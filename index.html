@@ -1,0 +1,653 @@
+<!DOCTYPE HTML>
+<html><head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<meta charset="UTF-8">
+		<style>
+			body {
+				margin: 0;
+				overflow-x:hidden;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+			}
+			.topnav, .row.hasnav {
+				overflow: hidden;
+				background-color: #635B9B;
+				min-height: 15vh;
+			}
+			.navimage a img.mobileOnly {
+				width: 45vw;
+			}
+			.topnav a {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight:700;
+			vertical-align: middle;
+			}
+			.navimage {
+				max-width: 66.667vw;
+			}
+			.nav.navlink.whitebtn {
+			background-color: white;
+			border-radius: 10px;
+			color: black;
+			}
+			.topnav .icon {
+			display: none;
+			}
+			@media screen and (max-width: 900px) {
+			.topnav a:not(:last-child) {display: none;}
+			.topnav a.icon {
+			float: right;
+			display: block;
+			}
+			}
+			@media screen and (max-width: 900px) {
+			.topnav.responsive {position: relative;}
+			.topnav.responsive .icon {
+			position: absolute;
+			right: 30px;
+			top: 30px;
+			}
+			.topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+			}
+			}
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;} 
+			[class*="col-"] {
+			float: left;
+			} 
+			.white {
+			color: white;
+			}
+			.bolder {
+			font-weight:bolder;
+			}
+			.titleContainer {
+			padding: 30px;
+			}
+			.titleContainer h1 {
+				font-size: max(3.6vw, 26px);
+			}
+			#gif_1 {
+			padding: 30px;
+			text-align: center;
+			
+			}
+			.navimage {
+			float: left;
+			}
+			.navlinks {
+			float: right;
+			padding: 30px;
+			}
+			.row.fullheight {
+				min-height:100vh;
+			}
+			.bigh2 {
+			font-size:42px;
+			}
+			.padding-x-30 {
+				padding-right:100px;
+				padding-left:100px;
+			}
+			.fontsize21 {
+				font-size:21px;
+			}
+			.fontsize17 {
+				font-size:17px;
+			}
+			.padding-top-10 {
+				padding-top:10%;
+			}
+			.width100 {
+				width:100%;
+			}
+			.width50 {
+				width:50%;
+			}
+			.container_1 {
+				padding:30px;
+			}
+			a.nounderline {
+				text-decoration: none;
+			}
+			.third {
+				width:33.33%;
+				float:left;
+			}
+			.center {
+				text-align:center;
+			}
+			.right {
+				text-align:right;
+			}
+			.inline-block {
+				display:inline-block;
+			}
+			.padding-top-100 {
+				padding-top:100px;
+			}
+			.white-border {
+				border: 3px solid white;
+				border-radius:10px;
+			}
+			.padding-10 {
+				padding:10px;
+			}
+			.btn {
+				border-radius:5px;
+				padding:10px;
+				font-size:21px;
+				font-weight:bolder;
+			}
+			.but {
+				border-radius: 5px;
+				padding: 10px;
+				font-size: 21px;
+				display: inline-block;
+				margin: 5px;
+				font-weight:bold;
+				letter-spacing:1px;
+			}
+			.BannerButtons.mobileOnly .but {
+				font-size: 12px;
+				width: 75.5%;
+				background-color: #36BDD9;
+			}
+			.white-bg {
+				background-color:white;
+			}
+			.purple-text {
+				color: #E05983;
+			}
+			.width67 {
+				width:67%;
+			}
+			.padding-30 {
+				padding:30px;
+			}
+			.softborder div {
+				border-radius:10px;
+			}
+			.width80 {
+				width:80%;
+			}
+			input {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 50%;
+				text-align: center;
+				margin-bottom: 10px;
+				border-radius: 10px;
+				color: white;
+				background-color: transparent;
+				border: 3px solid white;
+				min-width:250px;
+			}
+			.floatleft {
+				float:left;
+			}
+			.footer {
+				background-color: #1D1B40;
+				min-height:33vh;
+				display:inline-block;
+			}
+			.noxmargin p {
+				margin-top:0;
+				margin-bottom:0;
+			}
+			.nopadding {
+				padding-left:5px;
+			}
+			.nopadding.noxmargin p a {
+				text-decoration: none;
+			}
+			.nopadding.noxmargin p a:hover {
+				text-decoration: underline;
+			}
+			@media screen and (min-width:901px) {
+				.padding100desktop {
+					padding-top:100px;
+				}
+				.mobileOnly {
+					display:none !important;
+				}
+				.topnav {padding-right: 100px; padding-left:100px;}
+			}
+			@media screen and (max-width:900px) {
+				.col-6, .col-3, .col-5, .col-7, .col-8, .footer .col-4, .third, div.width50.funnel, .width67 {
+				  width: 100%;
+				}
+				.width80 {
+				  width: 100%
+				}
+				#gif_1 {
+				  padding:0;
+				}
+				#gif_1  img {
+				  width: 100%;
+				}
+				.responsive .navlinks, .responsive .navlinks a:not(:last-child) {
+				  width: 80%;
+				  text-align: center;
+				}
+				.navlinks a.icon {
+					width: 24px;
+					padding: 16px 0;
+					padding-top: 0;
+				}
+				.bigimg .titleContainer {
+					padding-right:0;
+					padding-left:0;
+				}
+				.footer {
+					min-width:unset !important;
+				}
+				.desktopOnly {
+					display:none !important;
+				}
+				.padding-x-30 {
+					padding-right:15px;
+					padding-left:15px;
+				}
+				#product .col-7 {
+					background-color: white !important;
+				}
+				.titleContainer h1 {
+					font-size: max(3.6vw, 29px);
+					font-weight: lighter;
+				}
+				.hasnav .titleContainer {
+					padding-top: 0;
+				}
+				.hasnav .titleContainer h1 {
+					margin-top: 0;
+				}
+				.BannerButtons.mobileOnly {
+					margin-top: 15px;
+				}
+				.bigh2 {
+					font-size: 30px;
+				}
+				.fontsize21 {
+					font-size: 17px;
+				}
+			}
+			input::placeholder {
+				color: white;
+				font-size: 14px;
+				font-weight: bolder !important;
+				opacity: 1;
+			}
+			p.white a {
+				color: white;
+				text-decoration: none;
+			}
+
+			.titleContainer.productsRight {
+				margin-top: 5vw;
+			}
+			.desktopOnly.BannerButtons .white {
+				background-color:#DA5A80;
+			}
+			ul { padding-left:0; list-style:none; }
+			.footer ul {padding-left:1em; list-style:none;}
+			li.bigbullet {
+				margin-bottom: 10px;
+			}
+			@media screen and (max-width:1440px) and (min-width:901px) {
+				.topnav, .padding-x-30 {
+					padding-right:30px;
+					padding-left:30px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<div class="navimage"><a href="/"> <img class="desktopOnly" style="width:270px;padding-top:10px;" src="homemedia/logod.svg"> <img class="mobileOnly" src="homemedia/logo.svg"></a></div>
+			<div class="navlinks">
+				<a class="nav navlink" href="/">Home</a><a class="nav navlink" href="#product">Product</a><a class="nav navlink" href="/about/">About Us</a><a class="nav navlink" href="/comparison/">Comparison</a><a class="nav navlink" href="/SecurityScience/">SecurityScience</a><a class="nav navlink" href="/faq/">FAQ</a><a class="nav navlink" href="/contact/">Contact</a><a class="nav navlink whitebtn" href="/Lab985/">LAB 985</a><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="homemedia/burger.svg"></a>
+			</div>
+		</div>
+		<div class="row hasnav padding-x-30" style="min-height:85vh;">
+			<div class="col-6">
+				<div class="titleContainer">
+					<h1 class="white">YOUR PEACE OF MIND IS OUR MOST IMPORTANT PRODUCT</h1>
+					<div class="BannerButtons desktopOnly" style="width: 80%;">
+						<a class="but white">MORE RESTORE OPTIONS</a><a class="but white">MORE SUPPORTED PRODUCTS</a><a class="but white">A MORE COMPREHENSIVE BACKUP</a>
+					</div>
+				</div>
+			</div>
+			<div class="col-6" style="">
+				<div id="gif_1" style="min-height: 250px;min-width: 300px;"><img style="width:100%; height:100%;" src="homemedia/c1.svg"></div>
+				<div class="BannerButtons mobileOnly" style="text-align: center;">
+						<a class="but white">MORE RESTORE OPTIONS</a><a class="but white">MORE SUPPORTED PRODUCTS</a><a class="but white">A MORE COMPREHENSIVE BACKUP</a>
+				</div>
+			</div>
+		</div>
+		<div id="product" class="row fullheight padding-x-30" style="background-color:#61B9D4; display:table;">
+			<div class="col-5" style="background-color: #61B9D4;">
+				<div class="titleContainer productsRight">		
+					<div style="width:50%;">
+						<h2 class="white bigh2" style="margin-top: 0;margin-bottom: 0;">SUPPORTED PRODUCTS</h2>
+					</div>
+					<div class="desktopOnly"><p class="white bolder fontsize21">FileScience Backup and Recovery is a fully managed Cloud-to-Cloud service that bulletproofs your data.</p></div>
+					<div class="desktopOnly"><p class="white fontsize21">Regardless of scale, industry, or region, ensuring business continuity and data availability is the number one priority for modern organizations. Gaps in these abilities can lead to immediate, drastic consequences ranging from skyrocketing downtime costs and customer dissatisfaction to bankruptcy. That's why organizations are looking for foolproof ways to avoid these threats and achieve stable continuity and availability - and increasingly adopting cloud-to-cloud backup solutions.</p></div>
+				</div>
+			</div>
+			<div class="col-7" style="background-color: #61B9D4;">
+				<div class="titleContainer productsLeft" style="display:block;">
+					<div class="col-12">
+						<div class="desktopOnly">
+							<img loading="lazy" class="width100" src="homemedia/sp.svg">
+						</div>
+						<div class="mobileOnly">
+							<img loading="lazy" class="width100" src="homemedia/sp.svg" >
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-5 mobileOnly" style="background-color: #61B9D4;">
+				<div class="titleContainer">		
+					<div><p class="white bolder fontsize21">FileScience Backup and Recovery is a fully managed Cloud-to-Cloud service that bulletproofs your data.</p></div>
+					<div><p class="white fontsize21">Regardless of scale, industry, or region, ensuring business continuity and data availability is the number one priority for modern organizations. Gaps in these abilities can lead to immediate, drastic consequences ranging from skyrocketing downtime costs and customer dissatisfaction to bankruptcy. That's why organizations are looking for foolproof ways to avoid these threats and achieve stable continuity and availability - and increasingly adopting cloud-to-cloud backup solutions.</p></div>
+				</div>
+			</div>
+		</div>
+		<div style="background-color:#CD5A80; display:table;width: 100%;" class="row fullheight desktopOnly">
+			<div style="width: calc(100% - 200px);" class="col-12 padding-x-30">
+				<div class="titleContainer">
+					<h2 class="white bigh2" style="margin-top:0;width: max(55%, 350px);">WHY SHOULD YOU BACKUP G-Suite &amp; Office 365 data?</h2>
+					<div>
+						<p class="white fontsize21">Google, Microsoft, Zoom, and others do not take responsibility for data loss. Data backup is your responsibility.</p>
+					</div><img loading="lazy" src="homemedia/1.svg">
+					<div>
+						<p class="white" style="font-size:12px;">Source - Based on the Cyber Guardian Consulting Group, LLC. customer survey.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="background-color:#CD5A80; display:table;width: 100%;" class="row mobileOnly">
+			<div  class="col-12">
+				<div class="titleContainer">
+					<h2 class="white bigh2" style="margin-top:0;margin-bottom: 0;">WHY SHOULD YOU BACKUP G-Suite &amp; Office 365 data?</h2>
+					<div>
+						<p class="white fontsize21">Google, Microsoft, Zoom, and others do not take responsibility for data loss. Data backup is your responsibility.</p>
+					</div><img loading="lazy"  src="homemedia/mg.svg">
+					<div>
+						<p class="white" style="font-size:12px;">Source - Based on the Cyber Guardian Consulting Group, LLC. customer survey.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row bigimg padding-x-30" style="display: table;">
+			<div class="col-12 desktopOnly">
+				<div class="titleContainer">
+					<img loading="lazy" class="width100" src="homemedia/pp.svg">
+				</div>
+			</div>
+			<div class="col-6 mobileOnly">
+				<div class="titleContainer">
+					<img loading="lazy" class="width100" src="homemedia/p1.svg">
+				</div>
+			</div>
+			<div class="col-6 mobileOnly">
+				<div class="titleContainer">
+					<img loading="lazy" class="width100" src="homemedia/p2.svg">
+				</div>
+			</div>
+		</div>
+		<div class="row tnt padding-x-30" style="background-color:#61BBD6; display:table;">
+			<div class="col-12 ">
+				<div class="titleContainer padding-top-100">
+					<h2 class="white bigh2" style="margin-top:0;">TESTED AND TRUSTED</h2>
+					<div>
+						<p class="white fontsize21">The complete, flexible solution:</p>
+						<div class="col-6" style="float: left;padding: 0;">
+							<ul>
+								<li class="white bigbullet fontsize21" style="list-style: none;display: inline-block;"><span style="display: inline-block;float: left;width: 20%;font-size: 48px !important;text-align: left;max-width: 48px;">•</span><span style="display: inline-block;float: left;width: 80%;">Data is always recoverable within 24 hours, <span style="white-space: nowrap;">faster if necessary.</span></span></li>
+								<li class="white bigbullet fontsize21" style="list-style: none;display: inline-block;"><span style="display: inline-block;float: left;width: 20%;font-size: 48px !important;text-align: left;max-width: 48px;">•</span><span style="display: inline-block;float: left;width: 80%;">Files are protected from accidental or malicious human interactions. Mistakes, deliberate data destruction, hacking, ransomware, theft are all but impossible <span style="white-space: nowrap;">with this service.</span></span></li>
+							</ul>
+						</div>
+						<div class="col-6" style="float: left;padding: 0;">
+							<ul>
+								<li class="white bigbullet fontsize21" style="list-style: none;display: inline-block;"><span style="display: inline-block;float: left;width: 20%;font-size: 48px !important;text-align: left;max-width: 48px;">•</span><span style="display: inline-block;float: left;width: 80%;">You configure your settings for the number of versions stored (minimum of 10), aging, and backup frequency. Want daily backups, keep two versions for a year; <span style="white-space: nowrap;">options are endless.</span></span></li>
+								<li class="white bigbullet fontsize21" style="list-style: none;display: inline-block;"><span style="display: inline-block;float: left;width: 20%;font-size: 48px !important;text-align: left;max-width: 48px;">•</span><span style="display: inline-block;float: left;width: 80%;">FileScience is a comprehensive service that stores files from apps nobody else can: Microsoft Stream, To-Do, and Lists are all supported. SharePoint is fully reconfigurable. Want to restore from AutoDesk BIM360? Only FileScience can. The list goes on <span style="white-space: nowrap;">and is growing.</span></span></li>
+							</ul>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="col-12 desktopOnly">
+				<div class="titleContainer padding-top-100 ">
+					<div class="center padding-x-30" style="padding-bottom: 30px;">
+						<h2 class="white bigh2">CREATE A QUOTE</h2>
+						<div class="padding-x-30"><p class="white fontsize21">Answer a few questions, get an estimate. You can contact us for more information.</p></div>
+						<div style="display: inline-block;width: 100%;"><p style="float: left;display: block;background-color: white;padding: 22px 0;margin: 0;color: purple;font-size: 17px;font-weight: bolder;border-radius: 8px;font-style: italic;" class="col-8">We always deliver the best possible solution that will grow and evolve with your business.</p>
+						<a style="padding: 26px 0;float: right;color: white;background-color: #655E8E;text-decoration:none;" href="/create/" class="btn col-3">CREATE A QUOTE</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row cq padding-x-30" style="background-color:#DB5080; display:table;">
+			<div class="col-12 mobileOnly">
+				<div class="titleContainer padding-top-100 ">
+					<div class="center" style="padding-bottom: 30px;">
+						<h2 class="white bigh2">CREATE A QUOTE</h2>
+						<p class="white fontsize21">Answer a few questions, get an estimate. You can contact us for more information.</p>
+						<div style="display: inline-block;width: 100%;"><p style="float: left;display: block;background-color: white;padding: 22px 0;margin: 0;color: purple;font-size: 17px;font-weight: bolder;border-radius: 8px;font-style: italic; margin-bottom:16px;" class="col-8">We always deliver the best possible solution that will grow and evolve with your business.</p>
+						<a style="padding: 26px 0;float: right;color: white;background-color: #655E8E;text-decoration:none;" href="/create/" class="btn col-3">CREATE A QUOTE</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row fullheight padding-x-30" style="background-color:#fbfbfb; display:table;">
+			<div class="col-12">
+				<div class="titleContainer">
+					<h2 class="bigh2" style="color:#655E8E;">AUTO-RECOVERED FILES IN ANY FORMAT</h2>
+					<div><p class="fontsize21 width67" style="color:#655E8E;">We take your business very seriously and know that ease of use, flexibility and options allow you and your team to get more done and allows parties, like outside counsel and execs, easier access to the files they need. We provide by default the ability to restore your files in virtually any format you'd like. Office 365 and GMail to .PST, .EML, .MSG or back to 365. The same for Office 365 and Google Calendar. We can provide .iCal, .PST, .VCS, .ICS or back to 365. This is also true for Office 365 and Google Contacts. A .PST, .vCard, .XLSX, .CSV can be provided and again, back to 365 if desired.</p></div>
+					<div class="third center softborder">
+						<div class="">
+							<div>
+								<img loading="lazy" class="width100" src="homemedia/ma.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="third center softborder">
+						<div class="">
+							<div>
+									<img loading="lazy" class="width100" src="homemedia/ca.svg" />
+							</div>
+						</div>
+					</div>
+					<div class="third center softborder">
+						<div class="">
+							<div>
+								<img class="width100" loading="lazy" src="homemedia/co.svg" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row padding-x-30 fullheight" style="background-color:#655E9D; display:table;">
+			<div class="col-7">
+				<div>
+					<h2 class="white bigh2">INDISPENSABLE PROTECTION WITH CLOUD-TO-CLOUD BACKUP</h2>
+					<p class="white fontsize21 width80">Cloud apps are everywhere in today’s offices. Gone are the days when you installed a program from a CD and kept your data on an internal hard drive. That’s not only old tech, given today’s cyber threat environment, it’s dangerous tech. Whether you need to protect data for a personal laptop, an enterprise network, or a portfolio of growing clients, the best solution is in the cloud. Alarmingly, the exponential growth of cloud-based apps that keep businesses up and running has outstripped data protections. Many apps promote redundant storage, but in reality, user data has been relatively defenseless. That is, until now. Cloud-to-cloud backup and restore solutions are the technological innovation that defends stored data from a host of threats, everything from human error to malware, ransomware, malicious insiders, even gaps in retention policies. Not all solutions are equal.</p>
+					<p style="display:none;" class="white fontsize21 width80">A popularized myth is that criminals are the Major Vulnerability. So much is written about cybertheft, hacking, malware, ransomware, and so on. They are household words by now, striking terror in the hearts of geeks young and old alike. The reality is that 47 percent of data loss is caused by human error. That’s not as dramatic, but it can be equally devastating. People carelessly overwriting or data or accidentally deleting files are major causes. A terminated employee’s account is deleted; bye-bye data. It is vital that this information not disappear. Legal proceedings can hang on what a former employee communicated to someone outside the organization. Government regulatory bodies or compliance standards organizations require that data be securely stored and accessible. Data needs to be protected from common human mistakes.</p>
+				</div>
+			</div>
+			<div class="col-5" style="">
+				<div id="gif_2"><img class="width100" loading="lazy" src="homemedia/c2.svg"></div>
+			</div>
+		</div>
+		<div class="row  padding-x-30 " style="background-color:#60BBD6; display:table;">
+			<div class="col-6 padding-top-100">
+				<div class="titleContainer">
+					<h2 class="white bigh2">WE'RE HERE TO HELP</h2>
+					<div><p class="white fontsize21 bolder">Drop us a line. We'd love to learn more about your business.</p></div>
+					<div><p class="white fontsize21">We have championed the Cloud-to-Cloud space and took a strong position that all Cloud Apps must be in an Air Gapped environment in order to meet compliance and allow better sleep at night.</p></div>
+					<div class="width50 funnel" style="float:left">
+						<div class="floatleft" style="padding: 10px;"><img loading="lazy" class="width50" src="homemedia/tf.svg" style="width: 36px;"></div>
+						<div class="floatleft">
+							<p style="margin-top:0;margin-bottom: 0;" class="fontsize21 bolder white">Phone</p>
+							<p style="margin-top:5px;" class="fontsize21 bolder white"><a href="tel:+1845-444-8273" target="_blank">845-444-8273</a></p>
+						</div>
+					</div>
+					<div class="width50 funnel" style="float:left">
+						<div class="floatleft" style="padding: 10px;"><img loading="lazy" class="width50" src="homemedia/em.svg" style="width: 36px;"></div>
+						<div class="floatleft">
+							<p style="margin-top:0;margin-bottom: 0;" class="fontsize21 bolder white">Email</p>
+							<p style="margin-top:5px;" class="fontsize21 bolder white"><a href="mailto:hello@filescience.io" target="_blank">hello@filescience.io</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-6 padding-top-100">
+				<div class="titleContainer">
+					<div class="white-border center" style="padding-bottom: 30px;">
+						<h2 class="white bigh2">CONTACT US</h2>
+						<form action="/action_page.php">
+							<input type="text" id="name" name="name" placeholder="Name"><br>
+							<input type="email" id="email" name="email" placeholder="Email"><br>
+							<input type="phone" id="phone" name="phone" placeholder="Phone"><br>
+							<input type="text" id="company" name="company" placeholder="Company or Organization"><br>
+							<input type="text" id="info" name="info" placeholder="Tell us more about your business"><br>
+							<input class="btn white-bg" style="color:#60BBD6;" type="submit" value="Send">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div style="display:table;" class="row footer width100 white">
+			<div class="col-12">
+				<div style="display:block;" class="padding-x-30">
+					<div class="col-4 floatleft">
+						<p><img loading="lazy" style="max-width: 80%;" src="homemedia/logod.svg"></p>
+						
+					</div>
+					<div class="col-8 floatleft">
+						<ul class="footermenu col-12" style="list-style-type:none;box-sizing: border-box;float: left;padding-right: 30px;">
+							<li><p><a class="fontsize21 white" href="https://filescience.io/#product">Product</a></p></li>
+							<li><p><a class="fontsize21 white" href="https://filescience.io/about/">About Us</a></p></li>
+							<li><p><a class="fontsize21 white" href="https://filescience.io/faq/">FAQ</a></p></li>
+							<li><p><a class="fontsize21 white" href="https://filescience.io/comparison/">Comparison</a></p></li>
+							<li><p><a class="fontsize21 white" href="#">SecurityScience</a></p></li>
+						</ul>
+						<ul class="footercontact col-12" style="list-style-type:none;display: table-cell;float: left;padding-right: 30px;box-sizing: border-box;">
+							<li class="col-4"><p><a class="fontsize21 white" href="tel:+18454448273">845-444-8273</a></p></li>
+							<li class="col-4"><p><a class="fontsize21 white" href="mailto:hello@filescience.io">hello@filescience.io</a></p></li>
+							<li class="col-4" style="float:right;">
+							<p>
+							<div style="display:flex;flex-wrap:wrap"><a href="https://www.facebook.com/filescience/" target="_blank" style="text-decoration:none;border:0;width:24px;height:24px;padding:2px;margin:5px;color:#1D1B40;border-radius:50%;background-color:#ffffff;"><svg style="display:block;fill:currentColor" data-tag="fac" data-name="Facebook" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path></svg></a><a href="https://twitter.com/filescience" target="_blank" style="text-decoration:none;border:0;width:24px;height:24px;padding:2px;margin:5px;color:#1D1B40;border-radius:50%;background-color:#ffffff;"><svg style="display:block;fill:currentColor" viewBox="0 0 512 512"><path d="M419.6 168.6c-11.7 5.2-24.2 8.7-37.4 10.2 13.4-8.1 23.8-20.8 28.6-36 -12.6 7.5-26.5 12.9-41.3 15.8 -11.9-12.6-28.8-20.6-47.5-20.6 -42 0-72.9 39.2-63.4 79.9 -54.1-2.7-102.1-28.6-134.2-68 -17 29.2-8.8 67.5 20.1 86.9 -10.7-0.3-20.7-3.3-29.5-8.1 -0.7 30.2 20.9 58.4 52.2 64.6 -9.2 2.5-19.2 3.1-29.4 1.1 8.3 25.9 32.3 44.7 60.8 45.2 -27.4 21.4-61.8 31-96.4 27 28.8 18.5 63 29.2 99.8 29.2 120.8 0 189.1-102.1 185-193.6C399.9 193.1 410.9 181.7 419.6 168.6z"></path></svg></a><a href="https://www.instagram.com/FileScience/" target="_blank" style="text-decoration:none;border:0;width:24px;height:24px;padding:2px;margin:5px;color:#1D1B40;border-radius:50%;background-color:#ffffff;"><svg style="display:block;fill:currentColor" viewBox="0 0 512 512" preserveAspectRatio="xMidYMid meet"><path d="M256 109.3c47.8 0 53.4 0.2 72.3 1 17.4 0.8 26.9 3.7 33.2 6.2 8.4 3.2 14.3 7.1 20.6 13.4 6.3 6.3 10.1 12.2 13.4 20.6 2.5 6.3 5.4 15.8 6.2 33.2 0.9 18.9 1 24.5 1 72.3s-0.2 53.4-1 72.3c-0.8 17.4-3.7 26.9-6.2 33.2 -3.2 8.4-7.1 14.3-13.4 20.6 -6.3 6.3-12.2 10.1-20.6 13.4 -6.3 2.5-15.8 5.4-33.2 6.2 -18.9 0.9-24.5 1-72.3 1s-53.4-0.2-72.3-1c-17.4-0.8-26.9-3.7-33.2-6.2 -8.4-3.2-14.3-7.1-20.6-13.4 -6.3-6.3-10.1-12.2-13.4-20.6 -2.5-6.3-5.4-15.8-6.2-33.2 -0.9-18.9-1-24.5-1-72.3s0.2-53.4 1-72.3c0.8-17.4 3.7-26.9 6.2-33.2 3.2-8.4 7.1-14.3 13.4-20.6 6.3-6.3 12.2-10.1 20.6-13.4 6.3-2.5 15.8-5.4 33.2-6.2C202.6 109.5 208.2 109.3 256 109.3M256 77.1c-48.6 0-54.7 0.2-73.8 1.1 -19 0.9-32.1 3.9-43.4 8.3 -11.8 4.6-21.7 10.7-31.7 20.6 -9.9 9.9-16.1 19.9-20.6 31.7 -4.4 11.4-7.4 24.4-8.3 43.4 -0.9 19.1-1.1 25.2-1.1 73.8 0 48.6 0.2 54.7 1.1 73.8 0.9 19 3.9 32.1 8.3 43.4 4.6 11.8 10.7 21.7 20.6 31.7 9.9 9.9 19.9 16.1 31.7 20.6 11.4 4.4 24.4 7.4 43.4 8.3 19.1 0.9 25.2 1.1 73.8 1.1s54.7-0.2 73.8-1.1c19-0.9 32.1-3.9 43.4-8.3 11.8-4.6 21.7-10.7 31.7-20.6 9.9-9.9 16.1-19.9 20.6-31.7 4.4-11.4 7.4-24.4 8.3-43.4 0.9-19.1 1.1-25.2 1.1-73.8s-0.2-54.7-1.1-73.8c-0.9-19-3.9-32.1-8.3-43.4 -4.6-11.8-10.7-21.7-20.6-31.7 -9.9-9.9-19.9-16.1-31.7-20.6 -11.4-4.4-24.4-7.4-43.4-8.3C310.7 77.3 304.6 77.1 256 77.1L256 77.1z"></path><path d="M256 164.1c-50.7 0-91.9 41.1-91.9 91.9s41.1 91.9 91.9 91.9 91.9-41.1 91.9-91.9S306.7 164.1 256 164.1zM256 315.6c-32.9 0-59.6-26.7-59.6-59.6s26.7-59.6 59.6-59.6 59.6 26.7 59.6 59.6S288.9 315.6 256 315.6z"></path><circle cx="351.5" cy="160.5" r="21.5"></circle></svg></a>
+							</div>
+							</p>
+							</li>
+						</ul> 
+					</div>
+				</div>
+			</div>
+			<div class="col-12" style="text-align: center;">
+				<div class="center width80" style="display: inline-block;border-top: 2px solid white;">
+					<p>Copyright © 2021 Cyber Guardian Consulting Group, LLC - Privacy Policy</p>
+				</div>
+			</div>
+		</div>
+		<style>
+			.footer ul a {
+				text-decoration:none;
+			}
+			.footer ul li {
+				float:left;
+				padding:14px;
+				box-sizing:border-box;
+			}
+			.footermenu {
+				background-color: #60BBD6;
+			}
+			.footer 
+		</style>
+		<style>
+			@media screen and (max-width:410px) {
+				.cq. .bigh2  {
+					font-size:28px;
+				}
+				
+			}
+			@media screen and (max-width:900px) {
+				.row.bigimg {
+					width:calc(100% - 30px);
+				}
+				.padding-top-100 {
+					padding-top: 0;
+				}
+				.col-6 ul {
+					margin-bottom: 0;
+					margin-top: 0;
+				}
+				.tnt .col-12 {
+					padding-top:30px;
+				}
+			}
+			@media screen and (min-width:900px) {
+				.row.bigimg {
+					width: calc(100% - 200px);
+				}
+			}
+			@media screen and (max-width:1440px) and (min-width:901px) {
+				.topnav, .padding-x-30 {
+					padding-right:30px;
+					padding-left:30px;
+				}
+				.row.bigimg {
+					width: calc(100% - 60px);
+				}
+			}
+			@media screen and (max-width:1280px) and (min-width:901px) {
+				.topnav a {
+					padding: 8px;
+					font-size: 12px;
+				}
+				.navimage a img.desktopOnly {
+					max-width: 20vw;
+				}
+				.navlinks {
+					padding-left: 0;
+				}
+				
+			}
+			html {
+			  scroll-behavior: smooth;
+			}
+		</style>
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+			    x.className += " responsive";
+			  } else {
+			    x.className = "topnav";
+			  }
+			}
+		</script>
+</body></html>
+
