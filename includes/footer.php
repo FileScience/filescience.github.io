@@ -44,5 +44,4 @@
 			.footermenu {
 				background-color: #60BBD6;
 			}
-			.footer 
 		</style>
