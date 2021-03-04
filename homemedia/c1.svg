@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1250px"
 	 height="940px" viewBox="0 0 1250 940" style="enable-background:new 0 0 1250 940;" xml:space="preserve">
 <style type="text/css">
@@ -7,12 +6,7 @@
 	.st2{fill:#FFFFFF;}
 	.st3{fill:#DC5A80;}
 	.st4{fill:#DC5A80;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
-	.st5{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}
-    svg {
-        background-color: transparent;
-        }
-</style>
--->
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:3;stroke-miterlimit:10;}svg {background-color: transparent;}</style>
 <g id="Lines">
 	<path id="theMotionPath1" class="st1" d="M181.5,359.1v505.2c0,28.4,28.5,51.4,63.7,51.4h158.9c35.2,0,63.7-23,63.7-51.4L466.8,600" />
 	<path id="theMotionPath2" class="st1" d="M979.6,147.7v716.7c0,28.4-28.5,51.4-63.7,51.4h-125c-35.2,0-63.7-23-63.7-51.4V603.3" />
