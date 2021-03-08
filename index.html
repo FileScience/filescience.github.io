@@ -277,6 +277,14 @@
 					padding-left:30px;
 				}
 			}
+			.prx {
+				animation: cssAnimation 0s 1s forwards;
+				visibility: hidden;
+			}
+
+			@keyframes cssAnimation {
+				to   { visibility: visible; }
+			}
 		</style>
 		<link rel="shortcut icon" href="homemedia/0.svg" type="image/x-icon"> 
 	</head>
@@ -317,7 +325,7 @@
 				<div class="titleContainer productsLeft" style="display:block;">
 					<div class="col-12">
 						<div>
-							<img loading="lazy" class="width100" src="homemedia/b.svg" >
+							<img loading="lazy" class="width100 prx" src="homemedia/b.svg" >
 						</div>
 					</div>
 				</div>
