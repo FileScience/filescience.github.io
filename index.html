@@ -71,6 +71,7 @@
 			.col-12 {width: 100%;} 
 			[class*="col-"] {
 			float: left;
+			box-sizing:border-box;
 			} 
 			.white {
 			color: white;
@@ -329,26 +330,13 @@
 				</div>
 			</div>
 		</div>
-		<div style="background-color:#CD5A80; display:table;width: 100%;" class="row fullheight desktopOnly">
-			<div style="width: calc(100% - 200px);" class="col-12 padding-x-30">
+		<div style="background-color:#CD5A80; display:table;width: 100%;" class="row fullheight">
+			<div class="col-12 padding-x-30">
 				<div class="titleContainer">
 					<h2 class="white bigh2" style="margin-top:0;width: max(60%, 350px);">WHY SHOULD YOU BACKUP G-Suite &amp; Office 365 data?</h2>
 					<div>
 						<p class="white fontsize21">Google, Microsoft, Zoom, and others do not take responsibility for data loss. Data backup is your responsibility.</p>
-					</div><img loading="lazy" src="homemedia/1.svg">
-					<div>
-						<p class="white" style="font-size:12px;">Source - Based on the Cyber Guardian Consulting Group, LLC. customer survey.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div style="background-color:#CD5A80; display:table;width: 100%;" class="row mobileOnly">
-			<div  class="col-12">
-				<div class="titleContainer">
-					<h2 class="white bigh2" style="margin-top:0;margin-bottom: 0;">WHY SHOULD YOU BACKUP G-Suite &amp; Office 365 data?</h2>
-					<div>
-						<p class="white fontsize21">Google, Microsoft, Zoom, and others do not take responsibility for data loss. Data backup is your responsibility.</p>
-					</div><img loading="lazy"  src="homemedia/mg.svg">
+					</div><img loading="lazy" src="homemedia/1.svg" class="desktopOnly"><img loading="lazy"  src="homemedia/mg.svg" class="mobileOnly">
 					<div>
 						<p class="white" style="font-size:12px;">Source - Based on the Cyber Guardian Consulting Group, LLC. customer survey.</p>
 					</div>
@@ -599,15 +587,6 @@
 			  scroll-behavior: smooth;
 			}
 		</style>
-		<script>
-			function myFunction() {
-			  var x = document.getElementById("myTopnav");
-			  if (x.className === "topnav") {
-			    x.className += " responsive";
-			  } else {
-			    x.className = "topnav";
-			  }
-			}
-		</script>
+		<script>function myFunction() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}</script>
 </body></html>
 
