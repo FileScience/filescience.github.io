@@ -113,9 +113,6 @@
 			.width100 {
 				width:100%;
 			}
-			.width50 {
-				width:50%;
-			}
 			.third {
 				width:33.33%;
 				float:left;
@@ -125,10 +122,6 @@
 			}
 			.padding-top-100 {
 				padding-top:100px;
-			}
-			.white-border {
-				border: 3px solid white;
-				border-radius:10px;
 			}
 			.btn {
 				border-radius:5px;
@@ -150,35 +143,22 @@
 				width: 75.5%;
 				background-color: #36BDD9;
 			}
-			.white-bg {
-				background-color:white;
-			}
-			.width67 {
-				width:67%;
-			}
 			.softborder div {
 				border-radius:10px;
-			}
-			.width80 {
-				width:80%;
 			}
 			input {
 				padding-top: 10px;
 				padding-bottom: 10px;
 				width: 50%;
-				text-align: center;
 				margin-bottom: 10px;
-				border-radius: 10px;
-				color: white;
+				color: #DD5981;
 				background-color: transparent;
-				border: 3px solid white;
+				border: 0;
+				border-bottom: 3px solid #DD5981;
 				min-width:250px;
 			}
-			.floatleft {
-				float:left;
-			}
 			.footer {
-				background-color: #1D1B40;
+				background-color: #333;
 				min-height:33vh;
 				display:inline-block;
 			}
@@ -189,11 +169,8 @@
 				.topnav {padding-right: 100px; padding-left:100px;}
 			}
 			@media screen and (max-width:900px) {
-				.col-6, .col-3, .col-5, .col-7, .col-8, .footer .col-4, .third, div.width50.funnel, .width67 {
+				.col-6, .col-3, .col-5, .col-7, .col-8, .footer .col-4, .third {
 				  width: 100%;
-				}
-				.width80 {
-				  width: 100%
 				}
 				#gif_1 {
 				  padding:0;
@@ -220,9 +197,6 @@
 					padding-right:15px;
 					padding-left:15px;
 				}
-				#product .col-7 {
-					background-color: white !important;
-				}
 				.titleContainer h1 {
 					font-size: max(3.6vw, 29px);
 					font-weight: lighter;
@@ -244,27 +218,18 @@
 				}
 			}
 			input::placeholder {
-				color: white;
-				font-size: 14px;
-				font-weight: bolder !important;
+				color: #DD5981;
+				font-size: 16px;
+				font-weight: bolder;
 				opacity: 1;
 			}
 			p.white a {
 				color: white;
 				text-decoration: none;
 			}
-
-			.titleContainer.productsRight {
-				margin-top: 5vw;
-			}
-			.desktopOnly.BannerButtons .white {
-				background-color:#DA5A80;
-			}
+			.desktopOnly.BannerButtons .white {background-color:#DA5A80;}
 			ul { padding-left:0; list-style:none; }
-			.footer ul {padding-left:1em; list-style:none;}
-			li.bigbullet {
-				margin-bottom: 10px;
-			}
+			li.bigbullet {margin-bottom: 10px;}
 			@media screen and (max-width:1440px) and (min-width:901px) {
 				.topnav, .padding-x-30 {
 					padding-right:30px;
@@ -299,7 +264,7 @@
 		</div>
 		<div id="product" class="row fullheight padding-x-30" style="background-color:#61B9D4; display:table;">
 			<div class="col-12" style="background-color: #61B9D4;">
-				<div class="titleContainer productsRight">		
+				<div class="titleContainer">		
 					<div style="width:50%;">
 						<h2 class="white bigh2" style="margin-top: 0;margin-bottom: 0;">SUPPORTED PRODUCTS</h2>
 					</div>
@@ -321,12 +286,12 @@
 		<div style="background-color:#CD5A80; display:table;width: 100%;" class="row fullheight">
 			<div class="col-12 padding-x-30">
 				<div class="titleContainer">
-					<h2 class="white bigh2" style="margin-top:0;width: max(60%, 350px);">WHY SHOULD YOU BACKUP G-Suite &amp; Office 365 data?</h2>
+					<h2 class="white bigh2" style="width: max(60%, 320px);">WHY SHOULD YOU BACKUP G-Suite &amp; Office 365 data?</h2>
 					<div>
 						<p class="white fontsize21">Google, Microsoft, Zoom, and others do not take responsibility for data loss. Data backup is your responsibility.</p>
 					</div><img loading="lazy" src="homemedia/1.svg" class="desktopOnly"><img loading="lazy"  src="homemedia/mg.svg" class="mobileOnly">
 					<div>
-						<p class="white" style="font-size:12px;">Source - Based on the Cyber Guardian Consulting Group, LLC. customer survey.</p>
+						<p class="white">Source - Based on the Cyber Guardian Consulting Group, LLC. customer survey.</p>
 					</div>
 				</div>
 			</div>
@@ -369,7 +334,7 @@
 						<h2 class="bigh2" style="color:#655F9E;">CREATE A QUOTE</h2>
 						<p class="fontsize21">Answer a few questions, get an estimate. You can contact us for more information.</p>
 						<p>We always deliver the best possible solution that will grow and evolve with your business.</p>
-						<a style="display:inline-block;color: white;background-color: #655E8E;text-decoration:none;" href="/create/" class="btn width80">CREATE A QUOTE</a>
+						<a style="display:inline-block;color: white;background-color: #655E8E;text-decoration:none;width:80%;" href="/create/" class="btn">CREATE A QUOTE</a>
 					</div>
 				</div>
 			</div>
@@ -378,7 +343,7 @@
 			<div class="col-12">
 				<div class="titleContainer">
 					<h2 class="bigh2" style="color:#655E8E;">AUTO-RECOVERED FILES IN ANY FORMAT</h2>
-					<div><p class="fontsize21 width67" style="color:#655E8E;">We take your business very seriously and know that ease of use, flexibility and options allow you and your team to get more done and allows parties, like outside counsel and execs, easier access to the files they need. We provide by default the ability to restore your files in virtually any format you'd like. Office 365 and GMail to .PST, .EML, .MSG or back to 365. The same for Office 365 and Google Calendar. We can provide .iCal, .PST, .VCS, .ICS or back to 365. This is also true for Office 365 and Google Contacts. A .PST, .vCard, .XLSX, .CSV can be provided and again, back to 365 if desired.</p></div>
+					<div><p class="fontsize21" style="color:#655E8E;">We take your business very seriously and know that ease of use, flexibility and options allow you and your team to get more done and allows parties, like outside counsel and execs, easier access to the files they need. We provide by default the ability to restore your files in virtually any format you'd like. Office 365 and GMail to .PST, .EML, .MSG or back to 365. The same for Office 365 and Google Calendar. We can provide .iCal, .PST, .VCS, .ICS or back to 365. This is also true for Office 365 and Google Contacts. A .PST, .vCard, .XLSX, .CSV can be provided and again, back to 365 if desired.</p></div>
 					<div class="third center softborder">
 						<div>
 							<div>
@@ -414,91 +379,42 @@
 				<div id="gif_2"><img class="width100" loading="lazy" src="homemedia/i.svg"></div>
 			</div>
 		</div>
-		<div class="row  padding-x-30 " style="background-color:#60BBD6; display:table;">
+		<div class="row  padding-x-30 " style="background-color:#fff; display:table;color:#DD5981;">
 			<div class="col-6 padding-top-100">
 				<div class="titleContainer">
-					<h2 class="white bigh2">WE'RE HERE TO HELP</h2>
-					<div><p class="white fontsize21 bolder">Drop us a line. We'd love to learn more about your business.</p></div>
-					<div><p class="white fontsize21">We have championed the Cloud-to-Cloud space and took a strong position that all Cloud Apps must be in an Air Gapped environment in order to meet compliance and allow better sleep at night.</p></div>
-					<div class="width50 funnel" style="float:left">
-						<div class="floatleft" style="padding: 10px;"><img loading="lazy" class="width50" src="homemedia/tf.svg" style="width: 36px;"></div>
-						<div class="floatleft">
-							<p style="margin-top:0;margin-bottom: 0;" class="fontsize21 bolder white">Phone</p>
-							<p style="margin-top:5px;" class="fontsize21 bolder white"><a href="tel:+1845-444-8273" target="_blank">845-444-8273</a></p>
-						</div>
-					</div>
-					<div class="width50 funnel" style="float:left">
-						<div class="floatleft" style="padding: 10px;"><img loading="lazy" class="width50" src="homemedia/em.svg" style="width: 36px;"></div>
-						<div class="floatleft">
-							<p style="margin-top:0;margin-bottom: 0;" class="fontsize21 bolder white">Email</p>
-							<p style="margin-top:5px;" class="fontsize21 bolder white"><a href="mailto:hello@filescience.io" target="_blank">hello@filescience.io</a></p>
-						</div>
-					</div>
+					<h2 class="bigh2">WE'RE HERE TO HELP</h2>
+					<div><p class="fontsize21 bolder">Drop us a line. We'd love to learn more about your business.</p></div>
+					<div><p class="fontsize21">We have championed the Cloud-to-Cloud space and took a strong position that all Cloud Apps must be in an Air Gapped environment in order to meet compliance and allow better sleep at night.</p></div>
 				</div>
 			</div>
 			<div class="col-6 padding-top-100">
 				<div class="titleContainer">
-					<div class="white-border center" style="padding-bottom: 30px;">
-						<h2 class="white bigh2">CONTACT US</h2>
+					<div class="center" style="padding-bottom: 30px;">
+						<h2 class="bigh2">CONTACT US</h2>
 						<form action="https://cgcg.biz/apis/filescience/form/home/" method="POST">
-							<input type="text" id="name" name="name" placeholder="Name"><br>
-							<input type="email" id="email" name="email" placeholder="Email"><br>
-							<input type="phone" id="phone" name="phone" placeholder="Phone"><br>
-							<input type="text" id="company" name="company" placeholder="Company or Organization"><br>
-							<input type="text" id="info" name="info" placeholder="Tell us more about your business"><br>
-							<input class="btn white-bg" style="color:#60BBD6;" type="submit" value="Send">
+							<input required type="text" name="name" placeholder="Name"><br>
+							<input required type="email" name="email" placeholder="Email"><br>
+							<input required type="phone" name="phone" placeholder="Phone"><br>
+							<input required type="text" name="message" placeholder="Message"><br>
+							<input style="border:0;" class="btn" type="submit" value="Send">
 						</form>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div style="display:table;" class="row footer width100 white">
-			<div class="col-12">
-				<div style="display:block;" class="padding-x-30">
-					<div class="col-4 floatleft">
-						<p><img loading="lazy" style="max-width: 80%;" src="homemedia/logod.svg"></p>
-					</div>
-					<div class="col-8 floatleft">
-						<ul class="footermenu col-12" style="list-style-type:none;box-sizing: border-box;float: left;padding-right: 30px;">
-							<li><p><a class="fontsize21 white" href="https://filescience.io/#product">Product</a></p></li>
-							<li><p><a class="fontsize21 white" href="https://filescience.io/about/">About Us</a></p></li>
-							<li><p><a class="fontsize21 white" href="https://filescience.io/faq/">FAQ</a></p></li>
-							<li><p><a class="fontsize21 white" href="https://filescience.io/comparison/">Comparison</a></p></li>
-							<li><p><a class="fontsize21 white" href="#">SecurityScience</a></p></li>
-						</ul>
-						<ul class="footercontact col-12" style="list-style-type:none;display: table-cell;float: left;padding-right: 30px;box-sizing: border-box;">
-							<li class="col-4"><p><a class="fontsize21 white" href="tel:+18454448273">845-444-8273</a></p></li>
-							<li class="col-4"><p><a class="fontsize21 white" href="mailto:hello@filescience.io">hello@filescience.io</a></p></li>
-							<li class="col-4" style="float:right;">
-							<p>
-							<div style="display:flex;flex-wrap:wrap"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:32px;height:32px;margin:5px;border-radius:50%;"><img loading="lazy" src="homemedia/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:32px;height:32px;margin:5px;border-radius:50%;"><img loading="lazy" src="homemedia/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:32px;height:32px;margin:5px;border-radius:50%;"><img loading="lazy" src="homemedia/ig.svg"></a>
-							</div>
-							</p>
-							</li>
-						</ul> 
-					</div>
+		<div style="display:table;box-sizing:border-box;" class="row footer width100 white padding-x-30">
+			<div class="col-4">
+				<div style="display:block; text-align:center">
+					<p><img loading="lazy" src="homemedia/logod.svg"></p>
+					<p>© 2021 FileScience - All Rights Reserved</p>
+					<p><a style="color:white; text-decoration:none;" href="#">Privacy Policy</a></p>
 				</div>
 			</div>
-			<div class="col-12" style="text-align: center;">
-				<div class="center width80" style="display: inline-block;border-top: 2px solid white;">
-					<p>Copyright © 2021 Cyber Guardian Consulting Group, LLC - Privacy Policy</p>
+			<div class="col-8">
+				<div style="display:flex;flex-wrap:wrap; float:right;padding:30px;"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;"><img loading="lazy" src="homemedia/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;"><img loading="lazy" src="homemedia/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;"><img loading="lazy" src="homemedia/ig.svg"></a>
 				</div>
 			</div>
 		</div>
-		<style>
-			.footer ul a {
-				text-decoration:none;
-			}
-			.footer ul li {
-				float:left;
-				padding:14px;
-				box-sizing:border-box;
-			}
-			.footermenu {
-				background-color: #60BBD6;
-			}
-			.footer 
-		</style>
 		<style>
 			@media screen and (max-width:900px) {
 				.padding-top-100 {
