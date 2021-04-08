@@ -146,22 +146,6 @@
 			.softborder div {
 				border-radius:10px;
 			}
-			input {
-				padding-top: 10px;
-				padding-bottom: 10px;
-				width: 50%;
-				margin-bottom: 10px;
-				color: #DD5981;
-				background-color: transparent;
-				border: 0;
-				border-bottom: 3px solid #DD5981;
-				min-width:250px;
-			}
-			.footer {
-				background-color: #333;
-				min-height:33vh;
-				display:inline-block;
-			}
 			@media screen and (min-width:901px) {
 				.mobileOnly {
 					display:none !important;
@@ -186,9 +170,6 @@
 					width: 24px;
 					padding: 16px 0;
 					padding-top: 0;
-				}
-				.footer {
-					min-width:unset !important;
 				}
 				.desktopOnly {
 					display:none !important;
@@ -217,19 +198,7 @@
 					font-size: 17px;
 				}
 			}
-			input::placeholder {
-				color: #DD5981;
-				font-size: 16px;
-				font-weight: bolder;
-				opacity: 1;
-			}
-			p.white a {
-				color: white;
-				text-decoration: none;
-			}
 			.desktopOnly.BannerButtons .white {background-color:#DA5A80;}
-			ul { padding-left:0; list-style:none; }
-			li.bigbullet {margin-bottom: 10px;}
 			@media screen and (max-width:1440px) and (min-width:901px) {
 				.topnav, .padding-x-30 {
 					padding-right:30px;
@@ -276,14 +245,13 @@
 				<div class="titleContainer productsLeft" style="display:block;">
 					<div class="col-12">
 						<div>
-							<img id="m8" loading="lazy" class="width100 mobileOnly" src="homemedia/0.svg" >
-							<img id="m9" loading="lazy" class="width100 desktopOnly" src="homemedia/0.svg" >
+							<img id="m8" loading="lazy" class="width100 mobileOnly" src="" >
+							<img id="m9" loading="lazy" class="width100 desktopOnly" src="" >
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		
 		<script>
 		var s = false;
 		window.addEventListener('scroll', function(){
