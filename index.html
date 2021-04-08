@@ -45,25 +45,6 @@ body{margin:0;overflow-x:hidden;font-family:Verdana,Arial,Helvetica,sans-serif}.
 				</div>
 			</div>
 		</div>
-		<script>
-		var s = false;
-		window.addEventListener('scroll', function(){
-			if(!s) {
-				s = true;
-				var xhr = new XMLHttpRequest();
-				xhr.onreadystatechange = function () {
-				  if (xhr.readyState === 4) {
-					var data = xhr.responseText;
-					document.querySelector('body').innerHTML += data;
-				  }
-				};
-				xhr.open('GET', '/i.html');
-				xhr.send();
-				document.getElementById('m8').src = "homemedia/8.svg";
-				document.getElementById('m9').src = "homemedia/9.svg";
-			}
-		
-		}, true);
-		function myFunction() {var x = document.getElementById("myTopnav");if (x.className === "topnav") {x.className += " responsive";} else {x.className = "topnav";}}</script>
+<script>var s=!1;function myFunction(){var e=document.getElementById("myTopnav");"topnav"===e.className?e.className+=" responsive":e.className="topnav"}window.addEventListener("scroll",function(){var n;s||(s=!0,(n=new XMLHttpRequest).onreadystatechange=function(){var e;4===n.readyState&&(e=n.responseText,document.querySelector("body").innerHTML+=e)},n.open("GET","/i.html"),n.send(),document.getElementById("m8").src="homemedia/8.svg",document.getElementById("m9").src="homemedia/9.svg")},!0);</script>
 </body></html>
 
