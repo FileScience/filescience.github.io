@@ -16,7 +16,7 @@
 	.st12{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10.0001;}
 	.st13{fill:#F9F9F9;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10.0001;}
     svg {
-        background-color: #655E9D;
+        background-color: transparent;
         }
     
     #ball_2 {opacity: 0;}
