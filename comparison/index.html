@@ -345,7 +345,44 @@
 				<p><img loading="lazy" src="../homemedia/co3.svg"></p>
 			</div>
 		</div>
-		
+		<script>
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				   document.getElementById("qp").outerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "../homemedia/qp.svg", true);
+			xhttp.send(); 
+			var qp = [];
+			function lazyProducts() {
+
+				var list = document.querySelectorAll('.ptsel'); 
+
+				for(var i = 0; i < list.length; i++) {
+				list[i].onclick = function() {
+					console.log(this.id);
+					switchElementStatus(this);
+				}
+
+				}
+				
+				function switchElementStatus(el) {
+					if(el.style.opacity < 1) {
+						el.style.opacity = 1;
+						qp.push(el.id);
+						document.getElementById('InterestedInForm').value = qp.join(',');
+					}else {
+						el.style.opacity = 0.4;
+						qp = qp.filter(function(e) { return e !== el.id });
+						document.getElementById('InterestedInForm').value = qp.join(',');
+					}
+				}
+
+			}
+
+		setTimeout(lazyProducts, 5000);
+		</script>
 		<div class="row  padding-x-30 " style="background-color:#F2F2F2;overflow:hidden;color:#fff;">
 			<h2 class="center padding-top-100" style="color:#655F9E">Get an Estimate</h2>
 			<div class="col-6">
@@ -357,6 +394,7 @@
 							<input required type="email" name="email" placeholder="Email"><br>
 							<input required type="phone" name="phone" placeholder="Phone"><br>
 							<input required type="text" name="company" placeholder="Company Name"><br>
+							<input type="hidden" name="InterestedIn" value="" id="InterestedInForm">
 							<select name="amount" id="amount">
 							  <option value="" disabled="" selected="">Amount of Storage Needed</option>
 							  <option value="LessThan1TB">Less than 1TB</option>
@@ -376,7 +414,7 @@
 			<div class="col-6">
 				<div class="titleContainer">
 					<p class="fontsize21" style="color:#655F9E">Supported Products</p>
-					<img class="width100" loading="lazy" src="../homemedia/ptsel.svg" />
+					<img id="qp" class="width100" loading="lazy" src="../homemedia/ptsel.svg" />
 				</div>
 			</div>
 		</div>
@@ -517,6 +555,13 @@
 					width: 100% !important;
 					float: unset !important;
 				}
+				.qf input[type="text"], .qf input[type="email"], .qf input[type="phone"], .qf input[type="text"]::placeholder, .qf input[type="email"]::placeholder, .qf input[type="phone"]::placeholder {
+					width:85% !important;
+					color:#DD5981;
+				}
+				#amount {
+					width:85% !important;
+				}
 			}
 			@media screen and (min-width:900px) {
 				.tnt .col-5 p {
@@ -581,7 +626,6 @@
 			border-radius:5px;
 			min-width: 140px !important;
 			max-width: 140px !important;
-			margin-left: 20%;
 			}
 			.btn.reach {
 				text-decoration:none;
