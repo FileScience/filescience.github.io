@@ -3,7 +3,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">		
 		<meta charset="UTF-8">
 		<style>
-						 
 			body {
 				margin: 0;
 				overflow-x:hidden;
@@ -11,7 +10,7 @@
 			}
 			.topnav, .row.hasnav {
 				overflow: hidden;
-				background-color: #635B9B;
+				background-color: white;
 				min-height: 15vh;
 			}
 			.navimage a img.mobileOnly {
@@ -19,7 +18,7 @@
 			}
 			.topnav a {
 			display: inline-block;
-			color: white;
+			color: black;
 			text-align: center;
 			padding: 14px 16px;
 			text-decoration: none;
@@ -195,7 +194,6 @@
 				width: 50%;
 				text-align: center;
 				margin-bottom: 10px;
-				border-radius: 10px;
 				color: white;
 				background-color: transparent;
 				border: 3px solid white;
@@ -318,44 +316,76 @@
 					padding-left:30px;
 				}
 			}
+			.bluebanner {
+				background-color:#fff;
+				text-align:center;
+			}
+			.icon img {
+				background-color: black;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="topnav" id="myTopnav">
-			<div class="navimage"><a class="" href="../"> <img class="desktopOnly" style="width:270px;padding-top:10px;" src="../homemedia/logod.svg"> <img class="mobileOnly" src="../homemedia/logo.svg"></a></div>
+			<div class="navimage"><a class="" href="../"> <img class="desktopOnly" style="width:270px;padding-top:10px;" src="../homemedia/logowhitebg.svg"> <img class="mobileOnly" src="../homemedia/logowhitebg.svg"></a></div>
 			<div class="navlinks">
-				<a class="nav navlink" href="../">Home</a><a class="nav navlink" href="../#product">Product</a><a class="nav navlink" href="../about/">About Us</a><a class="nav navlink" href="../comparison/">Comparison</a><a class="nav navlink" href="../SecurityScience/">SecurityScience</a><a class="nav navlink" href="../faq/">FAQ</a><a class="nav navlink" href="../contact/">Contact</a><a class="nav navlink whitebtn" href="../Lab985/">LAB 985</a><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="../homemedia/burger.svg"></a>
+				<a class="nav navlink" href="../">Home</a><a class="nav navlink" href="../#product">Product</a><a class="nav navlink" href="/about/">About Us</a><a class="nav navlink" href="/comparison/">Comparison</a><a class="nav navlink" href="../SecurityScience/">SecurityScience</a><a class="nav navlink" href="/faq/">FAQ</a><a class="nav navlink" href="/contact/">Contact</a><a class="nav navlink whitebtn" href="/Lab985/">LAB 985</a><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="../homemedia/burger.svg"></a>
 			</div>
 		</div>
-		<div class="row padding-x-30 fullheight" style="background-color:white; display:block;">
-			<div class="col-6" style="">
-				<div id="gif_2"><img class="width100" loading="lazy" src="../homemedia/map.svg"></div>
-			</div>
-			<div class="col-6">
+		<div class="row  padding-x-30 " style="background-color:#fff;overflow:hidden;color:black;">
+			<div class="col-6 padding-top-100">
 				<div class="titleContainer">
-					<h2 class="bigh2" style="color: #36BDD9;">CONTACT US</h2>
-					<div class="width100" style="float:left">
-						<ul style="list-style-type:none;">
-							<li><p class="fontsize21 bolder">Main Office:&nbsp;&nbsp;</p><p class="fontsize21">63 John Street #3, Kingston, NY 12401</p></li>
-							<li><p class="fontsize21 bolder">Hawthorne Office:&nbsp;&nbsp;</p><p class="fontsize21">7 Skyline Drive, Hawthorne, NY 10532</p></li>
-							<li><p class="fontsize21 bolder">Phone:&nbsp;&nbsp;</p><p class="fontsize21">845-444-8273</p></li>
-							<li><p class="fontsize21 bolder">Email:&nbsp;&nbsp;</p><p class="fontsize21">hello@filescience.io</p></li>
-						</ul>  
+					<h2 class="bigh2" style="color:#60BDD6;">WE'RE HERE TO HELP</h2>
+					<div><p class="fontsize21 bolder">Drop us a line. We'd love to learn more about your business.</p></div>
+					<div><p class="fontsize21">We have championed the Cloud-to-Cloud space and taken a strong position that all Cloud Apps must be in an Air Gapped environment in order to meet compliance, provide protection against malware and malicious internal actors along with human error, the largest factor related to data loss in the Cloud.</p></div>
+					<a class="adv" target="_blank" href="https://filescience.io/#create">Get an Estimate</a>
+				</div>
+			</div>
+			<div class="col-6 padding-top-100">
+				<div class="titleContainer">
+					<div class="center" style="padding-bottom: 30px;">
+						<h2 class="bigh2">CONTACT US</h2>
+						<form action="https://cgnew.wpengine.com/apis/filescience/form/home/" method="POST">
+							<input required="" type="text" name="name" placeholder="Name"><br>
+							<input required="" type="email" name="email" placeholder="Email"><br>
+							<input required="" type="phone" name="phone" placeholder="Phone"><br>
+							<input required="" type="text" name="message" placeholder="Message"><br>
+							<input style="border:0;" class="btn" type="submit" value="Contact us">
+						</form>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div style="display:table;box-sizing:border-box;" class="row footer width100 white padding-x-30">
+			<div class="col-4 mw33">
+				<p class="fontsize21 bolder white">Menu</p><br>
+				<a href="https://filescience.io" class="fontesize17 white">Home</a><br>
+				<a href="https://filescience.io/comparison" class="fontesize17 white">Comparison</a><br>
+				<a href="https://filescience.io/#product" class="fontesize17 white">Supported Products</a><br>
+			</div>
+			<div class="col-4 mw33">
+				<p class="fontsize21 bolder white">Information</p><br>
+				<a href="https://filescience.io/about" class="fontesize17 white">About</a><br>
+				<a href="https://filescience.io/SecurityScience" class="fontesize17 white">Security Science</a><br>
+				<a href="https://filescience.io/faq" class="fontesize17 white">FAQ</a><br>
+				<a href="https://filescience.io/contact" class="fontesize17 white">Contact Us</a><br>
+				<a href="https://filescience.io/create" class="fontesize17 white">Get an Estimate</a><br>
+			</div>
+			<div class="col-4 mw33">
+				<a href="https://filescience.io/Lab985" class="fontsize21 bolder white">Lab 985</a><br>
+			</div>
+			<br style="clear: both;">
 			<div class="col-4">
 				<div style="display:block; text-align:center">
-					<p><img loading="lazy" src="../homemedia/logod.svg"></p>
-					<p>© 2021 FileScience - All Rights Reserved</p>
-					<p><a style="color:white; text-decoration:none;" href="#">Privacy Policy</a></p>
+					<div style=" margin:0 auto !important;overflow: hidden;text-align: center !important;"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/ig.svg"></a></div>
+					<p><img loading="lazy" class="desktopOnly" src="../homemedia/logod.svg"></p>
+					
 				</div>
 			</div>
-			<div class="col-8">
-				<div style="display:flex;flex-wrap:wrap; float:right;padding:30px;"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;"><img loading="lazy" src="../homemedia/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;"><img loading="lazy" src="../homemedia/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;"><img loading="lazy" src="../homemedia/ig.svg"></a>
-				</div>
+			<div class="col-4" style="height:1px;"></div>
+			<div class="col-4">
+				<p>2021 © FileScience - All Rights Reserved</p>
+					<p><a style="color:white; text-decoration:none;" href="#">Privacy Policy</a></p>
 			</div>
 		</div>
 		<style>
@@ -425,6 +455,223 @@
 			  scroll-behavior: smooth;
 			}
 		</style>
+		<style>
+			@media screen and (max-width:900px) {
+				.padding-top-100 {
+					padding-top: 0;
+				}
+				.col-6 ul {
+					margin-bottom: 0;
+					margin-top: 0;
+				}
+				.tnt .col-12 {
+					padding-top:30px;
+				}
+				.footer {
+					min-width:unset !important;
+				}
+				.row.fullheight {
+					overflow: hidden;
+					padding-bottom: 15px;
+					min-height:unset;
+				}
+				.btn.reach {
+					margin-bottom: 20px !important;
+					overflow: hidden;
+					position: relative;
+					display: block;
+					width: 210px;
+					text-align: center;
+				}
+				.person img {
+					width: 100% !important;
+					float: unset !important;
+					margin-right: 0 !important;
+				}
+				.pdetails {
+					width: 100% !important;
+					float: unset !important;
+				}
+				.qf input[type="text"], .qf input[type="email"], .qf input[type="phone"], .qf input[type="text"]::placeholder, .qf input[type="email"]::placeholder, .qf input[type="phone"]::placeholder {
+					width:85% !important;
+					color:#DD5981;
+				}
+				#amount {
+					width:85% !important;
+				}
+			}
+			@media screen and (min-width:900px) {
+				.tnt .col-5 p {
+					padding:32px;
+				}
+			}
+			@media screen and (max-width:1440px) and (min-width:901px) {
+				.topnav, .padding-x-30 {
+					padding-right:30px;
+					padding-left:30px;
+				}
+			}
+			@media screen and (max-width:1310px) and (min-width:901px) {
+				.topnav a {
+					padding: 8px;
+					font-size: 12px;
+				}
+				.navimage a img.desktopOnly {
+					max-width: 20vw;
+				}
+				.navlinks {
+					padding-left: 0;
+				}
+			}
+			@media screen and (min-width:2400px) {
+				
+			}
+			html {
+			  scroll-behavior: smooth;
+			}
+			.footer {
+				background-color: #60BDD6;
+				min-height:33vh;
+				display:inline-block;
+			}
+			input {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 50%;
+				margin-bottom: 10px;
+				color: black;
+				background-color: transparent;
+				border: 0;
+				border-bottom: 3px solid #DD5981;
+				min-width:250px;
+				text-align:left;
+			}
+			input::placeholder {
+				color: black;
+				font-size: 16px;
+				font-weight: bolder;
+				opacity: 1;
+			}
+			ul { padding-left:0; list-style:none; }
+			li.bigbullet {margin-bottom: 10px;}
+			p.white a {
+				color: white;
+				text-decoration: none;
+			}
+			input[type="submit"] {
+			border: 2px solid #DD5981 !important;
+			background: #DD5981;
+			border-radius:5px;
+			min-width: 140px !important;
+			max-width: 140px !important;
+			}
+			.btn.reach {
+				text-decoration:none;
+				color:white;
+				padding:5px;
+				margin-left:10%;
+				background-color:#DD5981;
+			}
+			.priceingpanel {
+				padding: 30px 15px;
+				background-color: white;
+				border-radius: 15px;
+			}
+			.qf input[type="text"], .qf input[type="email"], .qf input[type="phone"], .qf input[type="text"]::placeholder, .qf input[type="email"]::placeholder, .qf input[type="phone"]::placeholder {
+				width:70%;
+				color:#DD5981;
+			}
+			#amount {
+				width: 70%;
+				background: #DD5891;
+				border: 0;
+				padding: 12px;
+				border-radius: 5px;
+				-moz-appearance: none;
+				appearance: none;
+				-webkit-appearance: none;
+			}
+			input:focus, input:active {
+				border-bottom: 5px solid #DD5981;
+				outline: none !important;
+			}
+			.mw25 {
+				max-width:25%;
+			}
+			.mw75 {
+				max-width:75%;
+			}
+			.mw33 {
+				max-width:33%;
+			}
+			.col-4.mw33 .white {
+				display: block;
+				margin: 0;
+				margin: ;
+				text-decoration: none;
+			}
+			.footer .col-4.mw33 {
+				margin-top: 25px;
+			}
+			.person {overflow:hidden;}
+			.person img {
+				width: calc(25% - 25px);
+				float: left;
+				margin-right: 25px;
+			}
+			.person .bolder {float:left;}
+			.pdetails {width:75%;float:left;}
+			.person .bolder {
+				float: left;
+				width: 100%;
+				text-align: left;
+			}
+			@media screen and (min-width:900px) {
+				.person.jordan {
+				  width: 67%;
+				}
+				.person.mo {
+				  width: 67%;
+				  padding-left: 10%;
+				}
+				.person.matt {
+				  width: 67%;
+				}
+				.person.nicole {
+				  width: 67%;
+				  padding-left: 10%;
+				}
+			}
+			.btn.fbtn, .btn.sbtn {
+				color: white;
+				display: block;
+				overflow: ;
+				text-decoration: none;
+				width: 50%;
+				margin: 0 auto;
+				padding: 15px 30px;
+			}
+			.btn.fbtn {
+				background: #DD5981;
+			}
+			.btn.sbtn {
+				background: #60BDD6;
+				margin-top: 12px;
+			}
+			.row.bluebanner.padding-x-30 {
+				min-height: 50vh;
+			}
+			.adv {
+				padding: 12px 32px;
+				display: block;
+				width: 50%;
+				text-decoration: none;
+				color: white;
+				font-size: 21px;
+				background-color: #DD5981;
+				border-radius: 10px;
+			}
+		</style>
 		<script>
 			function myFunction() {
 			  var x = document.getElementById("myTopnav");
@@ -435,5 +682,5 @@
 			  }
 			}
 		</script>
-</body><style type="text/css"></style></html>
+</body></html>
 
