@@ -780,6 +780,20 @@
 					
 				}
 			}
+			q = document.querySelectorAll('.question');
+			for(var i = 0; i < q.length; i++) {
+				q[i].onclick = function() {
+					if(this.nextElementSibling.innerText == "+") {
+						this.nextElementSibling.innerText = "-";
+						this.nextElementSibling.nextElementSibling.style.display = "block";
+					}
+					else {
+						this.nextElementSibling.innerText = '+';
+						this.nextElementSibling.nextElementSibling.style.display = "none";
+					}
+					
+				}
+			}
 		</script>
 </body></html>
 
