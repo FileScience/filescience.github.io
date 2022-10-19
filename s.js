@@ -34,27 +34,3 @@ function lazyProducts() {
 }
 
 setTimeout(lazyProducts, 5000);
-
-
-
-/*
-
-var list = document.querySelectorAll('.ptsel'); 
-
-for(var i = 0; i < list.length; i++) {
-list[i].onclick = function() {
-    console.log(this.id);
-	switchElementStatus(this);
-}
-
-}
-
-function switchElementStatus(el) {
-	if(el.style.opacity < 1) {
-		el.style.opacity = 1;
-	}else {
-		el.style.opacity = 0.4;
-	}
-}
-
-*/
