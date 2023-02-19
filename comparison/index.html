@@ -1,735 +1,417 @@
-<!DOCTYPE HTML>
-<html><head>
-		<meta name="viewport" content="width=device-width, initial-scale=1">		
-		<meta charset="UTF-8">
-		<style>
-			body {
-				margin: 0;
-				overflow-x:hidden;
-				font-family: Verdana, Arial, Helvetica, sans-serif;
-			}
-			.topnav, .row.hasnav {
-				overflow: hidden;
-				background-color: white;
-				min-height: 15vh;
-			}
-			.navimage a img.mobileOnly {
-				width: 45vw;
-			}
-			.topnav a {
-			display: inline-block;
-			color: black;
-			text-align: center;
-			padding: 14px 16px;
-			text-decoration: none;
-			font-size: 16px;
-			font-weight:700;
-			vertical-align: middle;
-			}
-			.navimage {
-				max-width: 66.667vw;
-			}
-			.nav.navlink.whitebtn {
-			background-color: white;
-			border-radius: 10px;
-			color: black;
-			}
-			.topnav .icon {
-			display: none;
-			}
-			@media screen and (max-width: 900px) {
-			.topnav a:not(:last-child) {display: none;}
-			.topnav a.icon {
-			float: right;
-			display: block;
-			}
-			}
-			@media screen and (max-width: 900px) {
-			.topnav.responsive {position: relative;}
-			.topnav.responsive .icon {
-			position: absolute;
-			right: 30px;
-			top: 30px;
-			}
-			.topnav.responsive a {
-			float: none;
-			display: block;
-			text-align: left;
-			}
-			}
-			.col-1 {width: 8.33%;}
-			.col-2 {width: 16.66%;}
-			.col-3 {width: 25%;}
-			.col-4 {width: 33.33%;}
-			.col-5 {width: 41.66%;}
-			.col-6 {width: 50%;}
-			.col-7 {width: 58.33%;}
-			.col-8 {width: 66.66%;}
-			.col-9 {width: 75%;}
-			.col-10 {width: 83.33%;}
-			.col-11 {width: 91.66%;}
-			.col-12 {width: 100%;} 
-			[class*="col-"] {
-			float: left;
-			} 
-			.white {
-			color: white;
-			}
-			.bolder {
-			font-weight:bolder;
-			}
-			.titleContainer {
-			padding: 30px;
-			}
-			.titleContainer h1 {
-				font-size: max(3.6vw, 26px);
-			}
-			#gif_1 {
-			padding: 30px;
-			text-align: center;
-			
-			}
-			.navimage {
-			float: left;
-			}
-			.navlinks {
-			float: right;
-			padding: 30px;
-			}
-			.row.fullheight {
-				min-height:100vh;
-			}
-			.bigh2 {
-			font-size:42px;
-			}
-			.padding-x-30 {
-				padding-right:100px;
-				padding-left:100px;
-			}
-			.fontsize21 {
-				font-size:21px;
-			}
-			.fontsize17 {
-				font-size:17px;
-			}
-			.padding-top-10 {
-				padding-top:10%;
-			}
-			.width100 {
-				width:100%;
-			}
-			.width50 {
-				width:50%;
-			}
-			.container_1 {
-				padding:30px;
-			}
-			a.nounderline {
-				text-decoration: none;
-			}
-			.third {
-				width:33.33%;
-				float:left;
-			}
-			.center {
-				text-align:center;
-			}
-			.right {
-				text-align:right;
-			}
-			.inline-block {
-				display:inline-block;
-			}
-			.padding-top-100 {
-				padding-top:100px;
-			}
-			.white-border {
-				border: 3px solid white;
-				border-radius:10px;
-			}
-			.padding-10 {
-				padding:10px;
-			}
-			.btn {
-				border-radius:5px;
-				padding:10px;
-				font-size:21px;
-				font-weight:bolder;
-			}
-			.but {
-				border-radius: 5px;
-				padding: 10px;
-				font-size: 21px;
-				display: inline-block;
-				margin: 5px;
-				font-weight:bold;
-				letter-spacing:1px;
-			}
-			.BannerButtons.mobileOnly .but {
-				font-size: 12px;
-				width: 75.5%;
-				background-color: #36BDD9;
-			}
-			.white-bg {
-				background-color:white;
-			}
-			.purple-text {
-				color: #E05983;
-			}
-			.width67 {
-				width:67%;
-			}
-			.padding-30 {
-				padding:30px;
-			}
-			.softborder div {
-				border-radius:10px;
-			}
-			.width80 {
-				width:80%;
-			}
-			input {
-				padding-top: 10px;
-				padding-bottom: 10px;
-				width: 50%;
-				text-align: center;
-				margin-bottom: 10px;
-				color: white;
-				background-color: transparent;
-				border: 3px solid white;
-				min-width:250px;
-			}
-			.floatleft {
-				float:left;
-			}
-			.footer {
-				background-color: #1D1B40;
-				min-height:33vh;
-				display:inline-block;
-			}
-			.noxmargin p {
-				margin-top:0;
-				margin-bottom:0;
-			}
-			.nopadding {
-				padding-left:5px;
-			}
-			.nopadding.noxmargin p a {
-				text-decoration: none;
-			}
-			.nopadding.noxmargin p a:hover {
-				text-decoration: underline;
-			}
-			@media screen and (min-width:901px) {
-				.padding100desktop {
-					padding-top:100px;
-				}
-				.mobileOnly {
-					display:none !important;
-				}
-				.topnav {padding-right: 100px; padding-left:100px;}
-			}
-			@media screen and (max-width:900px) {
-				.col-6, .col-3, .col-5, .col-7, .col-8, .footer .col-4, .third, div.width50.funnel, .width67 {
-				  width: 100%;
-				}
-				.width80 {
-				  width: 100%
-				}
-				#gif_1 {
-				  padding:0;
-				}
-				#gif_1  img {
-				  width: 100%;
-				}
-				.responsive .navlinks, .responsive .navlinks a:not(:last-child) {
-				  width: 80%;
-				  text-align: center;
-				}
-				.navlinks a.icon {
-					width: 24px;
-					padding: 16px 0;
-					padding-top: 0;
-				}
-				.bigimg .titleContainer {
-					padding-right:0;
-					padding-left:0;
-				}
-				.footer {
-					min-width:unset !important;
-				}
-				.desktopOnly {
-					display:none !important;
-				}
-				.padding-x-30 {
-					padding-right:15px;
-					padding-left:15px;
-				}
-				#product .col-7 {
-					background-color: white !important;
-				}
-				.titleContainer h1 {
-					font-size: max(3.6vw, 29px);
-					font-weight: lighter;
-				}
-				.hasnav .titleContainer {
-					padding-top: 0;
-				}
-				.hasnav .titleContainer h1 {
-					margin-top: 0;
-				}
-				.BannerButtons.mobileOnly {
-					margin-top: 15px;
-				}
-				.bigh2 {
-					font-size: 30px;
-				}
-				.fontsize21 {
-					font-size: 17px;
-				}
-			}
-			input::placeholder {
-				color: white;
-				font-size: 14px;
-				font-weight: bolder !important;
-				opacity: 1;
-			}
-			p.white a {
-				color: white;
-				text-decoration: none;
-			}
-
-			.titleContainer.productsRight {
-				margin-top: 5vw;
-			}
-			.desktopOnly.BannerButtons .white {
-				background-color:#DA5A80;
-			}
-			ul { padding-left:0; list-style:none; }
-			.footer ul {padding-left:1em; list-style:none;}
-			li.bigbullet {
-				margin-bottom: 10px;
-			}
-			@media screen and (max-width:1440px) and (min-width:901px) {
-				.topnav, .padding-x-30 {
-					padding-right:30px;
-					padding-left:30px;
-				}
-			}
-			.bluebanner {
-				background-color:#fff;
-				text-align:center;
-			}
-			.icon img {
-				background-color: black;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="topnav" id="myTopnav">
-			<div class="navimage"><a class="" href="../"> <img class="desktopOnly" style="width:270px;padding-top:10px;" src="../homemedia/logowhitebg.svg"> <img class="mobileOnly" src="../homemedia/logowhitebg.svg"></a></div>
-			<div class="navlinks">
-				<a class="nav navlink" href="../">Home</a><a class="nav navlink" href="../#product">Product</a><a class="nav navlink" href="/about/">About Us</a><a class="nav navlink" href="/comparison/">Comparison</a><a class="nav navlink" href="../SecurityScience/">SecurityScience</a><a class="nav navlink" href="/faq/">FAQ</a><a class="nav navlink" href="/contact/">Contact</a><a class="nav navlink whitebtn" href="/Lab985/">LAB 985</a><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="../homemedia/burger.svg"></a>
-			</div>
-		</div>
-		<div class="row padding-x-30" style="overflow:hidden;">
-			<div class="col-12">
-					<h2 class="bigh2" style="color: #60BDD6;">COMPARISON</h2>
-					<p class="fontsize17">We take your business very seriously and know that ease of use, flexibility and options allow you and your team to get more done and allows parties, like outside counsel and execs, easier access to the files they need. We provide by default the ability to restore your files in virtually any format you'd like. Office 365 and GMail to .PST, .EML, .MSG or back to 365. The same for Office 365 and Google Calendar. We can provide .iCal, .PST, .VCS, .ICS or back to 365. This is also true for Office 365 and Google Contacts. A .PST, .vCard, .XLSX, .CSV can be provided and again, back to 365 if desired.</p>
-			</div>
-		</div>
-		<div class="row bluebanner padding-x-30" style="overflow:hidden;">
-			<div class="col-12">
-				<p><img loading="lazy" src="../homemedia/co1.svg"></p>
-				<p><img loading="lazy" src="../homemedia/co2.svg"></p>
-				<p><img loading="lazy" src="../homemedia/co3.svg"></p>
-			</div>
-		</div>
-		<script>
-			var xhttp = new XMLHttpRequest();
-			xhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
-				   document.getElementById("qp").outerHTML = xhttp.responseText;
-				}
-			};
-			xhttp.open("GET", "../homemedia/qp.svg", true);
-			xhttp.send(); 
-			var qp = [];
-			function lazyProducts() {
-
-				var list = document.querySelectorAll('.ptsel'); 
-
-				for(var i = 0; i < list.length; i++) {
-				list[i].onclick = function() {
-					console.log(this.id);
-					switchElementStatus(this);
-				}
-
-				}
-				
-				function switchElementStatus(el) {
-					if(el.style.opacity < 1) {
-						el.style.opacity = 1;
-						qp.push(el.id);
-						document.getElementById('InterestedInForm').value = qp.join(',');
-					}else {
-						el.style.opacity = 0.4;
-						qp = qp.filter(function(e) { return e !== el.id });
-						document.getElementById('InterestedInForm').value = qp.join(',');
-					}
-				}
-
-			}
-
-		setTimeout(lazyProducts, 5000);
-		</script>
-		<div class="row  padding-x-30 " style="background-color:#F2F2F2;overflow:hidden;color:#fff;">
-			<h2 class="center padding-top-100" style="color:#655F9E">Get an Estimate</h2>
-			<div class="col-6">
-				<div class="titleContainer">
-					<div class="center" style="padding-bottom: 30px;">
-						<p class="fontsize21" style="color:#655F9E">Fill the information</p>
-						<form class="qf" action="https://cgnew.wpengine.com/apis/filescience/form/create/" method="POST">
-							<input required type="text" name="name" placeholder="Name"><br>
-							<input required type="email" name="email" placeholder="Email"><br>
-							<input required type="phone" name="phone" placeholder="Phone"><br>
-							<input required type="text" name="company" placeholder="Company Name"><br>
-							<input type="hidden" name="InterestedIn" value="" id="InterestedInForm">
-							<select name="amount" id="amount">
-							  <option value="" disabled="" selected="">Amount of Storage Needed</option>
-							  <option value="LessThan1TB">Less than 1TB</option>
-							  <option value="LessThan5TB">1TB-5TB</option>
-							  <option value="LessThan50TB">5TB-50TB</option>
-							  <option value="LessThan100TB">5TB-100TB</option>
-							  <option value="LessThan1PB">100TB-1PB</option>
-							  <option value="LessThan5PB">1PB-5PB</option>
-							  <option value="MoreThanP5B">5PB+</option>
-							</select><br>
-							<input required type="text" name="info" placeholder="Tell us more about your business"><br>
-							<input style="border:0;" class="btn" type="submit" value="Contact us">
-						</form>
-					</div>
-				</div>
-			</div>
-			<div class="col-6">
-				<div class="titleContainer">
-					<p class="fontsize21" style="color:#655F9E">Supported Products</p>
-					<img id="qp" class="width100" loading="lazy" src="../homemedia/ptsel.svg" />
-				</div>
-			</div>
-		</div>
-		
-		<div style="display:table;box-sizing:border-box;" class="row footer width100 white padding-x-30">
-			<div class="col-4 mw33">
-				<p class="fontsize21 bolder white">Menu</p><br>
-				<a href="https://filescience.io" class="fontesize17 white">Home</a><br>
-				<a href="https://filescience.io/comparison" class="fontesize17 white">Comparison</a><br>
-				<a href="https://filescience.io/#product" class="fontesize17 white">Supported Products</a><br>
-			</div>
-			<div class="col-4 mw33">
-				<p class="fontsize21 bolder white">Information</p><br>
-				<a href="https://filescience.io/about" class="fontesize17 white">About</a><br>
-				<a href="https://filescience.io/SecurityScience" class="fontesize17 white">Security Science</a><br>
-				<a href="https://filescience.io/faq" class="fontesize17 white">FAQ</a><br>
-				<a href="https://filescience.io/contact" class="fontesize17 white">Contact Us</a><br>
-				<a href="https://filescience.io/create" class="fontesize17 white">Get an Estimate</a><br>
-			</div>
-			<div class="col-4 mw33">
-				<a href="https://filescience.io/Lab985" class="fontsize21 bolder white">Lab 985</a><br>
-			</div>
-			<br style="clear: both;">
-			<div class="col-4">
-				<div style="display:block; text-align:center">
-					<div style=" margin:0 auto !important;overflow: hidden;text-align: center !important;"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/ig.svg"></a></div>
-					<p><img loading="lazy" class="desktopOnly" src="../homemedia/logod.svg"></p>
-					
-				</div>
-			</div>
-			<div class="col-4" style="height:1px;"></div>
-			<div class="col-4">
-				<p>2022 © FileScience - All Rights Reserved</p>
-					<p><a style="color:white; text-decoration:none;" href="#">Privacy Policy</a></p>
-			</div>
-		</div>
-		<style>
-			.footer ul a {
-				text-decoration:none;
-			}
-			.footer ul li {
-				float:left;
-				padding:14px;
-				box-sizing:border-box;
-			}
-			.footermenu {
-				background-color: #60BBD6;
-			}
-			.footer 
-		</style>
-		<style>
-			@media screen and (max-width:410px) {
-				.cq. .bigh2  {
-					font-size:28px;
-				}
-				
-			}
-			@media screen and (max-width:900px) {
-				.row.bigimg {
-					width:calc(100% - 30px);
-				}
-				.padding-top-100 {
-					padding-top: 0;
-				}
-				.col-6 ul {
-					margin-bottom: 0;
-					margin-top: 0;
-				}
-				.tnt .col-12 {
-					padding-top:30px;
-				}
-			}
-			@media screen and (min-width:900px) {
-				.row.bigimg {
-					width: calc(100% - 200px);
-				}
-			}
-			@media screen and (max-width:1440px) and (min-width:901px) {
-				.topnav, .padding-x-30 {
-					padding-right:30px;
-					padding-left:30px;
-				}
-				.row.bigimg {
-					width: calc(100% - 60px);
-				}
-			}
-			@media screen and (max-width:1280px) and (min-width:901px) {
-				.topnav a {
-					padding: 8px;
-					font-size: 12px;
-				}
-				.navimage a img.desktopOnly {
-					max-width: 20vw;
-				}
-				.navlinks {
-					padding-left: 0;
-				}
-				
-			}
-			html {
-			  scroll-behavior: smooth;
-			}
-		</style>
-		<style>
-			@media screen and (max-width:900px) {
-				.padding-top-100 {
-					padding-top: 0;
-				}
-				.col-6 ul {
-					margin-bottom: 0;
-					margin-top: 0;
-				}
-				.tnt .col-12 {
-					padding-top:30px;
-				}
-				.footer {
-					min-width:unset !important;
-				}
-				.row.fullheight {
-					overflow: hidden;
-					padding-bottom: 15px;
-					min-height:unset;
-				}
-				.btn.reach {
-					margin-bottom: 20px !important;
-					overflow: hidden;
-					position: relative;
-					display: block;
-					width: 210px;
-					text-align: center;
-				}
-				.person img {
-					width: 100% !important;
-					float: unset !important;
-					margin-right: 0 !important;
-				}
-				.pdetails {
-					width: 100% !important;
-					float: unset !important;
-				}
-				.qf input[type="text"], .qf input[type="email"], .qf input[type="phone"], .qf input[type="text"]::placeholder, .qf input[type="email"]::placeholder, .qf input[type="phone"]::placeholder {
-					width:85% !important;
-					color:#DD5981;
-				}
-				#amount {
-					width:85% !important;
-				}
-			}
-			@media screen and (min-width:900px) {
-				.tnt .col-5 p {
-					padding:32px;
-				}
-			}
-			@media screen and (max-width:1440px) and (min-width:901px) {
-				.topnav, .padding-x-30 {
-					padding-right:30px;
-					padding-left:30px;
-				}
-			}
-			@media screen and (max-width:1310px) and (min-width:901px) {
-				.topnav a {
-					padding: 8px;
-					font-size: 12px;
-				}
-				.navimage a img.desktopOnly {
-					max-width: 20vw;
-				}
-				.navlinks {
-					padding-left: 0;
-				}
-			}
-			@media screen and (min-width:2400px) {
-				
-			}
-			html {
-			  scroll-behavior: smooth;
-			}
-			.footer {
-				background-color: #60BDD6;
-				min-height:33vh;
-				display:inline-block;
-			}
-			input {
-				padding-top: 10px;
-				padding-bottom: 10px;
-				width: 50%;
-				margin-bottom: 10px;
-				color: #fff;
-				background-color: transparent;
-				border: 0;
-				border-bottom: 3px solid #DD5981;
-				min-width:250px;
-			}
-			input::placeholder {
-				color: #fff;
-				font-size: 16px;
-				font-weight: bolder;
-				opacity: 1;
-			}
-			ul { padding-left:0; list-style:none; }
-			li.bigbullet {margin-bottom: 10px;}
-			p.white a {
-				color: white;
-				text-decoration: none;
-			}
-			input[type="submit"] {
-			border: 2px solid #DD5981 !important;
-			background: #DD5981;
-			border-radius:5px;
-			min-width: 140px !important;
-			max-width: 140px !important;
-			}
-			.btn.reach {
-				text-decoration:none;
-				color:white;
-				padding:5px;
-				margin-left:10%;
-				background-color:#DD5981;
-			}
-			.priceingpanel {
-				padding: 30px 15px;
-				background-color: white;
-				border-radius: 15px;
-			}
-			.qf input[type="text"], .qf input[type="email"], .qf input[type="phone"], .qf input[type="text"]::placeholder, .qf input[type="email"]::placeholder, .qf input[type="phone"]::placeholder {
-				width:70%;
-				color:#DD5981;
-			}
-			#amount {
-				width: 70%;
-				background: #DD5891;
-				border: 0;
-				padding: 12px;
-				border-radius: 5px;
-				-moz-appearance: none;
-				appearance: none;
-				-webkit-appearance: none;
-			}
-			input:focus, input:active {
-				border-bottom: 5px solid #DD5981;
-				outline: none !important;
-			}
-			.mw25 {
-				max-width:25%;
-			}
-			.mw75 {
-				max-width:75%;
-			}
-			.mw33 {
-				max-width:33%;
-			}
-			.col-4.mw33 .white {
-				display: block;
-				margin: 0;
-				margin: ;
-				text-decoration: none;
-			}
-			.footer .col-4.mw33 {
-				margin-top: 25px;
-			}
-			.person {overflow:hidden;}
-			.person img {
-				width: calc(25% - 25px);
-				float: left;
-				margin-right: 25px;
-			}
-			.person .bolder {float:left;}
-			.pdetails {width:75%;float:left;}
-			.person .bolder {
-				float: left;
-				width: 100%;
-				text-align: left;
-			}
-			@media screen and (min-width:900px) {
-				.person.jordan {
-				  width: 67%;
-				}
-				.person.mo {
-				  width: 67%;
-				  padding-left: 10%;
-				}
-				.person.matt {
-				  width: 67%;
-				}
-				.person.nicole {
-				  width: 67%;
-				  padding-left: 10%;
-				}
-			}
-			.btn.fbtn, .btn.sbtn {
-				color: white;
-				display: block;
-				overflow: ;
-				text-decoration: none;
-				width: 50%;
-				margin: 0 auto;
-				padding: 15px 30px;
-			}
-			.btn.fbtn {
-				background: #DD5981;
-			}
-			.btn.sbtn {
-				background: #60BDD6;
-				margin-top: 12px;
-			}
-		</style>
-		<script>
-			function myFunction() {
-			  var x = document.getElementById("myTopnav");
-			  if (x.className === "topnav") {
-			    x.className += " responsive";
-			  } else {
-			    x.className = "topnav";
-			  }
-			}
-		</script>
-</body></html>
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.4 53.6'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23ba6280;%7D.b%7Bfill:%2361bbd6;%7D.c%7Bfill:%236b5b97;%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='a' points='0 16.2 0 32.4 30.5 15.4 30.5 0 0 16.2'/%3E%3Cpolygon class='b' points='30.6 31 30.6 15.4 44.4 23 44.4 38.4 30.6 31'/%3E%3Cpolygon class='c' points='16.6 53.6 30.6 46.2 30.6 31 16.7 38.2 16.6 53.6'/%3E%3C/svg%3E" type="image/x-icon">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta property="og:title" content="">
+        <meta property="og:site_name" content="">
+        <meta property="og:url" content="https://filescience.io">
+        <meta property="og:description" content="">
+        <meta property="og:type" content="business.business">
+        <meta property="og:image" content="">
+        <meta property="twitter:image" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="English">
+        <meta name="revisit-after" content="21 days">
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+            color:#fff;
+        }
+        body {
+            background: #191919;
+            margin: 0;
+        }
+        .t, .s {
+            display: flex;
+            padding: 2.7% 8%;
+            flex-wrap: wrap;
+        }
+        .n, .b {
+            width: calc(100% - 160px);
+            display: flex;
+            justify-content: right;
+        }
+        .n a, .n > div {
+            padding: 10px 22px;
+            font-size: 20px;
+            text-decoration: none;
+            font-family: Arial;
+            display: block;
+            cursor: pointer;
+        }
+        .n div div a {
+            margin: 0;
+        }
+        .b {
+            cursor: pointer;
+            font-size: 50px;
+            width: 33%;
+            line-height: 7vw;
+        }
+        .c12 {
+            width: 100%;
+        }
+        .c6 {
+            width: 50%;
+        }
+        .c5 {
+            width: 41.66%;
+        }
+        .c4 {
+            width: 33.33%;
+        }
+        .c2 {
+            width: 16.66%;
+        }
+        .c1 {
+            width: 8.33%;
+        }
+        .c8 {
+            width: 66.66%;
+        }
+        .c9 {
+            width: 75%;
+        }
+        .c3 {
+            width: 25%;
+        }
+        .c1, .c2, .c3, .c4, .c5, .c6, .c12, .c8, .c9, .c3 {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        h1, p, h2, h3 {
+            font-family: Helvetica;
+        }
+        @media screen and (max-width:1080px) {
+            .d {
+                display: none;
+            }
+            .l {
+                width: 67%;
+            }
+            .l p {
+                font-size: 36px;
+                font-weight: 500;
+                font-family: Arial;
+                margin: 0;
+            }
+            .n {
+                width: 100%;
+                flex-wrap: wrap;
+                margin-top: 20vh;
+                padding-bottom: 20vh;
+            }
+            .n a, .n div {
+                width: 100%;
+                text-align: center;
+            }
+            .t {
+                margin-top: 40px;
+            }
+            .c {
+                max-width: 130px;
+                margin: 0 auto;
+                margin-top: 10vh;
+            }
+            .c1, .c2, .c3, .c4, .c5, .c6, .c12 {
+                width: 100%;
+            }
+            .f.s:nth-of-type(2) {
+                flex-direction: column-reverse;
+            }
+            .f.s:nth-of-type(2) img.m {
+                margin: 0% -10%;
+                width: 120vw;
+            }
+            .f.s.m {
+                background-color: #fff;
+            }
+            .f.s h1 {
+                margin-top: -10%;
+            }
+            .s.g.ar h2, .s.g.ar p {
+                color: black;
+            }
+            .s.g.ar {
+                background-color: #fff;
+                padding-bottom: 32px;
+            }
+            .s.g.ar::before {
+                width: 100%;
+                content: '';
+                height: 1px;
+                color: black;
+                background-color: black;
+                margin: 20px auto;
+            }
+            .gb {
+                width: 100%;
+                text-align: center;
+            }
+            p {
+                font-size:24px;
+            }
+            h2, h3 {
+                font-size: 36px;
+            }
+            .s.g.in {
+                background: #fff;
+            }
+            .s.g.in p, .s.g.in h3 {
+                color: #000;
+            }
+            .s.g.in p {
+                padding-bottom: 64px;
+            }
+            .s.g.in {
+                background: #fff;
+            }
+            .s.g.in p, .s.g.in h3 {
+                color: #000;
+            }
+            .s.g.in p {
+                padding-bottom: 64px;
+            }
+            .s.g.fo svg {
+                margin: 30px auto;
+            }
+            .s.g.fo {
+                background: #98C5C2;
+            }
+        }
+        @media screen and (min-width:1080px) {
+            .m {
+                display: none;
+            }
+            .l {
+                width: 140px;
+            }
+            .n div:hover {
+                background-color: #1e1e1e;
+            }
+            .n div:hover div {
+                display: block;
+                background-color: #1e1e1e;
+            }
+            .n div div {
+                position: absolute;
+                display: none;
+                margin: 6px -22px;
+            }
+            .n.d > div > a {
+                padding: 0;
+            }
+            h1 {
+                font-size:64px;
+            } 
+            p {
+                font-size:20px;
+                line-height: 27px;
+            }
+            .f.s .c6:nth-of-type(2) {
+                justify-content: right;
+            }
+            .f.s .c6:nth-of-type(2) img, .f.s .c6:nth-of-type(1) *{
+                width: 80%;
+            }
+            .s.g.d .c12 {
+                flex-direction: column;
+                align-items: center;
+            }
+            h2 {
+                font-size:42px;
+            }
+            h3 {
+                font-size:30px;
+            }
+            .s.g {
+                background-color: #1e1e1e;
+            }
+            .s.g.ar .c12 {
+                background-color: #000;
+                padding: 32px;
+                border-radius: 25px;
+                box-shadow: 10px 10px 10px 10px black;
+            }
+            .s.g.ar .c6, .s.g.in .c6, .s.g.cf .c6 {
+                padding: 1% 7%;
+                align-content: center;
+            }
+            .s.g.in .c3, .s.g.in .c9 {
+                align-content: baseline;
+            }
+            .in .c9 h4 {
+                margin-top: 0;
+                margin-bottom: 10px;
+                font-family: Helvetica;
+                font-size:32px;
+            }
+            .in .c9, .in .c3 {
+                margin-bottom: 36px;
+            }
+            .s.g.cf {
+                background-color:#A490B0;
+            }
+            .s.g.cf h3, .s.g.cf p {
+                color: #000;
+            }
+            .s.g.cf p {
+                font-weight: bold;
+            }
+        }
+        .r {
+            height: 0;
+            flex-basis: 100%;
+        }
+        .n .a {
+            text-decoration: underline;
+        }
+        .n a:hover {
+            text-decoration: underline;
+        }
+        .c {
+            color: #000;
+            background-color: #fff;
+        }
+        .s.g.d .c12 {
+            justify-content: center;
+        }
+        .s.g.d .c12 svg {
+            width: 80px;
+        }
+        .s.g.d p {
+            max-width: 800px;
+            text-align: center;
+        }
+        .gb {
+            background-color: #EBCA71;
+            padding: 12px 25px;
+            font-size: 25px;
+            color: black;
+            font-family: Helvetica;
+            text-decoration: none;
+        }
+        .cf .gb {
+            font-weight: bold;
+        }
+        form {
+            width: 100%;
+        }
+        input {
+            display: block;
+            width: 100%;
+            font-size: 22px;
+            padding: 2px 6px;
+            margin-bottom: 8px;
+            color:#000;
+            border: 0;
+        }
+        .s.g.fo .c4 {
+            display: flex;
+            flex-direction: column;
+        }
+        .s.g.fo a {
+            font-size: 17px;
+            text-decoration: none;
+            font-family: helvetica;
+            line-height: 32px;
+        }
+        .s.g.fo svg {
+            max-width: 230px;
+            margin-bottom: 48px;
+        }
+        .si {
+            margin-top: 32px;
+        }
+        .s.g img {
+            width: 100%;
+        }
+    </style>
+    <body>
+        <div class="t">
+            <div class="l d">
+                <svg viewBox='0 0 243.3 53.6'><defs><style>.c{fill:#fff}</style></defs><path d='M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z' class='c'/><text fill='#fff' font-family='Arial' font-size='36' font-weight='500' x='58' y='37'>FileScience</text></svg>
+            </div>
+            <div class="l m">
+                <svg viewBox="0 0 420 54"><path d="M0,16.2v16.2l30.5-17v-15.4L0,16.2ZM30.6,31v-15.6L44.4,23v15.4L30.6,31Zm-14,22.6l14-7.4v-15.2l-14,7.2v15.4Z" transform="translate(370 0)" fill="#fff"/><text dx="0" dy="0" font-family="Arial" font-size="36" font-weight="500" transform="translate(5 39)" fill="#fff"><tspan font-size="36" font-weight="500" transform="translate(58 37)" fill="#fff">FileScience</tspan></text></svg>
+            </div>
+            <span class="m b">≡</span>
+            <div class="n d">
+                <a class="a" href="https://filescience.io/">Home</a>
+                <div>
+                    <a href="https://filescience.io/about">Company</a>
+                    <div>
+                        <a href="https://filescience.io/about">About</a>
+                        <a style="display: none;" href="#">How Backup Works</a>
+                        <a href="https://filescience.io/SecurityScience">SecurityScience</a>
+                    </div>
+                </div>
+                <a href="https://filescience.io/comparison">Comparison</a>
+                <a style="display: none;" href="#">FAQ</a>
+                <a href="https://filescience.io/contact">Contact</a>
+                <a href="https://filescience.io/Lab985" class="c">LAB 985</a>
+            </div>
+        </div>
+        <div class="s g">
+            <div class="c12">
+                <h1>FileScience Backup and Recovery is a fully managed<br>Cloud-to-Cloud service that bulletproofs your data.</h1>
+                <img class="d" src="../m/cod.svg" />
+                <img class="m" src="../m/com.svg" />
+            </div>
+        </div>
+        <div class="s g cf">
+            <div class="c6">
+                <p class="d">Contact Us</p>
+                <h3 class="d">At FileScience we always deliver the best possible solutions for your bussiness.</h3>
+                <h3 class="m">Contact Us</h3>
+                <p class="m">At FileScience we always deliver the best possible solutions for your bussiness.</p>
+            </div>
+            <div class="c6">
+                <form action="POST" target="">
+                    <input name="name" type="text" placeholder="Name" />
+                    <input name="company" type="text" placeholder="Company Name" />
+                    <input name="email" type="email" placeholder="Email" />
+                    <input name="phone" type="text" placeholder="Phone Number" />
+                    <input name="amount" type="text" placeholder="Amount of Storage Needed" />
+                    <input name="info" type="text" placeholder="Message" />
+                    <input class="gb" type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+        <div class="s g fo">
+            <div class="c4">
+                <svg viewBox="0 0 243.3 53.6"><defs><style>.c{fill:#fff}</style></defs><path d="M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z" class="c"></path><text fill="#fff" font-family="Arial" font-size="36" font-weight="500" x="58" y="37">FileScience</text></svg>
+                <a href="https://filescience.io/">Home</a>
+                <a href="https://filescience.io/comparison">Comparison</a>
+                <div class="si"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/ig.svg"></a></div>
+            </div>
+            <div class="c4">
+                <h3>Information</h3>
+                <a href="https://filescience.io/about">About us</a>
+                <a href="https://filescience.io/comparison">Comparison</a>
+                <a href="https://filescience.io/">FAQ</a>
+                <a href="https://filescience.io/contact">Contact</a>
+            </div>
+            <div class="c4">
+                <h3>Our Projects</h3>
+                <a style="font-weight: bold;margin-bottom: 40px;" href="https://filescience.io/about">LAB 985</a>
+                <br><br>
+                <a style="font-size:14px" href="https://filescience.io/Privacy-policy">Privacy Policy</a>
+                <p style="font-size:14px;margin: 0;">© 2022 FileScience - All Rights Reserved</p>
+            </div>
+        </div>
+        <script nonce="fs-w43323kh4">
+            document.querySelector('.b').addEventListener('click', b);
+            function b() {
+                document.querySelector('.n').classList.toggle('d');
+                document.querySelector('.b').innerHTML = document.querySelector('.b').innerHTML == '≡' ? '×' : '≡';
+            }
+        </script>
+    </body>
+</html>

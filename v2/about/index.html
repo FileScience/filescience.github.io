@@ -1,0 +1,735 @@
+<!DOCTYPE HTML>
+<html><head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<meta charset="UTF-8">
+		<style>
+			body {
+				margin: 0;
+				overflow-x:hidden;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+			}
+			.topnav, .row.hasnav {
+				overflow: hidden;
+				background-color: #635B9B;
+				min-height: 17vh;
+			}
+			.navimage a img.mobileOnly {
+				width: 45vw;
+			}
+			.topnav a {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+			font-size: 16px;
+			font-weight:700;
+			vertical-align: middle;
+			}
+			.navimage {
+				max-width: 66.667vw;
+			}
+			.nav.navlink.whitebtn {
+			background-color: white;
+			border-radius: 10px;
+			color: black;
+			}
+			.topnav .icon {
+			display: none;
+			}
+			@media screen and (max-width: 900px) {
+			.topnav a:not(:last-child) {display: none;}
+			.topnav a.icon {
+			float: right;
+			display: block;
+			}
+			}
+			@media screen and (max-width: 900px) {
+			.topnav.responsive {position: relative;}
+			.topnav.responsive .icon {
+			position: absolute;
+			right: 30px;
+			top: 30px;
+			}
+			.topnav.responsive a {
+			float: none;
+			display: block;
+			text-align: left;
+			}
+			}
+			.col-1 {width: 8.33%;}
+			.col-2 {width: 16.66%;}
+			.col-3 {width: 25%;}
+			.col-4 {width: 33.33%;}
+			.col-5 {width: 41.66%;}
+			.col-6 {width: 50%;}
+			.col-7 {width: 58.33%;}
+			.col-8 {width: 66.66%;}
+			.col-9 {width: 75%;}
+			.col-10 {width: 83.33%;}
+			.col-11 {width: 91.66%;}
+			.col-12 {width: 100%;} 
+			[class*="col-"] {
+			float: left;
+			box-sizing:border-box;
+			}
+			@media screen and (max-width:900px) {
+				[class*="col-"] {
+					width:100%;
+				}
+			}
+			.white {
+			color: white;
+			}
+			.bolder {
+			font-weight:bolder;
+			}
+			.titleContainer {
+			padding: 30px;
+			}
+			.titleContainer h1 {
+				font-size: max(3.6vw, 26px);
+			}
+			#gif_1 {
+			padding: 30px;
+			text-align: center;
+			
+			}
+			.navimage {
+			float: left;
+			}
+			.navlinks {
+			float: right;
+			padding: 30px;
+			}
+			.row.fullheight {
+				min-height:100vh;
+			}
+			.bigh2 {
+			font-size:42px;
+			}
+			.padding-x-30 {
+				padding-right:100px;
+				padding-left:100px;
+			}
+			.fontsize21 {
+				font-size:21px;
+			}
+			.fontsize24 {
+				font-size:24px;
+			}
+			.fontsize32 {
+				font-size:32px;
+			}
+			.width100 {
+				width:100%;
+			}
+			.third {
+				width:33.33%;
+				float:left;
+			}
+			.center {
+				text-align:center;
+			}
+			.padding-top-100 {
+				padding-top:100px;
+			}
+			.btn {
+				border-radius:5px;
+				padding:10px;
+				font-size:21px;
+				font-weight:bolder;
+			}
+			.but {
+				border-radius: 5px;
+				padding: 10px;
+				font-size: 21px;
+				display: inline-block;
+				margin: 5px;
+				font-weight:bold;
+				letter-spacing:1px;
+			}
+			.BannerButtons.mobileOnly .but {
+				font-size: 12px;
+				width: 75.5%;
+				background-color: #36BDD9;
+			}
+			.softborder div {
+				border-radius:10px;
+			}
+			input {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 50%;
+				margin-bottom: 10px;
+				color: #DD5981;
+				background-color: transparent;
+				border: 0;
+				border-bottom: 3px solid #DD5981;
+				min-width:250px;
+			}
+			.footer {
+				background-color: #333;
+				min-height:33vh;
+				display:inline-block;
+			}
+			div div div form select option[disabled], select option:disabled {
+				color: blue !important;
+			}
+			option {
+				margin-bottom: 12px !important;
+			}
+			@media screen and (min-width:901px) {
+				.mobileOnly {
+					display:none !important;
+				}
+				.topnav {padding-right: 100px; padding-left:100px;}
+				.lfs img, .lfs p {
+					width: calc(80% + 60px) !important;
+					display:block;
+					margin-bottom:36px;
+				}
+			}
+			@media screen and (max-width:900px) {
+				.col-6, .col-3, .col-5, .col-7, .col-8, .footer .col-4, .third {
+				  width: 100% !important;
+				}
+				#gif_1 {
+				  padding:0;
+				}
+				#gif_1  img {
+				  width: 100%;
+				}
+				.responsive .navlinks, .responsive .navlinks a:not(:last-child) {
+				  width: 80%;
+				  text-align: center;
+				}
+				.navlinks a.icon {
+					width: 24px;
+					padding: 16px 0;
+					padding-top: 0;
+				}
+				.footer {
+					min-width:unset !important;
+				}
+				.desktopOnly {
+					display:none !important;
+				}
+				.padding-x-30 {
+					padding-right:15px;
+					padding-left:15px;
+				}
+				.titleContainer h1 {
+					font-size: max(3.6vw, 29px);
+					font-weight: lighter;
+				}
+				.hasnav .titleContainer {
+					padding-top: 0;
+				}
+				.hasnav .titleContainer h1 {
+					margin-top: 0;
+				}
+				.BannerButtons.mobileOnly {
+					margin-top: 15px;
+				}
+				.bigh2 {
+					font-size: 30px;
+				}
+				.fontsize21 {
+					font-size: 17px;
+				}
+			}
+			input::placeholder {
+				color: #DD5981;
+				font-size: 16px;
+				font-weight: bolder;
+				opacity: 1;
+			}
+			p.white a {
+				color: white;
+				text-decoration: none;
+			}
+			.desktopOnly.BannerButtons .white {background-color:#DA5A80;}
+			ul { padding-left:0; list-style:none; }
+			li.bigbullet {margin-bottom: 10px;}
+			@media screen and (max-width:1440px) and (min-width:901px) {
+				.topnav, .padding-x-30 {
+					padding-right:30px;
+					padding-left:30px;
+				}
+			}
+			.bluebanner {
+				background-color: #60BDD6;
+				text-align:center;
+			}
+			.person img {
+				width: 75%;
+			}
+			.person p {
+				text-align:left;
+			}
+			.person {
+				padding: 30px;
+				border-radius: 20px;
+				margin-top: 30px;
+				color: white;
+			}
+			.col-6 {
+				padding:20px;
+			}
+			@font-face {
+				font-family: 'L';
+				font-display:swap;
+				src: url('../L.woff2') format('embedded-opentype'), /* Internet Explorer */
+				url('../L.woff2') format('woff2'), /* Super Modern Browsers */
+				url('../L.woff2') format('woff'), /* Pretty Modern Browsers */
+				url('../L.woff2')  format('truetype'), /* Safari, Android, iOS */
+				url('../L.woff2') format('svg'); /* Legacy iOS */
+			}
+			.light {
+				font-family: l, 'Open Sans', Arial;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="topnav" id="myTopnav">
+			<div class="navimage"><a class="" href="../"> <img class="desktopOnly" style="width:270px;padding-top:10px;" src="../homemedia/logod.svg"> <img class="mobileOnly" src="../homemedia/logo.svg"></a></div>
+			<div class="navlinks">
+				<a class="nav navlink" href="../">Home</a><a class="nav navlink" href="../#product">Product</a><a class="nav navlink" href="/about/">About Us</a><a class="nav navlink" href="/comparison/">Comparison</a><a class="nav navlink" href="../SecurityScience/">SecurityScience</a><a class="nav navlink" href="/faq/">FAQ</a><a class="nav navlink" href="/contact/">Contact</a><a class="nav navlink whitebtn" href="/Lab985/">LAB 985</a><a href="javascript:void(0);" class="icon" onclick="myFunction()"><img src="../homemedia/burger.svg"></a>
+			</div>
+		</div>
+		<div class="row padding-x-30 padding-y-30" style="background-color: #635B9B; overflow:hidden;">
+			<div class="col-6 titleContainer lfs" style="">
+				<img style="width:100%;display: none;" loading="lazy" src="../homemedia/i.svg">
+				<p class="fontsize21 white">FileScience is a comprehensive service that stores files from apps nobody else can:</p>
+				<img style="margin-bottom: 32px;" loading="lazy" src="../homemedia/fi2.svg">
+				<a href="#" target="_blank" class="btn fbtn">Get an Estimate</a>
+				<a href="#" target="_blank" class="btn sbtn">Contatc Us</a>
+			</div>
+			<div class="col-6 titleContainer " style="">
+				<div class="width100">
+					<p class="left light  white fontsize24" style="text-align: left;"><br/>We began as an MSP and MSSP, covering all areas of information technology and cybersecurity. We implemented highly complex IT systems and cutting-edge, next generation malware protection for the cloud, endpoints, application-layers and networks.</p>
+					<p class="left white fontsize32">Our mission is to fill the gap of data protection in areas that aren't frequently covered.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row padding-x-30 padding-y-30" style="background-color: #635B9B; overflow:hidden;">
+			<div class="col-12 titleContainer" style="">
+				<div class="col-9">
+					<h2 class="newh2 white">Our Clients</h2>
+					<p class="fontsize24 light white">Today, we have used the knowledge we’ve gathered from supporting various clients in industries such as Healthcare, Real Estate, Government, Hospitality, Construction, etc.. – and applied our knowledge to solve difficult problems in the Software-as-a-Service space.</p>
+					<img loading="lazy" src="../homemedia/abptns.svg" style="max-width:640px;" />
+				</div>
+			</div>
+		</div>
+		<div class="row padding-x-30 padding-y-30" style="background-color: #635B9B; overflow:hidden;">
+			<div class="col-12 titleContainer" style="">
+				<div class="col-6">
+					<p class="fontsize32 light white">You use Microsoft Office 365, Google Workspace (formerly GSuite) among others. They have geo-redundant storage facilities. They are protecting my data, <span style="font-family: 'Open Sans', Arial; font-weight:normal;">or so you think.</span></p>
+				</div>
+				<div class="col-6">
+					<p class="fontsize24 light white">The big cloud app publishers are focused on making sure the software they sell works without interruptions or problems. Operational infrastructure is their primary concern. They want to be sure that when a server fails, there is an instantaneous failover available. Their customers will not miss a beat. They are not concerned with storing or protecting your data. It’s explicitly stated in the Terms of Service that users are responsible for their data.</p>
+				</div>
+			</div>
+		</div>
+		<div class="row padding-x-30 titleContainer" style="overflow:hidden;width: 100%;text-align: center;box-sizing: border-box;background-color:#635B9B;padding-bottom:20px;">
+			<div class="col-12 titleContainer">
+				<h2 class="newh2 white">Our Team</h2>
+			</div>
+			
+			<div class="col-12 titleContainer">
+				<div class="col-4">
+					<div class="person">
+						<img loading="lazy" src="../homemedia/people/nick.jpeg">
+						<div class="pdetails">
+							<h2 class="bolder">Nick Martin</h2>
+							<p class="position">Founder</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="person jordan">
+						<img loading="lazy" src="../homemedia/people/jordan.png">
+						<div class="pdetails">
+							<h2 class="bolder">Jordan Mesches</h2>
+							<p class="position">Founding Engineer</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="person mo">
+						<img loading="lazy" src="../homemedia/people/mo.jpg">
+						<div class="pdetails">
+							<h2 class="bolder">Mo Abdelalim</h2>
+							<p class="position">Director of Engineering - Web</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="person matt">
+						<img loading="lazy" src="../homemedia/people/matt.jpg">
+						<div class="pdetails">
+							<h2 class="bolder">Matthew Pisano</h2>
+							<p class="position">Engineer I</p>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-4">
+					<div class="person nicole">
+						<img loading="lazy" src="../homemedia/people/nicole.png">
+						<div class="pdetails">
+							<h2 class="bolder">Nicole Shakarishvili</h2>
+							<p class="position">UI/UX Architect</p>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				   document.getElementById("qp").outerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", "../homemedia/qp.svg", true);
+			xhttp.send(); 
+			var qp = [];
+			function lazyProducts() {
+
+				var list = document.querySelectorAll('.ptsel'); 
+
+				for(var i = 0; i < list.length; i++) {
+				list[i].onclick = function() {
+					console.log(this.id);
+					switchElementStatus(this);
+				}
+
+				}
+				
+				function switchElementStatus(el) {
+					if(el.style.opacity < 1) {
+						el.style.opacity = 1;
+						qp.push(el.id);
+						document.getElementById('InterestedInForm').value = qp.join(',');
+					}else {
+						el.style.opacity = 0.4;
+						qp = qp.filter(function(e) { return e !== el.id });
+						document.getElementById('InterestedInForm').value = qp.join(',');
+					}
+				}
+
+			}
+
+		setTimeout(lazyProducts, 5000);
+		</script>
+		<div class="row  padding-x-30 " style="background-color:#F2F2F2;overflow:hidden;color:#fff;">
+			<h2 class="center padding-top-100" style="color:#655F9E">Get an Estimate</h2>
+			<div class="col-6">
+				<div class="titleContainer">
+					<div class="center" style="padding-bottom: 30px;">
+						<p class="fontsize21" style="color:#655F9E">Fill the information</p>
+						<form class="qf" action="https://cgnew.wpengine.com/apis/filescience/form/create/" method="POST">
+							<input required type="text" name="name" placeholder="Name"><br>
+							<input required type="email" name="email" placeholder="Email"><br>
+							<input required type="phone" name="phone" placeholder="Phone"><br>
+							<input required type="text" name="company" placeholder="Company Name"><br>
+							<input type="hidden" name="InterestedIn" value="" id="InterestedInForm">
+							<select name="amount" id="amount">
+							  <option value="" disabled="" selected="">Amount of Storage Needed</option>
+							  <option value="LessThan1TB">Less than 1TB</option>
+							  <option value="LessThan5TB">1TB-5TB</option>
+							  <option value="LessThan50TB">5TB-50TB</option>
+							  <option value="LessThan100TB">5TB-100TB</option>
+							  <option value="LessThan1PB">100TB-1PB</option>
+							  <option value="LessThan5PB">1PB-5PB</option>
+							  <option value="MoreThanP5B">5PB+</option>
+							</select><br>
+							<input required type="text" name="info" placeholder="Tell us more about your business"><br>
+							<input style="border:0;" class="btn" type="submit" value="Contact us">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="titleContainer">
+					<p class="fontsize21" style="color:#655F9E">Supported Products</p>
+					<img id="qp" class="width100" loading="lazy" src="../homemedia/ptsel.svg" />
+				</div>
+			</div>
+		</div>
+		
+		<div style="display:table;box-sizing:border-box;" class="row footer width100 white padding-x-30">
+			<div class="col-4 mw33">
+				<p class="fontsize21 bolder white">Menu</p><br>
+				<a href="https://filescience.io" class="fontesize17 white">Home</a><br>
+				<a href="https://filescience.io/comparison" class="fontesize17 white">Comparison</a><br>
+				<a href="https://filescience.io/#product" class="fontesize17 white">Supported Products</a><br>
+			</div>
+			<div class="col-4 mw33">
+				<p class="fontsize21 bolder white">Information</p><br>
+				<a href="https://filescience.io/about" class="fontesize17 white">About</a><br>
+				<a href="https://filescience.io/SecurityScience" class="fontesize17 white">Security Science</a><br>
+				<a href="https://filescience.io/faq" class="fontesize17 white">FAQ</a><br>
+				<a href="https://filescience.io/contact" class="fontesize17 white">Contact Us</a><br>
+				<a href="https://filescience.io/create" class="fontesize17 white">Get an Estimate</a><br>
+			</div>
+			<div class="col-4 mw33">
+				<a href="https://filescience.io/Lab985" class="fontsize21 bolder white">Lab 985</a><br>
+			</div>
+			<br style="clear: both;">
+			<div class="col-4">
+				<div style="display:block; text-align:center">
+					<div style=" margin:0 auto !important;overflow: hidden;text-align: center !important;"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../homemedia/ig.svg"></a></div>
+					<p><img loading="lazy" class="desktopOnly" src="../homemedia/logod.svg"></p>
+					
+				</div>
+			</div>
+			<div class="col-4" style="height:1px;"></div>
+			<div class="col-4">
+				<p>2022 © FileScience - All Rights Reserved</p>
+					<p><a style="color:white; text-decoration:none;" href="#">Privacy Policy</a></p>
+			</div>
+		</div>
+		<style>
+			.footer ul a {
+				text-decoration:none;
+			}
+			.footer ul li {
+				float:left;
+				padding:14px;
+				box-sizing:border-box;
+			}
+			.footermenu {
+				background-color: #60BBD6;
+			}
+			.newh2 {
+				text-align:left;
+			}
+		</style>
+		<style>
+			@media screen and (max-width:900px) {
+				.padding-top-100 {
+					padding-top: 0;
+				}
+				.col-6 ul {
+					margin-bottom: 0;
+					margin-top: 0;
+				}
+				.tnt .col-12 {
+					padding-top:30px;
+				}
+				.footer {
+					min-width:unset !important;
+				}
+				.row.fullheight {
+					overflow: hidden;
+					padding-bottom: 15px;
+					min-height:unset;
+				}
+				.btn.reach {
+					margin-bottom: 20px !important;
+					overflow: hidden;
+					position: relative;
+					display: block;
+					width: 210px;
+					text-align: center;
+				}
+				.person img {
+					margin: 0 auto;
+					width: 250px;
+					height: 250px;
+					object-fit: cover;
+					border-radius: 50%;
+					float:left;
+				}
+				.pdetails {
+					width: 100% !important;
+					float: unset !important;
+				}
+				.col-6, .col-3, .col-5, .col-7, .col-8, .footer .col-4, .third {
+				  width: 100% !important;
+				}
+			}
+			@media screen and (min-width:900px) {
+				.tnt .col-5 p {
+					padding:32px;
+				}
+			}
+			@media screen and (max-width:1440px) and (min-width:901px) {
+				.topnav, .padding-x-30 {
+					padding-right:30px;
+					padding-left:30px;
+				}
+			}
+			@media screen and (max-width:1310px) and (min-width:901px) {
+				.topnav a {
+					padding: 8px;
+					font-size: 12px;
+				}
+				.navimage a img.desktopOnly {
+					max-width: 20vw;
+				}
+				.navlinks {
+					padding-left: 0;
+				}
+			}
+			@media screen and (min-width:2400px) {
+				
+			}
+			html {
+			  scroll-behavior: smooth;
+			}
+			.footer {
+				background-color: #60BDD6;
+				min-height:33vh;
+				display:inline-block;
+			}
+			input {
+				padding-top: 10px;
+				padding-bottom: 10px;
+				width: 50%;
+				margin-bottom: 10px;
+				color: #fff;
+				background-color: transparent;
+				border: 0;
+				border-bottom: 3px solid #DD5981;
+				min-width:250px;
+			}
+			input::placeholder {
+				color: #fff;
+				font-size: 16px;
+				font-weight: bolder;
+				opacity: 1;
+			}
+			ul { padding-left:0; list-style:none; }
+			li.bigbullet {margin-bottom: 10px;}
+			p.white a {
+				color: white;
+				text-decoration: none;
+			}
+			input[type="submit"] {
+			border: 2px solid #DD5981 !important;
+			background: #DD5981;
+			border-radius:5px;
+			min-width: 140px !important;
+			max-width: 140px !important;
+			margin-left: 20%;
+			}
+			.btn.reach {
+				text-decoration:none;
+				color:white;
+				padding:5px;
+				margin-left:10%;
+				background-color:#DD5981;
+			}
+			.priceingpanel {
+				padding: 30px 15px;
+				background-color: white;
+				border-radius: 15px;
+			}
+			.qf input[type="text"], .qf input[type="email"], .qf input[type="phone"], .qf input[type="text"]::placeholder, .qf input[type="email"]::placeholder, .qf input[type="phone"]::placeholder {
+				width:70%;
+				color:#DD5981;
+			}
+			#amount {
+				width: 70%;
+				background: #DD5891;
+				border: 0;
+				padding: 12px;
+				border-radius: 5px;
+				-moz-appearance: none;
+				appearance: none;
+				-webkit-appearance: none;
+			}
+			input:focus, input:active {
+				border-bottom: 5px solid #DD5981;
+				outline: none !important;
+			}
+			.mw25 {
+				max-width:25%;
+			}
+			.mw75 {
+				max-width:75%;
+			}
+			.mw33 {
+				max-width:33%;
+			}
+			.col-4.mw33 .white {
+				display: block;
+				margin: 0;
+				margin: ;
+				text-decoration: none;
+			}
+			.footer .col-4.mw33 {
+				margin-top: 25px;
+			}
+			.person {overflow:hidden;}
+			.person img {
+				margin: 0 auto;
+				width: 250px;
+				height: 250px;
+				object-fit: cover;
+				border-radius: 50%;
+				float:left;
+			}
+			.person .bolder {float:left;}
+			.pdetails {width:75%;float:unset !important;}
+			.person .bolder {
+				float: left;
+				width: 100%;
+				text-align: left;
+			}
+			@media screen and (min-width:900px) {
+				.person.jordan {
+				  width: 67%;
+				}
+				.person.mo {
+				  width: 67%;
+				  padding-left: 10%;
+				}
+				.person.matt {
+				  width: 67%;
+				}
+				.person.nicole {
+				  width: 67%;
+				  padding-left: 10%;
+				}
+			}
+			.btn.fbtn, .btn.sbtn {
+				color: white;
+				display: block;
+				overflow: ;
+				text-decoration: none;
+				width: 80%;
+				padding: 15px 30px;
+			}
+			.btn.fbtn {
+				background: #DD5981;
+			}
+			.btn.sbtn {
+				background: #60BDD6;
+				margin-top: 12px;
+			}
+			.pdetails, .pdetails * {
+				width: 250px !important;
+				text-align: center !important;
+			}
+		</style>
+		<script>
+			function myFunction() {
+			  var x = document.getElementById("myTopnav");
+			  if (x.className === "topnav") {
+			    x.className += " responsive";
+			  } else {
+			    x.className = "topnav";
+			  }
+			}
+		</script>
+</body></html>
+
