@@ -503,7 +503,10 @@
                 <a style="font-weight: bold;margin-bottom: 40px;" href="https://filescience.io/about">LAB 985</a>
                 <br><br>
                 <a style="font-size:14px" href="https://filescience.io/Privacy-policy">Privacy Policy</a>
-                <p style="font-size:14px;margin: 0;">© 2022 FileScience - All Rights Reserved</p>
+                <p id="cc" style="font-size:14px;margin: 0;"></p>
+                <script>
+                    document.getElementById("cc").innerText = "© " + new Date().getFullYear() + " FileScience - All Rights Reserved";
+                </script>
             </div>
         </div>
         <script nonce="fs-w43323kh4">
