@@ -41,7 +41,7 @@
             padding: 10px 22px;
             font-size: 20px;
             text-decoration: none;
-            font-family: Arial;
+            font-family: l, Arial;
             display: block;
             cursor: pointer;
         }
@@ -85,8 +85,11 @@
             display:flex;
             flex-wrap: wrap;
         }
-        h1, p, h2, h3 {
-            font-family: Helvetica;
+        h1, h2, h3 {
+            font-family:b, Helvetica;
+        }
+        p, span, a {
+            font-family: l, Helvetica;
         }
         @media screen and (max-width:1080px) {
             .d {
@@ -98,7 +101,7 @@
             .l p {
                 font-size: 36px;
                 font-weight: 500;
-                font-family: Arial;
+                font-family: l, Arial;
                 margin: 0;
             }
             .n {
@@ -256,7 +259,7 @@
             .in .c9 h4 {
                 margin-top: 0;
                 margin-bottom: 10px;
-                font-family: Helvetica;
+                font-family: b, Helvetica;
                 font-size:32px;
             }
             .in .c9, .in .c3 {
@@ -301,7 +304,7 @@
             padding: 12px 25px;
             font-size: 25px;
             color: black;
-            font-family: Helvetica;
+            font-family: b, Helvetica;
             text-decoration: none;
         }
         .cf .gb {
@@ -326,7 +329,7 @@
         .s.g.fo a {
             font-size: 17px;
             text-decoration: none;
-            font-family: helvetica;
+            font-family: l, helvetica;
             line-height: 32px;
         }
         .s.g.fo svg {
@@ -480,7 +483,7 @@
                 <p class="m">At FileScience we always deliver the best possible solutions for your business.</p>
             </div>
             <div class="c6">
-                <form action="POST" target="">
+                <form action="POST" target="" autocomplete="off">
                     <input name="name" type="text" placeholder="Name" />
                     <input name="company" type="text" placeholder="Company Name" />
                     <input name="email" type="email" placeholder="Email" />
