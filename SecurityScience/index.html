@@ -41,7 +41,7 @@
             padding: 10px 22px;
             font-size: 20px;
             text-decoration: none;
-            font-family: Arial;
+            font-family: l, Arial;
             display: block;
             cursor: pointer;
         }
@@ -86,7 +86,10 @@
             flex-wrap: wrap;
         }
         h1, p, h2, h3 {
-            font-family: Helvetica;
+            font-family: b, Helvetica;
+        }
+        p {
+            font-family: l, Helvetica;
         }
         @media screen and (max-width:1080px) {
             .d {
@@ -98,7 +101,7 @@
             .l p {
                 font-size: 36px;
                 font-weight: 500;
-                font-family: Arial;
+                font-family: l, Arial;
                 margin: 0;
             }
             .n {
@@ -253,12 +256,6 @@
             .s.g.in .c3, .s.g.in .c9 {
                 align-content: baseline;
             }
-            .in .c9 h4 {
-                margin-top: 0;
-                margin-bottom: 10px;
-                font-family: Helvetica;
-                font-size:32px;
-            }
             .in .c9, .in .c3 {
                 margin-bottom: 36px;
             }
@@ -304,7 +301,7 @@
             padding: 12px 25px;
             font-size: 25px;
             color: black;
-            font-family: Helvetica;
+            font-family: b, Helvetica;
             text-decoration: none;
         }
         .cf .gb {
@@ -329,7 +326,7 @@
         .s.g.fo a {
             font-size: 17px;
             text-decoration: none;
-            font-family: helvetica;
+            font-family: l, helvetica;
             line-height: 32px;
         }
         .s.g.fo svg {
@@ -341,6 +338,24 @@
         }
         .t .l a {
             text-decoration: none;
+        }
+        @font-face {
+            font-family: 'l';
+            font-display:swap;
+            src: url('../f/l.woff2') format('embedded-opentype'),
+            url('../f/l.woff2') format('woff2'), 
+            url('../f/l.woff2') format('woff'),
+            url('../f/l.woff2')  format('truetype'),
+            url('../f/l.woff2') format('svg');
+        }
+        @font-face {
+            font-family: 'b';
+            font-display:swap;
+            src: url('../f/b.woff2') format('embedded-opentype'),
+            url('../f/b.woff2') format('woff2'), 
+            url('../f/b.woff2') format('woff'),
+            url('../f/b.woff2')  format('truetype'),
+            url('../f/b.woff2') format('svg');
         }
     </style>
     <body>
