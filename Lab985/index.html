@@ -228,11 +228,11 @@
 			@font-face {
             font-family: 'l';
             font-display:swap;
-            src: url('../f/l.woff2') format('embedded-opentype'),
-            url('../f/l.woff2') format('woff2'), 
-            url('../f/l.woff2') format('woff'),
-            url('../f/l.woff2')  format('truetype'),
-            url('../f/l.woff2') format('svg');
+				src: url('../f/l.woff2') format('embedded-opentype'),
+				url('../f/l.woff2') format('woff2'), 
+				url('../f/l.woff2') format('woff'),
+				url('../f/l.woff2')  format('truetype'),
+				url('../f/l.woff2') format('svg');
 			}
 			@font-face {
 				font-family: 'b';
@@ -281,7 +281,24 @@
 					font-family: b;
 					font-size: 49px;
 					margin-bottom: 12px;
-				}	
+				}
+				.white.bolder.fontsize17.p985.first {
+					font-family: l;
+					font-size: 16px;
+				}
+				.white.fontsize17.p985:not(.first) {
+					font-family: l;
+					margin-top: 6px;
+					font-size: 16px;
+				}
+				.mobileOnly {
+					display: block;
+					background-image: url('media/985ad.svg');
+					width: 100%;
+					height: calc(100vw - 30px);
+					background-size: cover;
+					background-position: right;
+				}
 			}
 			@media screen and (min-width:901px) {
 				html {
@@ -292,6 +309,9 @@
 					background-size:cover;
 					display:table;
 					background-position-y: 75%;
+				}
+				.mobileOnly {
+					display:none;
 				}
 				.logo img{
 					max-width:20vw;
@@ -335,7 +355,9 @@
 				</div>
 			</div>
 			<div class="col-6" style="">
-				
+				<div class="mobileOnly">
+					
+				</div>
 			</div>
 		</div>
 		<a class="logo" href="../"><img src="media/l.svg" style="position: fixed;top: 10px;right: 10px;"></a>
