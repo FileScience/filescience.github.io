@@ -3,11 +3,14 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1">		
 		<meta charset="UTF-8">
+		<title>FileScience.io - Lab985</title>
+		<link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.4 53.6'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23ba6280;%7D.b%7Bfill:%2361bbd6;%7D.c%7Bfill:%236b5b97;%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='a' points='0 16.2 0 32.4 30.5 15.4 30.5 0 0 16.2'/%3E%3Cpolygon class='b' points='30.6 31 30.6 15.4 44.4 23 44.4 38.4 30.6 31'/%3E%3Cpolygon class='c' points='16.6 53.6 30.6 46.2 30.6 31 16.7 38.2 16.6 53.6'/%3E%3C/svg%3E" type="image/x-icon">
 		<style>
 			body {
 				margin: 0;
 				overflow-x:hidden;
 				font-family: Verdana, Arial, Helvetica, sans-serif;
+				width: 100vw;
 			}
 			.topnav, .row.hasnav {
 				overflow: hidden;
@@ -222,6 +225,24 @@
 			.nopadding.noxmargin p a:hover {
 				text-decoration: underline;
 			}
+			@font-face {
+            font-family: 'l';
+            font-display:swap;
+            src: url('../f/l.woff2') format('embedded-opentype'),
+            url('../f/l.woff2') format('woff2'), 
+            url('../f/l.woff2') format('woff'),
+            url('../f/l.woff2')  format('truetype'),
+            url('../f/l.woff2') format('svg');
+			}
+			@font-face {
+				font-family: 'b';
+				font-display:swap;
+				src: url('../f/b.woff2') format('embedded-opentype'),
+				url('../f/b.woff2') format('woff2'), 
+				url('../f/b.woff2') format('woff'),
+				url('../f/b.woff2')  format('truetype'),
+				url('../f/b.woff2') format('svg');
+			}
 			@media screen and (max-width:900px) {
 				.col-6, .col-3, .col-5, .col-7, .footer .col-4, .third, .fifth, div.width50.funnel {
 				  width: 100%;
@@ -248,27 +269,26 @@
 				html {
 					background-color:black;
 				}
-				body {
-					background: url('media/m.svg') no-repeat right center black;
-					background-size:contain;
-					display:table;
-					background-position-y: 80%;
-				}
+				
 				.logo img{
 					max-width:40vw;
 				}
 				.fontsize17 {
 					font-size: 14px;
 				}
-				
-				
+				h2 {
+					color: white;
+					font-family: b;
+					font-size: 49px;
+					margin-bottom: 12px;
+				}	
 			}
 			@media screen and (min-width:901px) {
 				html {
 					background-color:black;
 				}
 				body {
-					background: url('media/d.svg') no-repeat right center black;
+					background: url('media/985ad.svg') no-repeat right center black;
 					background-size:cover;
 					display:table;
 					background-position-y: 75%;
@@ -283,6 +303,25 @@
 					width:30%;
 					padding-top:20%;
 				}
+				h2 {
+					font-size: 102px;
+					color: white;
+					margin-bottom: 12px !important;
+				}
+				.titleContainer {
+					margin-top: 16.7vh;
+					max-width: 600px;
+				}
+				.white.bolder.fontsize17.p985.first {
+					font-family: b;
+					margin-bottom: 3px !important;
+					font-size: 21px;
+				}
+				.white.fontsize17.p985:not(.first) {
+					font-family: l;
+					margin-top: 6px;
+					font-size: 20px;
+				}
 			}
 		</style>
 	</head>
@@ -290,9 +329,7 @@
 		<div class="row fullheight padding-x-30 Single985">
 			<div class="col-6">
 				<div class="titleContainer">
-					<img class="width50" loading="lazy" src="media/t.svg" />
-				</div>
-				<div class="titleContainer">
+					<h2>LAB985</h2>
 					<p class="white bolder fontsize17 p985 first">Lab985 - Founded to develop radically new technologies to solve some of the world's most difficult problems.</p>
 					<p class="white fontsize17 p985">985 is a diverse group of inventors and strategists who build and launch solutions that will drastically alter the current world. Our goal: 50x impact on the world's most intractable problems. We approach projects that have the aspiration and riskiness of research with the speed and ambition of a startup.</p>
 				</div>
