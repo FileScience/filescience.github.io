@@ -833,12 +833,13 @@
                 </div>
             </div>
             <script id="SearchScript" nonce="a34g29914">
-                document.querySelector('#myInput').onfocusout = function() {
-                    SwitchShowChildren();
-                }
                 document.querySelector('#myInput').onfocus = function() {
                     SwitchShowChildren();
                 }
+                document.querySelector('#myInput').onblur  = function() {
+                    SwitchShowChildren();
+                }
+                document.querySelector('#myInput')
                 document.querySelector('#myInput').onkeyup = function() {
                     filterFunction();
                 }
