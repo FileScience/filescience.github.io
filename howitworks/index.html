@@ -395,7 +395,7 @@
                     <!-- Make a Select Dropdown with Search -->
                     <div class="dropdown">
                         <div id="DropDown" class="dropdown-content">
-                          <input onfocusout="SwitchShowChildren()" onfocus="SwitchShowChildren()" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                          <input type="text" placeholder="Search.." id="myInput">
                             <a id="AutoDeskConstructionCloudButton"> Autodesk Construction Cloud</a>
                             <a id="PipedriveButton"> Pipedrive</a>
                             <a id="DropboxButton"> Dropbox</a>
@@ -828,7 +828,15 @@
                 </div>
             </div>
             <script id="SearchScript" nonce="a34g29914">
-
+                document.querySelecor('#myInput').onfocusout = function() {
+                    document.querySelecor('#DropDown').style.display = 'none';
+                }
+                document.querySelecor('#myInput').onfocus = function() {
+                    document.querySelecor('#DropDown').style.display = 'block';
+                }
+                document.querySelector('#myInput').onkeyup = function() {
+                    filterFunction();
+                }
                  // Add onclick events and onmousedown to dropdowns
                  document.querySelector('#AutoDeskConstructionCloudButton').onclick = function() {
                             viewer('AutoDeskConstructionCloud');
