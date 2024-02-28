@@ -396,34 +396,34 @@
                     <div class="dropdown">
                         <div id="DropDown" class="dropdown-content">
                           <input onfocusout="SwitchShowChildren()" onfocus="SwitchShowChildren()" type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-                            <a onclick="viewer('AutoDeskConstructionCloud');" onmousedown="viewer('AutoDeskConstructionCloud');"> Autodesk Construction Cloud</a>
-                            <a onclick="viewer('Pipedrive');" onmousedown="viewer('Pipedrive');"> Pipedrive</a>
-                            <a onclick="viewer('Dropbox');" onmousedown="viewer('Dropbox')"> Dropbox</a>
-                            <a onclick="viewer('mondaycom');" onmousedown="viewer('mondaycom')">Monday.com</a>
-                            <a onclick="viewer('JiraSoftware');" onmousedown="viewer('JiraSoftware')"> Jira Software</a>
-                            <a onclick="viewer('Paycheck');" onmousedown="viewer('Paycheck')"> Paycheck</a>
-                            <a onclick="viewer('Trello');" onmousedown="viewer('Trello')"> Trello</a>
-                            <a onclick="viewer('Asana');" onmousedown="viewer('Asana')"> Asana</a>
-                            <a onclick="viewer('Box');" onmousedown="viewer('Box')"> Box</a>
-                            <a onclick="viewer('Cisco');" onmousedown="viewer('Cisco')"> Cisco</a>
-                            <a onclick="viewer('Xero');" onmousedown="viewer('Xero');"> Xero</a>
-                            <a onclick="viewer('Ubiquiti');" onmousedown="viewer('Ubiquiti')"> Ubiquiti</a>
-                            <a onclick="viewer('GitHub');" onmousedown="viewer('GitHub')"> GitHub</a>
-                            <a onclick="viewer('Figma');" onmousedown="viewer('Figma')"> Figma</a>
-                            <a onclick="viewer('ZohoBusinessSuite');" onmousedown="viewer('ZohoBusinessSuite')"> Zoho Business Suite</a>
-                            <a onclick="viewer('Zoom');" onmousedown="viewer('Zoom')"> Zoom</a>
-                            <a onclick="viewer('Slack');" onmousedown="viewer('Slack')"> Slack</a>
-                            <a onclick="viewer('GitLab');" onmousedown="viewer('GitLab')"> GitLab</a>
-                            <a onclick="viewer('Confluence')" onmousedown="viewer('Confluence')"> Confluence</a>
-                            <a onclick="viewer('ADP')" onmousedown="viewer('ADP')"> ADP</a>
-                            <a onclick="viewer('AdobeCreativeCloud')" onmousedown="viewer('AdobeCreativeCloud')"> Adobe Creative Cloud</a>
-                            <a onclick="viewer('Notion')" onmousedown="viewer('Notion')"> Notion</a>
-                            <a onclick="viewer('QuickBooks')" onmousedown="viewer('QuickBooks')"> QuickBooks</a>
-                            <a onclick="viewer('Salesforce')" onmousedown="viewer('Salesforce')"> Salesforce</a>
-                            <a onclick="viewer('GoogleBusinessSuite')" onmousedown="viewer('GoogleBusinessSuite')"> Google Business Suite</a>
-                            <a onclick="viewer('Office365')" onmousedown="viewer('Office365')"> Office365</a>
+                            <a id="AutoDeskConstructionCloudButton"> Autodesk Construction Cloud</a>
+                            <a id="PipedriveButton"> Pipedrive</a>
+                            <a id="DropboxButton"> Dropbox</a>
+                            <a id="mondaycomButton">Monday.com</a>
+                            <a id="JiraSoftwareButton"> Jira Software</a>
+                            <a id="PaycheckButton"> Paycheck</a>
+                            <a id="TrelloButton"> Trello</a>
+                            <a id="AsanaButton"> Asana</a>
+                            <a id="BoxButton"> Box</a>
+                            <a id="CiscoButton"> Cisco</a>
+                            <a id="XeroButton"> Xero</a>
+                            <a id="UbiquitiButton"> Ubiquiti</a>
+                            <a id="GitHubButton"> GitHub</a>
+                            <a id="FigmaButton"> Figma</a>
+                            <a id="ZohoBusinessSuiteButton"> Zoho Business Suite</a>
+                            <a id="ZoomButton"> Zoom</a>
+                            <a id="SlackButton"> Slack</a>
+                            <a id="GitLabButton"> GitLab</a>
+                            <a id="ConfluenceButton"> Confluence</a>
+                            <a id="ADPButton"> ADP</a>
+                            <a id="AdobeCreativeCloudButton"> Adobe Creative Cloud</a>
+                            <a id="NotionButton"> Notion</a>
+                            <a id="QuickBooksButton"> QuickBooks</a>
+                            <a id="SalesforceButton"> Salesforce</a>
+                            <a id="GoogleBusinessSuiteButton"> Google Business Suite</a>
+                            <a id="Office365Button"> Office365</a>
                         </div>
-                      </div> 
+                      </div>
                 </div>
                 <div class="ContentZone hc">
                     <div class="ContentSingle hc" id ="AutoDeskConstructionCloud">
@@ -828,6 +828,166 @@
                 </div>
             </div>
             <script id="SearchScript" nonce="a34g29914">
+
+                 // Add onclick events and onmousedown to dropdowns
+                 document.querySelector('#AutoDeskConstructionCloudButton').onclick = function() {
+                            viewer('AutoDeskConstructionCloud');
+                        };
+                        document.querySelector('#AutoDeskConstructionCloudButton').onmousedown = function() {
+                            viewer('AutoDeskConstructionCloud');
+                        };
+                        document.querySelector('#PipedriveButton').onclick = function() {
+                            viewer('Pipedrive');
+                        };
+                        document.querySelector('#PipedriveButton').onmousedown = function() {
+                            viewer('Pipedrive');
+                        };
+                        document.querySelector('#DropboxButton').onclick = function() {
+                            viewer('Dropbox');
+                        };
+                        document.querySelector('#DropboxButton').onmousedown = function() {
+                            viewer('Dropbox');
+                        };
+                        document.querySelector('#mondaycomButton').onclick = function() {
+                            viewer('mondaycom');
+                        };
+                        document.querySelector('#mondaycomButton').onmousedown = function() {
+                            viewer('mondaycom');
+                        };
+                        document.querySelector('#JiraSoftwareButton').onclick = function() {
+                            viewer('JiraSoftware');
+                        };
+                        document.querySelector('#JiraSoftwareButton').onmousedown = function() {
+                            viewer('JiraSoftware');
+                        };
+                        document.querySelector('#PaycheckButton').onclick = function() {
+                            viewer('Paycheck');
+                        };
+                        document.querySelector('#PaycheckButton').onmousedown = function() {
+                            viewer('Paycheck');
+                        };
+                        document.querySelector('#TrelloButton').onclick = function() {
+                            viewer('Trello');
+                        };
+                        document.querySelector('#TrelloButton').onmousedown = function() {
+                            viewer('Trello');
+                        };
+                        document.querySelector('#AsanaButton').onclick = function() {
+                            viewer('Asana');
+                        };
+                        document.querySelector('#AsanaButton').onmousedown = function() {
+                            viewer('Asana');
+                        };
+                        document.querySelector('#BoxButton').onclick = function() {
+                            viewer('Box');
+                        };
+                        document.querySelector('#BoxButton').onmousedown = function() {
+                            viewer('Box');
+                        };
+                        document.querySelector('#CiscoButton').onclick = function() {
+                            viewer('Cisco');
+                        };
+                        document.querySelector('#CiscoButton').onmousedown = function() {
+                            viewer('Cisco');
+                        };
+                        document.querySelector('#XeroButton').onclick = function() {
+                            viewer('Xero');
+                        };
+                        document.querySelector('#XeroButton').onmousedown = function() {
+                            viewer('Xero');
+                        };
+                        document.querySelector('#UbiquitiButton').onclick = function() {
+                            viewer('Ubiquiti');
+                        };
+                        document.querySelector('#UbiquitiButton').onmousedown = function() {
+                            viewer('Ubiquiti');
+                        };
+                        document.querySelector('#GitHubButton').onclick = function() {
+                            viewer('GitHub');
+                        };
+                        document.querySelector('#GitHubButton').onmousedown = function() {
+                            viewer('GitHub');
+                        };
+                        document.querySelector('#FigmaButton').onclick = function() {
+                            viewer('Figma');
+                        };
+                        document.querySelector('#FigmaButton').onmousedown = function() {
+                            viewer('Figma');
+                        };
+                        document.querySelector('#ZohoBusinessSuiteButton').onclick = function() {
+                            viewer('ZohoBusinessSuite');
+                        };
+                        document.querySelector('#ZohoBusinessSuiteButton').onmousedown = function() {
+                            viewer('ZohoBusinessSuite');
+                        };
+                        document.querySelector('#ZoomButton').onclick = function() {
+                            viewer('Zoom');
+                        };
+                        document.querySelector('#ZoomButton').onmousedown = function() {
+                            viewer('Zoom');
+                        };
+                        document.querySelector('#SlackButton').onclick = function() {
+                            viewer('Slack');
+                        };
+                        document.querySelector('#SlackButton').onmousedown = function() {
+                            viewer('Slack');
+                        };
+                        document.querySelector('#GitLabButton').onclick = function() {
+                            viewer('GitLab');
+                        };
+                        document.querySelector('#GitLabButton').onmousedown = function() {
+                            viewer('GitLab');
+                        };
+                        document.querySelector('#ConfluenceButton').onclick = function() {
+                            viewer('Confluence');
+                        };
+                        document.querySelector('#ConfluenceButton').onmousedown = function() {
+                            viewer('Confluence');
+                        };
+                        document.querySelector('#ADPButton').onclick = function() {
+                            viewer('ADP');
+                        };
+                        document.querySelector('#ADPButton').onmousedown = function() {
+                            viewer('ADP');
+                        };
+                        document.querySelector('#AdobeCreativeCloudButton').onclick = function() {
+                            viewer('AdobeCreativeCloud');
+                        };
+                        document.querySelector('#AdobeCreativeCloudButton').onmousedown = function() {
+                            viewer('AdobeCreativeCloud');
+                        };
+                        document.querySelector('#NotionButton').onclick = function() {
+                            viewer('Notion');
+                        };
+                        document.querySelector('#NotionButton').onmousedown = function() {
+                            viewer('Notion');
+                        };
+                        document.querySelector('#QuickBooksButton').onclick = function() {
+                            viewer('QuickBooks');
+                        };
+                        document.querySelector('#QuickBooksButton').onmousedown = function() {
+                            viewer('QuickBooks');
+                        };
+                        document.querySelector('#SalesforceButton').onclick = function() {
+                            viewer('Salesforce');
+                        };
+                        document.querySelector('#SalesforceButton').onmousedown = function() {
+                            viewer('Salesforce');
+                        };
+                        document.querySelector('#GoogleBusinessSuiteButton').onclick = function() {
+                            viewer('GoogleBusinessSuite');
+                        };
+                        document.querySelector('#GoogleBusinessSuiteButton').onmousedown = function() {
+                            viewer('GoogleBusinessSuite');
+                        };
+                        document.querySelector('#Office365Button').onclick = function() {
+                            viewer('Office365');
+                        };
+                        document.querySelector('#Office365Button').onmousedown = function() {
+                            viewer('Office365');
+                        };
+
+
                 function getSpacedName(name) {
                     if(name == "AutoDeskConstructionCloud") {
                         return "AutoDesk Construction Cloud";
@@ -885,7 +1045,6 @@
                     // remove class hc from the one with the id of name
                     document.getElementById(name).classList.remove("hc");
 
-                    console.log(name);
                 }
             </script>
             <style id="SearchStyle">
