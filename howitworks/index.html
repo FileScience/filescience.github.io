@@ -832,7 +832,7 @@
                     document.querySelecor('#DropDown').style.display = 'none';
                 }
                 document.querySelector('#myInput').onfocus = function() {
-                    document.querySelector('#DropDown').style.display = 'block';
+                    SwitchShowChildren();
                 }
                 document.querySelector('#myInput').onkeyup = function() {
                     filterFunction();
