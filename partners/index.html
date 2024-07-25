@@ -21,10 +21,10 @@
     <style>
         * {
             box-sizing: border-box;
-            color:#fff;
+            color:#000;
         }
         body {
-            background: #7BADD5;
+            background: #fff;
             margin: 0;
         }
         .t, .s {
@@ -225,7 +225,10 @@
                 width: 140px;
             }
             .n div:hover {
-                background-color: #1e1e1e;
+                background-color: #000;
+            }
+            .n div:hover *{
+                color:#fff;
             }
             .n div:hover div {
                 display: block;
@@ -258,12 +261,6 @@
             }
             .f.s .c6:nth-of-type(2) img, .f.s .c6:nth-of-type(1) *{
                 width: 80%;
-            }
-            .t + .f.s {
-                background: url('../m/abm.svg');
-                background-repeat: no-repeat;
-                background-position: center;
-                min-height: 50vh !important;
             }
             .t + .f.s p {
                 max-width: 520px;
@@ -431,17 +428,24 @@
             url('../f/b.woff2')  format('truetype'),
             url('../f/b.woff2') format('svg');
         }
+        .c {
+            background: black;
+            color: white;
+        }
+        .cen {
+            margin: 0 auto;
+            max-width: 100%;
+        }
     </style>
     <body>
         <div class="t">
             <div class="l d">
                 <a href="https://filescience.io">
-                    <svg viewBox='0 0 243.3 53.6'><defs><style>.c{fill:#fff}</style></defs><path d='M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z' class='c'/><text fill='#fff' font-family='Arial' font-size='36' font-weight='500' x='58' y='37'>FileScience</text></svg>
-                </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="121" height="31" fill="none"><path fill="#A490B0" d="M0 9.35v9.36l17.37-9.8V0L0 9.35Z"/><path fill="#7BADD5" d="M17.4 17.91v-9l7.9 4.37v8.9l-7.9-4.27Z"/><path fill="#EBCA71" d="m9.46 31 7.94-4.28v-8.81l-7.9 4.18L9.46 31Z"/><path fill="#272727" d="M33.2 12.16h7.98v2h-5.64v2.63h4.94v1.99h-4.94v4.79H33.2v-11.4Zm11.62 1.95h-2.2v-2.03h2.2v2.03Zm-2.2 1.01h2.2v8.45h-2.2v-8.45Zm6.54 8.45h-2.18V12.15h2.18v11.42Zm5.41-6.85c-.5 0-.9.16-1.17.48-.28.32-.45.75-.52 1.3h3.38a1.91 1.91 0 0 0-.53-1.33c-.3-.3-.7-.45-1.16-.45Zm0-1.82c.7 0 1.32.13 1.87.4a3.3 3.3 0 0 1 1.38 1.24c.32.5.53 1.08.63 1.74.06.39.08.95.07 1.68h-5.7c.03.84.3 1.44.79 1.78.3.21.66.32 1.08.32.45 0 .82-.13 1.1-.4.15-.13.28-.32.4-.57h2.22c-.05.5-.31 1-.77 1.52a3.75 3.75 0 0 1-3 1.24 4.23 4.23 0 0 1-2.8-1.04c-.8-.7-1.2-1.82-1.2-3.38 0-1.46.36-2.58 1.08-3.36a3.73 3.73 0 0 1 2.85-1.17Zm7.3 5.14c.07.52.21.91.42 1.17.38.47 1.04.7 1.96.7.56 0 1-.06 1.35-.18.66-.24.99-.68.99-1.32a.98.98 0 0 0-.49-.88 5.2 5.2 0 0 0-1.53-.53l-1.2-.28a7.46 7.46 0 0 1-2.42-.87c-.76-.53-1.14-1.35-1.14-2.47 0-1.03.37-1.88 1.1-2.55.73-.68 1.8-1.02 3.23-1.02 1.18 0 2.2.32 3.03.96a3.42 3.42 0 0 1 1.32 2.78h-2.26c-.04-.69-.34-1.18-.89-1.47a2.92 2.92 0 0 0-1.36-.28c-.6 0-1.1.12-1.45.37-.36.25-.54.6-.54 1.04 0 .4.17.7.53.91.23.14.72.3 1.47.47l1.93.48c.85.2 1.5.48 1.93.83.67.53 1 1.31 1 2.33 0 1.04-.39 1.9-1.18 2.6a4.89 4.89 0 0 1-3.33 1.03 5.36 5.36 0 0 1-3.45-1.01 3.42 3.42 0 0 1-1.26-2.8h2.24Zm13.53-1.89c-.05-.31-.15-.6-.32-.85-.25-.34-.62-.51-1.14-.51-.73 0-1.23.37-1.5 1.1-.15.4-.22.92-.22 1.57 0 .62.07 1.12.22 1.5.26.7.75 1.05 1.46 1.05.51 0 .87-.14 1.09-.42.21-.28.34-.64.39-1.08h2.22c-.05.67-.3 1.3-.72 1.9a3.47 3.47 0 0 1-3.03 1.45c-1.34 0-2.32-.4-2.95-1.2a4.94 4.94 0 0 1-.95-3.15c0-1.45.35-2.58 1.04-3.38.7-.8 1.66-1.21 2.89-1.21 1.04 0 1.9.24 2.56.71.66.48 1.06 1.32 1.18 2.52H75.4Zm5.96-4.04h-2.2v-2.03h2.2v2.03Zm-2.2 1.01h2.2v8.45h-2.2v-8.45Zm7.6 1.6c-.5 0-.9.16-1.18.48-.27.32-.44.75-.52 1.3h3.39a1.91 1.91 0 0 0-.53-1.33 1.6 1.6 0 0 0-1.16-.45Zm0-1.82c.7 0 1.32.13 1.87.4A3.3 3.3 0 0 1 90 16.53c.33.5.54 1.08.64 1.74.05.39.08.95.07 1.68H85c.03.84.3 1.44.79 1.78.3.21.66.32 1.08.32a1.54 1.54 0 0 0 1.5-.97h2.22c-.06.5-.31 1-.77 1.52a3.75 3.75 0 0 1-3 1.24 4.2 4.2 0 0 1-2.8-1.04c-.8-.7-1.21-1.82-1.21-3.38 0-1.46.36-2.58 1.1-3.36a3.73 3.73 0 0 1 2.84-1.17Zm10.04.02c.85 0 1.55.23 2.1.69.55.45.82 1.21.82 2.27v5.69H97.5v-5.14c0-.44-.05-.79-.17-1.02-.22-.44-.62-.65-1.22-.65-.74 0-1.25.31-1.52.95-.14.34-.22.76-.22 1.29v4.57H92.2v-8.43h2.1v1.23c.28-.44.54-.75.79-.94a2.73 2.73 0 0 1 1.7-.51Zm9.9 3.23c-.03-.31-.14-.6-.3-.85-.25-.34-.63-.51-1.14-.51-.73 0-1.24.37-1.5 1.1-.15.4-.22.92-.22 1.57 0 .62.07 1.12.21 1.5.26.7.75 1.05 1.47 1.05.5 0 .87-.14 1.08-.42.22-.28.35-.64.4-1.08h2.22c-.06.67-.3 1.3-.72 1.9a3.47 3.47 0 0 1-3.03 1.45c-1.34 0-2.33-.4-2.96-1.2a4.94 4.94 0 0 1-.94-3.15c0-1.45.34-2.58 1.04-3.38.7-.8 1.66-1.21 2.89-1.21 1.04 0 1.9.24 2.55.71.67.48 1.07 1.32 1.19 2.52h-2.23Zm7.02-1.43c-.5 0-.9.16-1.17.48-.27.32-.45.75-.52 1.3h3.38a1.91 1.91 0 0 0-.52-1.33 1.6 1.6 0 0 0-1.17-.45Zm0-1.82c.7 0 1.32.13 1.88.4a3.3 3.3 0 0 1 1.37 1.24c.33.5.54 1.08.63 1.74.06.39.08.95.07 1.68h-5.7c.04.84.3 1.44.8 1.78.3.21.66.32 1.08.32.45 0 .8-.13 1.09-.4.15-.13.29-.32.4-.57h2.22c-.05.5-.3 1-.77 1.52a3.75 3.75 0 0 1-2.99 1.24c-1.06 0-2-.35-2.8-1.04-.81-.7-1.21-1.82-1.21-3.38 0-1.46.36-2.58 1.09-3.36a3.73 3.73 0 0 1 2.84-1.17Z"/></svg>                </a>
             </div>
             <div class="l m">
                 <a href="https://filescience.io">
-                    <svg viewBox="0 0 420 54"><path d="M0,16.2v16.2l30.5-17v-15.4L0,16.2ZM30.6,31v-15.6L44.4,23v15.4L30.6,31Zm-14,22.6l14-7.4v-15.2l-14,7.2v15.4Z" transform="translate(370 0)" fill="#fff"/><text dx="0" dy="0" font-family="Arial" font-size="36" font-weight="500" transform="translate(5 39)" fill="#fff"><tspan font-size="36" font-weight="500" transform="translate(58 37)" fill="#fff">FileScience</tspan></text></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="121" height="31" fill="none"><path fill="#A490B0" d="M0 9.35v9.36l17.37-9.8V0L0 9.35Z"/><path fill="#7BADD5" d="M17.4 17.91v-9l7.9 4.37v8.9l-7.9-4.27Z"/><path fill="#EBCA71" d="m9.46 31 7.94-4.28v-8.81l-7.9 4.18L9.46 31Z"/><path fill="#272727" d="M33.2 12.16h7.98v2h-5.64v2.63h4.94v1.99h-4.94v4.79H33.2v-11.4Zm11.62 1.95h-2.2v-2.03h2.2v2.03Zm-2.2 1.01h2.2v8.45h-2.2v-8.45Zm6.54 8.45h-2.18V12.15h2.18v11.42Zm5.41-6.85c-.5 0-.9.16-1.17.48-.28.32-.45.75-.52 1.3h3.38a1.91 1.91 0 0 0-.53-1.33c-.3-.3-.7-.45-1.16-.45Zm0-1.82c.7 0 1.32.13 1.87.4a3.3 3.3 0 0 1 1.38 1.24c.32.5.53 1.08.63 1.74.06.39.08.95.07 1.68h-5.7c.03.84.3 1.44.79 1.78.3.21.66.32 1.08.32.45 0 .82-.13 1.1-.4.15-.13.28-.32.4-.57h2.22c-.05.5-.31 1-.77 1.52a3.75 3.75 0 0 1-3 1.24 4.23 4.23 0 0 1-2.8-1.04c-.8-.7-1.2-1.82-1.2-3.38 0-1.46.36-2.58 1.08-3.36a3.73 3.73 0 0 1 2.85-1.17Zm7.3 5.14c.07.52.21.91.42 1.17.38.47 1.04.7 1.96.7.56 0 1-.06 1.35-.18.66-.24.99-.68.99-1.32a.98.98 0 0 0-.49-.88 5.2 5.2 0 0 0-1.53-.53l-1.2-.28a7.46 7.46 0 0 1-2.42-.87c-.76-.53-1.14-1.35-1.14-2.47 0-1.03.37-1.88 1.1-2.55.73-.68 1.8-1.02 3.23-1.02 1.18 0 2.2.32 3.03.96a3.42 3.42 0 0 1 1.32 2.78h-2.26c-.04-.69-.34-1.18-.89-1.47a2.92 2.92 0 0 0-1.36-.28c-.6 0-1.1.12-1.45.37-.36.25-.54.6-.54 1.04 0 .4.17.7.53.91.23.14.72.3 1.47.47l1.93.48c.85.2 1.5.48 1.93.83.67.53 1 1.31 1 2.33 0 1.04-.39 1.9-1.18 2.6a4.89 4.89 0 0 1-3.33 1.03 5.36 5.36 0 0 1-3.45-1.01 3.42 3.42 0 0 1-1.26-2.8h2.24Zm13.53-1.89c-.05-.31-.15-.6-.32-.85-.25-.34-.62-.51-1.14-.51-.73 0-1.23.37-1.5 1.1-.15.4-.22.92-.22 1.57 0 .62.07 1.12.22 1.5.26.7.75 1.05 1.46 1.05.51 0 .87-.14 1.09-.42.21-.28.34-.64.39-1.08h2.22c-.05.67-.3 1.3-.72 1.9a3.47 3.47 0 0 1-3.03 1.45c-1.34 0-2.32-.4-2.95-1.2a4.94 4.94 0 0 1-.95-3.15c0-1.45.35-2.58 1.04-3.38.7-.8 1.66-1.21 2.89-1.21 1.04 0 1.9.24 2.56.71.66.48 1.06 1.32 1.18 2.52H75.4Zm5.96-4.04h-2.2v-2.03h2.2v2.03Zm-2.2 1.01h2.2v8.45h-2.2v-8.45Zm7.6 1.6c-.5 0-.9.16-1.18.48-.27.32-.44.75-.52 1.3h3.39a1.91 1.91 0 0 0-.53-1.33 1.6 1.6 0 0 0-1.16-.45Zm0-1.82c.7 0 1.32.13 1.87.4A3.3 3.3 0 0 1 90 16.53c.33.5.54 1.08.64 1.74.05.39.08.95.07 1.68H85c.03.84.3 1.44.79 1.78.3.21.66.32 1.08.32a1.54 1.54 0 0 0 1.5-.97h2.22c-.06.5-.31 1-.77 1.52a3.75 3.75 0 0 1-3 1.24 4.2 4.2 0 0 1-2.8-1.04c-.8-.7-1.21-1.82-1.21-3.38 0-1.46.36-2.58 1.1-3.36a3.73 3.73 0 0 1 2.84-1.17Zm10.04.02c.85 0 1.55.23 2.1.69.55.45.82 1.21.82 2.27v5.69H97.5v-5.14c0-.44-.05-.79-.17-1.02-.22-.44-.62-.65-1.22-.65-.74 0-1.25.31-1.52.95-.14.34-.22.76-.22 1.29v4.57H92.2v-8.43h2.1v1.23c.28-.44.54-.75.79-.94a2.73 2.73 0 0 1 1.7-.51Zm9.9 3.23c-.03-.31-.14-.6-.3-.85-.25-.34-.63-.51-1.14-.51-.73 0-1.24.37-1.5 1.1-.15.4-.22.92-.22 1.57 0 .62.07 1.12.21 1.5.26.7.75 1.05 1.47 1.05.5 0 .87-.14 1.08-.42.22-.28.35-.64.4-1.08h2.22c-.06.67-.3 1.3-.72 1.9a3.47 3.47 0 0 1-3.03 1.45c-1.34 0-2.33-.4-2.96-1.2a4.94 4.94 0 0 1-.94-3.15c0-1.45.34-2.58 1.04-3.38.7-.8 1.66-1.21 2.89-1.21 1.04 0 1.9.24 2.55.71.67.48 1.07 1.32 1.19 2.52h-2.23Zm7.02-1.43c-.5 0-.9.16-1.17.48-.27.32-.45.75-.52 1.3h3.38a1.91 1.91 0 0 0-.52-1.33 1.6 1.6 0 0 0-1.17-.45Zm0-1.82c.7 0 1.32.13 1.88.4a3.3 3.3 0 0 1 1.37 1.24c.33.5.54 1.08.63 1.74.06.39.08.95.07 1.68h-5.7c.04.84.3 1.44.8 1.78.3.21.66.32 1.08.32.45 0 .8-.13 1.09-.4.15-.13.29-.32.4-.57h2.22c-.05.5-.3 1-.77 1.52a3.75 3.75 0 0 1-2.99 1.24c-1.06 0-2-.35-2.8-1.04-.81-.7-1.21-1.82-1.21-3.38 0-1.46.36-2.58 1.09-3.36a3.73 3.73 0 0 1 2.84-1.17Z"/></svg>
                 </a>
             </div>
             <span class="m b">≡</span>
@@ -462,19 +466,28 @@
             </div>
         </div>
         <div class="f s">
-            <div class="c12">
-                <h1>One service,  All apps</h1>
-                <p>FileScience is a comprehensive service that stores files from apps nobody else can:</p>
+            <div class="c6">
+                <h1>The power of collaboration </h1>
+                <p>At FileScience, we believe in the power of collaboration to drive innovation and success. Our partnership program is designed to empower technology providers, MSP’s, resellers, and service integrators with the tools and support they need to deliver unparalleled data management solutions to their clients. </p>
+                <a class="concl"> Contact us</a>
+            </div>
+            <div class="c6">
+                <img class="cen" loading="lazy" src="../m/collab.svg" />
             </div>
         </div>
-        <div class="f s d">
+        <div class="f s q">
             <div class="c12">
-                <img class="d" loading="lazy" src="../m/bd.svg" />
+                <h2>An access to cutting-edge technology</h2>
+                <p>Our partners are at the heart of our mission to revolutionize data science and management. When you join the FileScience partner program, you receive exclusive access to our advanced platform, which includes robust data analytics, seamless integration capabilities, and top-tier security features. Additionally, we provide extensive resources, including marketing collateral, sales training, and technical support, to ensure you have everything you need to succeed. Our commitment to your growth means we work closely with you to identify opportunities, streamline operations, and deliver exceptional value to your clients.</p>
             </div>
         </div>
-        <div class="f s m">
-            <div class="c12">
-                <img class="m" loading="lazy" src="../m/apm.svg" />
+        <div class="f s">
+            <div class="c6">
+                <h2>Beyond just great products</h2>
+                <p>At FileScience, we understand that a successful partnership goes beyond just providing great products. That’s why we offer a collaborative approach, working hand-in-hand with our partners to achieve shared goals. Our dedicated partner management team is always available to offer guidance, share best practices, and help you navigate any challenges. From co-branded marketing campaigns to joint business planning, we are committed to your success at every stage. Join us and become a part of a vibrant network of innovators who are shaping the future of data management.</p>
+            </div>
+            <div class="c6">
+                <img class="cen" loading="lazy" src="../m/parcel.svg" />
             </div>
         </div>
         <div class="rf">
