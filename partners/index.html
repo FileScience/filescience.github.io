@@ -259,9 +259,6 @@
             .f.s .c6:nth-of-type(2) {
                 justify-content: right;
             }
-            .f.s .c6:nth-of-type(2) img, .f.s .c6:nth-of-type(1) *{
-                width: 80%;
-            }
             .t + .f.s p {
                 max-width: 520px;
                 margin: 0 auto;
@@ -436,6 +433,49 @@
             margin: 0 auto;
             max-width: 100%;
         }
+        .f.s h1, .f.s p, .f.s h2 {
+            text-align: left;
+            margin-left: 0 !important;
+        }
+        .f .cen {
+            width: 380px;
+        }
+        .f.s.q p, .f.s.q h2 {
+            text-align: center !important;
+            width: 100%;
+            color:#fff;
+        }
+        .f.s.q {
+            background: #A490B0;
+        }
+        .cen {
+            max-width: 100% !important;
+            margin-bottom: 48px;
+        }
+        .concl {
+            padding: 16px 58px;
+            background-color: #A490B0;
+            color: white;
+            font-family: b;
+            font-size: 20px;
+            margin-top: 12px;
+            min-width: 200px !important;
+            margin-right: 120px;
+            text-decoration: none;
+        }
+        .s.g.cf p, .s.g.cf h3 {
+            color: white;
+        }
+        .s.g.fo * {
+            color: white;
+        }
+        @media screen and (max-width:1080px) {
+            .concl {
+                margin-right: 0;
+                width: 100%;
+                text-align: center;
+            }
+        }
     </style>
     <body>
         <div class="t">
@@ -469,7 +509,7 @@
             <div class="c6">
                 <h1>The power of collaboration </h1>
                 <p>At FileScience, we believe in the power of collaboration to drive innovation and success. Our partnership program is designed to empower technology providers, MSP’s, resellers, and service integrators with the tools and support they need to deliver unparalleled data management solutions to their clients. </p>
-                <a class="concl"> Contact us</a>
+                <a class="concl" target="_blank" href="https://filescience.io/contact"> Contact us</a>
             </div>
             <div class="c6">
                 <img class="cen" loading="lazy" src="../m/collab.svg" />
@@ -488,47 +528,6 @@
             </div>
             <div class="c6">
                 <img class="cen" loading="lazy" src="../m/parcel.svg" />
-            </div>
-        </div>
-        <div class="rf">
-            <div class="s g">
-                <div class="c12">
-                    <br>
-                    <h2>Our team</h2>
-                    <div class="c20">
-                        <img src="../m/nick.png" />
-                        <h3>Nick Martin</h3>
-                        <p>Founder</p>
-                    </div>
-                    <div class="c20">
-                        <img src="../m/jordan.png" />
-                        <h3>Jordan Mesches</h3>
-                        <p>Founding Engineer</p>
-                    </div>
-                    <div class="c20">
-                        <img src="../m/mo.png" />
-                        <h3>Mo Abdelalim</h3>
-                        <p>Director of Engineering - Web</p>
-                    </div>
-                    <div class="c20">
-                        <img src="../m/matt.png" />
-                        <h3>Matthew Pisano</h3>
-                        <p>Engineer I</p>
-                    </div>
-                    <div class="c20">
-                        <img src="../m/nicole.png" />
-                        <h3>Nicole Shakarishvili</h3>
-                        <p>UI/UX Architect</p>
-                    </div>
-                </div>
-            </div>
-            <div class="f s cl">
-                <div class="c12">
-                    <h3>Our Clients</h3>
-                    <p>Today, we have used the knowledge we’ve gathered from supporting various clients in industries such as Healthcare, Real Estate, Government, Hospitality, Construction, etc.. – and applied our knowledge to solve difficult problems in the Software-as-a-Service space.</p>
-                    <img loading="lazy" class="d" src="../m/acd.svg" />
-                    <img loading="lazy" class="m" src="../m/acm.svg" />
-                </div>
             </div>
         </div>
         <div class="s g cf">
