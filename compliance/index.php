@@ -264,9 +264,7 @@
                 margin: 0 auto;
                 font-size: 24px;
             }
-            .rf {
-                background: #fff;
-            }
+            
             .s.g.d .c12 {
                 flex-direction: row;
                 align-items: center;
@@ -445,7 +443,9 @@
         .rf p {
             max-width: 420px;
         }
-
+        .rf {
+                background: #fff;
+            }
     </style>
     <body>
         <div class="t">
