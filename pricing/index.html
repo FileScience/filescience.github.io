@@ -450,6 +450,10 @@
   width: 100%;
 }
 
+.slider-container input {
+  margin-bottom: 36px;
+}
+
 .cl.pricingpanel {
   width: 100%;
 }
@@ -463,10 +467,11 @@
 .DCLeft {
   width: 60%;
   float: left;
+  padding: 12px;
 }
 
 .DCRight {
-  width: 40%;
+  width: 30%;
   float: left;
   display: block;
   background: #7BADD5;
@@ -494,6 +499,97 @@
 }
 
     </style>
+    <style>
+        /* For Chrome, Safari, and Edge */
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, black 50%, #ccc 50%);
+            border: none;
+            border-radius: 5px;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+            margin-top: -4px; /* Adjust thumb's vertical position */
+        }
+        
+        /* For Firefox */
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 8px;
+            background: linear-gradient(to right, black 50%, #ccc 50%);
+            border: none;
+            border-radius: 5px;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+        }
+        
+        /* Dynamic background change for the slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        
+        /* Dynamically adjust the filled background as the slider value changes */
+        input[type=range]::-webkit-slider-runnable-track {
+            background: linear-gradient(to right, black var(--percent, 50%), #ccc var(--percent, 50%));
+        }
+        
+        input[type=range]::-moz-range-track {
+            background: linear-gradient(to right, black var(--percent, 50%), #ccc var(--percent, 50%));
+        }
+
+
+.DCRight * {
+  color: black;
+}
+
+#tierPrice {
+  font-size: 44px;
+  font-weight: bold;
+  font-family: b;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.sublabel {
+  margin-top: 0px;
+  margin-left: 60px;
+  text-align: center;
+}
+
+.slider-container label {
+  font-size: 32px;
+  color: black;
+  font-family: b;
+  margin-left: calc(2.5% - 18px);
+}
+
+
+.slider-container p, .slider-container p span {
+  color: black;
+  font-size: 19px;
+  font-family: b;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+        </style>
+        
     <body>
         <div class="t">
             <div class="l d">
@@ -539,8 +635,8 @@
                 
                 <div class="slider-container">
                     <label for="storageRange">How much storage do you need?</label>
+                    <p><span id="storageValue">320</span> GB</p>
                     <input type="range" id="storageRange" name="storage" min="0" max="100" value="0">
-                    <p>Selected storage: <span id="storageValue">320</span> GB</p>
                 </div>
                 
                 <div class="DynamicCard">
@@ -568,6 +664,7 @@
         </div>
         <script>
            // Tier data
+// Tier data
 const tiers = [
     { name: "Basic", min: 1, max: 338, price: 199, perGB: "$0.00", description: "Basic tier with flat pricing for small quantities." },
     { name: "Standard", min: 339, max: 1000, price: null, perGB: "$0.59", description: "Standard pricing for medium quantities." },
@@ -608,11 +705,20 @@ function findTier(value) {
 // Function to update the card and displayed values
 function updateCard(value) {
     const tier = findTier(value);
-    if (tier) {
+    if (tier.name != "Basic") {
         document.getElementById('tierName').textContent = tier.name;
         document.getElementById('tierPrice').textContent = tier.perGB;
         document.querySelector('.desc').textContent = tier.description;
+        document.querySelector('.sublabel').textContent = "Per GB";
+    } else {
+        setToBasic();
     }
+}
+function setToBasic() {
+    document.getElementById('tierName').textContent = "Basic";
+    document.getElementById('tierPrice').textContent = "$199";
+    document.querySelector('.sublabel').textContent = "Flat Rate";
+    document.querySelector('.desc').textContent = "Basic tier with flat pricing for small quantities.";
 }
 
 // Set slider default to 320GB
@@ -623,13 +729,25 @@ slider.value = sliderDefaultValue;
 document.getElementById('storageValue').textContent = defaultGB;
 updateCard(defaultGB);
 
-// Event listener for slider input
+// Update the slider's filled color
+function updateSliderFill(slider) {
+    const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+    slider.style.setProperty('--percent', percentage + '%');
+}
+
+// Update the fill based on the initial default value
+updateSliderFill(slider);
+
+// Event listener for slider input to update the values and fill
 slider.addEventListener('input', function () {
     const logValue = sliderToLogValue(this.value);
     const roundedValue = Math.round(logValue);
     document.getElementById('storageValue').textContent = roundedValue;
     updateCard(roundedValue);
+    updateSliderFill(this); // Update the slider's fill as the value changes
 });
+
+
 
         </script>
         <div class="s g cf">
