@@ -747,7 +747,8 @@ updateSliderFill(slider);
 // Event listener for slider input to update the values and fill
 slider.addEventListener('input', function () {
     const logValue = sliderToLogValue(this.value);
-    const roundedValue = Math.round(logValue);
+    // make rounded value have commas as separator for 1,000
+    const roundedValue = Math.round(logValue).toLocaleString();
     document.getElementById('storageValue').textContent = roundedValue;
     updateCard(roundedValue);
     updateSliderFill(this); // Update the slider's fill as the value changes
