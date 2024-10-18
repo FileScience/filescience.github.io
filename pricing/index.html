@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.4 53.6'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23ba6280;%7D.b%7Bfill:%2361bbd6;%7D.c%7Bfill:%236b5b97;%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='a' points='0 16.2 0 32.4 30.5 15.4 30.5 0 0 16.2'/%3E%3Cpolygon class='b' points='30.6 31 30.6 15.4 44.4 23 44.4 38.4 30.6 31'/%3E%3Cpolygon class='c' points='16.6 53.6 30.6 46.2 30.6 31 16.7 38.2 16.6 53.6'/%3E%3C/svg%3E" type="image/x-icon">
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+        <meta property="og:title" content="">
+        <meta property="og:site_name" content="">
+        <meta property="og:url" content="https://filescience.io">
+        <meta property="og:description" content="">
+        <meta property="og:type" content="business.business">
+        <meta property="og:image" content="">
+        <meta property="twitter:image" content="">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="English">
+        <meta name="revisit-after" content="21 days">
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+            color:#fff;
+        }
+        body {
+            background: url('../m/noise.png');
+            margin: 0;
+        }
+        .t, .s {
+            display: flex;
+            padding: 2.7% 8%;
+            flex-wrap: wrap;
+        }
+        .n, .b {
+            width: calc(100% - 160px);
+            display: flex;
+            justify-content: right;
+        }
+        .n a, .n > div {
+            padding: 10px 22px;
+            font-size: 20px;
+            text-decoration: none;
+            font-family: l, Arial;
+            display: block;
+            cursor: pointer;
+        }
+        .n div div a {
+            margin: 0;
+        }
+        .b {
+            cursor: pointer;
+            font-size: 50px;
+            width: 33%;
+            line-height: 7vw;
+        }
+        .c12 {
+            width: 100%;
+        }
+        .c6 {
+            width: 50%;
+        }
+        .c5 {
+            width: 41.66%;
+        }
+        .c4 {
+            width: 33.33%;
+        }
+        .c2 {
+            width: 16.66%;
+        }
+        .c1 {
+            width: 8.33%;
+        }
+        .c8 {
+            width: 66.66%;
+        }
+        .c9 {
+            width: 75%;
+        }
+        .c3 {
+            width: 25%;
+        }
+        .c20 {
+            width: 20%;
+        }
+        .c1, .c2, .c3, .c4, .c5, .c6, .c12, .c8, .c9, .c3 {
+            display:flex;
+            flex-wrap: wrap;
+        }
+        h1, h2, h3 {
+            font-family: b, Helvetica;
+        }
+        p {
+            font-family: l, Helvetica;
+        }
+        .c20 {
+            max-width: 380px;
+        }
+
+        .s.g .c12 {
+            justify-content:center;
+        }
+        @media screen and (max-width:1080px) {
+            .d {
+                display: none;
+            }
+            .l {
+                width: 67%;
+            }
+            .l p {
+                font-size: 36px;
+                font-weight: 500;
+                font-family: Arial;
+                margin: 0;
+            }
+            .n {
+                width: 100%;
+                flex-wrap: wrap;
+                margin-top: 20vh;
+                padding-bottom: 20vh;
+            }
+            .t + .f.s {
+                margin-top: 120px;
+            }
+            .n a, .n div {
+                width: 100%;
+                text-align: center;
+            }
+            .t {
+                margin-top: 40px;
+            }
+            .c {
+                max-width: 130px;
+                margin: 0 auto;
+                margin-top: 10vh;
+            }
+            .c1, .c2, .c3, .c4, .c5, .c6, .c12, .c20 {
+                width: 100%;
+            }
+            .f.s:nth-of-type(2) {
+                flex-direction: column-reverse;
+            }
+            .f.s:nth-of-type(2) img.m {
+                margin: 0% -10%;
+                width: 120vw;
+            }
+            
+            .f.s h1 {
+                margin-top: -10%;
+            }
+            .s.g.ar h2, .s.g.ar p {
+                color: black;
+            }
+            .s.g.ar {
+                background-color: #fff;
+                padding-bottom: 32px;
+            }
+            .s.g.ar::before {
+                width: 100%;
+                content: '';
+                height: 1px;
+                color: black;
+                background-color: black;
+                margin: 20px auto;
+            }
+            .gb {
+                width: 100%;
+                text-align: center;
+            }
+            p {
+                font-size:24px;
+            }
+            h2, h3 {
+                font-size: 36px;
+            }
+            .s.g.in {
+                background: #fff;
+            }
+            .s.g.in p, .s.g.in h3 {
+                color: #000;
+            }
+            .s.g.in p {
+                padding-bottom: 64px;
+            }
+            .s.g.in {
+                background: #fff;
+            }
+            .s.g.in p, .s.g.in h3 {
+                color: #000;
+            }
+            .s.g.in p {
+                padding-bottom: 64px;
+            }
+            .s.g.fo svg {
+                margin: 30px auto;
+            }
+            .s.g.fo {
+                background: #98C5C2;
+            }
+            .f.s.cl:nth-of-type(2) img.m {
+                width: 100%;
+                margin: 0 auto;
+            }
+            .rf {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+            .s.g.cf {
+                background: #000;
+            }
+            .f.s.cl p {
+                text-align: left;
+                font-size: 20px;
+            }
+            .n > div > a {
+                display: none;
+            }
+            .c4.fm {
+                width:33.33%;
+            }
+            .f.s.cl .c12 {
+                flex-direction: column-reverse;
+                border-radius: 18px;
+                margin-bottom: 18px;
+            }
+            .f.s.cl .c12.first {
+                background: #7BADD5;
+            }
+        }
+        @media screen and (min-width:1080px) {
+            .m {
+                display: none;
+            }
+            .l {
+                width: 140px;
+            }
+            .n div:hover {
+                background-color: #1e1e1e;
+            }
+            .n div:hover div {
+                display: block;
+                background-color: #1e1e1e;
+            }
+            .n div div {
+                position: absolute;
+                display: none;
+                margin: 6px -22px;
+            }
+            .f.s.d img {
+                width: 100%;
+            }
+            .n.d > div > a {
+                padding: 0;
+            }
+            .f.s h1, .f.s p, .f.s h3 {
+                width: 100%;
+                text-align: left;
+            }
+            h1 {
+                font-size:64px;
+            } 
+            p {
+                font-size:20px;
+                line-height: 27px;
+            }
+            .f.s .c6:nth-of-type(2) {
+                justify-content: right;
+            }
+            .f.s .c6:nth-of-type(2) img, .f.s .c6:nth-of-type(1) *{
+                width: 80%;
+            }
+            .t + .f.s p {
+                max-width: 520px;
+                margin: 0 auto;
+                font-size: 24px;
+            }
+            .rf {
+                background: #85B7DF;
+            }
+            .s.g.d .c12 {
+                flex-direction: row;
+                align-items: center;
+            }
+            h2 {
+                font-size:42px;
+            }
+            h3 {
+                font-size:30px;
+            }
+            .c12 h3 {
+                margin-top: 96px;
+                margin-bottom: 12px;
+            }
+            .s.g.ar .c12 {
+                background-color: #000;
+                padding: 32px;
+                border-radius: 25px;
+                box-shadow: 10px 10px 10px 10px black;
+            }
+            .s.g.ar .c6, .s.g.in .c6, .s.g.cf .c6 {
+                padding: 1% 7%;
+                align-content: center;
+            }
+            .s.g.in .c3, .s.g.in .c9 {
+                align-content: baseline;
+            }
+            .in .c9, .in .c3 {
+                margin-bottom: 36px;
+            }
+            .s.g.cf {
+                background-color:#A490B0;
+            }
+            .s.g.cf h3, .s.g.cf p {
+                color: #000;
+            }
+            .s.g.cf p {
+                font-weight: bold;
+            }
+            .s.g h2 {
+                width: 100%;
+            }
+            .f.s.cl {
+                background-color: #000;
+            }
+            .s.g.fo {
+                background: #000;
+            }
+        }
+        .r {
+            height: 0;
+            flex-basis: 100%;
+        }
+        .n .a {
+            text-decoration: underline;
+        }
+        .n a:hover {
+            text-decoration: underline;
+        }
+        .c {
+            color: #000;
+            background-color: #fff;
+        }
+        .s.g.d .c12 {
+            justify-content: center;
+        }
+        .s.g.d .c12 svg {
+            width: 80px;
+        }
+        .s.g.d p {
+            max-width: 800px;
+            text-align: center;
+        }
+        .gb {
+            background-color: #EBCA71;
+            padding: 12px 25px;
+            font-size: 25px;
+            color: black;
+            font-family: b, Helvetica;
+            text-decoration: none;
+        }
+        .cf .gb {
+            font-weight: bold;
+        }
+        form {
+            width: 100%;
+        }
+        input {
+            display: block;
+            width: 100%;
+            font-size: 22px;
+            padding: 2px 6px;
+            margin-bottom: 8px;
+            color:#000;
+            border: 0;
+        }
+        .s.g.fo .c4 {
+            display: flex;
+            flex-direction: column;
+        }
+        .s.g.fo a {
+            font-size: 17px;
+            text-decoration: none;
+            font-family: l, helvetica;
+            line-height: 32px;
+        }
+        .s.g.fo svg {
+            max-width: 230px;
+            margin-bottom: 48px;
+        }
+        .si {
+            margin-top: 32px;
+        }
+        .s.g.d h2  {
+            width: 100%;
+        }
+        .c20 img {
+            max-width: 100%;
+            border-radius: 50%;
+            width: 200px;
+            /*height: 200px;*/
+        }
+        .c20 * {
+            margin: 0 auto;
+            text-align: center;
+        }
+        .c20 {
+            padding: 2%;
+            text-align: center;
+        }
+        .f.s.cl {
+            text-align: center;
+        }
+        .f.s.cl img {
+            margin: 0 auto;
+        }
+        .t .l a {
+            text-decoration: none;
+        }
+        .f.s.m img {
+            max-width: 100%;
+            width: 100%;
+        }
+        @font-face {
+            font-family: 'l';
+            font-display:swap;
+            src: url('../f/l.woff2') format('embedded-opentype'),
+            url('../f/l.woff2') format('woff2'), 
+            url('../f/l.woff2') format('woff'),
+            url('../f/l.woff2')  format('truetype'),
+            url('../f/l.woff2') format('svg');
+        }
+        @font-face {
+            font-family: 'b';
+            font-display:swap;
+            src: url('../f/b.woff2') format('embedded-opentype'),
+            url('../f/b.woff2') format('woff2'), 
+            url('../f/b.woff2') format('woff'),
+            url('../f/b.woff2')  format('truetype'),
+            url('../f/b.woff2') format('svg');
+        }
+        .f.s, .t {
+            background: url('../m/noise.png');
+        }
+
+.DynamicCard {
+  background: url(../m/noise.png);
+  border-radius: 7px;
+  padding: 18px;
+  width: 100%;
+}
+
+.cl.pricingpanel {
+  width: 100%;
+}
+
+.slider-container {
+  width: 95%;
+  display: block;
+  margin: 0 auto;
+}
+
+.DCLeft {
+  width: 60%;
+  float: left;
+}
+
+.DCRight {
+  width: 40%;
+  float: left;
+  display: block;
+  background: #7BADD5;
+  padding: 12px !important;
+  min-height: 300px;
+  margin-top: -40px;
+  margin-bottom: -20px;
+  border-radius: 12px;
+}
+
+
+.DCLeft {
+  display: block;
+}
+
+
+.DynamicCard {
+  display: block;
+  overflow: visible;
+  min-height: 256px;
+}
+
+.rf.s {
+  background: #e2e2e2;
+}
+
+    </style>
+    <body>
+        <div class="t">
+            <div class="l d">
+                <a href="https://filescience.io">
+                    <svg viewBox='0 0 243.3 53.6'><defs><style>.c{fill:#fff}</style></defs><path d='M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z' class='c'/><text fill='#fff' font-family='Arial' font-size='36' font-weight='500' x='58' y='37'>FileScience</text></svg>
+                </a>
+            </div>
+            <div class="l m">
+                <a href="https://filescience.io">
+                    <svg viewBox="0 0 420 54"><path d="M0,16.2v16.2l30.5-17v-15.4L0,16.2ZM30.6,31v-15.6L44.4,23v15.4L30.6,31Zm-14,22.6l14-7.4v-15.2l-14,7.2v15.4Z" transform="translate(370 0)" fill="#fff"/><text dx="0" dy="0" font-family="Arial" font-size="36" font-weight="500" transform="translate(5 39)" fill="#fff"><tspan font-size="36" font-weight="500" transform="translate(58 37)" fill="#fff">FileScience</tspan></text></svg>
+                </a>
+            </div>
+            <span class="m b">≡</span>
+            <div class="n d">
+                <a  href="https://filescience.io/">Home</a>
+                <div>
+                    <a class="a" href="https://filescience.io/about">Company</a>
+                    <div>
+                        <a class="a" href="https://filescience.io/about">About</a>
+                        <a style="display: none;" href="#">How Backup Works</a>
+                        <a href="https://filescience.io/SecurityScience">SecurityScience</a>
+                        <a href="https://filescience.io/compliance">Compliance</a>
+                        <a href="https://filescience.io/trust">Trust</a>
+                        <a href="https://filescience.io/partners">Partners</a>
+                    </div>
+                </div>
+                <a href="https://filescience.io/comparison">Comparison</a>
+                <a href="https://filescience.io/faq">FAQ</a>
+                <a href="https://filescience.io/contact">Contact</a>
+                <a href="https://dashboard.filescience.io/login" class="c">Login</a>
+            </div>
+        </div>
+        <div class="f s">
+            <div class="c12">
+                <h1>Pricing</h1>
+            </div>
+        </div>
+        <div class="rf s">
+            
+        </div>
+        <div class="rf s">
+            <div class="cl pricingpanel">
+                
+                <div class="slider-container">
+                    <label for="storageRange">How much storage do you need?</label>
+                    <input type="range" id="storageRange" name="storage" min="0" max="100" value="0">
+                    <p>Selected storage: <span id="storageValue">320</span> GB</p>
+                </div>
+                
+                <div class="DynamicCard">
+                    <div class="DCLeft">
+                        <h3 id="tierName">Standard</h3>
+                        <p class="desc">
+                            Standard pricing for medium quantities.
+                        </p>
+                    </div>
+                    <div class="DCRight">
+                        <p class="price" id="tierPrice">$0.59</p>
+                        <p class="sublabel">Per GB</p>
+                        <div class="list">
+                            <ul>
+                                <li>Value 1</li>
+                                <li>Value 2</li>
+                                <li>Value 3</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        <script>
+           // Tier data
+const tiers = [
+    { name: "Basic", min: 1, max: 338, price: 199, perGB: "$0.00", description: "Basic tier with flat pricing for small quantities." },
+    { name: "Standard", min: 339, max: 1000, price: null, perGB: "$0.59", description: "Standard pricing for medium quantities." },
+    { name: "Growth", min: 1001, max: 5000, price: null, perGB: "$0.49", description: "Growth tier for scaling up your storage." },
+    { name: "Professional", min: 5001, max: 10000, price: null, perGB: "$0.39", description: "Professional tier for large quantities." },
+    { name: "Business", min: 10001, max: 50000, price: null, perGB: "$0.29", description: "Business tier for extensive storage needs." },
+    { name: "Corporate", min: 50001, max: 100000, price: null, perGB: "$0.19", description: "Corporate tier for high-volume storage." },
+    { name: "Enterprise", min: 100001, max: null, price: null, perGB: "$0.17", description: "Enterprise tier for unlimited storage." }
+];
+
+// Helper function to convert slider position to a logarithmic scale
+function sliderToLogValue(sliderValue) {
+    const min = Math.log(1);
+    const max = Math.log(150000);
+    const scale = (max - min) / 100; // Map slider to log scale
+    return Math.exp(min + scale * sliderValue);
+}
+
+// Helper function to convert GB to slider value for default
+function logValueToSlider(gbValue) {
+    const min = Math.log(1);
+    const max = Math.log(150000);
+    const scale = 100 / (max - min);
+    return (Math.log(gbValue) - min) * scale;
+}
+
+// Function to find the appropriate tier based on the value
+function findTier(value) {
+    for (let i = 0; i < tiers.length; i++) {
+        const tier = tiers[i];
+        if ((value >= tier.min) && (tier.max === null || value <= tier.max)) {
+            return tier;
+        }
+    }
+    return null;
+}
+
+// Function to update the card and displayed values
+function updateCard(value) {
+    const tier = findTier(value);
+    if (tier) {
+        document.getElementById('tierName').textContent = tier.name;
+        document.getElementById('tierPrice').textContent = tier.perGB;
+        document.querySelector('.desc').textContent = tier.description;
+    }
+}
+
+// Set slider default to 320GB
+const defaultGB = 320;
+const slider = document.getElementById('storageRange');
+const sliderDefaultValue = logValueToSlider(defaultGB);
+slider.value = sliderDefaultValue;
+document.getElementById('storageValue').textContent = defaultGB;
+updateCard(defaultGB);
+
+// Event listener for slider input
+slider.addEventListener('input', function () {
+    const logValue = sliderToLogValue(this.value);
+    const roundedValue = Math.round(logValue);
+    document.getElementById('storageValue').textContent = roundedValue;
+    updateCard(roundedValue);
+});
+
+        </script>
+        <div class="s g cf">
+            <div class="c6">
+                <p class="d">Contact Us</p>
+                <h3 class="d">At FileScience we always deliver the best possible solutions for your business.</h3>
+                <h3 class="m">Contact Us</h3>
+                <p class="m">At FileScience we always deliver the best possible solutions for your business.</p>
+            </div>
+            <div class="c6">
+                <form action="https://cgnew.wpengine.com/apis/filescience/form/create/" method="POST" autocomplete="off">
+                    <input name="name" type="text" placeholder="Name" />
+                    <input name="company" type="text" placeholder="Company Name" />
+                    <input name="email" type="email" placeholder="Email" />
+                    <input name="phone" type="text" placeholder="Phone Number" />
+                    <input name="amount" type="text" placeholder="Amount of Storage Needed" />
+                    <input name="info" type="text" placeholder="Message" />
+                    <input class="gb" type="submit" value="Submit" />
+                </form>
+            </div>
+        </div>
+        <div class="s g fo">
+            <div class="c4">
+                <svg viewBox="0 0 243.3 53.6"><defs><style>.c{fill:#fff}</style></defs><path d="M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z" class="c"></path><text fill="#fff" font-family="Arial" font-size="36" font-weight="500" x="58" y="37">FileScience</text></svg>
+                <a href="https://filescience.io/">Home</a>
+                <a href="https://filescience.io/comparison">Comparison</a>
+                <div class="si"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/ig.svg"></a></div>
+            </div>
+            <div class="c4">
+                <h3>Information</h3>
+                <a href="https://filescience.io/about">About</a>
+                <a href="https://filescience.io/comparison">Comparison</a>
+                <a href="https://filescience.io/faq">FAQ</a>
+                <a href="https://filescience.io/contact">Contact</a>
+            </div>
+            <div class="c4">
+                <br><br>
+                <a style="font-size:14px" href="https://filescience.io/Privacy-policy">Privacy Policy</a>
+                <p id="cc" style="font-size:14px;margin: 0;"></p>
+            </div>
+        </div>
+        <script nonce="a34g29914">
+            document.getElementById("cc").innerText = "© " + new Date().getFullYear() + " FileScience - All Rights Reserved";
+            document.querySelector('.b').addEventListener('click', b);
+            function b() {
+                document.querySelector('.n').classList.toggle('d');
+                document.querySelector('.b').innerHTML = document.querySelector('.b').innerHTML == '≡' ? '×' : '≡';
+            }
+        </script>
+    </body>
+</html>
