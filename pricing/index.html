@@ -753,7 +753,7 @@ slider.addEventListener('input', function () {
     const roundedValue = Math.round(logValue);
     
 
-    document.getElementById('storageValue').textContent = roundedValue;
+    document.getElementById('storageValue').textContent = roundedValue.toLocaleString();
     updateCard(roundedValue);
     updateSliderFill(this); // Update the slider's fill as the value changes
 });
