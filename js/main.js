@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // At 0.5s, swap the icon source and continue the rotation.
       setTimeout(() => {
         
-        burger.src = menuActive ? "https://localhost/fs25/media/close.svg" : "https://localhost/fs25/media/burger.svg";
+        burger.src = menuActive ? "https://filescience.io/media/close.svg" : "https://filescience.io/media/burger.svg";
         
         // Now animate from 180° to 360° while fading back in over the next 0.5s.
         burger.style.transition = "transform 0.4s ease, opacity 0.4s ease";
