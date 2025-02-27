@@ -136,12 +136,12 @@
                     <p class="f5">At FileScience we always deliver the best possible solutions for your business.</p>
                 </div>
                 <div class="col-6">
-                    <form> <!--Name, Company Name, Email, Amount of Storage Needed, Message (Text Area) that's not resizeable and add a honeypot called secondary email -->
+                    <form action="https://cgnew.wpengine.com/apis/filescience/form/create/" method="POST" autocomplete="off">
                         <input type="text" class="input" name="name" placeholder="Name">
                         <input type="text" class="input" name="company" placeholder="Company Name">
                         <input type="email" class="input" name="email" placeholder="Email">
-                        <input type="text" class="input" name="storage" placeholder="Amount of Storage Needed">
-                        <textarea class="input" name="message" placeholder="Message"></textarea>
+                        <input type="text" class="input" name="amount" placeholder="Amount of Storage Needed">
+                        <textarea class="input" name="info" placeholder="Message"></textarea>
                         <input type="email" class="input" name="secondary_email" placeholder="Secondary Email" style="display: none;">
                         <button type="submit" class="button">Submit</button>
                     </form>
