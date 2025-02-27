@@ -29,9 +29,6 @@
         .section.s1 {
           min-height: calc(100vh - 120px);
         }
-        .s1 {
-            margin-top:48px;
-        }
         .section.s1 .container {
           padding-left: 25px;
           padding-right: 25px;
@@ -39,52 +36,6 @@
         .section:not(.s1) .container {
           max-width: 1390px;
         }
-        .s1 .col-6 .f5, .s1 .col-6 .bold {
-        margin-top: 84px;
-        padding-right: 32px;
-        }
-        a.f4 {
-        text-decoration: none;
-        color: #272727;
-        }
-        .s1 form input, .s1 form textarea {
-        all: unset;
-        display: flex;
-        flex-direction: row-reverse;
-        background: #F5F5F5;
-        padding: 17px;
-        margin-bottom: 20px;
-        width: 100%;
-        max-width: 528px;
-        font-size: 20px;
-        font-family: n;
-        color: #A2A2A2;
-        box-sizing: border-box
-        }
-        form textarea.input {
-        box-sizing: border-box;
-        min-height: 180px;
-        }
-        .s1 form .button {
-        all: unset;
-        background: #EBCA71;
-        padding: 17px;
-        display: flex;
-        justify-content: center;
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 528px;
-        font-family: n;
-        text-align: center;
-        font-size: 20px;
-        }
-        @media screen and (max-width: 992px) {
-          .container, .section.s1 .container {
-            padding-left: 10px;
-            padding-right: 10px;
-          }
-        }
-
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -99,11 +50,11 @@
             <img src="../media\burger.svg" alt="Mobile Menu" class="burger m">
         </div>
         <div class="nav-links">
-          <a href="https://filescience.io">Home</a>
-          <a href="../about/">About</a>
-          <a href="../pricing/">Pricing</a>
-          <a href="../faq/">FAQ</a>
-          <a href="../contact/">Contact</a>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Pricing</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact</a>
 
                 <div class="nav-info m">
                     <p class="f6l">Contact Us</p>
@@ -126,29 +77,7 @@
         <!-- Navigation content goes here -->
       </nav>
     </div>
-    <div class="section s1">
-        <div class="container">
-            <div class="row">
-                <div class="col-6">
-                    <p class="bold">Contact Us</p>
-                    <a href="tel:+18454448273" class="f4">845-444-8273</a>
-                    <a href="mailto:hello@filescience.io" class="f4">hello@filescience.io</a>
-                    <p class="f5">At FileScience we always deliver the best possible solutions for your business.</p>
-                </div>
-                <div class="col-6">
-                    <form> <!--Name, Company Name, Email, Amount of Storage Needed, Message (Text Area) that's not resizeable and add a honeypot called secondary email -->
-                        <input type="text" class="input" name="name" placeholder="Name">
-                        <input type="text" class="input" name="company" placeholder="Company Name">
-                        <input type="email" class="input" name="email" placeholder="Email">
-                        <input type="text" class="input" name="storage" placeholder="Amount of Storage Needed">
-                        <textarea class="input" name="message" placeholder="Message"></textarea>
-                        <input type="email" class="input" name="secondary_email" placeholder="Secondary Email" style="display: none;">
-                        <button type="submit" class="button">Submit</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <!-- Footer Section -->
     <div class="section footer">
       <div class="container">
@@ -159,19 +88,19 @@
                 <p class="f6">FileScience is a comprehensive service that stores files from apps nobody else can</p>
             </div>
             <div class="col-4">
-              <p class="p">Quick Links</p>
-              <div class="row">
-                  <div class="col-6">
-                      <a href="../about/" class="f6">About</a>
-                      <a href="../contact/" class="f6">Contact</a>
-                      <a href="../compliance/" class="f6">Trust & Compliance</a>
-                      <a href="../standards/" class="f6">Standards & Security</a>
-                  </div>
-                  <div class="col-6">
-                      <a href="../faq/" class="f6">FAQ</a>
-                      <a href="../careers/" class="f6">Careers</a>
-                  </div>
-              </div>
+                <p class="p">Quick Links</p>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#" class="f6">About</a>
+                        <a href="#" class="f6">Services</a>
+                        <a href="#" class="f6">Trust</a>
+                        <a href="#" class="f6">Standards</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#" class="f6">FAQ</a>
+                        <a href="#" class="f6">Careers</a>
+                    </div>
+                </div>
             </div>
             <div class="col-4">
                 <p class="f6">To know the latest news and updates,  as well as keep an eye on our offers - please enter your email below</p>
@@ -184,6 +113,6 @@
         </footer>
       </div>
     </div>
-    <script src="../js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -1,644 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.4 53.6'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23ba6280;%7D.b%7Bfill:%2361bbd6;%7D.c%7Bfill:%236b5b97;%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='a' points='0 16.2 0 32.4 30.5 15.4 30.5 0 0 16.2'/%3E%3Cpolygon class='b' points='30.6 31 30.6 15.4 44.4 23 44.4 38.4 30.6 31'/%3E%3Cpolygon class='c' points='16.6 53.6 30.6 46.2 30.6 31 16.7 38.2 16.6 53.6'/%3E%3C/svg%3E" type="image/x-icon">
-        <title></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="UTF-8">
-        <meta property="og:title" content="">
-        <meta property="og:site_name" content="">
-        <meta property="og:url" content="https://filescience.io">
-        <meta property="og:description" content="">
-        <meta property="og:type" content="business.business">
-        <meta property="og:image" content="">
-        <meta property="twitter:image" content="">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta name="robots" content="index, follow">
-        <meta name="language" content="English">
-        <meta name="revisit-after" content="21 days">
-    </head>
+  <head>
+    <meta name="google-site-verification" content="L7bSda6bf_i4skbVG6uxKaxkmsHQt9ecQvLsSfZRJCg" />
+    <link rel="shortcut icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 44.4 53.6'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:%23ba6280;%7D.b%7Bfill:%2361bbd6;%7D.c%7Bfill:%236b5b97;%7D%3C/style%3E%3C/defs%3E%3Cpolygon class='a' points='0 16.2 0 32.4 30.5 15.4 30.5 0 0 16.2'/%3E%3Cpolygon class='b' points='30.6 31 30.6 15.4 44.4 23 44.4 38.4 30.6 31'/%3E%3Cpolygon class='c' points='16.6 53.6 30.6 46.2 30.6 31 16.7 38.2 16.6 53.6'/%3E%3C/svg%3E" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:url" content="https://filescience.io">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="business.business">
+    <meta property="og:image" content="">
+    <meta property="twitter:image" content="">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="21 days">
+    <title>FileScience - Reliable Cloud-to-Cloud Backup and Recovery Service</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="../css/style.css">
     <style>
-        * {
-            box-sizing: border-box;
-            color:#fff;
-        }
-        body {
-            background: #ECCE7A;
-            margin: 0;
-        }
-        .t, .s {
-            display: flex;
-            padding: 2.7% 8%;
-            flex-wrap: wrap;
-        }
-        .n, .b {
-            width: calc(100% - 160px);
-            display: flex;
-            justify-content: right;
-        }
-        .n a, .n > div {
-            padding: 10px 22px;
-            font-size: 20px;
-            text-decoration: none;
-            font-family: l, Arial;
-            display: block;
-            cursor: pointer;
-        }
-        .n div div a {
-            margin: 0;
-        }
-        .b {
-            cursor: pointer;
-            font-size: 50px;
-            width: 33%;
-            line-height: 7vw;
-        }
-        .c12 {
-            width: 100%;
-        }
-        .c6 {
-            width: 50%;
-        }
-        .c5 {
-            width: 41.66%;
-        }
-        .c4 {
-            width: 33.33%;
-        }
-        .c2 {
-            width: 16.66%;
-        }
-        .c1 {
-            width: 8.33%;
-        }
-        .c8 {
-            width: 66.66%;
-        }
-        .c9 {
-            width: 75%;
-        }
-        .c3 {
-            width: 25%;
-        }
-        .c7 {
-            width: 58.33%;
-        }
-        .c20 {
-            width: 20%;
-        }
-        .c1, .c2, .c3, .c4, .c5, .c6, .c12, .c8, .c9, .c3, .c7 {
-            display:flex;
-            flex-wrap: wrap;
-        }
-        h1, h2, h3 {
-            font-family: b, Helvetica;
-        }
-        p {
-            font-family: l, Helvetica;
-        }
-        @media screen and (max-width:1080px) {
-            .d {
-                display: none;
-            }
-            .l {
-                width: 67%;
-            }
-            .l p {
-                font-size: 36px;
-                font-weight: 500;
-                font-family: l, Arial;
-                margin: 0;
-            }
-            .n {
-                width: 100%;
-                flex-wrap: wrap;
-                margin-top: 8vh;
-                padding-bottom: 20vh;
-            }
-            .t + .f.s {
-                margin-top: 120px;
-            }
-            .n a, .n div {
-                width: 100%;
-                text-align: center;
-            }
-            .t {
-                margin-top: 40px;
-            }
-            .c {
-                max-width: 51%;
-                margin: 0 auto;
-                margin-top: 32px;
-            }
-            .c1, .c2, .c3, .c4, .c5, .c6, .c12, .c20, .c7 {
-                width: 100%;
-            }
-            .f.s:nth-of-type(2) {
-                flex-direction: column-reverse;
-            }
-            .f.s:nth-of-type(2) img.m {
-                margin: 0% -10%;
-                width: 120vw;
-            }
-            
-            .f.s h1 {
-                margin-top: -10%;
-            }
-            .s.g.ar h2, .s.g.ar p {
-                color: black;
-            }
-            .s.g.ar {
-                background-color: #fff;
-                padding-bottom: 32px;
-            }
-            .s.g.ar::before {
-                width: 100%;
-                content: '';
-                height: 1px;
-                color: black;
-                background-color: black;
-                margin: 20px auto;
-            }
-            .gb {
-                width: 100%;
-                text-align: center;
-            }
-            p {
-                font-size:24px;
-            }
-            h2, h3 {
-                font-size: 36px;
-            }
-            .s.g.in {
-                background: #fff;
-            }
-            .s.g.in p, .s.g.in h3 {
-                color: #000;
-            }
-            .s.g.in p {
-                padding-bottom: 64px;
-            }
-            .s.g.in {
-                background: #fff;
-            }
-            .s.g.in p, .s.g.in h3 {
-                color: #000;
-            }
-            .s.g.in p {
-                padding-bottom: 64px;
-            }
-            .s.g.fo svg {
-                margin: 30px auto;
-            }
-            .s.g.fo {
-                background: #98C5C2;
-            }
-            .f.s.cl:nth-of-type(2) img.m {
-                width: 100%;
-                margin: 0 auto;
-            }
-            .rf {
-                display: flex;
-                flex-direction: column-reverse;
-            }
-            .s.g.cf {
-                background: #000;
-            }
-            .f.s.cl p {
-                text-align: left;
-                font-size: 20px;
-            }
-            .faq .opener {
-                width: 64px;
-                background-repeat: no-repeat !important;
-                background-position: center center !important;
-            }
-            .n > div > a {
-                display: none;
-            }
-            a.k {
-                margin: 32px auto 0px;
-                max-width: 51%;
-                display: block;
-            }
-        }
-        @media screen and (min-width:1080px) {
-            .m {
-                display: none;
-            }
-            .l {
-                width: 140px;
-            }
-            .n div:hover {
-                background-color: #1e1e1e;
-            }
-            .n div:hover div {
-                display: block;
-                background-color: #1e1e1e;
-            }
-            .n div div {
-                position: absolute;
-                display: none;
-                margin: 6px -22px;
-            }
-            .n.d > div > a {
-                padding: 0;
-            }
-            .f.s h1, .f.s p, .f.s h3 {
-                width: 100%;
-                text-align: center;
-            }
-            h1 {
-                font-size:64px;
-            } 
-            p {
-                font-size:20px;
-                line-height: 27px;
-            }
-            .f.s .c6:nth-of-type(2) {
-                justify-content: right;
-            }
-            .f.s .c6:nth-of-type(2) img, .f.s .c6:nth-of-type(1) *{
-                width: 80%;
-            }
-            .s.g.d .c12 {
-                flex-direction: row;
-                align-items: center;
-            }
-            h2 {
-                font-size:42px;
-            }
-            h3 {
-                font-size:30px;
-            }
-           
-            .s.g.ar .c12 {
-                background-color: #000;
-                padding: 32px;
-                border-radius: 25px;
-                box-shadow: 10px 10px 10px 10px black;
-            }
-            .s.g.ar .c6, .s.g.in .c6, .s.g.cf .c6 {
-                padding: 1% 7%;
-                align-content: center;
-            }
-            .s.g.in .c3, .s.g.in .c9 {
-                align-content: baseline;
-            }
-            .in .c9, .in .c3 {
-                margin-bottom: 36px;
-            }
-            .s.g.cf {
-                background-color:#A490B0;
-            }
-            .s.g.cf h3, .s.g.cf p {
-                color: #000;
-            }
-            .s.g.cf p {
-                font-weight: bold;
-            }
-            .s.g h2 {
-                width: 100%;
-            }
-            .f.s.cl {
-                background-color: #000;
-            }
-            .s.g.fo {
-                background: #000;
-            }
-            .s.gf .c5 {
-                padding-right: 4%;
-            }
-            .faq .opener {
-                width: 64px;
-                background-repeat: no-repeat !important;
-                background-position: center 20px !important;
-            }
-            a.k {
-                margin: 0px 16px;
-            }
-        }
-        a.k {
-            border: 1px solid white;
-        }
-        .r {
-            height: 0;
-            flex-basis: 100%;
-        }
-        .n .a {
-            text-decoration: underline;
-        }
-        .n a:hover {
-            text-decoration: underline;
-        }
-        .c {
-            color: #000;
+        /* Custom CSS goes here */
+        html {
             background-color: #fff;
         }
-        .s.g.d .c12 {
-            justify-content: center;
+        .section.s1 {
+          min-height: calc(100vh - 120px);
         }
-        .s.g.d .c12 svg {
-            width: 80px;
+        .section.s1 .container {
+          padding-left: 25px;
+          padding-right: 25px;
         }
-        .s.g.d p {
-            max-width: 800px;
-            text-align: center;
+        .section .container {
+          max-width: 1390px;
         }
-        .gb {
-            background-color: #EBCA71;
-            padding: 12px 25px;
-            font-size: 25px;
-            color: black;
-            font-family: b, Helvetica;
-            text-decoration: none;
-        }
-        .cf .gb {
-            font-weight: bold;
-        }
-        form {
-            width: 100%;
-        }
-        input {
-            display: block;
-            width: 100%;
-            font-size: 22px;
-            padding: 2px 6px;
-            margin-bottom: 8px;
-            color:#000;
-            border: 0;
-        }
-        .s.g.fo .c4 {
-            display: flex;
-            flex-direction: column;
-        }
-        .s.g.fo a {
-            font-size: 17px;
-            text-decoration: none;
-            font-family: a, helvetica;
-            line-height: 32px;
-        }
-        .s.g.fo svg {
-            max-width: 230px;
-            margin-bottom: 48px;
-        }
-        .si {
-            margin-top: 32px;
-        }
-        .s.g.d h2  {
-            width: 100%;
-        }
-        .c20 img {
-            max-width: 100%;
-            border-radius: 50%;
-            width: 200px;
-            height: 200px;
-        }
-        .c20 * {
-            margin: 0 auto;
-            text-align: center;
-        }
-        .c20 {
-            padding: 2%;
-            text-align: center;
-        }
-        .f.s.cl {
-            text-align: center;
-        }
-        .f.s.cl img {
-            margin: 0 auto;
+        .opener {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-repeat: no-repeat !important;
+            right: 0;
+            top: 16px;
         }
         .faq {
-            display: flex;
-            flex-wrap: wrap;
-            flex-direction: row;
-            width:100%;
-            border-top: 1px solid #000;
+            position: relative;
+            padding-right: 52px;
+            margin-top: 16px;
+            border-top: 1px solid #272727;
+            padding-top: 12px;
         }
-        .gf {
-            background:#fff;
+        .faq .f5 {
+            margin-top: 8px;
         }
-        
-        .faq h3, .faq p {
-            width: calc(100% - 64px);
+        .s1 .col-40 .f1b {
+            margin-top: 12px;
         }
-        .gf h3, .gf h2, .gf a, .gf p {
-            color: #000;
+        .s1 .row {
+            margin-bottom: 100px;
         }
-        .gf .c5 {
-            align-self: flex-start;
+        .section.s1 {
+            padding-top: 100px;
         }
-        .bf .c12 div {
-            background: #D88E8C;
-            padding: 3% 6%;
-            margin: 0 auto;
-            margin-bottom: 5%;
-            border-radius: 35px;
-            text-align: center;
-        }
-        .bf {
-            background: #fff;
-        }
-        .t .l a {
-            text-decoration: none;
-        }
-        @font-face {
-            font-family: 'l';
-            font-display:swap;
-            src: url('../f/l.woff2') format('embedded-opentype'),
-            url('../f/l.woff2') format('woff2'), 
-            url('../f/l.woff2') format('woff'),
-            url('../f/l.woff2')  format('truetype'),
-            url('../f/l.woff2') format('svg');
-        }
-        @font-face {
-            font-family: 'b';
-            font-display:swap;
-            src: url('../f/b.woff2') format('embedded-opentype'),
-            url('../f/b.woff2') format('woff2'), 
-            url('../f/b.woff2') format('woff'),
-            url('../f/b.woff2')  format('truetype'),
-            url('../f/b.woff2') format('svg');
-        }
+        @media screen and (max-width: 992px) {
+  .container, .section.s1 .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
     </style>
-    <body>
-        <div class="t">
-            <div class="l d">
-                <a href="https://filescience.io">
-                    <svg viewBox='0 0 243.3 53.6'><defs><style>.c{fill:#fff}</style></defs><path d='M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z' class='c'/><text fill='#fff' font-family='Arial' font-size='36' font-weight='500' x='58' y='37'>FileScience</text></svg>
-                </a>
-            </div>
-            <div class="l m">
-                <a href="https://filescience.io">
-                    <svg viewBox="0 0 420 54"><path d="M0,16.2v16.2l30.5-17v-15.4L0,16.2ZM30.6,31v-15.6L44.4,23v15.4L30.6,31Zm-14,22.6l14-7.4v-15.2l-14,7.2v15.4Z" transform="translate(370 0)" fill="#fff"/><text dx="0" dy="0" font-family="Arial" font-size="36" font-weight="500" transform="translate(5 39)" fill="#fff"><tspan font-size="36" font-weight="500" transform="translate(58 37)" fill="#fff">FileScience</tspan></text></svg>
-                </a>
-            </div>
-            <span class="m b">≡</span>
-            <div class="n d">
-                <a href="https://filescience.io/">Home</a>
-                <div>
-                    <a href="https://filescience.io/about">Company</a>
-                    <div>
-                        <a class="a" href="https://filescience.io/about">About</a>
-                        <a style="display: none;" href="#">How Backup Works</a>
-                        <a href="https://filescience.io/SecurityScience">SecurityScience</a>
-                        <a href="https://filescience.io/compliance">Compliance</a>
-                        <a href="https://filescience.io/trust">Trust</a>
-                        <a href="https://filescience.io/partners">Partners</a>
-                        <a href="https://filescience.io/pricing">Pricing</a>
+    <!-- Navigation Container -->
+    <div class="nav-container">
+      <nav>
+        <div class="nav-logo">
+          <a href="/">
+            <img src="../media\logo.svg" alt="FileScience Logo">
+          </a>
+        </div>
+        <div class="nav-center m">
+            <a href="#" class="f6l">Sign In</a>
+            <img src="../media\burger.svg" alt="Mobile Menu" class="burger m">
+        </div>
+        <div class="nav-links">
+            <a href="https://filescience.io">Home</a>
+            <a href="../about/">About</a>
+            <a href="../pricing/">Pricing</a>
+            <a href="../faq/">FAQ</a>
+            <a href="../contact/">Contact</a>
+
+                <div class="nav-info m">
+                    <p class="f6l">Contact Us</p>
+                    <p class="bold nav-tel"><a href="tel:+1845-444-8273">845-444-8273</a></p>
+                    <p class="bold nav-email"><a href="mailto:hello@filescience.io">hello@filescience.io</a></p>
+                </div>
+                <div class="nav-policies m">
+                    <div class="privacy-nav">
+                        <p><a href="#">Privacy Terms</a></p>
+                    </div>
+                    <div class="copyright-nav">
+                        <p><a href="#">Copyrights</a></p>
                     </div>
                 </div>
-                <a class="a" href="https://filescience.io/faq">FAQ</a>
-                <a href="https://filescience.io/contact">Contact</a>
-                <a href="https://dashboard.filescience.io/" class="k">Sign Up</a>
-                <a href="https://dashboard.filescience.io/login" class="c">Login</a>
+        </div>
+        <div class="nav-right d">
+          <a href="#" class="button-nav f6l">Sign In</a>
+          <a href="#" class="btn-nav-alt f6b">Join Now</a>
+        </div>
+        <!-- Navigation content goes here -->
+      </nav>
+    </div>
+    <div class="section s1">
+        <div class="container">
+            <div class="row">
+                <div class="col-40">
+                    <h1 class="f1b">Basics of Cloud-to-Cloud Backup</h1>
+                    <p class="f6">Everything you need to know about the product and how it works. <br>
+                        Can't find the answer? <br>
+                        Please, chat with our friendly team.</p>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">What is cloud-to-cloud backup?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Cloud-to-cloud backup is a service where data from one cloud platform is backed up to another cloud-based storage environment. In essence, it's a <span class="bold">Backup-as-a-Service</span> offering that creates a secure copy of your cloud data in a separate cloud location, so it can be restored if needed.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Why do I need cloud-to-cloud backup if my data is already in the cloud?</h3>
+                        <div class="opener" style="background: url('../media/open.svg'); margin-top:12px;"></div>
+                        <p class="p" style="display: none;">Storing data in the cloud doesn't make it immune to loss. About one-third of cloud data loss is due to user errors (accidental deletion or overwriting), and other risks include malicious deletions, hackers, sync glitches, or service outages.Cloud providers have redundancy for themselves but often <span class="bold">cannot recover your data once it's permanently deleted on your end</span> cannot recover your data once it's permanently deleted on your end (for example, after a recycle bin is purged. A cloud-to-cloud backup keeps independent copies of your data to restore those lost or corrupted files, providing an extra layer of protection.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How does cloud-to-cloud backup work?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Cloud-to-cloud backup works by connecting to your cloud applications (via secure APIs or credentials) and periodically copying your data to a separate cloud storage. The backup service will <span class="bold">snapshot your data and store it safely in the cloud</span> snapshot your data and store it safely in the cloud so that a point-in-time version can be recovered later. Because the backup runs entirely in the cloud, you don't need any hardware - the provider manages the storage and infrastructure.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How is cloud-to-cloud backup different from traditional on-premises backup?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Unlike on-premises backup, cloud-to-cloud backup does not require you to maintain physical servers or storage devices. It leverages the scalability and infrastructure of cloud platforms. This means <span class="bold">no hardware to buy or manage</span> , and backups can scale on-demand as your cloud data grows. Additionally, cloud backups are stored off-site by design (fulfilling the off-site copy need), and the provider takes care of updates and maintenance, which is ideal for businesses without extensive IT resources. In short, cloud-to-cloud backup is more hands-off and flexible, while traditional backup requires on-premise storage and upkeep.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-40">
+                    <h2 class="f1b">Security and Compliance</h2>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">How is my data secured in a cloud-to-cloud backup?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Security is a top priority in cloud backups. Reputable providers protect data with strong <span class="bold">encryption</span> both in transit and at rest – using AES-256 encryption for stored data and SSL/TLS for data transfer. Your backup data is stored in hardened, secure data centers with robust physical and network security. Our solution also uses unique encryption keys per customer and per dataset, ensuring that even if one key were compromised, it couldn’t decrypt other data. In short, your data is encrypted and safeguarded so that only authorized access (you or those you designate) can read it.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Where is the backup data stored, and can I choose the region?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">FileScience stores your data in Amazon Web Services by default. If geography is a relevant, we do allow you to choose the geographic region of storage to meet data residency or compliance needs. For example, you might choose to keep backups in the US, EU, or Australia data centers. The data is typically replicated within that region for durability (multiple copies within a data center or across zones). By selecting a region, you ensure your backup data stays in an approved location (helpful for GDPR and other local regulations).</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Where is the backup data stored, and can I choose the region?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">FileScience stores your data in Amazon Web Services by default. If geography is a relevant, we do allow you to choose the geographic <span class="bold">region</span> of storage to meet data residency or compliance needs. For example, you might choose to keep backups in the US, EU, or Australia data centers. The data is typically replicated within that region for durability (multiple copies within a data center or across zones). By selecting a region, you ensure your backup data stays in an approved location (helpful for GDPR and other local regulations).</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Can cloud-to-cloud backups protect against ransomware or malware?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Yes. A critical advantage of having independent backups is protection against ransomware or malicious corruption. Our Cloud-to-cloud backups are <span>immutable</span>, meaning once data is backed up, it cannot be altered or encrypted by malware on your end. If ransomware encrypts files in your primary cloud account, you can restore clean versions from the backup, effectively rolling back to a safe state. Additionally, our systems don’t execute files when copying them, so malware-infected files are stored inertly and won’t spread through the backup platform. In short, backups let you recover from ransomware by retrieving uninfected copies of your data.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-40">
+                    <h2 class="f1b">Features and Functionality</h2>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">Are backups performed automatically, and how often do they run?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Yes, our backups are automated and we perform <span class="bold">daily backups</span> by default (for example, every night) without manual intervention. We also offer a high frequency backup, allowing you to back up multiple times per day (e.g. 4x a day) for more frequent protection. The initial setup is done once, and then backups happen automatically at the set frequency, ensuring new and changed data gets protected regularly.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How long are backups retained, and can I set retention policies?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">We keep backups <span class="bolder">indefinitely</span> (with “unlimited storage” so you don’t worry about older backups),  but the retained time can be customized.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Do backups keep multiple versions of my data or just the latest copy?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Our backups maintain <span class="bold">multiple versions.</span> Each backup run captures a snapshot of your data at that point in time without overwriting the previous one. This means if you modify or delete a file, you can still retrieve the earlier version from a prior backup. Versioning allows point-in-time recovery - you can roll back to last week's email or yesterday's document version. Essentially, backups are non-destructive: new backups add to the archive instead of replacing older backups.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Can I restore a single file or email, or do I have to restore everything?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">You can perform <span class="bold">granular restores</span>, letting you retrieve individual items - such as one email, a specific document, or a single user's data - without having to do a full restore of everything. This item-level recovery is very useful; for instance, if one file is accidentally deleted, you can just restore that file. Of course, you also have the option to restore larger sets (like an entire mailbox or folder) if needed, but you are not forced to roll back or recover the whole system for one item.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">What is the process to restore data from a cloud-to-cloud backup?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Restoring data is very straightforward via the backup service's interface. You would log in to the backup dashboard, <span class="bold">find the data</span>find the data you want, and then initiate a restore. The service will then provide a download.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-40">
+                    <h2 class="f1b">Pricing and Costs</h2>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">How is pricing structured for cloud-to-cloud backup services?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Pricing is based on a per GB model. This tend to be a more cost effective structure. You can find our quoting tool here:
+                            <a class="p" href="https://dashboard.filescience.io/quote" target="_blank">https://dashboard.filescience.io/quote</a>
+                        </p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Is backup storage included in the cost, or is it charged separately?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">We <span class="bold">include the storage costs</span> in our per-user pricing - meaning the backups are stored in our cloud do not create additional costs for you.
+                        </p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Are there any additional fees (e.g., for data restores or exceeding certain limits)?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">We do provide no-cost egress, but egress that exceeds XXGB per month, are subject to a $X.XX fee per GB.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How quickly can I restore data from a cloud-to-cloud backup after data loss?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Restoration speed are generally instant but have a 24-hour SLA for recovery. Most times file size is the variable here.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How will I be notified if a backup fails or encounters an issue?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Our dashboard will alert and an e-mail will be sent providing detailed reporting if a failure was to happen.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-40">
+                    <h2 class="f1b">Performance and Scalability</h2>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">Will running cloud-to-cloud backups slow down my network or cloud services?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Backups will not disrupt daily usage, and they are engineered to be as efficient as possible with bandwidth.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Can a cloud-to-cloud backup solution scale to handle large data volumes and many users?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Yes. Scalability is a key benefit of cloud-based backups. These services are designed to <span class="bold">scale on demand</span>, whether you're protecting 10 users or 100,000, a few gigabytes or many exabytes.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-40">
+                    <h2 class="f1b">Advanced and Niche Considerations</h2>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">If my cloud service already retains data or has legal hold, do I still need a separate backup?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">Built-in retention (like recycle bins or litigation hold in Office 365) is helpful, but it's not a complete backup solution. Legal holds preserve data for eDiscovery, but they have <span class="bold">limitations</span> - for example, Microsoft's litigation hold has mailbox size quotas (~100 GB) and won't retain data if a user's license is removed. It also doesn't provide easy restoration, just preservation. Relying solely on these can give a false sense of security. As one analysis put it, using holds in place of backup can be “risky” because data might still be lost when employees leave or if errors occur. A cloud-to-cloud backup keeps independent, restorable copies of data (physically separate from the primary service), which is the safest approach for general recovery. In summary, retention features and holds are not designed for point-in-time recovery or full protection - they complement but do not replace having a true backup.
+                        </p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">What happens to the backups if an employee leaves the company?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;">When an employee leaves, you'll likely remove their account from the primary cloud service - but your backup can still retain that user's data. Cloud-to-cloud backup solutions will keep the departed employee's backed-up emails, files, etc., under an “inactive” or archived status. Notably, one best practice is to save costs by removing the SaaS license while <span class="bold">still retaining the backup archives</span> in case of litigation or knowledge transfer. You can also perform cross-user restore - for instance, restore the ex-employee's mailbox into a new user's mailbox if someone takes over their role. In short, employee departure doesn't mean backup deletion; you maintain the data for as long as needed.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How is cloud-to-cloud backup different from simply syncing or replicating data?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p" style="display: none;"><span class="bold">Syncing</span> (or cloud storage services like OneDrive/Dropbox) is not the same as backup. Sync keeps files consistent across devices - if you delete or change a file, that change syncs everywhere (including deletions). A true backup, by contrast, maintains historical versions and separate copies. With replication alone, any corruption or deletion on the source can immediately propagate to the replica, whereas a backup can be used to recover the earlier intact data. In short, cloud sync is great for accessibility and collaboration, but it is not a trustworthy backup solution. Backup ensures you have an independent copy that isn't automatically changed when the source changes. This distinction is crucial: for protection against accidental or malicious changes, you need backup, not just sync.</p>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="s j">
-            <h1>Top questions about FileScience</h1>
-            <p>Need something cleared up? Here are our most frequently asked questions.</p>
-        </div>
-        <div class="s gf">
-            <div class="c12">
-                <div class="c5">
-                    <h2>General FAQ</h2>
-                    <p>Everything you need to know about the product and how it works. Can’t find the answer? <br>
-                        <a href="https://filescience.io/contact">Please, chat with our friendly team.</a></p>
-                </div>
-                <div class="c7">
-                    <div class="faq">
-                        <h3>How long does it take to recover data?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">We have Service Level Agreements that specify recovery time. Typically, we offer 24-hour service, which is the basis for our pricing model. Faster recovery times are available but may incur additional charges.</p>
+    </div>
+    <!-- Footer Section -->
+    <div class="section footer">
+      <div class="container">
+        <footer>
+          <div class="row">
+            <div class="col-4">
+                <img src="../media\logo-white.svg" alt="FileScience Logo">
+                <p class="f6">FileScience is a comprehensive service that stores files from apps nobody else can</p>
+            </div>
+            <div class="col-4">
+                <p class="p">Quick Links</p>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="../about/" class="f6">About</a>
+                        <a href="../contact/" class="f6">Contact</a>
+                        <a href="../compliance/" class="f6">Trust & Compliance</a>
+                        <a href="../standards/" class="f6">Standards & Security</a>
                     </div>
-                    <div class="faq">
-                        <h3>How do we manage what is backed up?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">We setup an initial customer discovery to review what apps and platforms you require to be backed up.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>How are requests for recovery made?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">Email or phone-in to our Help Desk.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>Can the retention period be different for different types of data?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">Yes.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>Is there a self-service option?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">No. We offer a fully managed service.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>How do you connect with us?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">We connect via a service account. We require Global Admin permissions.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>How long does it take to recover data?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">We have Service Level Agreements that specify recovery time. Typically, we offer 24-hour service, which is the basis for our pricing model. Faster recovery times are available but may incur additional charges.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>What do you not backup?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">Nothing. We back up everything down to permissions level. We back up Microsoft Streams and To Do, and a fully comprehensive back up of Teams. We also offer BIM360 backups.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>Is training available?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">Yes, if needed. It's part of the set-up.</p>
-                    </div>
-                </div>
-                <div class="c5">
-                    <h2>Billing FAQ</h2>
-                    <p>Everything you need to know about the product and how it works. Can’t find the answer? <br>
-                        <a href="https://filescience.io/contact">Please, chat with our friendly team.</a></p>
-                </div>
-                <div class="c7">
-                    <div class="faq">
-                        <h3>What is your pricing model?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">We bill per GB per month instead of per user. How much data you’re storing, not how many people are storing the data, determines cost.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>How do you determine the bill?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">We have a tiered rate structure based on how many TB are stored. As data storage increases, cost per GB decreases. We meter the data and bill based on data stored.</p>
-                    </div>
-                    <div class="faq">
-                        <h3>Are there implementation costs?</h3>
-                        <div class="opener" style="background: url('../m/open.svg');"></div>
-                        <p style="display: none;">Yes, but they can be waived. It depends on the amount of data to be stored. Set-up charges are occasionally discounted in special promotions.</p>
+                    <div class="col-6">
+                        <a href="../faq/" class="f6">FAQ</a>
+                        <a href="../careers/" class="f6">Careers</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bf">
-            <div class="c12">
-                <div class="st">
-                    <h2>Still left with some questions?</h2>
-                    <p>Please, <a href="https://filescience.io/contact">chat with our friendly team.</a></p>
-                </div>
-            </div>
-        </div>
-        <div class="s g cf">
-            <div class="c6">
-                <p class="d">Contact Us</p>
-                <h3 class="d">At FileScience we always deliver the best possible solutions for your business.</h3>
-                <h3 class="m">Contact Us</h3>
-                <p class="m">At FileScience we always deliver the best possible solutions for your business.</p>
-            </div>
-            <div class="c6">
-                <form action="https://cgnew.wpengine.com/apis/filescience/form/create/" method="POST" autocomplete="off">
-                    <input name="name" type="text" placeholder="Name" />
-                    <input name="company" type="text" placeholder="Company Name" />
-                    <input name="email" type="email" placeholder="Email" />
-                    <input name="phone" type="text" placeholder="Phone Number" />
-                    <input name="amount" type="text" placeholder="Amount of Storage Needed" />
-                    <input name="info" type="text" placeholder="Message" />
-                    <input class="gb" type="submit" value="Submit" />
+            <div class="col-4">
+                <p class="f6">To know the latest news and updates,  as well as keep an eye on our offers - please enter your email below</p>
+                <form action="" method="post" class="footer_form">
+                    <input type="email" class="footer_input f6" name="email" placeholder="Enter email">
+                    <button type="submit" class="footer_submit f6">Subscribe</button>
                 </form>
             </div>
-        </div>
-        <div class="s g fo">
-            <div class="c4">
-                <svg viewBox="0 0 243.3 53.6"><defs><style>.c{fill:#fff}</style></defs><path d="M0 16.2v16.2l30.5-17V0L0 16.2zM30.6 31V15.4L44.4 23v15.4L30.6 31zM16.6 53.6l14-7.4V31l-14 7.2v15.4z" class="c"></path><text fill="#fff" font-family="Arial" font-size="36" font-weight="500" x="58" y="37">FileScience</text></svg>
-                <a href="https://filescience.io/">Home</a>
-                <div class="si"><a href="https://www.facebook.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/fb.svg"></a><a href="https://www.twitter.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/tw.svg"></a><a href="https://www.instagram.com/filescience/" target="_blank" style="width:48px;margin:5px;border-radius:50%;display: inline-block;"><img loading="lazy" src="../m/ig.svg"></a></div>
-            </div>
-            <div class="c4">
-                <h3>Information</h3>
-                <a href="https://filescience.io/about">About</a>
-                <a href="https://filescience.io/faq">FAQ</a>
-                <a href="https://filescience.io/contact">Contact</a>
-            </div>
-            <div class="c4">
-                <br><br>
-                <a style="font-size:14px" href="https://filescience.io/Privacy-policy">Privacy Policy</a>
-                <p id="cc" style="font-size:14px;margin: 0;"></p>
-            </div>
-        </div>
-        <script nonce="a34g29914">
-            document.getElementById("cc").innerText = "© " + new Date().getFullYear() + " FileScience - All Rights Reserved";
-            document.querySelector('.b').addEventListener('click', b);
-            function b() {
-                document.querySelector('.n').classList.toggle('d');
-                document.querySelector('.b').innerHTML = document.querySelector('.b').innerHTML == '≡' ? '×' : '≡';
-            }
-            var q = document.querySelectorAll('.faq div');
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="../js/main.js"></script>
+    <script nonce="a34g29914">
+        var q = document.querySelectorAll('.faq div');
             for(var i = 0; i < q.length; i++) {
 				q[i].onclick = function() {
 					if(this.nextElementSibling.style.display == "none") {
                         closeAll();
-						this.nextElementSibling.style.display = "flex";
-                        this.style.background = "url('../m/close.svg')";
+						this.nextElementSibling.style.display = "block";
+                        this.style.background = "url('../media/close-f.svg')";
 					}
 					else {
-                        this.style.background = "url('../m/open.svg')";
+                        this.style.background = "url('../media/open.svg')";
 						this.nextElementSibling.style.display = "none";
 					}
 				}
@@ -647,9 +333,9 @@
                 var q = document.querySelectorAll('.faq div');
                 for(var i = 0; i < q.length; i++) {
                     q[i].nextElementSibling.style.display = "none";
-                    q[i].style.background = "url('../m/open.svg')";
+                    q[i].style.background = "url('../media/open.svg')";
                 }
             }
-        </script>
-    </body>
+    </script>
+  </body>
 </html>
