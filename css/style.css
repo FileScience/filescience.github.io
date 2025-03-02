@@ -367,7 +367,7 @@ footer a {
 .arrow_link:after {
   width: 16px;
   height: 12px;
-  background: url('..media/arrow-mini.svg') no-repeat;
+  background: url('../media/arrow-mini.svg') no-repeat;
   content: ' ';
   display: block;
   position: absolute;
