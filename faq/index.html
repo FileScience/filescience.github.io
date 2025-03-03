@@ -54,6 +54,23 @@
         .faq .f5 {
             margin-top: 8px;
         }
+
+
+
+        .faq p {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s ease;
+            margin: 0; /* Optional: adjust as needed */
+        }
+
+        /* When open, allow the content to expand */
+        .faq p.open {
+            /* Set a max-height large enough to accommodate the content */
+            max-height: 500px;
+        }
+
+
         .s1 .col-40 .f1b {
             margin-top: 12px;
         }
@@ -123,22 +140,22 @@
                     <div class="faq">
                         <h3 class="f5">What is cloud-to-cloud backup?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Cloud-to-cloud backup is a service where data from one cloud platform is backed up to another cloud-based storage environment. In essence, it's a <span class="bold">Backup-as-a-Service</span> offering that creates a secure copy of your cloud data in a separate cloud location, so it can be restored if needed.</p>
+                        <p class="p"  >Cloud-to-cloud backup is a service where data from one cloud platform is backed up to another cloud-based storage environment. In essence, it's a <span class="bold">Backup-as-a-Service</span> offering that creates a secure copy of your cloud data in a separate cloud location, so it can be restored if needed.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Why do I need cloud-to-cloud backup if my data is already in the cloud?</h3>
                         <div class="opener" style="background: url('../media/open.svg'); margin-top:12px;"></div>
-                        <p class="p" style="display: none;">Storing data in the cloud doesn't make it immune to loss. About one-third of cloud data loss is due to user errors (accidental deletion or overwriting), and other risks include malicious deletions, hackers, sync glitches, or service outages.Cloud providers have redundancy for themselves but often <span class="bold">cannot recover your data once it's permanently deleted on your end</span> cannot recover your data once it's permanently deleted on your end (for example, after a recycle bin is purged. A cloud-to-cloud backup keeps independent copies of your data to restore those lost or corrupted files, providing an extra layer of protection.</p>
+                        <p class="p"  >Storing data in the cloud doesn't make it immune to loss. About one-third of cloud data loss is due to user errors (accidental deletion or overwriting), and other risks include malicious deletions, hackers, sync glitches, or service outages.Cloud providers have redundancy for themselves but often <span class="bold">cannot recover your data once it's permanently deleted on your end</span> cannot recover your data once it's permanently deleted on your end (for example, after a recycle bin is purged. A cloud-to-cloud backup keeps independent copies of your data to restore those lost or corrupted files, providing an extra layer of protection.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">How does cloud-to-cloud backup work?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Cloud-to-cloud backup works by connecting to your cloud applications (via secure APIs or credentials) and periodically copying your data to a separate cloud storage. The backup service will <span class="bold">snapshot your data and store it safely in the cloud</span> snapshot your data and store it safely in the cloud so that a point-in-time version can be recovered later. Because the backup runs entirely in the cloud, you don't need any hardware - the provider manages the storage and infrastructure.</p>
+                        <p class="p"  >Cloud-to-cloud backup works by connecting to your cloud applications (via secure APIs or credentials) and periodically copying your data to a separate cloud storage. The backup service will <span class="bold">snapshot your data and store it safely in the cloud</span> snapshot your data and store it safely in the cloud so that a point-in-time version can be recovered later. Because the backup runs entirely in the cloud, you don't need any hardware - the provider manages the storage and infrastructure.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">How is cloud-to-cloud backup different from traditional on-premises backup?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Unlike on-premises backup, cloud-to-cloud backup does not require you to maintain physical servers or storage devices. It leverages the scalability and infrastructure of cloud platforms. This means <span class="bold">no hardware to buy or manage</span> , and backups can scale on-demand as your cloud data grows. Additionally, cloud backups are stored off-site by design (fulfilling the off-site copy need), and the provider takes care of updates and maintenance, which is ideal for businesses without extensive IT resources. In short, cloud-to-cloud backup is more hands-off and flexible, while traditional backup requires on-premise storage and upkeep.</p>
+                        <p class="p"  >Unlike on-premises backup, cloud-to-cloud backup does not require you to maintain physical servers or storage devices. It leverages the scalability and infrastructure of cloud platforms. This means <span class="bold">no hardware to buy or manage</span> , and backups can scale on-demand as your cloud data grows. Additionally, cloud backups are stored off-site by design (fulfilling the off-site copy need), and the provider takes care of updates and maintenance, which is ideal for businesses without extensive IT resources. In short, cloud-to-cloud backup is more hands-off and flexible, while traditional backup requires on-premise storage and upkeep.</p>
                     </div>
                 </div>
             </div>
@@ -150,22 +167,22 @@
                     <div class="faq">
                         <h3 class="f5">How is my data secured in a cloud-to-cloud backup?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Security is a top priority in cloud backups. Reputable providers protect data with strong <span class="bold">encryption</span> both in transit and at rest – using AES-256 encryption for stored data and SSL/TLS for data transfer. Your backup data is stored in hardened, secure data centers with robust physical and network security. Our solution also uses unique encryption keys per customer and per dataset, ensuring that even if one key were compromised, it couldn’t decrypt other data. In short, your data is encrypted and safeguarded so that only authorized access (you or those you designate) can read it.</p>
+                        <p class="p"  >Security is a top priority in cloud backups. Reputable providers protect data with strong <span class="bold">encryption</span> both in transit and at rest – using AES-256 encryption for stored data and SSL/TLS for data transfer. Your backup data is stored in hardened, secure data centers with robust physical and network security. Our solution also uses unique encryption keys per customer and per dataset, ensuring that even if one key were compromised, it couldn’t decrypt other data. In short, your data is encrypted and safeguarded so that only authorized access (you or those you designate) can read it.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Where is the backup data stored, and can I choose the region?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">FileScience stores your data in Amazon Web Services by default. If geography is a relevant, we do allow you to choose the geographic region of storage to meet data residency or compliance needs. For example, you might choose to keep backups in the US, EU, or Australia data centers. The data is typically replicated within that region for durability (multiple copies within a data center or across zones). By selecting a region, you ensure your backup data stays in an approved location (helpful for GDPR and other local regulations).</p>
+                        <p class="p"  >FileScience stores your data in Amazon Web Services by default. If geography is a relevant, we do allow you to choose the geographic region of storage to meet data residency or compliance needs. For example, you might choose to keep backups in the US, EU, or Australia data centers. The data is typically replicated within that region for durability (multiple copies within a data center or across zones). By selecting a region, you ensure your backup data stays in an approved location (helpful for GDPR and other local regulations).</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Where is the backup data stored, and can I choose the region?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">FileScience stores your data in Amazon Web Services by default. If geography is a relevant, we do allow you to choose the geographic <span class="bold">region</span> of storage to meet data residency or compliance needs. For example, you might choose to keep backups in the US, EU, or Australia data centers. The data is typically replicated within that region for durability (multiple copies within a data center or across zones). By selecting a region, you ensure your backup data stays in an approved location (helpful for GDPR and other local regulations).</p>
+                        <p class="p"  >FileScience stores your data in Amazon Web Services by default. If geography is a relevant, we do allow you to choose the geographic <span class="bold">region</span> of storage to meet data residency or compliance needs. For example, you might choose to keep backups in the US, EU, or Australia data centers. The data is typically replicated within that region for durability (multiple copies within a data center or across zones). By selecting a region, you ensure your backup data stays in an approved location (helpful for GDPR and other local regulations).</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Can cloud-to-cloud backups protect against ransomware or malware?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Yes. A critical advantage of having independent backups is protection against ransomware or malicious corruption. Our Cloud-to-cloud backups are <span>immutable</span>, meaning once data is backed up, it cannot be altered or encrypted by malware on your end. If ransomware encrypts files in your primary cloud account, you can restore clean versions from the backup, effectively rolling back to a safe state. Additionally, our systems don’t execute files when copying them, so malware-infected files are stored inertly and won’t spread through the backup platform. In short, backups let you recover from ransomware by retrieving uninfected copies of your data.</p>
+                        <p class="p"  >Yes. A critical advantage of having independent backups is protection against ransomware or malicious corruption. Our Cloud-to-cloud backups are <span>immutable</span>, meaning once data is backed up, it cannot be altered or encrypted by malware on your end. If ransomware encrypts files in your primary cloud account, you can restore clean versions from the backup, effectively rolling back to a safe state. Additionally, our systems don’t execute files when copying them, so malware-infected files are stored inertly and won’t spread through the backup platform. In short, backups let you recover from ransomware by retrieving uninfected copies of your data.</p>
                     </div>
                 </div>
             </div>
@@ -177,27 +194,27 @@
                     <div class="faq">
                         <h3 class="f5">Are backups performed automatically, and how often do they run?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Yes, our backups are automated and we perform <span class="bold">daily backups</span> by default (for example, every night) without manual intervention. We also offer a high frequency backup, allowing you to back up multiple times per day (e.g. 4x a day) for more frequent protection. The initial setup is done once, and then backups happen automatically at the set frequency, ensuring new and changed data gets protected regularly.</p>
+                        <p class="p"  >Yes, our backups are automated and we perform <span class="bold">daily backups</span> by default (for example, every night) without manual intervention. We also offer a high frequency backup, allowing you to back up multiple times per day (e.g. 4x a day) for more frequent protection. The initial setup is done once, and then backups happen automatically at the set frequency, ensuring new and changed data gets protected regularly.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">How long are backups retained, and can I set retention policies?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">We keep backups <span class="bolder">indefinitely</span> (with “unlimited storage” so you don’t worry about older backups),  but the retained time can be customized.</p>
+                        <p class="p"  >We keep backups <span class="bolder">indefinitely</span> (with “unlimited storage” so you don’t worry about older backups),  but the retained time can be customized.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Do backups keep multiple versions of my data or just the latest copy?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Our backups maintain <span class="bold">multiple versions.</span> Each backup run captures a snapshot of your data at that point in time without overwriting the previous one. This means if you modify or delete a file, you can still retrieve the earlier version from a prior backup. Versioning allows point-in-time recovery - you can roll back to last week's email or yesterday's document version. Essentially, backups are non-destructive: new backups add to the archive instead of replacing older backups.</p>
+                        <p class="p"  >Our backups maintain <span class="bold">multiple versions.</span> Each backup run captures a snapshot of your data at that point in time without overwriting the previous one. This means if you modify or delete a file, you can still retrieve the earlier version from a prior backup. Versioning allows point-in-time recovery - you can roll back to last week's email or yesterday's document version. Essentially, backups are non-destructive: new backups add to the archive instead of replacing older backups.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Can I restore a single file or email, or do I have to restore everything?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">You can perform <span class="bold">granular restores</span>, letting you retrieve individual items - such as one email, a specific document, or a single user's data - without having to do a full restore of everything. This item-level recovery is very useful; for instance, if one file is accidentally deleted, you can just restore that file. Of course, you also have the option to restore larger sets (like an entire mailbox or folder) if needed, but you are not forced to roll back or recover the whole system for one item.</p>
+                        <p class="p"  >You can perform <span class="bold">granular restores</span>, letting you retrieve individual items - such as one email, a specific document, or a single user's data - without having to do a full restore of everything. This item-level recovery is very useful; for instance, if one file is accidentally deleted, you can just restore that file. Of course, you also have the option to restore larger sets (like an entire mailbox or folder) if needed, but you are not forced to roll back or recover the whole system for one item.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">What is the process to restore data from a cloud-to-cloud backup?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Restoring data is very straightforward via the backup service's interface. You would log in to the backup dashboard, <span class="bold">find the data</span>find the data you want, and then initiate a restore. The service will then provide a download.</p>
+                        <p class="p"  >Restoring data is very straightforward via the backup service's interface. You would log in to the backup dashboard, <span class="bold">find the data</span>find the data you want, and then initiate a restore. The service will then provide a download.</p>
                     </div>
                 </div>
             </div>
@@ -209,30 +226,30 @@
                     <div class="faq">
                         <h3 class="f5">How is pricing structured for cloud-to-cloud backup services?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Pricing is based on a per GB model. This tend to be a more cost effective structure. You can find our quoting tool here:
+                        <p class="p"  >Pricing is based on a per GB model. This tend to be a more cost effective structure. You can find our quoting tool here:
                             <a class="p" href="https://dashboard.filescience.io/quote" target="_blank">https://dashboard.filescience.io/quote</a>
                         </p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Is backup storage included in the cost, or is it charged separately?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">We <span class="bold">include the storage costs</span> in our per-user pricing - meaning the backups are stored in our cloud do not create additional costs for you.
+                        <p class="p"  >We <span class="bold">include the storage costs</span> in our per-user pricing - meaning the backups are stored in our cloud do not create additional costs for you.
                         </p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Are there any additional fees (e.g., for data restores or exceeding certain limits)?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">We do provide no-cost egress, but egress that exceeds XXGB per month, are subject to a $X.XX fee per GB.</p>
+                        <p class="p"  >We do provide no-cost egress, but egress that exceeds XXGB per month, are subject to a $X.XX fee per GB.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">How quickly can I restore data from a cloud-to-cloud backup after data loss?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Restoration speed are generally instant but have a 24-hour SLA for recovery. Most times file size is the variable here.</p>
+                        <p class="p"  >Restoration speed are generally instant but have a 24-hour SLA for recovery. Most times file size is the variable here.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">How will I be notified if a backup fails or encounters an issue?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Our dashboard will alert and an e-mail will be sent providing detailed reporting if a failure was to happen.</p>
+                        <p class="p"  >Our dashboard will alert and an e-mail will be sent providing detailed reporting if a failure was to happen.</p>
                     </div>
                 </div>
             </div>
@@ -244,12 +261,12 @@
                     <div class="faq">
                         <h3 class="f5">Will running cloud-to-cloud backups slow down my network or cloud services?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Backups will not disrupt daily usage, and they are engineered to be as efficient as possible with bandwidth.</p>
+                        <p class="p"  >Backups will not disrupt daily usage, and they are engineered to be as efficient as possible with bandwidth.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">Can a cloud-to-cloud backup solution scale to handle large data volumes and many users?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Yes. Scalability is a key benefit of cloud-based backups. These services are designed to <span class="bold">scale on demand</span>, whether you're protecting 10 users or 100,000, a few gigabytes or many exabytes.</p>
+                        <p class="p"  >Yes. Scalability is a key benefit of cloud-based backups. These services are designed to <span class="bold">scale on demand</span>, whether you're protecting 10 users or 100,000, a few gigabytes or many exabytes.</p>
                     </div>
                 </div>
             </div>
@@ -261,18 +278,18 @@
                     <div class="faq">
                         <h3 class="f5">If my cloud service already retains data or has legal hold, do I still need a separate backup?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">Built-in retention (like recycle bins or litigation hold in Office 365) is helpful, but it's not a complete backup solution. Legal holds preserve data for eDiscovery, but they have <span class="bold">limitations</span> - for example, Microsoft's litigation hold has mailbox size quotas (~100 GB) and won't retain data if a user's license is removed. It also doesn't provide easy restoration, just preservation. Relying solely on these can give a false sense of security. As one analysis put it, using holds in place of backup can be “risky” because data might still be lost when employees leave or if errors occur. A cloud-to-cloud backup keeps independent, restorable copies of data (physically separate from the primary service), which is the safest approach for general recovery. In summary, retention features and holds are not designed for point-in-time recovery or full protection - they complement but do not replace having a true backup.
+                        <p class="p"  >Built-in retention (like recycle bins or litigation hold in Office 365) is helpful, but it's not a complete backup solution. Legal holds preserve data for eDiscovery, but they have <span class="bold">limitations</span> - for example, Microsoft's litigation hold has mailbox size quotas (~100 GB) and won't retain data if a user's license is removed. It also doesn't provide easy restoration, just preservation. Relying solely on these can give a false sense of security. As one analysis put it, using holds in place of backup can be “risky” because data might still be lost when employees leave or if errors occur. A cloud-to-cloud backup keeps independent, restorable copies of data (physically separate from the primary service), which is the safest approach for general recovery. In summary, retention features and holds are not designed for point-in-time recovery or full protection - they complement but do not replace having a true backup.
                         </p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">What happens to the backups if an employee leaves the company?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;">When an employee leaves, you'll likely remove their account from the primary cloud service - but your backup can still retain that user's data. Cloud-to-cloud backup solutions will keep the departed employee's backed-up emails, files, etc., under an “inactive” or archived status. Notably, one best practice is to save costs by removing the SaaS license while <span class="bold">still retaining the backup archives</span> in case of litigation or knowledge transfer. You can also perform cross-user restore - for instance, restore the ex-employee's mailbox into a new user's mailbox if someone takes over their role. In short, employee departure doesn't mean backup deletion; you maintain the data for as long as needed.</p>
+                        <p class="p"  >When an employee leaves, you'll likely remove their account from the primary cloud service - but your backup can still retain that user's data. Cloud-to-cloud backup solutions will keep the departed employee's backed-up emails, files, etc., under an “inactive” or archived status. Notably, one best practice is to save costs by removing the SaaS license while <span class="bold">still retaining the backup archives</span> in case of litigation or knowledge transfer. You can also perform cross-user restore - for instance, restore the ex-employee's mailbox into a new user's mailbox if someone takes over their role. In short, employee departure doesn't mean backup deletion; you maintain the data for as long as needed.</p>
                     </div>
                     <div class="faq">
                         <h3 class="f5">How is cloud-to-cloud backup different from simply syncing or replicating data?</h3>
                         <div class="opener" style="background: url('../media/open.svg');"></div>
-                        <p class="p" style="display: none;"><span class="bold">Syncing</span> (or cloud storage services like OneDrive/Dropbox) is not the same as backup. Sync keeps files consistent across devices - if you delete or change a file, that change syncs everywhere (including deletions). A true backup, by contrast, maintains historical versions and separate copies. With replication alone, any corruption or deletion on the source can immediately propagate to the replica, whereas a backup can be used to recover the earlier intact data. In short, cloud sync is great for accessibility and collaboration, but it is not a trustworthy backup solution. Backup ensures you have an independent copy that isn't automatically changed when the source changes. This distinction is crucial: for protection against accidental or malicious changes, you need backup, not just sync.</p>
+                        <p class="p"  ><span class="bold">Syncing</span> (or cloud storage services like OneDrive/Dropbox) is not the same as backup. Sync keeps files consistent across devices - if you delete or change a file, that change syncs everywhere (including deletions). A true backup, by contrast, maintains historical versions and separate copies. With replication alone, any corruption or deletion on the source can immediately propagate to the replica, whereas a backup can be used to recover the earlier intact data. In short, cloud sync is great for accessibility and collaboration, but it is not a trustworthy backup solution. Backup ensures you have an independent copy that isn't automatically changed when the source changes. This distinction is crucial: for protection against accidental or malicious changes, you need backup, not just sync.</p>
                     </div>
                 </div>
             </div>
@@ -315,25 +332,27 @@
     </div>
     <script nonce="a34g29914" src="../js/main.js"></script>
     <script nonce="a34g29914">
-        var q = document.querySelectorAll('.faq div');
-            for(var i = 0; i < q.length; i++) {
-				q[i].onclick = function() {
-					if(this.nextElementSibling.style.display == "none") {
-                        closeAll();
-						this.nextElementSibling.style.display = "block";
-                        this.style.background = "url('../media/close-f.svg')";
-					}
-					else {
-                        this.style.background = "url('../media/open.svg')";
-						this.nextElementSibling.style.display = "none";
-					}
-				}
-			}
+          // Select all clickable opener divs inside .faq
+            var q = document.querySelectorAll('.faq div');
+            for (var i = 0; i < q.length; i++) {
+                q[i].onclick = function() {
+                // Toggle the 'open' class on the corresponding <p> element
+                if (this.nextElementSibling.classList.contains('open')) {
+                    this.nextElementSibling.classList.remove('open');
+                    this.style.background = "url('../media/open.svg')";
+                } else {
+                    closeAll();
+                    this.nextElementSibling.classList.add('open');
+                    this.style.background = "url('../media/close-f.svg')";
+                }
+                }
+            }
+            
             function closeAll() {
                 var q = document.querySelectorAll('.faq div');
-                for(var i = 0; i < q.length; i++) {
-                    q[i].nextElementSibling.style.display = "none";
-                    q[i].style.background = "url('../media/open.svg')";
+                for (var i = 0; i < q.length; i++) {
+                q[i].nextElementSibling.classList.remove('open');
+                q[i].style.background = "url('../media/open.svg')";
                 }
             }
     </script>
