@@ -452,7 +452,10 @@ footer a {
       z-index: 5;
       gap:0;
     }
-    
+    .nav-logo img {
+      height: auto;
+      margin-top: 5px;
+    }
     /* This class disables transition for the initial load */
     .nav-links.no-transition {
       transition: none;
