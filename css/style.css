@@ -375,14 +375,15 @@ footer a {
   top: 7px;
   background-size: 100%;
 }
-.stats-cta {
+.stats-cta a {
   display: flex;
   align-items: center; 
+  text-decoration: none;
 }
 .col-12.cta-border {
   padding: 48px;
 }
-.stats-cta {
+.stats-cta a {
   border: 4px solid #A7B88F;
   padding: 12px;
 }      
