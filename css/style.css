@@ -86,8 +86,8 @@ html, body {
     }
   }
   
-  /* Responsive Font Scaling (30% Smaller on screens < 1080px) */
-  @media (max-width: 1080px) {
+  /* Responsive Font Scaling (30% Smaller on screens < 992px) */
+  @media (max-width: 992px) {
     .f1  { font-size: 40px; line-height: 45px; }
     .f1b { font-size: 45px; line-height: 48px; }
     
@@ -409,7 +409,7 @@ footer a {
 }
 
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 992px) {
     footer {
         padding: 40px 0;
     }
