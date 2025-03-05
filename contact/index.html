@@ -185,5 +185,45 @@
       </div>
     </div>
     <script nonce="a34g29914" src="../js/main.js"></script>
+    <script nonce="a34g29914">
+      document.addEventListener("DOMContentLoaded", function() {
+        // Select the form
+        const form = document.getElementById("maincontact");
+        if (!form) return;
+      
+        // Attach a submit event listener
+        form.addEventListener("submit", function(e) {
+          e.preventDefault(); // Prevent normal form submission
+      
+          // Collect form data
+          const formData = new FormData(form);
+      
+          // Send data via Fetch to the same URL in the form's action
+          fetch(form.action, {
+            method: "POST",
+            body: formData,
+            redirect: "manual" // so we can detect and stop a server redirect
+          })
+          .then(response => {
+            // If the endpoint attempts a redirect, the status is in the 300 range
+            if (response.status >= 300 && response.status < 400) {
+              console.log("Server attempted a redirect (HTTP " + response.status + ").");
+            }
+      
+            // Show a thank‑you message below the form
+            const thankYouMsg = document.createElement("p");
+            thankYouMsg.textContent = "Thanks for your interest in FileScience, we'll get in touch shortly!";
+            form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
+      
+            // Optionally hide or remove the form
+            form.remove();
+          })
+          .catch(err => {
+            console.error("Error submitting form:", err);
+          });
+        });
+      });
+      </script>
+      
   </body>
 </html>
