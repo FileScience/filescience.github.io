@@ -36,4 +36,43 @@ document.addEventListener('DOMContentLoaded', function() {
       }, 500);
     });
   });
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Select the form element using its class
+    var form = document.querySelector(".footer_form");
+    
+    form.addEventListener("submit", function(e) {
+        e.preventDefault();  // Prevent the default form submission
+        
+        // Grab the email value from the form
+        var emailInput = form.querySelector("input[name='email']");
+        var email = emailInput.value.trim();
+        
+        // Prepare the data to send (only the email field)
+        var formData = new FormData();
+        formData.append("email", email);
+        
+        // Send the AJAX POST request to your PHP endpoint
+        fetch("https://cgnew.wpengine.com/apis/filescience/subscribe/", {
+            method: "POST",
+            body: formData
+        })
+        .then(function(response) {
+            return response.text();
+        })
+        .then(function(responseText) {
+            // Create a new paragraph element to display the thank-you message
+            var thankYouMsg = document.createElement("p");
+            thankYouMsg.className = "p thank you";
+            thankYouMsg.textContent = responseText; // Expected to be "Thank you for your interest in FileScience!"
+            
+            // Insert the thank-you message directly after the form
+            form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
+        })
+        .catch(function(error) {
+            console.error("Error:", error);
+        });
+    });
+});
   
