@@ -39,21 +39,37 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   document.addEventListener("DOMContentLoaded", function() {
+    // Log that DOMContentLoaded fired
+    console.log("DOM fully loaded. Running subscription script.");
+    
     // Select the form element using its class
     var form = document.querySelector(".footer_form");
     
+    if (!form) {
+        console.error("Form element with class '.footer_form' was not found.");
+        return;
+    } else {
+        console.log("Form found:", form);
+    }
+    
     form.addEventListener("submit", function(e) {
-        e.preventDefault();  // Prevent the default form submission
+        e.preventDefault();  // Prevent default form submission
+        console.log("Form submitted.");
         
         // Grab the email value from the form
         var emailInput = form.querySelector("input[name='email']");
+        if (!emailInput) {
+            console.error("Email input not found.");
+            return;
+        }
         var email = emailInput.value.trim();
+        console.log("Email captured:", email);
         
         // Prepare the data to send (only the email field)
         var formData = new FormData();
         formData.append("email", email);
         
-        // Send the AJAX POST request to your PHP endpoint
+        // Send the AJAX POST request to the PHP endpoint
         fetch("https://cgnew.wpengine.com/apis/filescience/subscribe/", {
             method: "POST",
             body: formData
@@ -62,16 +78,17 @@ document.addEventListener('DOMContentLoaded', function() {
             return response.text();
         })
         .then(function(responseText) {
+            console.log("Response received:", responseText);
             // Create a new paragraph element to display the thank-you message
             var thankYouMsg = document.createElement("p");
             thankYouMsg.className = "p thank you";
-            thankYouMsg.textContent = responseText; // Expected to be "Thank you for your interest in FileScience!"
+            thankYouMsg.textContent = responseText; // Expected: "Thank you for your interest in FileScience!"
             
             // Insert the thank-you message directly after the form
             form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
         })
         .catch(function(error) {
-            console.error("Error:", error);
+            console.error("Error during fetch:", error);
         });
     });
 });
