@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
   function initSubscriptionForm() {
-    var form = document.querySelector(".footer_form");
+    var form = document.querySelector(".footer .footer_form");
     if (!form) {
         console.log("Form not found. Retrying in 1 second...");
         setTimeout(initSubscriptionForm, 1000);
