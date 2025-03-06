@@ -472,7 +472,7 @@ footer a {
     .nav-links a {
       display: block;
       width: 100%;
-      padding: 12px 24px;
+      padding: 6px 24px;
       text-align: left;
       font-family: 'n', Arial, sans-serif;
       font-size:24px;
@@ -505,7 +505,7 @@ footer a {
         align-self: baseline;
         width: 100%;
         border-top: 1px solid #272727;
-        margin-top:48px;
+        margin-top:40px;
     }
     .nav-info.m .f6l {
         padding: 12px 24px;
