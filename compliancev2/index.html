@@ -81,43 +81,16 @@
 }
     </style>
     <style>
-        .flip-card {
+        .card-content {
+            align-items: start;
             display: flex;
-            width: 100%;
-            height: 100%; /* Changed from auto to 100% if parent has defined height */
-            border: 1px solid rgba(0,0,0,0.12);
-            position: relative;
-            z-index: 0;
+            flex-direction: column;
+            align-content: center;
+            align-self: center;
+            padding:24px 24px;
+            text-align: left;
         }
-
-        .flip-card-front {
-            position: relative;
-            background: #000;
-            width: 100%;
-            height: 100%; /* Ensure full height */
-            color: #fff;
-            text-align: center;
-            line-height: 10rem;
-            transition: 700ms;
-            display: flex;
-            z-index: 2;
-            /* Removed height: fit-content; */
-        }
-
-        .flip-card-back {
-            position: absolute;
-            background: #f00;
-            width: 100%;
-            height: 100%;
-            color: #fff;
-            text-align: center;
-            line-height: 10rem;
-            transition: 700ms;
-            display: flex;
-            z-index: 1;
-            opacity: 0;
-            transform: rotateY(180deg);
-        }
+        
 
         .row {
             display: flex;
@@ -172,6 +145,92 @@
 .flip-card.custom-card.card-10 div {
   background:#D88E8C;
 }
+    @media screen and (min-width: 992px) {
+        .row.row-compliance-1 .col-4 {
+            min-height: 680px;
+        }
+        .row.row-compliance-2 .col-6 {
+            min-height: 290px;
+        }
+        .row.row-compliance-3 .col-4 {
+            min-height: 720px;
+        }
+        .flip-card {
+            display: flex;
+            width: 100%;
+            height: 100%; /* Changed from auto to 100% if parent has defined height */
+            position: relative;
+            z-index: 0;
+        }
+
+        .flip-card-front {
+            position: relative;
+            width: 100%;
+            height: 100%; /* Ensure full height */
+            color: #fff;
+            text-align: center;
+            line-height: 10rem;
+            transition: 700ms;
+            display: flex;
+            z-index: 2;
+            /* Removed height: fit-content; */
+        }
+
+        .flip-card-back {
+            position: absolute;
+            background: #f00;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            line-height: 10rem;
+            transition: 700ms;
+            display: flex;
+            z-index: 1;
+            opacity: 0;
+            transform: rotateY(180deg);
+        }
+    }
+    @media screen and (max-width: 992px) {
+        .card-content .f3b {
+            margin: 0;
+        }
+        .flip-card-front .card-content {
+        padding-bottom: 0;
+        }
+        .flip-card-back .card-content {
+        padding-top: 0;
+        }
+        .card-content:not(.active-card) p {
+        display: none;
+        }
+        .flip-card {
+            cursor: pointer;
+        }
+        .card-content {
+            max-height: 120px;
+            overflow: hidden;
+            transition: max-height 3s ease;
+        }
+        .card-content.active-card {
+            max-height: 2000px; /* A sufficiently large value to accommodate the content */
+        }
+        
+        .flip-card {
+            cursor: pointer;
+        }
+        
+        /* Optional: Adjust margins/paddings if needed */
+        .card-content .f3b {
+            margin: 0;
+        }
+        .flip-card-front .card-content {
+            padding-bottom: 2px;
+        }
+        .flip-card-back .card-content {
+            padding-top: 0;
+        }
+    }
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -228,7 +287,7 @@
     </div>
     <div class="section s0">
         <div class="container">
-            <div class="row">
+            <div class="row row-compliance-1">
                 <div class="col-4">
                     <div class="flip-card custom-card card-1">
                         <div class="flip-card-front">
@@ -238,7 +297,7 @@
                                 <br>HIPAA civil fines up to $50k per violation (capped at $1.5M per year)​</p>    
                             </div>
                         </div>
-                        <div class="flip-card-back" style="background:#98C5C2">
+                        <div class="flip-card-back">
                             <div class="card-content">
                                 <p class="p">
                                     HIPAA civil fines up to $50k per violation (capped at $1.5M per year)​
@@ -254,72 +313,187 @@
                         <div class="flip-card-front">
                             <div class="card-content">
                                 <h2 class="f3b">Retail</h2>
-                                <p class="p">General Data Protection Regulation (GDPR): Requires businesses to protect the personal data of EU citizens, including data backup and disaster recovery plans.<br>California Consumer Privacy Act (CCPA): Mandates data security measures, including data backup, for protecting consumer information.</p>    
+                                <p class="p">PCI DSS - Must securely store and back up cardholder data only as necessary; maintain 1+ year of audit logs​. State Data Privacy (CCPA/CPRA) - Limit retention to what's needed​. FTC Act - Requires reasonable data security.</p>    
                             </div>
                         </div>
-                        <div class="flip-card-back" style="background:#A7B88F">
-
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    Card brands can levy fines of $5,000-$100,000 per month of PCI non-compliance​, or up to $500k per breach incident​. FTC and state AGs also impose penalties (e.g. multi-million dollar settlements) for data loss.<br>
+                                    Loss of ability to process credit cards (acquirers can terminate service); costly breach notifications and credit monitoring for customers; class-action lawsuits from consumers; erosion of customer loyalty and sales after a data loss incident.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class=col-4>
+                <div class="col-4">
                     <div class="flip-card custom-card card-3">
-                        <div class="flip-card-front">Front 3</div>
-                        <div class="flip-card-back" style="background:yellow">yellow</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Government and Public Sector</h2>
+                                <p class="p">Federal Records Act - Must preserve official records per NARA schedules; no unauthorized destruction. State Sunshine/FOIA laws - Require retention of public records for transparency.</p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                    <p class="p">Federal law penalties up to $2,000 fine and 3 years imprisonment for willfully destroying records​.<br>
+                                    State open-records violations can bring fines or court sanctions.<br>
+                                    Legal sanctions (courts can hold agencies in contempt for missing records); loss of public trust; oversight investigations; officials risk job loss for non-compliance.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-compliance-2">
                 <div class="col-6">
                     <div class="flip-card custom-card card-4">
-                        <div class="flip-card-front">Front 4</div>
-                        <div class="flip-card-back" style="background:green">green</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Education</h2>
+                                <p class="p">
+                                    FERPA - Protects student records privacy; mandates controlled access. (No fixed retention period, but schools typically keep transcripts for decades​.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    No direct FERPA fines, but Department of Education can cut federal funding for non-compliance​. Some states impose fines for data breaches.<br>
+                                    Accreditation and legal risks if student records are lost; lawsuits from students/parents; damage to reputation and student trust; loss of enrollment if seen as negligent.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="flip-card custom-card card-5">
-                        <div class="flip-card-front">Front 5</div>
-                        <div class="flip-card-back" style="background:skyblue">skyblue</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Energy and Utilities</h2>
+                                <p class="p">
+                                    NERC CIP - Power utilities must maintain cyber and backup plans (e.g. CIP-009 recovery plans). FERC - Requires reliable operation data retention.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    Strict: Up to $1 million per day per violation of reliability standards​. Recent CIP violations have brought multi-million dollar penalties.<br>
+Blackouts or safety incidents if critical data is lost; regulators could mandate shutdowns until compliance is restored; revenue losses from downtime; public safety and environmental liabilities.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-compliance-3">
                 <div class="col-4">
                     <div class="flip-card custom-card card-6">
-                        <div class="flip-card-front">Front 1</div>
-                        <div class="flip-card-back" style="background:#98C5C2">red</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Technology & Telecom</h2>
+                                <p class="p">
+                                    Data Privacy Laws – e.g. GDPR (EU) and CCPA/CPRA (CA) mandate data retention limits and secure storage​. Telecom – FCC requires safeguarding customer network data (CPNI); continuity plans for 911 systems.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    GDPR fines up to 4% of global revenue (multi-billion dollar fines have been issued)​. FTC can fine or order remedies for data breaches. FCC has penalized carriers for failing to protect customer data.<br>
+                                    Service outages or data loss can trigger mass customer departures; regulatory scrutiny and audits; tech firms face consent decrees (years of monitoring) after major failures; emerging AI regulations may soon require logging and retaining algorithmic decision data for accountability.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class=col-4>
                     <div class="flip-card custom-card card-7">
-                        <div class="flip-card-front">Front 2</div>
-                        <div class="flip-card-back" style="background:#A7B88F">orange</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Manufacturing & Industrial</h2>
+                                <p class="p">
+                                    OSHA – Safety records (injury logs 5 years, exposure records 30 years); must back up required records. EPA – Environmental records retention for compliance. Industry Standards – Quality system records (e.g. ISO) often require archival.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    OSHA can fine up to $70,000 per willful recordkeeping violation (adjusted to ~$145k under current law). Environmental violations can incur fines per day.<br>
+                                    Production halts if critical process data is lost; inability to defend product liability or environmental claims without records; potential plant closures by regulators; loss of business contracts due to compliance failures.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class=col-4>
                     <div class="flip-card custom-card card-8">
-                        <div class="flip-card-front">Front 3</div>
-                        <div class="flip-card-back" style="background:yellow">yellow</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Professional Services (Legal & Accounting)</h2>
+                                <p class="p">
+                                    Legal - ABA Model Rules and state bar rules mandate safeguarding client files (often kept ≥5 years post-case).<br>
+                                    Accounting - SOX and PCAOB rules require audit workpapers for 7 years​; IRS requires years of tax record retention.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    Law firms: court sanctions or malpractice claims for spoliation (courts can impose fines or even case-ending sanctions if data is destroyed). e.g. NY AG fined a firm $200k for poor data security after a breach​. Accounting firms: SEC/PCAOB penalties or license loss for improper record destruction (as in the Enron/Arthur Andersen case).<br>
+                                    Loss of professional license (disbarment or CPA revocation) for ethical breaches; malpractice liability insurance claims; client loss if sensitive case files or financial data are lost; reputational damage affecting firm's viability.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-compliance-4">
                 <div class="col-6">
                     <div class="flip-card custom-card card-9">
-                        <div class="flip-card-front">Front 4</div>
-                        <div class="flip-card-back" style="background:green">green</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Finance  & Banking</h2>
+                                <p class="p">
+                                    GLBA – Safeguards for customer financial data (keep records ~6 years)​. SOX – Public companies must retain audit and financial records 5-7 years​. FFIEC/NY-DFS - Require backup and disaster recovery plans.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    Multi-million dollar regulatory fines (e.g. $1.5B+ in SEC/FINRA recordkeeping penalties since 2022); potential criminal liability (e.g. SOX prohibits early destruction of audits).<br>
+                                    Bank charter or license at risk; heightened oversight or cease-and-desist orders; client lawsuits if data loss affects accounts; reputational damage affecting stock value.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="flip-card custom-card card-10">
-                        <div class="flip-card-front">Front 5</div>
-                        <div class="flip-card-back" style="background:skyblue">skyblue</div>
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Pharmaceuticals & Life Sciences</h2>
+                                <p class="p">
+                                    FDA GxP - Good Practices rules (21 CFR) require retaining research data, clinical trial records ≥2 years post-study​; electronic records must be secure (Part 11). ICH GCP - Clinical data integrity standards.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-content">
+                                <p class="p">
+                                    FDA warnings, product approval delays, or consent decrees. Data integrity lapses can trigger import bans and remediation costing tens of millions. Fines can reach ~$1 million per incident for data integrity failures​.<br>
+                                    Suspension of drug trials or rejection of drug applications; forced product recalls if manufacturing records are missing; lawsuits (e.g. over unverified trial data); severe reputational damage in a regulated market.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section s2">
+    <!--<div class="section s2">
         <div class="container">
             <div class="row row-compliance-1">
                 <div class="col-4">
@@ -401,7 +575,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>-->
     <!-- Footer Section -->
     <div class="section footer">
       <div class="container">
@@ -438,5 +612,35 @@
       </div>
     </div>
     <script nonce="a34g29914" src="../js/main.js"></script>
+    <script nonce="a34g29914">
+        document.addEventListener('DOMContentLoaded', function() {
+          // Select all flip cards
+          const flipCards = document.querySelectorAll('.flip-card');
+          
+          flipCards.forEach((flipCard) => {
+            flipCard.addEventListener('click', function() {
+              // Only apply if screen width < 992px
+              if (window.innerWidth < 992) {
+                // Check if this card is already open (any child .card-content has .active-card)
+                const isOpen = flipCard.querySelector('.card-content.active-card') !== null;
+                
+                // Close all open card contents across all flip-cards
+                document.querySelectorAll('.card-content').forEach((content) => {
+                  content.classList.remove('active-card');
+                });
+                
+                // If it wasn't open, open it now
+                if (!isOpen) {
+                  flipCard.querySelectorAll('.card-content').forEach((content) => {
+                    content.classList.add('active-card');
+                  });
+                }
+              }
+            });
+          });
+        });
+        </script>
+        
+        
   </body>
 </html>
