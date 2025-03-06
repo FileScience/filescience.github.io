@@ -56,9 +56,11 @@ document.addEventListener('DOMContentLoaded', function() {
         el.disabled = true;
       });
       
-      // Insert a loading SVG above the submit button
+      // Hide the submit button immediately
       var submitButton = form.querySelector("button[type='submit']");
       if (submitButton) {
+        submitButton.style.display = "none";
+        // Insert a loading SVG above the submit button location
         var loadingSVG = document.createElement("img");
         loadingSVG.src = "https://filescience.io/media/loading.svg"; // Adjust the path as needed
         loadingSVG.alt = "Loading...";
@@ -90,6 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
         thankYouMsg.className = "p thank you";
         thankYouMsg.textContent = responseText; // Expected: "Thank you for your interest in FileScience!"
         form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
+        
+        // Hide the entire form upon successful submission
+        form.style.display = "none";
       })
       .catch(function(error) {
         console.error("Error during fetch:", error);
@@ -99,4 +104,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Start the check
   initSubscriptionForm();
+  
   
