@@ -80,6 +80,99 @@
   }
 }
     </style>
+    <style>
+        .flip-card {
+            display: flex;
+            width: 100%;
+            height: 100%; /* Changed from auto to 100% if parent has defined height */
+            border: 1px solid rgba(0,0,0,0.12);
+            position: relative;
+            z-index: 0;
+        }
+
+        .flip-card-front {
+            position: relative;
+            background: #000;
+            width: 100%;
+            height: 100%; /* Ensure full height */
+            color: #fff;
+            text-align: center;
+            line-height: 10rem;
+            transition: 700ms;
+            display: flex;
+            z-index: 2;
+            /* Removed height: fit-content; */
+        }
+
+        .flip-card-back {
+            position: absolute;
+            background: #f00;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            line-height: 10rem;
+            transition: 700ms;
+            display: flex;
+            z-index: 1;
+            opacity: 0;
+            transform: rotateY(180deg);
+        }
+
+        .row {
+            display: flex;
+            align-items: stretch;
+        }
+
+        .col-4, .col-6 {
+            display: flex;
+        }
+
+        .flip-card:hover .flip-card-front {
+            opacity: 0;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card:hover .flip-card-back {
+            opacity: 1;
+            transform: rotateY(0deg);
+        }
+
+
+
+.flip-card.custom-card.card-1 div {
+  background: #98C5C2;
+}
+.flip-card.custom-card.card-2 div {
+  background: #A7B88F;
+}
+.flip-card.custom-card.card-3 div {
+  background: #EBCA71;
+}
+
+.flip-card.custom-card.card-4 div {
+  background: #D88E8C;
+}
+.flip-card.custom-card.card-5 div {
+  background: #A490B0;
+}
+.flip-card.custom-card.card-6 div {
+  background: #A490B0;
+}
+
+.flip-card.custom-card.card-7 div {
+  background: #7BADD5;
+}
+.flip-card.custom-card.card-8 div {
+  background: #EBCA71;
+}
+.flip-card.custom-card.card-9 div {
+  background: #A7B88F;
+}
+.flip-card.custom-card.card-10 div {
+  background:#D88E8C;
+}
+    </style>
     <!-- Navigation Container -->
     <div class="nav-container">
       <nav>
@@ -133,7 +226,99 @@
         </div>
       </div>
     </div>
-    
+    <div class="section s0">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="flip-card custom-card card-1">
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Healthcare</h2>
+                                <p class="p">HIPAA – Requires safeguards (Security Rule) and backup plans for ePHI; certain records retained ≥6 years​
+                                <br>HIPAA civil fines up to $50k per violation (capped at $1.5M per year)​</p>    
+                            </div>
+                        </div>
+                        <div class="flip-card-back" style="background:#98C5C2">
+                            <div class="card-content">
+                                <p class="p">
+                                    HIPAA civil fines up to $50k per violation (capped at $1.5M per year)​
+                                    <br>State AG fines up to $25k per violation. Possible criminal charges for willful neglect.
+                                    <br>Compromised patient care and safety; loss of patient trust; malpractice lawsuits; HHS/OCR audits and corrective action mandates.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=col-4>
+                    <div class="flip-card custom-card card-2">
+                        <div class="flip-card-front">
+                            <div class="card-content">
+                                <h2 class="f3b">Retail</h2>
+                                <p class="p">General Data Protection Regulation (GDPR): Requires businesses to protect the personal data of EU citizens, including data backup and disaster recovery plans.<br>California Consumer Privacy Act (CCPA): Mandates data security measures, including data backup, for protecting consumer information.</p>    
+                            </div>
+                        </div>
+                        <div class="flip-card-back" style="background:#A7B88F">
+
+                        </div>
+                    </div>
+                </div>
+                <div class=col-4>
+                    <div class="flip-card custom-card card-3">
+                        <div class="flip-card-front">Front 3</div>
+                        <div class="flip-card-back" style="background:yellow">yellow</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="flip-card custom-card card-4">
+                        <div class="flip-card-front">Front 4</div>
+                        <div class="flip-card-back" style="background:green">green</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="flip-card custom-card card-5">
+                        <div class="flip-card-front">Front 5</div>
+                        <div class="flip-card-back" style="background:skyblue">skyblue</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="flip-card custom-card card-6">
+                        <div class="flip-card-front">Front 1</div>
+                        <div class="flip-card-back" style="background:#98C5C2">red</div>
+                    </div>
+                </div>
+                <div class=col-4>
+                    <div class="flip-card custom-card card-7">
+                        <div class="flip-card-front">Front 2</div>
+                        <div class="flip-card-back" style="background:#A7B88F">orange</div>
+                    </div>
+                </div>
+                <div class=col-4>
+                    <div class="flip-card custom-card card-8">
+                        <div class="flip-card-front">Front 3</div>
+                        <div class="flip-card-back" style="background:yellow">yellow</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div class="flip-card custom-card card-9">
+                        <div class="flip-card-front">Front 4</div>
+                        <div class="flip-card-back" style="background:green">green</div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="flip-card custom-card card-10">
+                        <div class="flip-card-front">Front 5</div>
+                        <div class="flip-card-back" style="background:skyblue">skyblue</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section s2">
         <div class="container">
             <div class="row row-compliance-1">
