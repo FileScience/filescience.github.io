@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
       var submitButton = form.querySelector("button[type='submit']");
       if (submitButton) {
         var loadingSVG = document.createElement("img");
-        loadingSVG.src = "../media/loading.svg"; // Adjust the path as needed
+        loadingSVG.src = "https://filescience.io/media/loading.svg"; // Adjust the path as needed
         loadingSVG.alt = "Loading...";
         loadingSVG.className = "loading-icon";
         submitButton.parentNode.insertBefore(loadingSVG, submitButton);
