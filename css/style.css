@@ -6,7 +6,9 @@ html, body {
     padding: 0;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    overscroll-behavior: none; /* Prevents overscroll bounce in some browsers */
   }
+
   img {
     max-width: 100%;
   }

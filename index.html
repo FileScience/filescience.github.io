@@ -718,5 +718,50 @@
       </div>
     </div>
     <script nonce="a34g29914" src="js/main.js"></script>
+    <script nonce="a34g29914">
+      document.addEventListener('DOMContentLoaded', function() {
+        // Select all percentage elements
+        const counters = document.querySelectorAll('.reason .f2');
+      
+        // Set up an IntersectionObserver (adjust threshold as needed)
+        const observerOptions = {
+          threshold: 0.5
+        };
+      
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateCounter(entry.target);
+              // Stop observing once animated
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+      
+        // Observe each counter element
+        counters.forEach(counter => {
+          observer.observe(counter);
+        });
+      
+        // Animate the counter from 0 to the target percentage over 2 seconds
+        function animateCounter(counter) {
+          const target = parseInt(counter.textContent.replace('%', ''), 10);
+          const duration = 2600; // duration in milliseconds
+          const startTime = performance.now();
+      
+          function updateCounter(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const currentValue = Math.floor(progress * target);
+            counter.textContent = currentValue + '%';
+            if (progress < 1) {
+              requestAnimationFrame(updateCounter);
+            }
+          }
+          requestAnimationFrame(updateCounter);
+        }
+      });
+      </script>
+      
   </body>
 </html>
