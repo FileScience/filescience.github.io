@@ -37,41 +37,47 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-
-  function(e) {
-    e.preventDefault();
-    console.log("Form submitted.");
-  
-    // Disable all form inputs (including the submit button)
-    var inputs = form.querySelectorAll("input, button, select, textarea");
-    inputs.forEach(function(input) {
-      input.disabled = true;
-    });
-    
-    // Create and insert a loading SVG above the submit button
-    // (Change the src to your actual loading icon or insert inline SVG)
-    var loadingSVG = document.createElement("img");
-    loadingSVG.src = "https://filescience.io/media/loading.svg"; // Update with your actual path
-    loadingSVG.alt = "Loading...";
-    loadingSVG.className = "loading-icon";
-    
-    var submitButton = form.querySelector("button[type='submit']");
-    if (submitButton) {
-      submitButton.parentNode.insertBefore(loadingSVG, submitButton);
-    }
-    
-    var emailInput = form.querySelector("input[name='email']");
-    if (!emailInput) {
-      console.error("Email input not found.");
+  function initSubscriptionForm() {
+    var form = document.querySelector(".footer .footer_form");
+    if (!form) {
+      console.log("Form not found. Retrying in 1 second...");
+      setTimeout(initSubscriptionForm, 1000);
       return;
     }
-    var email = emailInput.value.trim();
-    console.log("Captured email:", email);
+    console.log("Form found. Attaching event listener.");
     
-    var formData = new FormData();
-    formData.append("email", email);
-    
-    fetch("https://cgnew.wpengine.com/apis/filescience/subscribe/", {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      console.log("Form submitted.");
+      
+      // Disable all form elements to prevent multiple submissions
+      var formElements = form.querySelectorAll("input, button, select, textarea");
+      formElements.forEach(function(el) {
+        el.disabled = true;
+      });
+      
+      // Insert a loading SVG above the submit button
+      var submitButton = form.querySelector("button[type='submit']");
+      if (submitButton) {
+        var loadingSVG = document.createElement("img");
+        loadingSVG.src = "../media/loading.svg"; // Adjust the path as needed
+        loadingSVG.alt = "Loading...";
+        loadingSVG.className = "loading-icon";
+        submitButton.parentNode.insertBefore(loadingSVG, submitButton);
+      }
+      
+      var emailInput = form.querySelector("input[name='email']");
+      if (!emailInput) {
+        console.error("Email input not found.");
+        return;
+      }
+      var email = emailInput.value.trim();
+      console.log("Captured email:", email);
+      
+      var formData = new FormData();
+      formData.append("email", email);
+      
+      fetch("https://cgnew.wpengine.com/apis/filescience/subscribe/", {
         method: "POST",
         body: formData
       })
@@ -81,13 +87,16 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(function(responseText) {
         console.log("Response received:", responseText);
         var thankYouMsg = document.createElement("p");
-        thankYouMsg.className = "p thank-you";
+        thankYouMsg.className = "p thank you";
         thankYouMsg.textContent = responseText; // Expected: "Thank you for your interest in FileScience!"
         form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
-        // Optionally, you can also remove the loading icon here if desired
       })
       .catch(function(error) {
         console.error("Error during fetch:", error);
       });
+    });
   }
+  
+  // Start the check
+  initSubscriptionForm();
   
