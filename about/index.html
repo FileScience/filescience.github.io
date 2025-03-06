@@ -418,6 +418,52 @@
         </footer>
       </div>
     </div>
-    <script src="../js/main.js"></script>
+    <script nonce="a34g29914" src="../js/main.js"></script>
+    <script nonce="a34g29914">
+        document.addEventListener('DOMContentLoaded', function() {
+          // Select all number elements within card-content having class "f2b"
+          const counters = document.querySelectorAll('.card .card-content h2.f2b');
+        
+          // Set up an IntersectionObserver with a threshold (adjust as needed)
+          const observerOptions = { threshold: 0.5 };
+          const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                observer.unobserve(entry.target); // Only animate once
+              }
+            });
+          }, observerOptions);
+        
+          counters.forEach(counter => observer.observe(counter));
+        
+          // Animate from 0 up to the target number over 2 seconds.
+          function animateCounter(counter) {
+            const originalText = counter.textContent.trim();
+            // Extract the number portion (allowing commas)
+            const match = originalText.match(/([\d,]+)/);
+            if (!match) return; // if nothing found, exit
+            const numStr = match[1].replace(/,/g, ''); // remove commas for parsing
+            const target = parseInt(numStr, 10);
+            // Get any suffix (like GB or Hours) that follows the number
+            const suffix = originalText.replace(/[\d,]+/, '').trim();
+            const duration = 2000; // Duration in milliseconds (2 seconds)
+            const startTime = performance.now();
+        
+            function updateCounter(currentTime) {
+              const elapsed = currentTime - startTime;
+              const progress = Math.min(elapsed / duration, 1);
+              const currentValue = Math.floor(progress * target);
+              // Format with commas and re-append suffix if it exists
+              counter.textContent = currentValue.toLocaleString() + (suffix ? " " + suffix : '');
+              if (progress < 1) {
+                requestAnimationFrame(updateCounter);
+              }
+            }
+            requestAnimationFrame(updateCounter);
+          }
+        });
+        </script>
+        
   </body>
 </html>
