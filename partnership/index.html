@@ -36,6 +36,81 @@
         .section:not(.s1) .container {
           max-width: 1390px;
         }
+        
+.card:not(.card-3) {
+  min-height: 280px;
+  margin-bottom: 32px;
+  padding: 0;
+}
+.card.card-1 {
+  background: #A490B0;
+}
+.card.card-2 {
+  background: #7BADD5;
+}
+.card.card-3, .card.card-3 img {
+  min-height: 585px;
+}
+.card.card-1 .card-content, .card.card-2 .card-content {
+  padding: 70px 25px;
+}
+.card-content .f4 {
+  margin: 0;
+}
+.card.card-2 p {
+  margin: 0;
+}
+.s1 .container {
+  max-width: 1390px;
+}
+.card.card-3 {
+  padding: 0;
+}
+.row.partner-row {
+  background: #eee;
+  padding: 25px 40px;
+  border-radius: 18px;
+}
+.get-started {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.get-started a {
+  line-height: 48px;
+  text-decoration: none;
+}
+.section.s2 * {
+  text-align: center;
+}
+.section.s2 {
+  margin: 48px 0;
+}
+.section.s3 {
+  margin: 48px 0;
+  text-align: center;
+}
+.section.s3 {
+  margin-bottom: 92px;
+}
+.f1b {
+	margin-top: 64px;
+	margin-bottom: 96px;
+}
+
+@media screen and (max-width:992px) {
+      
+.get-started {
+  justify-content: center;
+}
+.partnership-logo {
+  justify-content: center;
+  display: flex;
+}
+.card.card-3, .card.card-3 img {
+	min-height: auto;
+}
+}
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -50,13 +125,13 @@
             <img src="../media\burger.svg" alt="Mobile Menu" class="burger m">
         </div>
         <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
+                <a href="https://filescience.io">Home</a>
+                <a href="../about/">About</a>
                 <a href="../standards/">Security</a>
                 <a href="../compliance/">Trust</a>
-                <a href="#">Pricing</a>
-                <a href="#">FAQ</a>
-                <a href="#">Contact</a>
+                <a href="../pricing/">Pricing</a>
+                <a href="../faq/">FAQ</a>
+                <a href="../contact/">Contact</a>
 
                 <div class="nav-info m">
                     <p class="f6l">Contact Us</p>
@@ -79,7 +154,69 @@
         <!-- Navigation content goes here -->
       </nav>
     </div>
-    
+    <div class="section s1">
+        <div class="container">
+            <div class="row">
+                <h1 class="f1b">The Power of Collaboration</h1>
+            </div>
+            <div class="row partner-row">
+                <div class="col-6 column-first">
+                    <div class="partnership-logo">
+                        <img src="../media/partner-logo.svg" alt="PartnerPro logo">
+                    </div>
+                </div>
+                <div class="col-6 column-second">
+                    <div class="get-started">
+                        <a href="https://outlook.office365.com/book/FileScienceBooking@cyberguardian.consulting/" target="_blank" class="p">Get Started</a>
+                    </div>
+                </div>
+                <div class="col-5 m">
+                    <div class="card card-3">
+                        <div class="card-content">
+                            <img src="../media/partnership-1.svg" alt="Partnership Art Background">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <div class="card card-1">
+                        <div class="card-content">
+                            <p class="f4">At FileScience, we believe in the power of collaboration to drive innovation and success.</p>
+                        </div>
+                    </div>
+                    <div class="card card-2">
+                        <div class="card-content">
+                            <p class="p">Our partnership program is designed to empower technology providers, MSP’s, resellers, and service integrators with the tools and support they need to deliver unparalleled data management solutions to their clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d">
+                    <div class="card card-3">
+                        <div class="card-content">
+                            <img src="../media/partnership-1.svg" alt="Partnership Art Background">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section s2">
+        <div class="container">
+            <div class="row">
+                <h2 class="f2">Our partners are at the heart of our mission to revolutionize data science and management.</h2>
+                <p class="p">When you join the FileScience partner program, you receive exclusive access to our advanced platform, which includes robust data analytics, seamless integration capabilities, and top-tier security features. Additionally, we provide extensive resources, including marketing collateral, sales training, and technical support, to ensure you have everything you need to succeed.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section s3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="f1">Trusted by Industry Leaders</h2>
+                    <img src="../media/partnership-2.svg" alt="Partnership Logos">
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer Section -->
     <div class="section footer">
       <div class="container">
@@ -115,6 +252,6 @@
         </footer>
       </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
