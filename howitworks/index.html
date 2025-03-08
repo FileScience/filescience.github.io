@@ -36,6 +36,97 @@
         .section:not(.s1) .container {
           max-width: 1390px;
         }
+        
+                /* The search field */
+                .Logos {
+                    display: block;
+                    margin-top: 120px;
+                }
+                .SearchZone {
+                    text-align: center;
+                    width: 100%;
+                }
+                .dropdown {
+                    display: flex;
+                    text-align: left;
+                }
+                #myInput {
+                box-sizing: border-box;
+                background-image: url('../media/search-icon.svg');
+                background-position: 14px 12px;
+                background-repeat: no-repeat;
+                font-size: 16px;
+                padding: 14px 20px 12px 45px;
+                border: none;
+                border-bottom: 1px solid #ddd;
+                margin-bottom: 0;
+                
+                }
+                .hc {
+                    display: none;
+                }
+                /* The search field when it gets focus/clicked on */
+                #myInput:focus {outline: 0px solid #dddddd96;}
+                
+                #myInput {
+                width: 75%;
+                padding-bottom: 16px;
+                }
+                #DropDown {
+                font-size: 0;
+                border-radius: 30px;
+                }
+                #SearchButton {
+                width: 25%;
+                height: 52px;
+                border-radius: 0;
+                border: 0;
+                outline: 0;
+                background: #DD5981;
+                }
+                #DropDown a {
+                    font-size: 24px;
+                }
+                /* Dropdown Content (Hidden by Default) */
+                .dropdown-content {
+                position: absolute;
+                background-color: #f6f6f6;
+                min-width: 230px;
+                border: 1px solid #ddd;
+                z-index: 1;
+                width: 60%;
+                left:20%;
+                font-family: l;
+                }
+                #DropDown {
+                    max-height: 400px;
+                    overflow: scroll;
+                }
+                .ContentZone {
+                    background-color: rgba(147, 164, 123, 1);
+                    padding: 24px;
+                    margin-top:60px;
+                }
+                .list li {
+                    font-family: l;
+                }
+                /* Links inside the dropdown */
+                .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: none;
+
+                }
+                .SearchZone {
+                    min-height: 150px;
+                }
+                /* Change color of dropdown links on hover */
+                .dropdown-content a:hover {background-color: #f1f1f1}
+
+                /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+                .showChildren a {display:block;} 
+            
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -50,12 +141,13 @@
             <img src="../media\burger.svg" alt="Mobile Menu" class="burger m">
         </div>
         <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Pricing</a>
-                <a href="#">FAQ</a>
-                <a href="#">Contact</a>
-
+                <a href="https://filescience.io">Home</a>
+                <a href="../about/">About</a>
+                <a href="../standards/">Security</a>
+                <a href="../compliance/">Trust</a>
+                <a href="../pricing/">Pricing</a>
+                <a href="../faq/">FAQ</a>
+                <a href="../contact/">Contact</a>
                 <div class="nav-info m">
                     <p class="f6l">Contact Us</p>
                     <p class="bold nav-tel"><a href="tel:+1845-444-8273">845-444-8273</a></p>
@@ -77,7 +169,453 @@
         <!-- Navigation content goes here -->
       </nav>
     </div>
+    <div class="section s1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="SearchZone">
+                        <h1 class="f2">How do you backup?</h1>
+                        <p class="p">Enter app name to know how we backup your data.</p>
+                        <a class="f6l" href="../contact/">My Cloud isn't on the list</a>
+                        <!-- Make a Select Dropdown with Search -->
+                        <div class="dropdown">
+                            <div id="DropDown" class="dropdown-content">
+                                <input type="text" placeholder="Pipedrive" id="myInput">
+                                <button id="SearchButton">Search</button>
+                                <a id="AutoDeskConstructionCloudButton"> Autodesk Construction Cloud</a>
+                                <a id="PipedriveButton"> Pipedrive</a>
+                                <a id="DropboxButton"> Dropbox</a>
+                                <a id="mondaycomButton">Monday.com</a>
+                                <a id="JiraSoftwareButton">Jira Software</a>
+                                <a id="PaycheckButton"> Paycheck</a>
+                                <a id="TrelloButton"> Trello</a>
+                                <a id="AsanaButton"> Asana</a>
+                                <a id="BoxButton"> Box</a>
+                                <a id="CiscoButton"> Cisco</a>
+                                <a id="XeroButton"> Xero</a>
+                                <a id="UbiquitiButton"> Ubiquiti</a>
+                                <a id="GitHubButton"> GitHub</a>
+                                <a id="FigmaButton"> Figma</a>
+                                <a id="ZohoBusinessSuiteButton"> Zoho Business Suite</a>
+                                <a id="ZoomButton"> Zoom</a>
+                                <a id="SlackButton"> Slack</a>
+                                <a id="GitLabButton"> GitLab</a>
+                                <a id="ConfluenceButton"> Confluence</a>
+                                <a id="ADPButton"> ADP</a>
+                                <a id="AdobeCreativeCloudButton"> Adobe Creative Cloud</a>
+                                <a id="NotionButton"> Notion</a>
+                                <a id="QuickBooksButton"> QuickBooks</a>
+                                <a id="SalesforceButton"> Salesforce</a>
+                                <a id="GoogleBusinessSuiteButton"> Google Business Suite</a>
+                                <a id="Office365Button"> Office365</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="ContentZone">
+                        <div class="ContentSingle hc" id="AutoDeskConstructionCloud">
+                            <img src="../m/p/AdobeCreativeCloud.svg" alt="Adobe Creative Cloud">
+                            <p class="into">FileScience employs a meticulous backup strategy to safeguard data within Autodesk Construction Cloud (ACC). This comprehensive approach involves:</p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Backups: FileScience sets up scheduled, automated backups of Autodesk Construction Cloud data to prevent any potential loss. These backups can be configured to occur daily, weekly, or at other intervals, providing a consistent safety net for critical project information.</li>
+                                    <li>Data Redundancy and Replication: To enhance resilience, FileScience implements data redundancy and replication mechanisms. This involves creating multiple copies of the ACC data and distributing them across geographically diverse locations. In the event of server failures or unforeseen disasters, this redundancy ensures that a reliable copy of the data is readily available.</li>
+                                    <li>Encryption and Security Measures: FileScience prioritizes the security of backed-up data by implementing encryption and other robust security measures. This ensures that sensitive information stored in Autodesk Construction Cloud remains confidential and protected, adhering to industry best practices for data integrity and privacy.</li>
+                                </ul>
+                            </div>
+                            <p class="closure">
+                                Through these strategies, FileScience provides a dependable and secure backup solution for Autodesk Construction Cloud, empowering users with the confidence that their critical project data is well-preserved and can be efficiently recovered if needed.
+                            </p>
+                        </div>
+                        <div class="ContentSingle hc" id="mondaycom">
+                            <img src="../m/p/mondaycom.svg" alt="Monday.com">
+                            <p class="into">
+                                FileScience employs a robust backup strategy to ensure the security and integrity of data within Monday.com. This comprehensive approach involves:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Backups: FileScience sets up regular, automated backups of Monday.com data to prevent any loss of information. These scheduled backups occur at intervals that align with the organization's specific needs, whether daily, weekly, or as determined by the client.</li>
+                                    <li>Version Control: To safeguard against accidental data corruption or deletion, FileScience implements version control mechanisms. This allows users to revert to previous states of their Monday.com boards or projects, maintaining a historical record and providing a safety net for unforeseen issues.</li>
+                                    <li>Secure Cloud Storage: FileScience leverages secure cloud storage solutions to store Monday.com backups. This not only ensures accessibility but also provides an additional layer of protection against on-premises disasters or hardware failures. By storing data in the cloud, FileScience enhances data resilience and facilitates swift recovery in case of any disruptions.</li>
+                                </ul>
+                            </div>
+                            <p class="closure">
+                                By combining these elements, FileScience delivers a comprehensive and reliable backup solution for Monday.com users, mitigating risks and empowering organizations to focus on their core activities without the fear of data loss.
+                            </p>
+                        </div>
+                        <div class="ContentSingle" id="Pipedrive">
+                            <img src="../m/p/Pipedrive.svg" alt="Pipedrive">
+                                <p class="into">
+                                    FileScience employs a comprehensive backup strategy to ensure the security and availability of data within Pipedrive. This strategy includes:
+                                </p>
+                                <div class="list">
+                                    <ul>
+                                        <li>Regular Automated Backups: FileScience establishes automated backup schedules for Pipedrive data, allowing for consistent and reliable protection against data loss. These scheduled backups can be configured to occur daily or at specified intervals, ensuring that the most recent and crucial information is regularly captured.</li>
+                                        <li>Versioning and Historical Tracking: To mitigate the impact of accidental changes or deletions, FileScience implements versioning and historical tracking mechanisms. This allows users to revert to previous states of their Pipedrive data, providing a safety net and maintaining a record of changes over time.</li>
+                                        <li>Cloud-Based Storage Solutions: FileScience leverages secure cloud storage to store Pipedrive backups. This not only facilitates accessibility but also adds an extra layer of protection against on-premises disasters or hardware failures. By utilizing cloud storage, FileScience enhances data resilience and enables efficient recovery in case of any disruptions.</li>
+                                    </ul>
+                                </div>
+                                <p class="closure">
+                                    By integrating these elements into its backup strategy, FileScience offers Pipedrive users a robust solution that prioritizes data integrity, accessibility, and recovery capabilities.
+                                </p>
+                        </div>
+                        <div class="ContentSingle hc" id="Dropbox">
+                            <img src="../m/p/Dropbox.svg" alt="Dropbox">
+                            <p class="into">
+                                FileScience implements a thorough backup strategy to ensure the safety and accessibility of data within Dropbox. This strategy comprises several key components:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes regular automated backup schedules for Dropbox data. These scheduled backups can occur daily, weekly, or at customized intervals, ensuring that the most up-to-date information is consistently captured and secured.</li>
+                                    <li>Incremental Backups: To optimize efficiency and reduce storage requirements, FileScience employs incremental backups. This approach focuses on backing up only the data that has changed since the last backup, minimizing redundancy and conserving resources while maintaining a comprehensive record of modifications.</li>
+                                    <li>Encryption and Secure Storage: FileScience prioritizes the security of backed-up data by employing robust encryption methods and storing Dropbox backups in secure, compliant storage solutions. This ensures that sensitive information remains confidential and protected, aligning with industry best practices for data security and privacy.</li>
+                                </ul>
+                                <p class="closure">
+                                    By combining these elements into its backup strategy, FileScience provides Dropbox users with a reliable solution that emphasizes data integrity, efficiency, and security. This comprehensive approach allows organizations to confidently rely on Dropbox for their file storage needs, knowing that their data is well-preserved and can be efficiently restored if necessary.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="JiraSoftware">
+                            <img src="../m/p/JiraSoftware.svg" alt="Jira Software">
+                            <p class="into">
+                                FileScience implements a robust backup strategy to ensure the integrity and availability of data within Jira Software. This strategy includes several key elements:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Backups: FileScience sets up automated backup schedules for Jira Software data, allowing for consistent protection against potential data loss. These scheduled backups can be configured to occur daily or at other specified intervals, capturing the latest changes and updates to the system.</li>
+                                    <li>Database Backups: To comprehensively back up Jira Software, FileScience focuses on capturing the underlying database. This includes not only the Jira application data but also associated configurations and user settings. Storing these database backups ensures a complete snapshot of the Jira instance, enabling swift recovery in the event of system failures or data corruption.</li>
+                                    <li>Off-site Storage and Redundancy: FileScience employs off-site storage solutions for Jira Software backups, enhancing data redundancy and protection against on-premises disasters. By storing backups in geographically diverse locations, FileScience ensures that even in the face of unforeseen events, a secure and accessible copy of Jira data is readily available for recovery.</li>
+                                </ul>
+                                <p class="closure">
+                                    By incorporating these elements into its backup strategy, FileScience delivers a reliable solution for Jira Software users, emphasizing data security, continuity, and efficient recovery capabilities. Organizations can trust that their critical project and issue-tracking data in Jira is well-preserved and can be quickly restored when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Paycheck">
+                            <img src="../m/p/Paycheck.svg" alt="Paycheck">
+                            <p class="into">
+                                FileScience employs a meticulous approach to backup and secure paycheck data, ensuring the confidentiality and accessibility of sensitive financial information. The backup strategy includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Backups: FileScience sets up scheduled, automated backups of paycheck data, ensuring that critical financial information is consistently and reliably captured. These scheduled backups can occur at specified intervals, providing a timely and up-to-date snapshot of payroll data.</li>
+                                    <li>Encryption and Secure Storage: Prioritizing data security, FileScience implements robust encryption methods to safeguard paycheck information during both storage and transmission. Secure storage solutions, compliant with industry standards, are utilized to protect sensitive financial data against unauthorized access, aligning with best practices for confidentiality.</li>
+                                    <li>Version Control and Audit Trails: FileScience implements version control mechanisms and maintains detailed audit trails for paycheck data. This allows for the tracking of changes, ensuring accountability, and providing a historical record of payroll transactions. In the event of discrepancies or errors, organizations can reference these audit trails for accurate and efficient resolution.</li>
+                                </ul>
+                                <p class="closure">
+                                    By integrating these elements into its paycheck data backup strategy, FileScience offers a secure and reliable solution, allowing organizations to trust in the protection of financial information and enabling swift recovery in case of any disruptions or data loss.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Trello">
+                            <img src="../m/p/Trello.svg" alt="Trello">
+                            <p class="into">
+                                FileScience employs a comprehensive backup strategy to ensure the security and availability of data within Trello, offering users peace of mind regarding their project management information. The backup strategy incorporates several key elements:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes automated backup schedules for Trello data, allowing for consistent protection against potential data loss. These scheduled backups can be configured to occur daily or at other specified intervals, capturing the latest updates and changes to boards and cards.</li>
+                                    <li>Data Redundancy and Versioning: To enhance resilience, FileScience implements data redundancy and versioning mechanisms. This involves creating redundant copies of Trello data and maintaining a history of changes. In the event of accidental deletions or modifications, users can revert to previous versions, ensuring data integrity and preventing the loss of critical information.</li>
+                                    <li>Secure Cloud Storage: FileScience leverages secure cloud storage solutions to store Trello backups. This not only facilitates accessibility but also provides an extra layer of protection against local disruptions or hardware failures. Storing data in the cloud enhances overall data resilience and enables efficient recovery in case of unforeseen events.</li>
+                                </ul>
+                                <p class="closure">
+                                    By combining these elements into its backup strategy, FileScience delivers a reliable solution for Trello users, emphasizing data integrity, accessibility, and the ability to recover swiftly from potential disruptions. Organizations can confidently manage their projects with the knowledge that their Trello data is well-preserved and can be efficiently restored if needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Asana">
+                            <img src="../m/p/Asana.svg" alt="Asana">
+                            <p class="into">
+                                FileScience employs a robust backup strategy to safeguard data within Asana, ensuring the reliability and accessibility of project management information. This comprehensive approach includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes regular automated backup schedules for Asana data, allowing for consistent protection against potential data loss. These scheduled backups can be configured to occur daily or at other specified intervals, capturing the most recent updates and changes to tasks, projects, and workflows.</li>
+                                    <li>Database Backups and Version Control: To comprehensively back up Asana, FileScience focuses on capturing the underlying database, including task details, project structures, and user configurations. This strategy also incorporates version control mechanisms to maintain a historical record of changes, enabling users to revert to previous states in the event of accidental deletions or modifications.</li>
+                                    <li>Secure Off-site Storage: FileScience leverages secure off-site storage solutions for Asana backups, enhancing data redundancy and protection against on-premises disasters. Storing backups in geographically diverse locations ensures that even in the face of unforeseen events, a secure and accessible copy of Asana data is readily available for recovery.</li>
+                                </ul>
+                                <p class="closure">
+                                    By incorporating these elements into its backup strategy, FileScience provides Asana users with a reliable solution that prioritizes data integrity, accessibility, and efficient recovery capabilities. Organizations can trust that their critical project management information in Asana is well-preserved and can be quickly restored when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Box">
+                            <img src="../m/p/Box.svg" alt="Box">
+                            <p class="into">
+                                FileScience implements a robust backup strategy to ensure the security and availability of data within Box, offering users confidence in the protection of their cloud-based content. This strategy includes several key components:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Backups: FileScience establishes scheduled, automated backup routines for Box data, ensuring that the most recent information is consistently captured. These backups can be configured to occur at specific intervals, providing organizations with up-to-date snapshots of their critical content stored in Box.</li>
+                                    <li>Incremental Backups: To optimize efficiency and reduce storage requirements, FileScience employs incremental backups. This method focuses on capturing only the data that has changed since the last backup, minimizing redundancy and ensuring that the backup process is resource-efficient while maintaining a comprehensive record of modifications.</li>
+                                    <li>Secure Cloud Storage and Encryption: FileScience prioritizes data security by leveraging secure cloud storage solutions for Box backups. Robust encryption methods are applied to safeguard sensitive information during both storage and transmission, ensuring that confidential content remains protected against unauthorized access and adheres to industry standards for data security.</li>
+                                </ul>
+                                <p class="closure">
+                                    By integrating these elements into its backup strategy, FileScience provides Box users with a reliable solution that emphasizes data integrity, efficiency, and security. Organizations can trust that their cloud-based content in Box is well-preserved and can be quickly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Cisco">
+                            <img src="../m/p/Cisco.svg" alt="Cisco">
+                            <p class="into">
+                                FileScience employs a comprehensive backup strategy to ensure the security and availability of data within Cisco environments, encompassing various Cisco products and services. This strategy involves:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Backups: FileScience establishes automated backup schedules for Cisco data, ensuring consistent protection against potential data loss. Scheduled backups can be configured at intervals suitable for the specific Cisco applications and services in use, capturing the latest updates and changes.</li>
+                                    <li>Configuration File Backups: For Cisco networking devices, FileScience focuses on backing up configuration files. This includes router and switch configurations, ensuring that network settings and parameters are well-preserved. These backups facilitate quick recovery in the event of device failures or the need to revert to a previous state.</li>
+                                    <li>Secure Storage and Encryption: FileScience prioritizes data security by utilizing secure storage solutions for Cisco backups. Robust encryption methods are applied to protect sensitive configurations and ensure data integrity. By adhering to industry best practices for security, FileScience enhances the confidentiality and accessibility of Cisco data.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience provides a reliable backup solution for Cisco environments, enabling organizations to maintain the stability and security of their network configurations and data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Xero">
+                            <img src="../m/p/Xero.svg" alt="Xero">
+                            <p class="into">
+                                FileScience implements a robust backup strategy to secure financial data within Xero, ensuring the integrity and accessibility of crucial accounting information. This comprehensive approach includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes regular automated backup schedules for Xero data, capturing financial transactions, account details, and configurations. These scheduled backups can occur daily or at other specified intervals, providing organizations with up-to-date snapshots of their financial information.</li>
+                                    <li>Secure Cloud Storage and Encryption: FileScience leverages secure cloud storage solutions to store Xero backups, enhancing accessibility and protection against local disruptions. Robust encryption methods are applied to safeguard sensitive financial data during both storage and transmission, adhering to industry standards for data security and privacy.</li>
+                                    <li>Data Validation and Integrity Checks: FileScience incorporates data validation and integrity checks into the backup process. This ensures that the backed-up Xero data is accurate and complete, mitigating the risk of errors during the restoration process. By regularly validating the integrity of backups, FileScience enhances the reliability of financial information stored in Xero.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through the integration of these elements, FileScience delivers a dependable solution for Xero users, emphasizing data security, accessibility, and efficient recovery capabilities. Organizations can trust that their financial records in Xero are well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Ubiquiti">
+                            <img src="../m/p/Ubiquiti.svg" alt="Ubiquiti">
+                            <p class="into">
+                                Ubiquiti Networks offers a range of networking and wireless communication products, and FileScience employs a robust backup strategy to ensure the security and availability of data within Ubiquiti environments. This strategy involves:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Configuration Backups: FileScience focuses on regularly backing up the configurations of Ubiquiti devices such as routers, switches, and access points. This includes settings, network parameters, and device configurations. By consistently capturing these configurations, organizations can ensure a quick and accurate recovery in the event of device failures or the need to restore a previous state.</li>
+                                    <li>Firmware and Software Image Backups: In addition to configuration backups, FileScience prioritizes the secure storage of firmware and software images associated with Ubiquiti devices. This ensures that the latest and approved versions of device firmware are readily available for deployment or restoration. Backing up these images enhances the organization's ability to maintain a consistent and secure network infrastructure.</li>
+                                    <li>Secure Off-site Storage: FileScience leverages secure off-site storage solutions for Ubiquiti backups, adding an extra layer of protection against on-premises disasters or hardware failures. Storing backups in geographically diverse locations ensures that even in the face of unforeseen events, a secure and accessible copy of Ubiquiti data is readily available for recovery.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience provides a reliable backup solution for Ubiquiti environments, enabling organizations to maintain the stability, security, and resilience of their network configurations and data.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="GitHub">
+                            <img src="../m/p/GitHub.svg" alt="GitHub">
+                            <p class="into">
+                                FileScience implements a comprehensive backup strategy to ensure the security and availability of data within GitHub repositories, safeguarding crucial source code and collaborative development projects. This strategy includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Repository Backups: FileScience establishes scheduled, automated backups for GitHub repositories, ensuring that the latest versions of source code and project files are consistently captured. These backups can occur at specified intervals, providing organizations with up-to-date snapshots of their development repositories.</li>
+                                    <li>Branch and Commit History Preservation: To maintain the integrity of version control, FileScience focuses on preserving the entire commit history and branch structures within GitHub repositories. This detailed versioning allows for efficient recovery in the event of accidental deletions, code changes, or the need to revert to a specific point in the project's development timeline.</li>
+                                    <li>Secure Cloud Storage and Encryption: FileScience leverages secure cloud storage solutions to store GitHub backups, enhancing accessibility and protection against local disruptions. Robust encryption methods are applied to safeguard sensitive source code during both storage and transmission, ensuring compliance with industry standards for data security and privacy.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through the integration of these elements, FileScience delivers a dependable backup solution for GitHub users, emphasizing data security, version control, and efficient recovery capabilities. Organizations can trust that their collaborative development projects and source code in GitHub are well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Figma">
+                            <img src="../m/p/Figma.svg" alt="Figma">
+                            <p class="into">
+                                FileScience employs a robust backup strategy to ensure the security and availability of design data within Figma, a collaborative design platform. This comprehensive approach includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes automated backup schedules for Figma data, allowing for consistent protection against potential data loss. These scheduled backups can be configured to occur daily or at other specified intervals, capturing the latest updates and changes to design files, prototypes, and collaborative projects.</li>
+                                    <li>File Versioning and Revision Control: To enhance collaboration and mitigate the impact of accidental changes, FileScience implements versioning and revision control mechanisms. This allows users to revert to previous states of their Figma designs, ensuring a historical record of modifications and facilitating the recovery of specific project iterations.</li>
+                                    <li>Secure Cloud Storage: FileScience leverages secure cloud storage solutions to store Figma backups. This not only enhances accessibility but also provides an extra layer of protection against local disruptions or hardware failures. Storing design data in the cloud ensures that organizations can recover their work efficiently, even in the face of unforeseen events.</li>
+                                </ul>
+                                <p class="closure">
+                                    By integrating these elements into its backup strategy, FileScience offers Figma users a reliable solution that prioritizes data integrity, collaboration, and efficient recovery capabilities. Design teams can trust that their creative work in Figma is well-preserved, allowing for seamless collaboration and rapid recovery in case of any disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="ZohoBusinessSuite">
+                            <img src="../m/p/ZohoBusinessSuite.svg" alt="Zoho Business Suite">
+                            <p class="into">
+                                FileScience implements a comprehensive backup strategy to ensure the security and availability of data within Zoho's suite of business applications. This strategy includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes automated backup schedules for Zoho data, capturing information from various Zoho applications such as CRM, Books, and Mail. These scheduled backups can occur at specified intervals, ensuring that the most recent and critical business data is consistently backed up.</li>
+                                    <li>Database and Configuration Backups: To comprehensively back up Zoho data, FileScience focuses on capturing the underlying databases and configurations. This includes customer records, financial data, and application settings. By regularly backing up databases and configurations, organizations can ensure a complete and accurate snapshot of their business information.</li>
+                                    <li>Secure Off-site Storage: FileScience leverages secure off-site storage solutions for Zoho backups, providing an additional layer of protection against on-premises disasters or hardware failures. Storing backups in geographically diverse locations ensures that a secure and accessible copy of Zoho data is readily available for recovery, contributing to data resilience and business continuity.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience provides Zoho users with a reliable and secure backup solution, emphasizing data integrity, accessibility, and the ability to recover swiftly in case of any disruptions or data loss. Organizations can trust that their critical business information in Zoho is well-preserved and can be efficiently restored when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Zoom">
+                            <img src="../m/p/Zoom.svg" alt="Zoom">
+                            <p class="into">
+                                FileScience implements a robust backup strategy to ensure the security and availability of data within Zoom, focusing on preserving meeting recordings, settings, and other essential information. This comprehensive approach includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Automated Meeting Recording Backups: FileScience establishes automated backup schedules for Zoom meeting recordings, capturing and storing these files securely. This ensures that valuable content from virtual meetings, presentations, and collaborative sessions is consistently preserved.</li>
+                                    <li>Configuration and Account Data Backups: To comprehensively back up Zoom data, FileScience focuses on capturing configuration settings and account-specific information. This includes user preferences, security settings, and other customization options. By regularly backing up this data, organizations can ensure a complete snapshot of their Zoom configurations, facilitating efficient recovery in case of any system changes or disruptions.</li>
+                                    <li>Secure Cloud Storage and Encryption: FileScience leverages secure cloud storage solutions to store Zoom backups, enhancing accessibility and protection against local disruptions. Robust encryption methods are applied to safeguard sensitive meeting recordings and configuration data, ensuring compliance with industry standards for data security and privacy.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through the integration of these elements, FileScience delivers a dependable backup solution for Zoom users, emphasizing the preservation of meeting content, configuration settings, and efficient recovery capabilities. Organizations can trust that their virtual collaboration data in Zoom is well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Slack">
+                            <img src="../m/p/Slack.svg" alt="Slack">
+                            <p class="into">
+                                FileScience employs a comprehensive backup strategy to ensure the security and availability of data within Slack, a widely used collaboration platform. This strategy includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Message and Data Backups: FileScience establishes automated backup schedules for Slack messages and data, capturing the latest communications, shared files, and collaborative content. These scheduled backups can be configured to occur at specified intervals, ensuring that organizations have a consistent and up-to-date snapshot of their team's interactions.</li>
+                                    <li>Channel and User Configuration Backups: To comprehensively back up Slack data, FileScience focuses on capturing channel configurations, user preferences, and other relevant settings. This includes information about integrated apps and third-party integrations. Regularly backing up this configuration data ensures that organizations can recover not only their messages but also the structure and settings of their Slack workspace.</li>
+                                    <li>Secure Cloud Storage and Encryption: FileScience leverages secure cloud storage solutions to store Slack backups, enhancing accessibility and protection against local disruptions. Robust encryption methods are applied to safeguard sensitive messages and configuration data, ensuring that confidential information remains protected and in compliance with industry standards for data security and privacy.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience provides Slack users with a reliable backup solution that emphasizes the preservation of messages, configurations, and efficient recovery capabilities. Organizations can trust that their collaborative data in Slack is well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="GitLab">
+                            <img src="../m/p/GitLab.svg" alt="GitLab">
+                            <p class="into">
+                                FileScience employs a comprehensive backup strategy to ensure the security and availability of data within GitLab repositories, providing organizations with confidence in the protection of their source code and collaborative development efforts. This strategy includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Repository Backups: FileScience establishes scheduled, automated backups for GitLab repositories, ensuring that the latest versions of source code, branches, and project data are consistently captured. These backups can occur at specified intervals, providing organizations with up-to-date snapshots of their development repositories.</li>
+                                    <li>Database Backups and Configuration Files: To comprehensively back up GitLab data, FileScience focuses on capturing the underlying databases, including information on users, projects, and merge requests. Additionally, configuration files that define settings and permissions are backed up. This comprehensive approach ensures that organizations can recover not only their codebase but also the entire GitLab environment.</li>
+                                    <li>Secure Off-site Storage and Versioning: FileScience leverages secure off-site storage solutions for GitLab backups, enhancing data redundancy and protection against on-premises disasters. Storing backups in geographically diverse locations ensures that even in the face of unforeseen events, a secure and accessible copy of GitLab data is readily available for recovery. Versioning mechanisms are applied to maintain a historical record of changes, facilitating efficient recovery to specific points in the project's development timeline.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience delivers a reliable backup solution for GitLab users, emphasizing data integrity, accessibility, and efficient recovery capabilities. Organizations can trust that their collaborative development projects and source code in GitLab are well-preserved and can be quickly restored in case of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Confluence">
+                            <img src="../m/p/Confluence.svg" alt="Confluence">
+                            <p class="into">
+                                FileScience employs a robust backup strategy to ensure the security and availability of data within Atlassian Confluence, a popular collaboration and documentation platform. This comprehensive approach includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Regular Automated Backups: FileScience establishes automated backup schedules for Confluence data, capturing pages, attachments, and other collaborative content. These scheduled backups can occur at specified intervals, ensuring that organizations have a consistent and up-to-date snapshot of their Confluence spaces.</li>
+                                    <li>Database Backups and Space Configurations: To comprehensively back up Confluence, FileScience focuses on capturing the underlying databases, including information on users, spaces, and permissions. Additionally, space configurations, page templates, and other settings are backed up. This thorough approach ensures that organizations can recover not only their content but also the entire Confluence environment with its structural elements.</li>
+                                    <li>Secure Cloud Storage and Versioning: FileScience leverages secure cloud storage solutions to store Confluence backups, enhancing accessibility and protection against local disruptions. Robust encryption methods are applied to safeguard sensitive content and configuration data, ensuring compliance with industry standards for data security and privacy. Versioning mechanisms are also employed to maintain a historical record of changes, facilitating efficient recovery to specific points in the documentation's evolution.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience provides Confluence users with a reliable backup solution that emphasizes data integrity, accessibility, and efficient recovery capabilities. Organizations can trust that their collaborative documentation and Confluence configurations are well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="AdobeCreativeCloud">
+                            <img src="../m/p/AdobeCreativeCloud.svg" alt="Adobe Creative Cloud">
+                            <p class="into">
+                                FileScience implements a comprehensive backup strategy to ensure the security and availability of data within Adobe Creative Cloud, safeguarding valuable design assets and creative projects. This strategy includes several key components:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: FileScience establishes automated backup schedules for Adobe Creative Cloud data, capturing design files, project assets, and collaborative content. These scheduled backups can occur at specified intervals, ensuring that organizations have a consistent and up-to-date snapshot of their creative work.</li>
+                                    <li>Secure Cloud Storage and Encryption: FileScience leverages secure cloud storage solutions to store Adobe Creative Cloud backups, enhancing accessibility and protection against local disruptions. Robust encryption methods are applied to safeguard sensitive design assets and project files, ensuring compliance with industry standards for data security and privacy.</li>
+                                    <li>Versioning and Historical Tracking: To maintain the integrity of design assets and creative projects, FileScience implements versioning and historical tracking mechanisms. This allows users to revert to previous states of their work, ensuring a historical record of modifications and facilitating the recovery of specific project iterations.</li>
+                                </ul>
+                                <p class="closure">
+                                    By integrating these elements into its backup strategy, FileScience delivers a reliable solution for Adobe Creative Cloud users, emphasizing data integrity, accessibility, and the ability to recover swiftly from potential disruptions. Design teams can trust that their creative assets and projects in Adobe Creative Cloud are well-preserved and can be efficiently restored if needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Notion">
+                            <img src="../m/p/Notion.svg" alt="Notion">
+                            <p class="into">
+                                Notion, a popular collaboration and note-taking platform, facilitates the creation of databases, documents, and tasks. While Notion has its own versioning and backup mechanisms, additional steps can be taken to enhance data protection. FileScience might approach Notion backup as follows:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: Establish automated backup schedules for Notion data, ensuring that changes and updates are regularly captured. This can involve exporting databases, pages, and other critical content in Notion to a secure location at specified intervals. Automated backups minimize the risk of data loss due to accidental deletions or modifications.</li>
+                                    <li>Offline Data Export: Encourage users to periodically export Notion databases and pages in offline formats such as CSV or Markdown. This provides an additional layer of backup outside the Notion ecosystem, allowing for easy recovery in case of disruptions or if users need to switch to an alternative platform.</li>
+                                    <li>Secure Cloud Storage: Store Notion backups in secure cloud storage solutions, enhancing accessibility and protection against local disruptions. Encrypt the stored data to ensure the confidentiality of sensitive information. This approach ensures that organizations can efficiently recover their Notion content even in the event of unforeseen events.</li>
+                                </ul>
+                                <p class="closure">
+                                    It's important to note that the capabilities of Notion and backup strategies may evolve over time. Users are advised to stay informed about any new features or functionalities related to data backup within the Notion platform and adjust their backup procedures accordingly.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="QuickBooks">
+                            <img src="../m/p/QuickBooks.svg" alt="QuickBooks">
+                            <p class="into">
+                                QuickBooks is a widely used accounting software, and FileScience may implement a comprehensive backup strategy to ensure the security and availability of financial data. The backup approach could include:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: Establish automated backup schedules for QuickBooks data to capture financial transactions, account details, and configurations. These scheduled backups can occur daily or at specified intervals, providing organizations with consistent snapshots of their critical financial information.</li>
+                                    <li>Database Backups and Configuration Files: Focus on capturing the underlying databases in QuickBooks, including details about customers, vendors, and transactions. Additionally, backup configuration files that store settings, preferences, and templates to ensure a complete snapshot of the financial environment. Regularly backing up both data and configurations is essential for comprehensive recovery.</li>
+                                    <li>Secure Off-site Storage and Encryption: Leverage secure off-site storage solutions for QuickBooks backups, enhancing protection against on-premises disasters or potential data breaches. Apply robust encryption methods to safeguard sensitive financial information during both storage and transmission, adhering to industry standards for data security and privacy. Storing backups off-site provides an additional layer of security and accessibility.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience could deliver a reliable backup solution for QuickBooks users, emphasizing data integrity, accessibility, and the ability to recover swiftly in case of any disruptions or data loss. Organizations can trust that their critical financial records in QuickBooks are well-preserved and can be efficiently restored when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Salesforce">
+                            <img src="../m/p/Salesforce.svg" alt="Salesforce">
+                            <p class="into">
+                                Salesforce is a powerful Customer Relationship Management (CRM) platform, and FileScience can implement a robust backup strategy to ensure the security and recoverability of essential business data within Salesforce. The backup approach could include:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: Establish automated backup schedules for Salesforce data, capturing information about leads, accounts, opportunities, and other critical CRM elements. Scheduled backups can occur at specific intervals, ensuring that organizations have regular snapshots of their customer data and interactions.</li>
+                                    <li>Metadata and Configuration Backups: Focus on backing up Salesforce metadata and configuration settings, which include custom objects, fields, workflows, and security settings. Regularly capturing these configurations ensures that organizations can recover not only their data but also the structure and settings of their Salesforce environment, maintaining business continuity.</li>
+                                    <li>Secure Cloud Storage and Encryption: Leverage secure cloud storage solutions for Salesforce backups, enhancing accessibility and protection against local disruptions. Implement robust encryption methods to safeguard sensitive customer data during both storage and transmission, aligning with industry standards for data security and privacy. Storing backups in the cloud provides an additional layer of security and ensures data resilience.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience could deliver a reliable backup solution for Salesforce users, emphasizing data integrity, accessibility, and efficient recovery capabilities. Organizations can trust that their crucial customer relationship and business data in Salesforce are well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="GoogleBusinessSuite">
+                            <img src="../m/p/GoogleBusinessSuite.svg" alt="Google Business Suite">
+                            <p class="into">
+                                FileScience implements a robust backup strategy to ensure the security and availability of data within Google Applications, which includes widely used tools like Gmail, Google Drive, and Google Workspace. The backup approach could involve:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: Establish automated backup schedules for Google Applications data, capturing emails, documents, spreadsheets, and other essential content. These scheduled backups can occur at specific intervals, providing organizations with consistent snapshots of their collaborative and communication data.</li>
+                                    <li>Granular Data Backup: Focus on granular data backup, allowing users to selectively back up specific folders, emails, or files within Google Drive or Gmail. This flexibility enables organizations to tailor their backup strategy based on the criticality of different data types, ensuring a more efficient and resource-effective approach.</li>
+                                    <li>Secure Cloud Storage and Encryption: Leverage secure cloud storage solutions to store Google Applications backups, enhancing accessibility and protection against local disruptions. Implement robust encryption methods to safeguard sensitive communication and collaborative data during both storage and transmission, aligning with industry standards for data security and privacy.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience could provide Google Applications users with a reliable backup solution that emphasizes data integrity, accessibility, and the ability to recover swiftly in case of any disruptions or data loss. Organizations can trust that their critical collaboration and communication data within Google Applications is well-preserved and can be efficiently restored when needed.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="ContentSingle hc" id="Office365">
+                            <img src="../m/p/Office365.svg" alt="Office 365">
+                            <p class="into">
+                                FileScience employs a comprehensive backup strategy to ensure the security and availability of data within Microsoft applications, covering a wide range of tools such as Microsoft 365, SharePoint, and Exchange. This strategy includes:
+                            </p>
+                            <div class="list">
+                                <ul>
+                                    <li>Scheduled Automated Backups: Implement automated backup schedules for Microsoft applications, capturing data from Microsoft 365, SharePoint, OneDrive, and other collaborative platforms. Scheduled backups can occur at regular intervals, ensuring organizations have consistent snapshots of their critical documents, emails, and collaboration data.</li>
+                                    <li>Granular Data Backup: Focus on granular data backup, allowing users to selectively back up specific files, folders, and mailboxes within Microsoft applications. This flexibility enables organizations to tailor their backup strategy based on the importance and sensitivity of different data types, ensuring an efficient use of resources and storage.</li>
+                                    <li>Secure Cloud Storage and Encryption: Leverage secure cloud storage solutions to store Microsoft application backups, enhancing accessibility and protection against local disruptions. Implement robust encryption methods to safeguard sensitive documents, emails, and collaboration data during both storage and transmission, adhering to industry standards for data security and privacy.</li>
+                                </ul>
+                                <p class="closure">
+                                    Through these components, FileScience delivers a reliable backup solution for Microsoft application users, emphasizing data integrity, accessibility, and efficient recovery capabilities. Organizations can trust that their critical business data within Microsoft applications is well-preserved and can be swiftly restored in the event of data loss or disruptions.
+                                </p>
+                            </div>
+                        </div>
     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Footer Section -->
     <div class="section footer">
       <div class="container">
@@ -91,14 +629,14 @@
                 <p class="p">Quick Links</p>
                 <div class="row">
                     <div class="col-6">
-                        <a href="#" class="f6">About</a>
-                        <a href="#" class="f6">Services</a>
-                        <a href="#" class="f6">Trust</a>
-                        <a href="#" class="f6">Standards</a>
+                        <a href="../about/" class="f6">About</a>
+                        <a href="../contact/" class="f6">Contact</a>
+                        <a href="../compliance/" class="f6">Trust & Compliance</a>
+                        <a href="../standards/" class="f6">Standards & Security</a>
                     </div>
                     <div class="col-6">
-                        <a href="#" class="f6">FAQ</a>
-                        <a href="#" class="f6">Careers</a>
+                        <a href="../faq/" class="f6">FAQ</a>
+                        <a href="../careers/" class="f6">Careers</a>
                     </div>
                 </div>
             </div>
@@ -114,5 +652,249 @@
       </div>
     </div>
     <script src="../js/main.js"></script>
+    <script id="SearchScript" nonce="a34g29914">
+        document.querySelector('#myInput').onfocus = function() {
+            SwitchShowChildren();
+        }
+        document.querySelector('#myInput').onblur = function() {
+            SwitchShowChildren();
+        }
+        document.querySelector('#myInput').onkeyup = function() {
+            filterFunction();
+        }
+    
+        // New search button functionality: when clicked, it checks the search query
+        // and shows the first matching dropdown result.
+        document.querySelector('#SearchButton').onclick = function() {
+            var query = document.getElementById("myInput").value.trim();
+            if (query.length > 0) {
+                // Ensure the dropdown is filtered based on the current query.
+                filterFunction();
+                var div = document.getElementById("DropDown");
+                var anchors = div.getElementsByTagName("a");
+                for (var i = 0; i < anchors.length; i++) {
+                    if (anchors[i].style.display !== "none") {
+                        // Derive the content section id by removing "Button" from the anchor's id.
+                        var btnId = anchors[i].id;
+                        var contentId = btnId.replace("Button", "");
+                        viewer(contentId);
+                        break;
+                    }
+                }
+            }
+        };
+    
+        // Existing onclick and onmousedown events for dropdown items.
+        document.querySelector('#AutoDeskConstructionCloudButton').onclick = function() {
+            viewer('AutoDeskConstructionCloud');
+        };
+        document.querySelector('#AutoDeskConstructionCloudButton').onmousedown = function() {
+            viewer('AutoDeskConstructionCloud');
+        };
+        document.querySelector('#PipedriveButton').onclick = function() {
+            viewer('Pipedrive');
+        };
+        document.querySelector('#PipedriveButton').onmousedown = function() {
+            viewer('Pipedrive');
+        };
+        document.querySelector('#DropboxButton').onclick = function() {
+            viewer('Dropbox');
+        };
+        document.querySelector('#DropboxButton').onmousedown = function() {
+            viewer('Dropbox');
+        };
+        document.querySelector('#mondaycomButton').onclick = function() {
+            viewer('mondaycom');
+        };
+        document.querySelector('#mondaycomButton').onmousedown = function() {
+            viewer('mondaycom');
+        };
+        document.querySelector('#JiraSoftwareButton').onclick = function() {
+            viewer('JiraSoftware');
+        };
+        document.querySelector('#JiraSoftwareButton').onmousedown = function() {
+            viewer('JiraSoftware');
+        };
+        document.querySelector('#PaycheckButton').onclick = function() {
+            viewer('Paycheck');
+        };
+        document.querySelector('#PaycheckButton').onmousedown = function() {
+            viewer('Paycheck');
+        };
+        document.querySelector('#TrelloButton').onclick = function() {
+            viewer('Trello');
+        };
+        document.querySelector('#TrelloButton').onmousedown = function() {
+            viewer('Trello');
+        };
+        document.querySelector('#AsanaButton').onclick = function() {
+            viewer('Asana');
+        };
+        document.querySelector('#AsanaButton').onmousedown = function() {
+            viewer('Asana');
+        };
+        document.querySelector('#BoxButton').onclick = function() {
+            viewer('Box');
+        };
+        document.querySelector('#BoxButton').onmousedown = function() {
+            viewer('Box');
+        };
+        document.querySelector('#CiscoButton').onclick = function() {
+            viewer('Cisco');
+        };
+        document.querySelector('#CiscoButton').onmousedown = function() {
+            viewer('Cisco');
+        };
+        document.querySelector('#XeroButton').onclick = function() {
+            viewer('Xero');
+        };
+        document.querySelector('#XeroButton').onmousedown = function() {
+            viewer('Xero');
+        };
+        document.querySelector('#UbiquitiButton').onclick = function() {
+            viewer('Ubiquiti');
+        };
+        document.querySelector('#UbiquitiButton').onmousedown = function() {
+            viewer('Ubiquiti');
+        };
+        document.querySelector('#GitHubButton').onclick = function() {
+            viewer('GitHub');
+        };
+        document.querySelector('#GitHubButton').onmousedown = function() {
+            viewer('GitHub');
+        };
+        document.querySelector('#FigmaButton').onclick = function() {
+            viewer('Figma');
+        };
+        document.querySelector('#FigmaButton').onmousedown = function() {
+            viewer('Figma');
+        };
+        document.querySelector('#ZohoBusinessSuiteButton').onclick = function() {
+            viewer('ZohoBusinessSuite');
+        };
+        document.querySelector('#ZohoBusinessSuiteButton').onmousedown = function() {
+            viewer('ZohoBusinessSuite');
+        };
+        document.querySelector('#ZoomButton').onclick = function() {
+            viewer('Zoom');
+        };
+        document.querySelector('#ZoomButton').onmousedown = function() {
+            viewer('Zoom');
+        };
+        document.querySelector('#SlackButton').onclick = function() {
+            viewer('Slack');
+        };
+        document.querySelector('#SlackButton').onmousedown = function() {
+            viewer('Slack');
+        };
+        document.querySelector('#GitLabButton').onclick = function() {
+            viewer('GitLab');
+        };
+        document.querySelector('#GitLabButton').onmousedown = function() {
+            viewer('GitLab');
+        };
+        document.querySelector('#ConfluenceButton').onclick = function() {
+            viewer('Confluence');
+        };
+        document.querySelector('#ConfluenceButton').onmousedown = function() {
+            viewer('Confluence');
+        };
+        document.querySelector('#ADPButton').onclick = function() {
+            viewer('ADP');
+        };
+        document.querySelector('#ADPButton').onmousedown = function() {
+            viewer('ADP');
+        };
+        document.querySelector('#AdobeCreativeCloudButton').onclick = function() {
+            viewer('AdobeCreativeCloud');
+        };
+        document.querySelector('#AdobeCreativeCloudButton').onmousedown = function() {
+            viewer('AdobeCreativeCloud');
+        };
+        document.querySelector('#NotionButton').onclick = function() {
+            viewer('Notion');
+        };
+        document.querySelector('#NotionButton').onmousedown = function() {
+            viewer('Notion');
+        };
+        document.querySelector('#QuickBooksButton').onclick = function() {
+            viewer('QuickBooks');
+        };
+        document.querySelector('#QuickBooksButton').onmousedown = function() {
+            viewer('QuickBooks');
+        };
+        document.querySelector('#SalesforceButton').onclick = function() {
+            viewer('Salesforce');
+        };
+        document.querySelector('#SalesforceButton').onmousedown = function() {
+            viewer('Salesforce');
+        };
+        document.querySelector('#GoogleBusinessSuiteButton').onclick = function() {
+            viewer('GoogleBusinessSuite');
+        };
+        document.querySelector('#GoogleBusinessSuiteButton').onmousedown = function() {
+            viewer('GoogleBusinessSuite');
+        };
+        document.querySelector('#Office365Button').onclick = function() {
+            viewer('Office365');
+        };
+        document.querySelector('#Office365Button').onmousedown = function() {
+            viewer('Office365');
+        };
+    
+        function getSpacedName(name) {
+            if (name == "AutoDeskConstructionCloud") {
+                return "AutoDesk Construction Cloud";
+            }
+            if (name == "mondaycom") {
+                return "Monday.com";
+            }
+            if (name == "JiraSoftware") {
+                return "Jira Software";
+            }
+            if (name == "ZohoBusinessSuite") {
+                return "Zoho Business Suite";
+            }
+            if (name == "AdobeCreativeCloud") {
+                return "Adobe Creative Cloud";
+            }
+            if (name == "GoogleBusinessSuite") {
+                return "Google Business Suite";
+            }
+            return name;
+        }
+        function viewer(name) {
+            document.getElementById("myInput").placeholder = getSpacedName(name);
+            DisplayRelatedContent(name);
+            document.getElementsByClassName("ContentZone")[0].classList.remove("hc");
+            return false;
+        }
+        function filterFunction() {
+            var input, filter, div, a, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            div = document.getElementById("DropDown");
+            a = div.getElementsByTagName("a");
+            for (i = 0; i < a.length; i++) {
+                txtValue = a[i].textContent || a[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    a[i].style.display = "";
+                } else {
+                    a[i].style.display = "none";
+                }
+            }
+        }
+        function SwitchShowChildren() {
+            document.getElementById("DropDown").classList.toggle("showChildren");
+        }
+        function DisplayRelatedContent(name) {
+            var x = document.getElementsByClassName("ContentSingle");
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.add("hc");
+            }
+            document.getElementById(name).classList.remove("hc");
+        }
+    </script>
+    
   </body>
 </html>
