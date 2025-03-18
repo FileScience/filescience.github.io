@@ -30,22 +30,23 @@
           padding-left: 25px;
           padding-right: 25px;
         }
-        .section:not(.s1) .container {
+        .section .container {
           max-width: 1390px;
         }
         
         .section.s1 {
-        margin-top: 60px;
-        margin-bottom:18px;
+            margin-top: 60px;
+            margin-bottom:18px;
         }
         .section.s2 {
-        margin-bottom: 60px
+            margin-bottom: 60px
         }
         .section.s1 h1 {
-        margin-top: 0;
+            margin-top: 64px;
+            margin-bottom: 64px;
         }
         .card.card-1 {
-        background: #98C5C2;
+            background: #98C5C2;
         }
         .card.card-2 {
         background: #A7B88F;
@@ -94,6 +95,35 @@
         }
         .s4 ul li {
             margin-bottom: 30px;
+        }  
+        .section.s2 {
+            margin-top: 64px;
+        }
+        .section.s2 h2.f1b {
+            margin: 0;
+            margin-top: 16px;
+        }
+        .section.s2 h2.f1b + p {
+            margin-top: 8px;
+        }
+        .culture-card h3.bold {
+            padding: 6px 18px;
+            width: fit-content;
+            display: flex;
+            border-radius: 30px;
+            background: #272727;
+        }
+        .culture-card.cc1 h3.bold {
+            color: #EBCA71;
+        }
+        .culture-card.cc2 h3.bold {
+            color: #A7B88F;
+        }
+        .culture-card.cc3 h3.bold {
+            color: #98C5C2;
+        }
+        .culture-card.cc4 h3.bold {
+            color: #7BADD5;
         }
         @media screen and (max-width: 992px) {
   .container, .section.s1 .container {
@@ -149,9 +179,10 @@
             <div class="row">
                 <div class="col-6">
                     <h1 class="f1b">Join our Team</h1>
+                    <p class="f6l">FileScience is a company that specializes in providing comprehensive multi-cloud backup and restore solutions, ensuring that your data is protected across various cloud platforms. With the increasing adoption of cloud services, businesses often spread their data across multiple cloud environments, which can complicate the backup process. </p>
                 </div>
-                <div class="col-6">
-                    <p class="p">FileScience is a company that specializes in providing comprehensive multi-cloud backup and restore solutions, ensuring that your data is protected across various cloud platforms. With the increasing adoption of cloud services, businesses often spread their data across multiple cloud environments, which can complicate the backup process. </p>
+                <div class="col-6 d">
+                    <img style="margin-top:-250px;" src="../media/careers-a-1.svg" alt="Join our Team" >
                 </div>
             </div>
         </div>
@@ -167,29 +198,25 @@
     <div class="section s2">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-6">
                     <h2 class="f1b">Company Culture</h2>
                     <p class="p">FileScience's culture is built on the following guiding principles:</p>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col-6">
-                    <div class="culture-card">
-                        <h3 class="f5b">Security-first mindset</h3>
+                    <div class="culture-card cc1">
+                        <h3 class="bold">Security-first mindset</h3>
                         <p class="p">As a cybersecurity firm, FS prioritizes a proactive and comprehensive approach to protecting its clients' data and systems. This security-focused culture permeates all aspects of the company's operations.</p>
                     </div>
-                    <div class="culture-card">
-                        <h3 class="f5b">Innovation and problem-solving</h3>
+                    <div class="culture-card cc2">
+                        <h3 class="bold">Innovation and problem-solving</h3>
                         <p class="p">FS encourages its employees to think creatively and collaboratively to develop innovative solutions tailored to each client's unique needs.</p>
                     </div>
-                </div>
-                <div class="col-6">
-                    <div class="culture-card">
-                        <h3 class="f5b">Teamwork and collaboration</h3>
+                    <div class="culture-card cc3">
+                        <h3 class="bold">Teamwork and collaboration</h3>
                         <p class="p">The company fosters an environment where employees work together as a team, sharing knowledge and expertise to achieve common goals.</p>
                     </div>
-                    <div class="culture-card">
-                        <h3 class="f5b">Continuous learning and growth</h3>
+                    <div class="culture-card cc4">
+                        <h3 class="bold">Continuous learning and growth</h3>
                         <p class="p">FS values continuous learning and professional development, providing opportunities for employees to expand their skills and knowledge.</p>
                     </div>
                 </div>
