@@ -43,6 +43,7 @@ html, body {
   /* f1 series */
   .f1  { font-size: 64px; line-height: 68px; font-family: 'n', Arial, sans-serif; color:#272727}
   .f1b { font-size: 64px; line-height: 68px; font-family: 'b', Arial, sans-serif; color:#272727}
+  .f1l { font-size: 64px; line-height: 68px; font-family: 'l', Arial, sans-serif; color:#272727}
   
   /* f2 series */
   .f2  { font-size: 48px; line-height: 55px; font-family: 'n', Arial, sans-serif; color:#272727}
@@ -92,6 +93,7 @@ html, body {
   @media (max-width: 992px) {
     .f1  { font-size: 40px; line-height: 45px; }
     .f1b { font-size: 45px; line-height: 48px; }
+    .f1l { font-size: 40px; line-height: 45px; }
     
     .f2  { font-size: 34px; line-height: 39px; }
     .f2b { font-size: 34px; line-height: 39px; }
