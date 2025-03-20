@@ -1,0 +1,1045 @@
+/* Landscape orientation */
+@media screen and (orientation: landscape) {
+    .dt-icon, .dt-icon-container, .dt-iconBg, .dt-icon img, .dt-icon-container h2, .dt-icon-container p {
+        backface-visibility: hidden;
+        transform: translateZ(0);
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+    }
+    
+    /* Additional stabilization for the yellow icon */
+    .dt-icon.dt-yellow-icon * {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+    }
+    
+    /* Main container for the rounded icons section */
+    .dt-roundedIcons {
+        width: 1440px;
+        max-width: 100%;
+        padding: 0;
+        overflow: visible;
+    }
+    
+    /* Content wrapper with padding and max-width */
+    .dt-content-wrapper {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 0;
+        overflow: visible;
+    }
+    
+    /* Main heading styles */
+    h1 {
+        font-family: Nexa;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: left;
+        margin: 20px 0 0 0;
+    }
+    
+    /* Description text styles */
+    .dt-description {
+        font-family: Nexa !important;
+        font-weight: 400 !important;
+        font-size: 24px !important;
+        line-height: 36px !important;
+        letter-spacing: 0 !important;
+        font-style: normal !important;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    
+    .dt-description-text {
+        font-family: 'Nexa', sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 24px !important;
+        line-height: 36px !important;
+        letter-spacing: 0 !important;
+        font-style: normal !important;
+        text-align: left;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-synthesis: none;
+    }
+    
+    div.dt-description {
+        font-style: normal !important;
+        font-family: 'Nexa', sans-serif !important;
+        font-weight: 400 !important;
+        text-transform: none !important;
+        font-variant: normal !important;
+        text-decoration: none !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-synthesis: none;
+    }
+    
+    /* Icon background styles */
+    .dt-iconBg {
+        background-color: #A490B0;
+        border-radius: 60px;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        transition: width 0.3s ease;
+    }
+    
+    /* Color classes for different icon backgrounds */
+    .dt-purple { background-color: #A490B0; }
+    .dt-blue { background-color: #7BADD5; }
+    .dt-green { background-color: #A7B88F; }   
+    .dt-red { background-color: #B0A490; }
+    .dt-lightblue { background-color: #98C5C2; }
+    .dt-yellow { background-color: #EBCA71; }
+    /* Colors for second row */
+    .dt-orange { background-color: #D88E8C; }
+    .dt-teal { background-color: #EBCA71; }
+    .dt-pink { background-color: #A7B88F; }
+    .dt-navy { background-color: #D88E8C; }
+    .dt-olive { background-color: #A490B0; }
+    .dt-maroon { background-color: #D88E8C; }
+    /* Colors for third row */
+    .dt-turquoise { background-color: #98C5C2; }
+    .dt-coral { background-color: #D88E8C; }
+    .dt-violet { background-color: #7BADD5; }
+    .dt-gold { background-color: #EBCA71; }
+    
+    /* Base icon styles */
+    .dt-icon {
+        position: relative;
+        cursor: pointer;
+        width: fit-content;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 0;
+        z-index: 1;
+        flex-shrink: 0;
+    }
+    
+    /* Icon image positioning */
+    .dt-icon img {
+        position: absolute;
+        z-index: 1;
+        width: 60px;
+        height: 60px;
+        top: 30px;
+        left: 30px;
+        transition: all 0.5s ease;
+    }
+    
+    /* Icon container that holds the icon and expands on hover */
+    .dt-icon-container {
+        position: relative;
+        display: inline-block;
+        width: 120px;
+        height: 120px;
+        transition: width 0.3s ease;
+        overflow: visible;
+        margin-left: 0;
+    }
+    
+    /* Shared styles for headings and paragraphs inside icon containers */
+    .dt-icon-container h2, .dt-icon-container p {
+        position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0.3s;
+        color: black;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        font-family: 'Nexa', 'Helvetica Neue', Arial, sans-serif;
+        z-index: 1;
+        pointer-events: none;
+        white-space: normal;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+    
+    /* Heading styles inside icon containers */
+    .dt-icon-container h2 {
+        font-size: 18px;
+        font-weight: 600;
+        top: 25px;
+        left: 120px;
+        width: 332px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: Nexa;
+        letter-spacing: 0;
+    }
+    
+    /* Paragraph styles inside icon containers */
+    .dt-icon-container p {
+        top: 50px;
+        left: 120px;
+        width: 332px;
+        height: 60px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        font-family: Nexa;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 18px;
+        letter-spacing: 0;
+    }
+    
+    /* Hover effects for icons */
+    .dt-icon:hover .dt-iconBg {
+        width: 472px;
+        transition: width 0.3s ease 0s;
+    }
+    
+    .dt-icon:hover .dt-icon-container {
+        width: 472px;
+        transition: width 0.3s ease 0s;
+    }
+    
+    /* Show text on hover */
+    .dt-icon:hover .dt-icon-container h2, 
+    .dt-icon:hover .dt-icon-container p {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    /* Quick text disappearance on hover out */
+    .dt-icon .dt-icon-container h2, 
+    .dt-icon .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s linear, visibility 0s linear 0s;
+    }
+    
+    /* Slower icon closing after text disappears */
+    .dt-icon .dt-iconBg,
+    .dt-icon .dt-icon-container {
+        transition: width 0.3s ease 0.1s;
+    }
+    
+    /* Smooth icon closing without delay */
+    .dt-icon .dt-iconBg,
+    .dt-icon .dt-icon-container {
+        transition: width 0.3s ease 0s;
+    }
+    
+    /* Container for all icons */
+    .dt-iconsSet {
+        margin: 50px 0 0 0;
+        white-space: nowrap;
+        overflow: visible;
+        padding-bottom: 0px;
+        text-align: left;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        position: relative;
+    }
+    
+    /* First row specific styles */
+    .dt-iconsSet:not(.dt-second-row):not(.dt-third-row) {
+        z-index: 3;
+    }
+    
+    /* Second row specific styles */
+    .dt-second-row {
+        z-index: 2;
+    }
+    
+    /* Third row specific styles */
+    .dt-third-row {
+        z-index: 1;
+    }
+    
+    /* Spacing between icons for each row */
+    .dt-iconsSet:not(.dt-second-row):not(.dt-third-row) .dt-icon:not(:last-child) {
+        margin-right: 37px;
+    }
+    
+    .dt-second-row .dt-icon:not(:last-child) {
+        margin-right: 37px;
+    }
+    
+    .dt-third-row .dt-icon:not(:last-child) {
+        margin-right: 25px;
+    }
+    
+    /* Active state styles */
+    .dt-icon.dt-active .dt-iconBg {
+        width: 472px;
+        transition: width 0.3s ease 0.1s;
+    }
+    
+    .dt-icon.dt-active .dt-icon-container {
+        width: 472px;
+        transition: width 0.3s ease 0.1s;
+    }
+    
+    .dt-icon.dt-active .dt-icon-container h2, 
+    .dt-icon.dt-active .dt-icon-container p {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    /* When hovering any icon, close the active one */
+    .dt-iconsSet:hover .dt-icon.dt-active:not(:hover):not(.dt-yellow-icon) .dt-iconBg {
+        width: 120px;
+        transition: width 0.3s ease;
+    }
+    
+    .dt-iconsSet:hover .dt-icon.dt-active:not(:hover):not(.dt-yellow-icon) .dt-icon-container {
+        width: 120px;
+        transition: width 0.3s ease;
+    }
+    
+    .dt-iconsSet:hover .dt-icon.dt-active:not(:hover):not(.dt-yellow-icon) .dt-icon-container h2, 
+    .dt-iconsSet:hover .dt-icon.dt-active:not(:hover):not(.dt-yellow-icon) .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.1s linear, visibility 0s linear 0.1s;
+    }
+    
+    /* When hovering any icon, close the yellow icon if it's not being hovered */
+    .dt-iconsSet:hover .dt-icon.dt-yellow-icon:not(:hover) .dt-iconBg {
+        width: 120px;
+        transition: width 0.3s ease;
+    }
+    
+    .dt-iconsSet:hover .dt-icon.dt-yellow-icon:not(:hover) .dt-icon-container h2, 
+    .dt-iconsSet:hover .dt-icon.dt-yellow-icon:not(:hover) .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s linear, visibility 0s linear 0s;
+    }
+    
+    /* Z-index management */
+    .dt-icon:hover {
+        z-index: 10;
+    }
+    
+    .dt-icon.dt-active {
+        z-index: 10;
+    }
+    
+    /* Special styles for the yellow icon */
+    .dt-icon.dt-yellow-icon {
+        z-index: 20;
+        will-change: auto;
+        transform: translateZ(0);
+        position: relative;
+        flex-shrink: 0;
+        overflow: visible;
+    }
+    
+    /* Special styles for the orange icon in the second row */
+    .dt-icon.dt-orange-icon {
+        z-index: 20;
+        will-change: auto;
+        transform: translateZ(0);
+        position: relative;
+        flex-shrink: 0;
+    }
+    
+    /* Special styles for the turquoise and violet icons in the third row */
+    .dt-icon.dt-turquoise-icon,
+    .dt-icon.dt-violet-icon {
+        z-index: 20;
+        will-change: auto;
+        transform: translateZ(0);
+        position: relative;
+        flex-shrink: 0;
+    }
+    
+    /* Base state for yellow icon */
+    .dt-icon.dt-yellow-icon .dt-iconBg,
+    .dt-icon.dt-yellow-icon .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease !important;
+        will-change: auto;
+        overflow: visible;
+    }
+    
+    /* Base state for orange icon */
+    .dt-icon.dt-orange-icon .dt-iconBg,
+    .dt-icon.dt-orange-icon .dt-icon-container {
+        width: 120px !important;
+        transition: width 0.3s ease !important;
+        will-change: auto;
+    }
+    
+    /* Base state for turquoise and violet icons */
+    .dt-icon.dt-turquoise-icon .dt-iconBg,
+    .dt-icon.dt-turquoise-icon .dt-icon-container,
+    .dt-icon.dt-violet-icon .dt-iconBg,
+    .dt-icon.dt-violet-icon .dt-icon-container {
+        width: 120px !important;
+        transition: width 0.3s ease !important;
+        will-change: auto;
+    }
+    
+    .dt-icon.dt-yellow-icon .dt-icon-container h2,
+    .dt-icon.dt-yellow-icon .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    .dt-icon.dt-orange-icon .dt-icon-container h2,
+    .dt-icon.dt-orange-icon .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s linear, visibility 0s linear 0s !important;
+    }
+    
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container p,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* Active state for yellow icon */
+    .dt-icon.dt-yellow-icon.dt-active .dt-iconBg,
+    .dt-icon.dt-yellow-icon.dt-active .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease 0.1s !important;
+    }
+    
+    /* Active state for orange icon */
+    .dt-icon.dt-orange-icon.dt-active .dt-iconBg,
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    /* Hover styles for yellow icon */
+    .dt-icon.dt-yellow-icon:hover .dt-iconBg,
+    .dt-icon.dt-yellow-icon:hover .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    /* Hover styles for orange icon */
+    .dt-icon.dt-orange-icon:hover .dt-iconBg,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    /* When hovering other icons, yellow icon collapses */
+    .dt-iconsSet .dt-icon:not(.dt-yellow-icon):hover ~ .dt-icon.dt-yellow-icon .dt-iconBg,
+    .dt-iconsSet .dt-icon:not(.dt-yellow-icon):hover ~ .dt-icon.dt-yellow-icon .dt-icon-container {
+        width: 120px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    .dt-iconsSet .dt-icon:not(.dt-yellow-icon):hover ~ .dt-icon.dt-yellow-icon .dt-icon-container h2,
+    .dt-iconsSet .dt-icon:not(.dt-yellow-icon):hover ~ .dt-icon.dt-yellow-icon .dt-icon-container p {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0s linear, visibility 0s linear 0s !important;
+    }
+    
+    /* Prevent jitter on yellow icon hover */
+    .dt-icon.dt-yellow-icon:hover {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+    }
+    
+    /* Anti-jitter for orange icon */
+    .dt-icon.dt-orange-icon:hover {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+    }
+    
+    /* Prevent text jitter in yellow icon */
+    .dt-icon.dt-yellow-icon .dt-icon-container h2,
+    .dt-icon.dt-yellow-icon .dt-icon-container p,
+    .dt-icon.dt-yellow-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-yellow-icon.dt-active .dt-icon-container p,
+    .dt-icon.dt-yellow-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-yellow-icon:hover .dt-icon-container p {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+        left: 120px !important;
+        width: 332px !important;
+    }
+    
+    /* Anti-jitter for text in orange icon */
+    .dt-icon.dt-orange-icon .dt-icon-container h2,
+    .dt-icon.dt-orange-icon .dt-icon-container p,
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container p,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container p {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+        left: 120px !important;
+        width: 332px !important;
+    }
+    
+    /* Text styles for turquoise and violet icons */
+    .dt-icon.dt-turquoise-icon .dt-icon-container h2,
+    .dt-icon.dt-turquoise-icon .dt-icon-container p,
+    .dt-icon.dt-violet-icon .dt-icon-container h2,
+    .dt-icon.dt-violet-icon .dt-icon-container p {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.1s ease 0s, visibility 0s linear 0.1s !important;
+        will-change: auto;
+    }
+    
+    /* Active state for orange icon */
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* Active state for turquoise and violet icons */
+    .dt-icon.dt-turquoise-icon.dt-active .dt-iconBg,
+    .dt-icon.dt-turquoise-icon.dt-active .dt-icon-container,
+    .dt-icon.dt-violet-icon.dt-active .dt-iconBg,
+    .dt-icon.dt-violet-icon.dt-active .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    .dt-icon.dt-yellow-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-yellow-icon.dt-active .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-orange-icon.dt-active .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* Active text state for turquoise and violet icons */
+    .dt-icon.dt-turquoise-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-turquoise-icon.dt-active .dt-icon-container p,
+    .dt-icon.dt-violet-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-violet-icon.dt-active .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* Hover styles for orange icon */
+    .dt-icon.dt-orange-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* Hover styles for turquoise and violet icons */
+    .dt-icon.dt-turquoise-icon:hover .dt-iconBg,
+    .dt-icon.dt-turquoise-icon:hover .dt-icon-container,
+    .dt-icon.dt-violet-icon:hover .dt-iconBg,
+    .dt-icon.dt-violet-icon:hover .dt-icon-container {
+        width: 472px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    .dt-icon.dt-yellow-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-yellow-icon:hover .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    .dt-icon.dt-orange-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-orange-icon:hover .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* Hover text styles for turquoise and violet icons */
+    .dt-icon.dt-turquoise-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-turquoise-icon:hover .dt-icon-container p,
+    .dt-icon.dt-violet-icon:hover .dt-icon-container h2,
+    .dt-icon.dt-violet-icon:hover .dt-icon-container p {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+    }
+    
+    /* When hovering other icons in second row, orange icon collapses */
+    .dt-second-row .dt-icon:not(.dt-orange-icon):hover ~ .dt-icon.dt-orange-icon .dt-iconBg,
+    .dt-second-row .dt-icon:not(.dt-orange-icon):hover ~ .dt-icon.dt-orange-icon .dt-icon-container {
+        width: 120px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    /* Remove CSS text visibility styles for second row - let JavaScript handle it */
+    .dt-second-row .dt-icon .dt-icon-container h2,
+    .dt-second-row .dt-icon .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    .dt-second-row .dt-icon:hover .dt-icon-container h2,
+    .dt-second-row .dt-icon:hover .dt-icon-container p {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    /* When hovering other icons in third row, turquoise and violet icons collapse */
+    .dt-third-row .dt-icon:not(.dt-turquoise-icon):hover ~ .dt-icon.dt-turquoise-icon .dt-iconBg,
+    .dt-third-row .dt-icon:not(.dt-turquoise-icon):hover ~ .dt-icon.dt-turquoise-icon .dt-icon-container {
+        width: 120px !important;
+        transition: width 0.3s ease !important;
+    }
+    
+    /* Text collapse for turquoise icon only */
+    .dt-third-row .dt-icon:not(.dt-turquoise-icon):hover ~ .dt-icon.dt-turquoise-icon .dt-icon-container h2,
+    .dt-third-row .dt-icon:not(.dt-turquoise-icon):hover ~ .dt-icon.dt-turquoise-icon .dt-icon-container p {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0s linear, visibility 0s linear 0s !important;
+    }
+    
+    /* Hover styles for third row icons (except violet) */
+    .dt-third-row .dt-icon:not(.dt-violet-icon):hover .dt-iconBg,
+    .dt-third-row .dt-icon:not(.dt-violet-icon):hover .dt-icon-container {
+        width: 472px;
+        transition: width 0.3s ease;
+    }
+    
+    .dt-third-row .dt-icon:not(.dt-violet-icon):hover .dt-icon-container h2,
+    .dt-third-row .dt-icon:not(.dt-violet-icon):hover .dt-icon-container p {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    /* Active state for third row icons */
+    .dt-third-row .dt-icon.dt-active .dt-iconBg,
+    .dt-third-row .dt-icon.dt-active .dt-icon-container {
+        width: 472px;
+        transition: width 0.3s ease;
+    }
+    
+    .dt-third-row .dt-icon.dt-active .dt-icon-container h2,
+    .dt-third-row .dt-icon.dt-active .dt-icon-container p {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    /* Special styles for the gold icon in the third row */
+    .dt-icon.dt-gold-icon {
+        z-index: 10;
+        will-change: auto;
+        transform: translateZ(0);
+        position: relative;
+        flex-shrink: 0;
+    }
+    
+    /* Base state for gold icon */
+    .dt-icon.dt-gold-icon .dt-iconBg,
+    .dt-icon.dt-gold-icon .dt-icon-container {
+        width: 120px;
+        transition: width 0.3s ease;
+        will-change: auto;
+    }
+    
+    .dt-icon.dt-gold-icon .dt-iconBg {
+        left: 0;
+        right: auto;
+    }
+    
+    .dt-icon.dt-gold-icon .dt-icon-container img {
+        left: 30px;
+        right: auto;
+    }
+    
+    /* Text styles for gold icon */
+    .dt-icon.dt-gold-icon .dt-icon-container h2,
+    .dt-icon.dt-gold-icon .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0.3s;
+        will-change: auto;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+        left: 120px;
+        right: auto;
+        text-align: left;
+        width: 332px;
+    }
+    
+    /* Active state for gold icon */
+    .dt-icon.dt-gold-icon.dt-active .dt-iconBg,
+    .dt-icon.dt-gold-icon.dt-active .dt-icon-container {
+        width: 472px;
+        transition: width 0.3s ease 0.1s;
+        left: 0;
+        right: auto;
+    }
+    
+    .dt-icon.dt-gold-icon.dt-active .dt-icon-container h2,
+    .dt-icon.dt-gold-icon.dt-active .dt-icon-container p {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s;
+    }
+    
+    /* Hover styles for gold icon */
+    .dt-icon.dt-gold-icon:hover .dt-iconBg,
+    .dt-icon.dt-gold-icon:hover .dt-icon-container {
+        width: 472px;
+        transition: width 0.3s ease 0s;
+        left: 0;
+        right: auto;
+    }
+    
+    /* Quick text disappearance on hover out for gold icon */
+    .dt-icon.dt-gold-icon .dt-icon-container h2,
+    .dt-icon.dt-gold-icon .dt-icon-container p {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0s linear 0s, visibility 0s linear 0s;
+    }
+    
+    /* Slower icon closing after text disappears for gold icon */
+    .dt-icon.dt-gold-icon .dt-iconBg,
+    .dt-icon.dt-gold-icon .dt-icon-container {
+        transition: width 0.3s ease 0s;
+    }
+    
+    /* Smooth icon closing without delay for gold icon */
+    .dt-icon.dt-gold-icon .dt-iconBg,
+    .dt-icon.dt-gold-icon .dt-icon-container {
+        transition: width 0.3s ease 0s;
+    }
+    
+    /* Anti-jitter for gold icon */
+    .dt-icon.dt-gold-icon:hover {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-font-smoothing: subpixel-antialiased;
+        will-change: auto;
+        perspective: 1000;
+        -webkit-perspective: 1000;
+    }
+}
+
+/* Portrait orientation */
+@media screen and (orientation: portrait) {
+    body.mb-benefits {
+        font-family: 'Nexa', 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .mb-content-wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .mb-roundedIcons .mb-content-wrapper h1 {
+        font-size: 42px;
+        line-height: 100%;
+        margin: 20px 0 0 0;
+        font-weight: 400;
+        font-family: 'Nexa', sans-serif;
+        width: auto;
+        height: auto;
+        letter-spacing: 0;
+        text-align: left;
+        display: block;
+        box-sizing: border-box;
+    }
+    
+    .mb-description {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-weight: 300;
+    } 
+    
+    /* Mobile icons container */
+    .mb-iconsSet {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 30px 0;
+    }
+    
+    /* Mobile icon styles */
+    .mb-icon {
+        width: 100%;
+        margin: 0;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: pan-y pinch-zoom;
+    }
+    
+    .mb-icon-container {
+        width: 100%;
+        height: 80px;
+        border-radius: 25px;
+        overflow: hidden;
+        position: relative;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        touch-action: pan-y pinch-zoom;
+    }
+    
+    .mb-iconBg {
+        width: 100%;
+        height: 100%;
+        border-radius: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: height 0.3s ease;
+    }
+    
+    /* Icon image and title container */
+    .mb-icon-header {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 15px;
+        position: relative;
+        min-height: 80px;
+        width: calc(100% - 30px);
+        touch-action: pan-y pinch-zoom;
+    }
+    
+    .mb-icon.mb-active .mb-icon-header {
+        min-height: 44px;
+        padding: 12px 15px;
+    }
+    
+    .mb-icon img {
+        width: 40px;
+        height: 40px;
+        position: static;
+        margin-right: 12px;
+        flex-shrink: 0;
+    }
+    
+    /* Mobile headings */
+    .mb-icon-container h2 {
+        position: static;
+        width: auto;
+        font-size: 18px;
+        margin: 0;
+        color: black;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        flex-grow: 1;
+        font-family: 'Nexa', 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 600;
+        opacity: 1;
+        visibility: visible;
+        display: block;
+        pointer-events: auto;
+        white-space: normal;
+        transition: none;
+        padding-right: 5px;
+    }
+    
+    /* Description text */
+    .mb-icon-container p {
+        position: relative;
+        width: calc(100% - 30px);
+        padding: 0 15px 20px;
+        margin: 0;
+        color: black;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+        font-family: 'Nexa', 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 400;
+        visibility: visible;
+    }
+    
+    /* Active state */
+    .mb-icon.mb-active .mb-icon-container {
+        height: 150px;
+    }
+    
+    .mb-icon.mb-active .mb-icon-container p {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    
+    /* Hide text for inactive icons */
+    .mb-icon:not(.mb-active) .mb-icon-container p {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    
+    /* Color classes */
+    .mb-purple { background-color: #A490B0; }
+    .mb-blue { background-color: #7BADD5; }
+    .mb-green { background-color: #A7B88F; }
+    .mb-red { background-color: #B0A490; }
+    .mb-lightblue { background-color: #98C5C2; }
+    .mb-yellow { background-color: #EBCA71; }
+    .mb-orange { background-color: #D88E8C; }
+    .mb-teal { background-color: #EBCA71; }
+    .mb-pink { background-color: #A7B88F; }
+    .mb-navy { background-color: #D88E8C; }
+    .mb-olive { background-color: #A490B0; }
+    .mb-maroon { background-color: #D88E8C; }
+    .mb-turquoise { background-color: #98C5C2; }
+    .mb-coral { background-color: #D88E8C; }
+    .mb-violet { background-color: #7BADD5; }
+    .mb-gold { background-color: #EBCA71; }
+    
+    /* Add specific styles for iOS devices */
+    @supports (-webkit-touch-callout: none) {
+        .mb-icon {
+            cursor: pointer;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+        }
+        
+        .mb-icon-container {
+            -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .mb-icon-header {
+            -webkit-user-select: none;
+            user-select: none;
+        }
+    }
+}
+
+/* Базові стилі для тексту в другому ряду - миттєве зникнення */
+.dt-second-row .dt-icon .dt-icon-container h2,
+.dt-second-row .dt-icon .dt-icon-container p {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s linear, visibility 0s linear 0s !important;
+}
+
+/* Показ тексту при наведенні або активному стані з fade-in для другого ряду */
+.dt-second-row .dt-icon:hover .dt-icon-container h2, 
+.dt-second-row .dt-icon:hover .dt-icon-container p,
+.dt-second-row .dt-icon.dt-active .dt-icon-container h2, 
+.dt-second-row .dt-icon.dt-active .dt-icon-container p {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+}
+
+/* Миттєве зникнення тексту при відведенні курсора */
+.dt-second-row .dt-icon:not(:hover):not(.dt-active) .dt-icon-container h2,
+.dt-second-row .dt-icon:not(:hover):not(.dt-active) .dt-icon-container p {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0s linear, visibility 0s linear 0s !important;
+}
+
+/* Спеціальні стилі для оранжевої іконки - миттєве зникнення тексту */
+.dt-icon.dt-orange-icon .dt-icon-container h2,
+.dt-icon.dt-orange-icon .dt-icon-container p {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0s linear, visibility 0s linear 0s !important;
+}
+
+.dt-icon.dt-orange-icon.dt-active .dt-icon-container h2,
+.dt-icon.dt-orange-icon.dt-active .dt-icon-container p,
+.dt-icon.dt-orange-icon:hover .dt-icon-container h2,
+.dt-icon.dt-orange-icon:hover .dt-icon-container p {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease 0.2s, visibility 0s linear 0s !important;
+}
+
+/* Миттєве зникнення тексту для оранжевої іконки при відведенні курсора */
+.dt-icon.dt-orange-icon:not(:hover):not(.dt-active) .dt-icon-container h2,
+.dt-icon.dt-orange-icon:not(:hover):not(.dt-active) .dt-icon-container p {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0s linear, visibility 0s linear 0s !important;
+}
+
+/* When hovering other icons in second row, orange icon collapses */
+.dt-second-row .dt-icon:not(.dt-orange-icon):hover ~ .dt-icon.dt-orange-icon .dt-iconBg,
+.dt-second-row .dt-icon:not(.dt-orange-icon):hover ~ .dt-icon.dt-orange-icon .dt-icon-container {
+    width: 120px !important;
+    transition: width 0.3s ease !important;
+}
+
+.dt-second-row .dt-icon:not(.dt-orange-icon):hover ~ .dt-icon.dt-orange-icon .dt-icon-container h2,
+.dt-second-row .dt-icon:not(.dt-orange-icon):hover ~ .dt-icon.dt-orange-icon .dt-icon-container p {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0s linear, visibility 0s linear 0s !important;
+}

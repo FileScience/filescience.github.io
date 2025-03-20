@@ -1,0 +1,128 @@
+/* Font faces */
+@font-face {
+    font-family: 'Nexa';
+    src: url('../assets/Nexa-Light.woff2') format('woff2'),
+         url('../assets/Nexa-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('../assets/Nexa-Regular.woff2') format('woff2'),
+         url('../assets/Nexa-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal !important;
+    font-display: swap;
+    font-stretch: normal;
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('../assets/Nexa-Bold.woff2') format('woff2'),
+         url('../assets/Nexa-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nexa';
+    src: url('../assets/Nexa-Heavy.woff2') format('woff2'),
+         url('../assets/Nexa-Heavy.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Base styles for the body */
+body {
+    font-family: 'Nexa', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+/* Ensure all elements use the inherited box-sizing */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Default paragraph styles */
+p {
+    font-family: Nexa;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Default heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: Nexa;
+    letter-spacing: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles */
+body.mb-benefits {
+    font-family: 'Nexa', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.mb-content-wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.mb-benefits h1 {
+    font-size: 42px;
+    line-height: 100%;
+    margin: 20px 0 0 0;
+    font-weight: 700;
+}
+
+.mb-description {
+    font-size: 20px;
+    line-height: 30px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+/* Base styles for version switching */
+.dt-roundedIcons,
+.mb-roundedIcons {
+    display: none;
+}
+
+/* Show desktop version by default */
+.dt-roundedIcons {
+    display: block;
+}
+
+/* Show mobile version only in portrait orientation */
+@media screen and (orientation: portrait) {
+    .dt-roundedIcons {
+        display: none;
+    }
+    
+    .mb-roundedIcons {
+        display: block;
+    }
+}
