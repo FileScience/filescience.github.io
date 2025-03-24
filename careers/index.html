@@ -197,7 +197,7 @@
                     <p class="f6l">FileScience is a company that specializes in providing comprehensive multi-cloud backup and restore solutions, ensuring that your data is protected across various cloud platforms. With the increasing adoption of cloud services, businesses often spread their data across multiple cloud environments, which can complicate the backup process. </p>
                 </div>
                 <div class="col-6 d">
-                    <img style="margin-top:-250px;" src="../media/careers-a-1.svg" alt="Join our Team" >
+                    <img class="dropsvg" style="margin-top:-250px;" src="../media/careers-a-1.svg" alt="Join our Team" >
                 </div>
             </div>
         </div>
@@ -649,5 +649,14 @@
       </div>
     </div>
     <script nonce="a34g29914" src="../js/main.js?v=2"></script>
+    <script nonce="a34g29914">
+        window.addEventListener('pageshow', function(e) {
+        const svg = document.querySelector('.dropsvg');
+        if (svg) {
+            const newSvg = svg.cloneNode(true);
+            svg.parentNode.replaceChild(newSvg, svg);
+        }
+        });
+    </script>
   </body>
 </html>
