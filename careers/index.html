@@ -655,10 +655,13 @@
         window.addEventListener('pageshow', function(e) {
         const svg = document.querySelector('.dropsvg');
         if (svg) {
+            setTimeout(() => {
             const newSvg = svg.cloneNode(true);
             svg.parentNode.replaceChild(newSvg, svg);
+            }, 50); // 50ms delay
         }
         });
+
     </script>
   </body>
 </html>
