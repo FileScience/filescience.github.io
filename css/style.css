@@ -551,6 +551,7 @@ footer a {
     bottom: 12px;
     right: 25px;
     background-size: cover;
+    flex-direction: column;
   }
   .consent_cookie_text h2, .consent_cookie_text p {
     color: #fff;
