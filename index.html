@@ -926,6 +926,42 @@
         }
       });
       </script>
-      
+      <div class="consent_cookie">
+        <div class="consent_cookie_text">
+          <h2 class="f5">MMMM COOKIES</h2>
+          <p class="f6l smaller">We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.</p>
+        </div>
+        <div class="consent_cookie_button">
+          <button class="btn-accept" id="accept_cookies">Accept</button>
+          <button class="btn-decline" id="decline_cookies">Decline</button>
+        </div>
+      </div>
+      <script nonce="a34g29914">
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+
+        // Set consent mode
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'analytics_storage': 'granted'
+        });
+
+        // Update consent based on user action
+        document.getElementById('accept_cookies').addEventListener('click', function() {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted'
+          });
+          document.querySelector('.consent_cookie').style.display = 'none'; // Hide the cookie consent banner
+        });
+
+        document.getElementById('decline_cookies').addEventListener('click', function() {
+          gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied'
+          });
+          document.querySelector('.consent_cookie').style.display = 'none'; // Hide the cookie consent banner
+        });
+      </script>
   </body>
 </html>
