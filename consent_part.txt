@@ -1,0 +1,81 @@
+<div class="consent_cookie" id="consent_banner" style="display: none;">
+        <div class="consent_cookie_text">
+          <p class="f6l smaller">
+            This website uses cookies to improve your experience 🍪
+          </p>
+        </div>
+        <div class="consent_cookie_button">
+          <button class="btn-accept" id="accept_cookies">Accept</button>
+          <button class="btn-decline" id="decline_cookies">Decline</button>
+        </div>
+      </div>
+      
+      <script nonce="a34g29914">
+        // Cookie utility functions
+        function setCookie(name, value, days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+      
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+        }
+      
+        // Google Consent Mode v2 default settings
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        });
+      
+        // Show banner after 1 second if cookie not accepted
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            if(getCookie("cookie_consent") !== "accepted") {
+              document.getElementById("consent_banner").style.display = "flex";
+            }
+          }, 1000);
+        });
+      
+        // Update consent based on user action
+        document.getElementById('accept_cookies').addEventListener('click', function() {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+          });
+          // Set a cookie to prevent the banner from showing again (expires in 365 days)
+          setCookie("cookie_consent", "accepted", 365);
+          // Hide the consent banner
+          document.getElementById("consent_banner").style.display = "none";
+        });
+      
+        document.getElementById('decline_cookies').addEventListener('click', function() {
+          gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+          });
+          // Do not set a cookie so the banner will show again on next visit.
+          // Hide the banner for the current session.
+          document.getElementById("consent_banner").style.display = "none";
+        });
+      </script>
