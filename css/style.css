@@ -547,7 +547,6 @@ footer a {
   .consent_cookie {
     max-width: 457px;
     min-height: 250px;
-    background: url('../media/consent.svg') no-repeat;
     position: fixed;
     bottom: 12px;
     right: 25px;
