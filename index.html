@@ -882,6 +882,16 @@
         </footer>
       </div>
     </div>
+    <div class="cookie-banner">
+      <p>
+        We use cookies to improve your experience on our website. By continuing to use the site, you agree to this.
+        You can read detailed information about cookies <a href="#">here</a>.
+      </p>
+      <div class="cookie-buttons">
+        <button class="btn accept">Accept</button>
+        <button class="btn decline">Decline</button>
+      </div>
+    </div>
     <script nonce="a34g29914" src="js/main.js?v=2"></script>
     <script nonce="a34g29914">
       document.addEventListener('DOMContentLoaded', function() {
@@ -927,7 +937,79 @@
         }
       });
       </script>
-
+      <script nonce="a34g29914">
+        // Cookie utility functions
+        function setCookie(name, value, days) {
+          var expires = "";
+          if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+      
+        function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+              c = c.substring(1, c.length);
+            }
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+          }
+          return null;
+        }
+      
+        // Google Consent Mode v2 default settings
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+      
+        gtag('consent', 'default', {
+          'ad_storage': 'denied',
+          'ad_user_data': 'denied',
+          'ad_personalization': 'denied',
+          'analytics_storage': 'denied'
+        });
+      
+        // Show banner after 1 second if cookie not accepted
+        window.addEventListener('load', function() {
+          setTimeout(function() {
+            if (getCookie("cookie_consent") !== "accepted") {
+              document.querySelector(".cookie-banner").style.display = "flex";
+            }
+          }, 1000);
+        });
+      
+        // Event listener for the "Accept" button
+        document.querySelector(".cookie-banner .accept").addEventListener('click', function() {
+          gtag('consent', 'update', {
+            'ad_storage': 'granted',
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'analytics_storage': 'granted'
+          });
+          // Set a cookie to prevent the banner from showing again (expires in 365 days)
+          setCookie("cookie_consent", "accepted", 365);
+          // Hide the consent banner
+          document.querySelector(".cookie-banner").style.display = "none";
+        });
+      
+        // Event listener for the "Decline" button
+        document.querySelector(".cookie-banner .decline").addEventListener('click', function() {
+          gtag('consent', 'update', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+          });
+          // Do not set a cookie so the banner will show again on next visit.
+          // Hide the banner for the current session.
+          document.querySelector(".cookie-banner").style.display = "none";
+        });
+      </script>
+      
 
 
       

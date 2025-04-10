@@ -606,3 +606,53 @@ footer a {
       width: 102vw;
     }
   }
+
+
+.cookie-banner {
+    display: flex;
+    position: fixed;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: stretch;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(4px);
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10%;
+    font-size: 14px;
+    z-index: 9999;
+  }
+  
+  .cookie-banner p {
+    font-size: 16px;
+    margin: 0;
+    max-width: 1000px;
+  }
+  
+  .cookie-banner a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  .cookie-buttons .btn {
+    margin: 10px 10px 10px 0;
+    padding: 10px 40px;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cookie-buttons .accept {
+    background-color: #fff;
+    color: #1e1e1e;
+    border-style: none;
+  }
+  
+  .cookie-buttons .decline {
+    border: 1px white;
+    background-color: #272727;
+    color: white;
+  }
