@@ -939,76 +939,117 @@
       </script>
       <script nonce="a34g29914">
         document.addEventListener('DOMContentLoaded', function() {
-          // Cookie utility functions
-          function setCookie(name, value, days) {
+          
+          // Cookie utility functions with added logging and default path.
+          function setCookie(name, value, days, path = "/") {
             var expires = "";
             if (days) {
               var date = new Date();
               date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
               expires = "; expires=" + date.toUTCString();
             }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            var cookieString = name + "=" + (value || "") + expires + "; path=" + path;
+            document.cookie = cookieString;
+            console.log("Set Cookie:", cookieString);
           }
         
           function getCookie(name) {
             var nameEQ = name + "=";
             var ca = document.cookie.split(';');
             for (var i = 0; i < ca.length; i++) {
-              var c = ca[i];
-              while (c.charAt(0) === ' ') {
-                c = c.substring(1);
-              }
+              var c = ca[i].trim();
               if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
             }
             return null;
           }
         
-          // Google Consent Mode v2 default settings
+          // Ensure dataLayer exists and define gtag as a wrapper.
           window.dataLayer = window.dataLayer || [];
-          function gtag() { dataLayer.push(arguments); }
-        
+          function gtag() { 
+            window.dataLayer.push(arguments); 
+            console.log("Pushed to dataLayer:", arguments);
+          }
+          
+          // Google Consent Mode v2 default settings.
           gtag('consent', 'default', {
             'ad_storage': 'denied',
             'ad_user_data': 'denied',
             'ad_personalization': 'denied',
             'analytics_storage': 'denied'
           });
+          console.log("Initial dataLayer state:", window.dataLayer);
         
-          // Show banner after 1 second if cookie not accepted
-          setTimeout(function() {
-            if (getCookie("cookie_consent") !== "accepted") {
-              document.querySelector(".cookie-banner").style.display = "flex";
-            }
-          }, 1000);
-        
-          // Event listener for the "Accept" button
-          document.querySelector(".cookie-banner .accept").addEventListener('click', function() {
+          // Check if consent cookie is already set.
+          var consentStatus = getCookie("cookie_consent");
+          if (consentStatus === "accepted") {
+            // If cookie is set, grant consent automatically.
             gtag('consent', 'update', {
               'ad_storage': 'granted',
               'ad_user_data': 'granted',
               'ad_personalization': 'granted',
               'analytics_storage': 'granted'
             });
-            // Set cookie to prevent banner from showing again (expires in 365 days)
-            setCookie("cookie_consent", "accepted", 365);
-            // Hide the banner
-            document.querySelector(".cookie-banner").style.display = "none";
-          });
-        
-          // Event listener for the "Decline" button
-          document.querySelector(".cookie-banner .decline").addEventListener('click', function() {
-            gtag('consent', 'update', {
-              'ad_storage': 'denied',
-              'ad_user_data': 'denied',
-              'ad_personalization': 'denied',
-              'analytics_storage': 'denied'
+            console.log("Consent already granted via cookie.");
+          } else {
+            // Otherwise, show the consent banner after a delay.
+            setTimeout(function() {
+              var banner = document.querySelector(".cookie-banner");
+              if (banner) {
+                banner.style.display = "flex";
+                console.log("Cookie banner displayed.");
+              } else {
+                console.warn("Cookie banner element not found.");
+              }
+            }, 1000);
+          }
+          
+          // Event listener for the "Accept" button.
+          var acceptBtn = document.querySelector(".cookie-banner .accept");
+          if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+              // Update consent using gtag.
+              gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+              });
+              // Set cookie so that the banner is not shown again.
+              setCookie("cookie_consent", "accepted", 365);
+              var banner = document.querySelector(".cookie-banner");
+              if (banner) {
+                banner.style.display = "none";
+                console.log("Cookie banner hidden after acceptance.");
+              }
             });
-            // Do not set a cookie so the banner will show again on next visit.
-            // Hide the banner for the current session.
-            document.querySelector(".cookie-banner").style.display = "none";
-          });
+          } else {
+            console.warn("Accept button not found in the cookie banner.");
+          }
+        
+          // Event listener for the "Decline" button.
+          var declineBtn = document.querySelector(".cookie-banner .decline");
+          if (declineBtn) {
+            declineBtn.addEventListener('click', function() {
+              // Update consent using gtag.
+              gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+              });
+              // Do not set a cookie so that the banner can reappear on the next visit.
+              var banner = document.querySelector(".cookie-banner");
+              if (banner) {
+                banner.style.display = "none";
+                console.log("Cookie banner hidden after decline.");
+              }
+            });
+          } else {
+            console.warn("Decline button not found in the cookie banner.");
+          }
         });
-      </script>
+        </script>
+        
       
       
       
