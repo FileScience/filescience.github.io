@@ -943,8 +943,8 @@
       </script>
       <script nonce="a34g29914">
         document.addEventListener('DOMContentLoaded', function() {
-        
-          // Cookie utility functions with added logging and a default path.
+          
+          // Cookie utility functions with added logging and default path.
           function setCookie(name, value, days, path = "/") {
             var expires = "";
             if (days) {
@@ -974,34 +974,42 @@
             console.log("Pushed to dataLayer:", arguments);
           }
           
-          // Function to update consent state in the dataLayer.
-          function updateConsent(state) {
-            // Push the consent update.
-            gtag('consent', 'update', {
-              'ad_storage': state,
-              'ad_user_data': state,
-              'ad_personalization': state,
-              'analytics_storage': state
-            });
-            // Also push the cookie_consent_update event with the same data.
-            gtag('event', 'cookie_consent_update', {
-              'ad_storage': state,
-              'ad_user_data': state,
-              'ad_personalization': state,
-              'analytics_storage': state
-            });
-            console.log("Consent state sent to dataLayer as:", state);
-          }
+          // Google Consent Mode v2 default settings.
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+          });
+          console.log("Initial dataLayer state:", window.dataLayer);
         
-          // Determine consent state based on cookie.
+          // Check if consent cookie is already set.
           var consentStatus = getCookie("cookie_consent");
-          var consentState = (consentStatus === "accepted") ? "granted" : "denied";
-        
-          // Always send an explicit update to dataLayer with the current consent state.
-          updateConsent(consentState);
-        
-          // If the consent hasn't been accepted, show the consent banner after a delay.
-          if (consentStatus !== "accepted") {
+          if (consentStatus === "accepted") {
+            // If cookie is set, grant consent automatically.
+            gtag('consent', 'update', {
+              'ad_storage': 'granted',
+              'ad_user_data': 'granted',
+              'ad_personalization': 'granted',
+              'analytics_storage': 'granted'
+            });
+            gtag("consent", "update", {
+              ad_storage: "granted",
+              ad_user_data: "granted",
+              ad_personalization: "granted",
+              analytics_storage: "granted",
+              security_storage: "granted",
+              functionality_storage: "granted",
+              personalization_storage: "granted"
+            });
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+              event: "consent_updated_granted"
+            });
+
+            console.log("Consent already granted via cookie.");
+          } else {
+            // Otherwise, show the consent banner after a delay.
             setTimeout(function() {
               var banner = document.querySelector(".cookie-banner");
               if (banner) {
@@ -1012,13 +1020,32 @@
               }
             }, 1000);
           }
-        
+          
           // Event listener for the "Accept" button.
           var acceptBtn = document.querySelector(".cookie-banner .accept");
           if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
-              // Update consent to granted.
-              updateConsent('granted');
+              // Update consent using gtag.
+              gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+              });
+              gtag("consent", "update", {
+                ad_storage: "granted",
+                ad_user_data: "granted",
+                ad_personalization: "granted",
+                analytics_storage: "granted",
+                security_storage: "granted",
+                functionality_storage: "granted",
+                personalization_storage: "granted"
+              });
+              window.dataLayer = window.dataLayer || [];
+              dataLayer.push({
+                event: "consent_updated_granted"
+              });
+              
               // Set cookie so that the banner is not shown again.
               setCookie("cookie_consent", "accepted", 365);
               var banner = document.querySelector(".cookie-banner");
@@ -1035,9 +1062,19 @@
           var declineBtn = document.querySelector(".cookie-banner .decline");
           if (declineBtn) {
             declineBtn.addEventListener('click', function() {
-              // Update consent to denied.
-              updateConsent('denied');
-              // Do not set a cookie so the banner can reappear on the next visit.
+              // Update consent using gtag.
+              gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+              });
+              window.dataLayer = window.dataLayer || [];
+              dataLayer.push({
+                event: "consent_updated_canceled"
+              });
+
+              // Do not set a cookie so that the banner can reappear on the next visit.
               var banner = document.querySelector(".cookie-banner");
               if (banner) {
                 banner.style.display = "none";
@@ -1049,7 +1086,6 @@
           }
         });
         </script>
-        
         
       
       
