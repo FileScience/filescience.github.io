@@ -987,12 +987,7 @@
           var consentStatus = getCookie("cookie_consent");
           if (consentStatus === "accepted") {
             // If cookie is set, grant consent automatically.
-            gtag('consent', 'update', {
-              'ad_storage': 'granted',
-              'ad_user_data': 'granted',
-              'ad_personalization': 'granted',
-              'analytics_storage': 'granted'
-            });
+            
             gtag("consent", "update", {
               ad_storage: "granted",
               ad_user_data: "granted",
@@ -1026,12 +1021,7 @@
           if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
               // Update consent using gtag.
-              gtag('consent', 'update', {
-                'ad_storage': 'granted',
-                'ad_user_data': 'granted',
-                'ad_personalization': 'granted',
-                'analytics_storage': 'granted'
-              });
+              
               gtag("consent", "update", {
                 ad_storage: "granted",
                 ad_user_data: "granted",
