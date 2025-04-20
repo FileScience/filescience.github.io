@@ -90,16 +90,14 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Response received:", responseText);
         var thankYouMsg = document.createElement("p");
         thankYouMsg.className = "p thank you";
-        thankYouMsg.textContent = responseText; // Expected: "Thank you for your interest in FileScience!"
-        form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
-
         // if the response contains ("invalid"), do not hide the form and show the error message instead
-        if (responseText.includes("invalid")) {
+        if (responseText.includes("Invalid")) {
           thankYouMsg.textContent = "Invalid email address. Please try again.";
           thankYouMsg.className = "error-message"; // Add a class for styling the error message
           return;
         }
-        
+        thankYouMsg.textContent = responseText; // Expected: "Thank you for your interest in FileScience!"
+        form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
         // Hide the entire form upon successful submission
         form.style.display = "none";
       })
