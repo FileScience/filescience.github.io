@@ -176,6 +176,7 @@
             transition: 700ms;
             display: flex;
             z-index: 2;
+            backface-visibility: hidden;
             /* Removed height: fit-content; */
         }
 
@@ -192,6 +193,7 @@
             z-index: 1;
             opacity: 0;
             transform: rotateY(180deg);
+            backface-visibility: hidden;
         }
     }
     @media screen and (max-width: 992px) {
