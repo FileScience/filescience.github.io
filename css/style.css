@@ -449,6 +449,13 @@ footer a {
       width: 80%;
       text-align: center;
     }
+    footer .row .row .col-6 {
+      flex: 0 0 50%;
+    }
+    .footer .col-4 .row .col-6 .f6 {
+      font-family: l;
+      margin-bottom: 10px;
+    }
 }
 
 
