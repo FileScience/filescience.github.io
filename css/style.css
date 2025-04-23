@@ -432,6 +432,23 @@ footer a {
     button.footer_submit.f6 {
       width: 30%;
     }
+    
+    .footer .col-4, footer .col-4 {
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+    }
+    .btn.footer-mobile-book {
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 8px 34px;
+      border-radius: 36px;
+      margin-top: 24px;
+      font-family: l, 'Open Sans', Arial;
+      font-size: 14px;
+      width: 80%;
+      text-align: center;
+    }
 }
 
 
