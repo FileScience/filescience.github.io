@@ -456,6 +456,15 @@ footer a {
       font-family: l;
       margin-bottom: 10px;
     }
+    
+    .cookie-banner {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .cookie-banner > div {
+      padding-right: 22px !important;
+      padding-left: 22px !important;
+    }
 }
 
 
