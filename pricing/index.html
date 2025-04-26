@@ -26,218 +26,124 @@
         html {
             background-color: #fff;
         }
+        .section.s1 {
+          min-height: calc(100vh - 120px);
+        }
         .section.s1 .container {
           padding-left: 25px;
           padding-right: 25px;
         }
-        .section:not(.s1) .container {
+        .section .container {
           max-width: 1390px;
         }
-        
-        
-.card.card-1 {
-  background: #A7B88F;
-}
-.card.card-2 {
-  background: #EBCA71;
-}
-.card.card-3 {
-  background: #A490B0;
-}
-.card .f3 {
-  margin-bottom: 0;
-}
-.card .f5 {
-  margin-top: 0;
+        .opener {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background-repeat: no-repeat !important;
+            right: 0;
+            top: 16px;
+        }
+        .faq {
+            position: relative;
+            padding-right: 52px;
+            margin-top: 16px;
+            border-top: 1px solid #272727;
+            padding-top: 12px;
+        }
+        .faq .f5 {
+            margin-top: 8px;
+        }
+
+
+
+        .faq p {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 1s ease;
+            margin: 0; /* Optional: adjust as needed */
+        }
+
+        /* When open, allow the content to expand */
+        .faq p.open {
+            /* Set a max-height large enough to accommodate the content */
+            max-height: 500px;
+        }
+
+
+        .s1 .col-40 .f1b {
+            margin-top: 12px;
+        }
+        .s1 .row {
+            margin-bottom: 100px;
+        }
+        .section.s1 {
+            padding-top: 100px;
+        }
+        @media screen and (max-width: 992px) {
+  .container, .section.s1 .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
-.card .f1b {
-  padding-left: 40px;
-  margin-bottom: 0;
-}
-.card .f6 {
-  margin-top: -3px;
+
+
+.col-left.included .f2 {
   text-align: center;
 }
-.card.card-2 {
-  min-height: 541px;
+.col-left .f1b span {
+  display: inline-flex;
+  vertical-align: middle;
+  font-size: 22px;
 }
-.section.s2 {
-  margin-bottom: 64px;
-  margin-top: 64px;
-}
-.section.s1 .f1b {
-  margin-bottom: 0;
+.btn.btn-get-started-pricing {
+  background: rgba(167, 184, 143, 0.90);
+  max-width: 320px;
+  padding: 25px 50px;
+  font-size: 24px;
+  font-family: n;
+  border-radius: 50px;
   text-align: center;
 }
-.section.s1 p.f4 {
+.col-left .f1b {
+  font-size: 115px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.col-left .f1 {
+  margin-bottom: 24px;
+}
+.f6l.pricing-notes {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.card-pricing {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  background: #EBCA71;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.card-pricing .f1 {
+  margin-top: 24px;
+  margin-bottom: 25px;
+}
+.btn.btn-get-quote-pricing {
+  background: #eee;
+  max-width: 320px;
+  padding: 25px 50px;
+  font-size: 24px;
+  font-family: n;
+  border-radius: 50px;
   text-align: center;
+  margin-top:40px;
+  display: flex;
 }
-.s1 span.f4 {
-  text-decoration: underline;
+.col-9.included {
+	text-align: center;
 }
-.s1 a {
-	text-decoration: none;
-	color: #272727;
-}
-        /* For Chrome, Safari, and Edge */
-        input[type=range]::-webkit-slider-runnable-track {
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(to right, black 50%, #ccc 50%);
-            border: none;
-            border-radius: 5px;
-        }
-        
-        input[type=range]::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            appearance: none;
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: black;
-            cursor: pointer;
-            margin-top: -4px; /* Adjust thumb's vertical position */
-        }
-        
-        /* For Firefox */
-        input[type=range]::-moz-range-track {
-            width: 100%;
-            height: 8px;
-            background: linear-gradient(to right, black 50%, #ccc 50%);
-            border: none;
-            border-radius: 5px;
-        }
-        
-        input[type=range]::-moz-range-thumb {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: black;
-            cursor: pointer;
-        }
-        
-        /* Dynamic background change for the slider */
-        input[type=range] {
-            -webkit-appearance: none;
-            width: 100%;
-            background: transparent;
-        }
-        
-        /* Dynamically adjust the filled background as the slider value changes */
-        input[type=range]::-webkit-slider-runnable-track {
-            background: linear-gradient(to right, black var(--percent, 50%), #ccc var(--percent, 50%));
-        }
-        
-        input[type=range]::-moz-range-track {
-            background: linear-gradient(to right, black var(--percent, 50%), #ccc var(--percent, 50%));
-        }
-        .DCLeft h3, .DCLeft p {
-            color: #fff;
-        }
-        .sublabel.f6 {
-            padding-left: 70px;
-            margin-top: -15px;
-        }
-        .DynamicCard {
-            background: #272727;
-            border-radius: 7px;
-            padding: 18px;
-            width: 100%;
-            }
-            .slider-container input {
-                margin-bottom: 36px;
-            }
-            .cl.pricingpanel {
-                width: 100%;
-            }
-            .slider-container {
-                width: 95%;
-                display: block;
-                margin: 0 auto;
-            }
-            .DCLeft {
-                width: 60%;
-                float: left;
-                padding: 12px;
-            }
-            .DCRight {
-                width: 30%;
-                float: left;
-                display: block;
-                background: #7BADD5;
-                padding: 12px !important;
-                min-height: 410px;
-                margin-top: -40px;
-                margin-bottom: -20px;
-                border-radius: 12px;
-            }
-            .DCLeft {
-                display: block;
-            }
-            .DynamicCard {
-                display: block;
-                overflow: visible;
-                min-height: 360px;
-            }
-            .DCRight * {
-                color: black;
-            }
-            #tierPrice {
-                font-size: 44px;
-                font-weight: bold;
-                font-family: b;
-                margin-bottom: 4px;
-                text-align: center;
-            }
-            .sublabel {
-                margin-top: 0px;
-                text-align: center;
-                font-size: 15px;
-            }
-            .slider-container label {
-                font-size: 32px;
-                color: black;
-                font-family: b;
-                margin-left: calc(2.5% - 18px);
-            }
-            .slider-container p, .slider-container p span {
-                color: black;
-                font-size: 19px;
-                font-family: b;
-                text-align: center;
-                margin-bottom: 6px;
-            }
-            @media screen and (max-width:992px) {
-                .DCRight {
-                    width: 100%;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    min-height: 260px;
-                }
-                .DCLeft {
-                    width: 100%;
-                }
-                .DynamicCard {
-                    overflow: hidden;
-                }
-                .DynamicCard {
-                    min-height: 320px;
-                }
-                
-                .sublabel.f6 {
-                margin-top: 0px;
-                }
-                .DCRight {
-                min-height: 180px;
-                }
-                .card {
-                min-height: 320px;
-                }
-                .card.card-2 {
-                min-height: 350px;
-                }
-            }
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -252,14 +158,14 @@
             <img src="../media/burger.svg" alt="Mobile Menu" class="burger m">
         </div>
         <div class="nav-links">
-                <a href="https://filescience.io">Home</a>
-                <a href="../about/">About</a>
-                <a href="../compliance/">Compliance</a>
-                <a href="../standards/">Trust</a>
-                <a href="../pricing/">Pricing</a>
-                <a href="../faq/">FAQ</a>
-                <a href="../contact/">Contact</a>
-                <a href="https://dashboard.filescience.io/login" class="m">Login</a>
+            <a href="https://filescience.io">Home</a>
+            <a href="../about/">About</a>
+            <a href="../compliance/">Compliance</a>
+            <a href="../standards/">Trust</a>
+            <a href="../pricing/">Pricing</a>
+            <a href="../faq/">FAQ</a>
+            <a href="../contact/">Contact</a>
+            <a href="https://dashboard.filescience.io/login" class="m">Login</a>
                 <div class="nav-info m">
                     <p class="f6l">Contact Us</p>
                     <p class="bold nav-tel"><a href="tel:+1212-777-0007">212-777-0007</a></p>
@@ -283,9 +189,172 @@
     </div>
     <div class="section s1">
         <div class="container">
-            <div class="col-12">
-                <h1 class="f1b">Still left with some questions?</h1>
-                <p class="f4">Please, <span class="f4"><a href="https://calendly.com/kris-filescience/meeting" target="_blank">chat with our friendly</a></span> team to know more</p>
+            <div class="row">
+                <div class="col-8 col-left">
+                    <h1 class="f1">Flexible pricing<br>for every need</h1>
+                    <p class="p">Enjoy fixed pricing for up to <b><u>500GB.</u></b><br>
+                        Need more? Just click 'Get a Quote' for a custom storage pricing.</p>
+                    <p class="f1b">$199 <span>/mo</span></p>
+                    <a class="btn btn-get-started-pricing">Get Started</a>
+                    <p class="f6l pricing-notes">*Accounts using over 500GB of storage will automatically transition to the dynamic pricing model.<br>
+                        **Certain exceptions to pricing may vary per cloud. Click here to learn more.<br>
+                        ***Multi-year contractual pricing available upon request, contact our team.</p><br>
+                </div>
+                <div class="col-4 col-right">
+                    <div class="card-pricing">
+                        <p class="f6">Did someone say</p>
+                        <h2 class="f1">Unlimited storage?</h2>
+                        <p class="f6">We got you! Just click <br>“Get a Quote” — it’s that easy.</p>
+                        <a class="btn btn-get-quote-pricing">Get a Quote</a>    
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-9 included">
+                    <h2 class="f2">Included in <u>every plan</u></h2>
+                    <img src="../media/inc-d.svg" class="d" alt="Included in every plan">
+                    <img src="../media/inc-m.svg" class="m" alt="Included in every plan">
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .section.s2 {
+            background: #A490B0;
+        }
+        .review-section .f2 {
+            color: #fff;
+        }
+        .review-card {
+            width: 372px;
+            display: flex;
+            min-width: 372px;
+            min-height: 280px;
+            box-shadow: 0px 20px 40px 0px rgba(15, 9, 82, 0.07);
+            border: 1px solid #ffffff1a;
+            padding: 12px;
+            color: #fff;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.10);
+        }
+        .review-slider {
+            flex-direction: row;
+            display: flex;
+            overflow: scroll;
+            gap: 25px;
+            scrollbar-color: transparent;
+        }
+        .review-section {
+            min-height: 458px;
+        }
+        .review-card p {
+            color: #fff;
+        }
+    </style>
+    <div class="section s2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="review-section">
+                        <h2 class="f2">Real Feedback, Real Results</h2>
+                        <div class="review-slider">
+                                <div class="review-card">
+                                    <a>
+                                        <img src="../media/stars-icon.svg" alt="Stars Icon" class="Stars">
+                                        <p class="f6">“FileScience: Nick Martin’s mission to secure the cloud’s overlooked data”</p>
+                                        <img src="../media/independent-icon.svg" alt="Independent Logo" class="source">
+                                    </a>
+                                </div>
+                                <div class="review-card">
+                                    <a>
+                                        <img src="../media/stars-icon.svg" alt="Stars Icon" class="Stars">
+                                        <p class="f6">“Practical Strategies for Securing Cloud Data and Microsoft 365”</p>
+                                        <img src="../media/forbes-icon.svg" alt="Forbes Logo" class="source">
+                                    </a>
+                                </div>
+                                <div class="review-card">
+                                    <a>
+                                        <img src="../media/stars-icon.svg" alt="Stars Icon" class="Stars">
+                                        <p class="f6">"FileScience has given us a white glove experience that we haven’t had before from a backup company. They have went over and beyond!"</p>
+                                        <p class="p source"> COO, StartCare</p>
+                                    </a>
+                                </div>
+                                <div class="review-card">
+                                    <a>
+                                        <img src="../media/stars-icon.svg" alt="Stars Icon" class="Stars">
+                                        <p class="f6">"FileScience has given us the ability to meet regulatory and compliance requirements that no other cloud-to-cloud provider could offer."</p>
+                                        <p class="p source">Chairman, Publicly Traded REIT (NYSE: URT)</p>
+                                    </a>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script nonce="a34g29914">
+
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewSlider = document.querySelector('.review-slider');
+  const originals = Array.from(document.querySelectorAll('.review-card'));
+  const total = originals.length;
+  let cloneIndex = 0;
+  let clonedCount = 0;
+  const maxClones = 100;
+
+  // 1) Auto-scroll at 1px per 10ms (fast, smooth)
+  setInterval(() => {
+    reviewSlider.scrollLeft += 1;
+    // no reset needed—new cards keep being appended
+  }, 10);
+
+  // 2) Clone one card per second, in sequence, stop after 100
+  const cloneInterval = setInterval(() => {
+    if (clonedCount >= maxClones) {
+      clearInterval(cloneInterval);
+      return;
+    }
+    const toClone = originals[cloneIndex % total];
+    reviewSlider.appendChild(toClone.cloneNode(true));
+    cloneIndex++;
+    clonedCount++;
+  }, 1000);
+});
+
+
+    </script>
+    <div class="section s4">
+        <div class="container">
+            <div class="row">
+                <div class="col-40">
+                    <h1 class="f2b">General FAQ</h1>
+                    <p class="f6">Everything you need to know about the product and how it works. <br>
+                        Can't find the answer? <br>
+                        Please, chat with our friendly team.</p>
+                </div>
+                <div class="col-60">
+                    <div class="faq">
+                        <h3 class="f5">What is cloud-to-cloud backup?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p"  >Cloud-to-cloud backup is a service where data from one cloud platform is backed up to another cloud-based storage environment. In essence, it's a <span class="bold">Backup-as-a-Service</span> offering that creates a secure copy of your cloud data in a separate cloud location, so it can be restored if needed.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How does cloud-to-cloud backup work?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p"  >Cloud-to-cloud backup works by connecting to your cloud applications (via secure APIs or credentials) and periodically copying your data to a separate cloud storage. The backup service will <span class="bold">snapshot your data and store it safely in the cloud</span> snapshot your data and store it safely in the cloud so that a point-in-time version can be recovered later. Because the backup runs entirely in the cloud, you don't need any hardware - the provider manages the storage and infrastructure.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">Why do I need cloud-to-cloud backup if my data is already in the cloud?</h3>
+                        <div class="opener" style="background: url('../media/open.svg'); margin-top:12px;"></div>
+                        <p class="p"  >Storing data in the cloud doesn't make it immune to loss. About one-third of cloud data loss is due to user errors (accidental deletion or overwriting), and other risks include malicious deletions, hackers, sync glitches, or service outages.Cloud providers have redundancy for themselves but often <span class="bold">cannot recover your data once it's permanently deleted on your end</span> cannot recover your data once it's permanently deleted on your end (for example, after a recycle bin is purged. A cloud-to-cloud backup keeps independent copies of your data to restore those lost or corrupted files, providing an extra layer of protection.</p>
+                    </div>
+                    <div class="faq">
+                        <h3 class="f5">How is cloud-to-cloud backup different from simply syncing or replicating data?</h3>
+                        <div class="opener" style="background: url('../media/open.svg');"></div>
+                        <p class="p"  ><span class="bold">Syncing</span> (or cloud storage services like OneDrive/Dropbox) is not the same as backup. Sync keeps files consistent across devices - if you delete or change a file, that change syncs everywhere (including deletions). A true backup, by contrast, maintains historical versions and separate copies. With replication alone, any corruption or deletion on the source can immediately propagate to the replica, whereas a backup can be used to recover the earlier intact data. In short, cloud sync is great for accessibility and collaboration, but it is not a trustworthy backup solution. Backup ensures you have an independent copy that isn't automatically changed when the source changes. This distinction is crucial: for protection against accidental or malicious changes, you need backup, not just sync.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -311,77 +380,6 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <script nonce="a34g29914" type='text/javascript' src='//script.crazyegg.com/pages/scripts/0123/0376.js' async='async'></script>
-    <div class="section s2">
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="pricing-card">
-                        <div class="card card-1">
-                            <h2 class="f3">Standard</h2>
-                            <p class="f5">339 Gb - 1000 Gb</p>
-                            <p class="f1b">$0.49</p>
-                            <p class="f6">per GB</p>
-                            <p class="p">Standard pricing for medium quantities.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="pricing-card">
-                        <div class="card card-2">
-                            <h2 class="f3">Small Business</h2>
-                            <p class="f5">Up to 338 Gb</p>
-                            <p class="f1b">$199</p>
-                            <p class="f6">per month</p>
-                            <p class="p">Basic tier with flat pricing for small quantities.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="pricing-card">
-                        <div class="card card-3">
-                            <h2 class="f3">Business</h2>
-                            <p class="f5">More than 10TB</p>
-                            <p class="f1b">$0.24</p>
-                            <p class="f6">per GB</p>
-                            <p class="p">Business tier for extensive storage needs.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section s3">
-        <div class="container">
-            <div class="col-12">
-                <div class="rf s">
-                    <div class="cl pricingpanel">
-                        <div class="slider-container">
-                            <label for="storageRange" class="f1">How much storage do you need?</label>
-                            <p><span id="storageValue">19,777</span> GB</p>
-                            <input type="range" id="storageRange" name="storage" min="0" max="100" value="0" style="--percent: 83%;">
-                        </div>
-                        
-                        <div class="DynamicCard">
-                            <div class="DCLeft">
-                                <h3 class="f3" id="tierName">Business</h3>
-                                <p class="desc p">Business tier for extensive storage needs.</p>
-                            </div>
-                            <div class="DCRight">
-                                <p class="price f1" id="tierPrice">$0.29</p>
-                                <p class="sublabel f6">Per GB</p>
-                                <div class="list">
-                                    <ul>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <!-- Footer Section -->
     <div class="section footer">
       <div class="container">
@@ -405,7 +403,6 @@
                         <a href="../partnership/" class="f6">Partnership</a>
                         <a href="../ai/" class="f6">FileScience AI</a>
                         <a href="../careers/" class="f6">Careers</a>
-                        
                     </div>
                 </div>
             </div>
@@ -420,99 +417,31 @@
         </footer>
       </div>
     </div>
-    <script nonce="a34g29914">
-        // Tier data
-        // Tier data
-        const tiers = [
-        { name: "Basic", min: 1, max: 338, price: 199, perGB: "$0.00", description: "Basic tier with flat pricing for small quantities." },
-        { name: "Standard", min: 339, max: 1000, price: null, perGB: "$0.49", description: "Standard pricing for medium quantities." },
-        { name: "Growth", min: 1001, max: 5000, price: null, perGB: "$0.39", description: "Growth tier for scaling up your storage." },
-        { name: "Professional", min: 5001, max: 10000, price: null, perGB: "$0.29", description: "Professional tier for large quantities." },
-        { name: "Business", min: 10001, max: 50000, price: null, perGB: "$0.24", description: "Business tier for extensive storage needs." },
-        { name: "Corporate", min: 50001, max: 100000, price: null, perGB: "$0.19", description: "Corporate tier for high-volume storage." },
-        { name: "Enterprise", min: 100001, max: null, price: null, perGB: "$0.17", description: "Enterprise tier for unlimited storage." }
-        ];
-
-        // Helper function to convert slider position to a logarithmic scale
-        function sliderToLogValue(sliderValue) {
-        const min = Math.log(1);
-        const max = Math.log(150000);
-        const scale = (max - min) / 100; // Map slider to log scale
-        return Math.exp(min + scale * sliderValue);
-        }
-
-        // Helper function to convert GB to slider value for default
-        function logValueToSlider(gbValue) {
-        const min = Math.log(1);
-        const max = Math.log(150000);
-        const scale = 100 / (max - min);
-        return (Math.log(gbValue) - min) * scale;
-        }
-
-        // Function to find the appropriate tier based on the value
-        function findTier(value) {
-        for (let i = 0; i < tiers.length; i++) {
-            const tier = tiers[i];
-            if ((value >= tier.min) && (tier.max === null || value <= tier.max)) {
-                return tier;
-            }
-        }
-        return null;
-        }
-
-        // Function to update the card and displayed values
-        function updateCard(value) {
-        const tier = findTier(value);
-        if (tier.name != "Basic") {
-            document.getElementById('tierName').textContent = tier.name;
-            document.getElementById('tierPrice').textContent = tier.perGB;
-            document.querySelector('.desc').textContent = tier.description;
-            document.querySelector('.sublabel').textContent = "Per GB";
-        } else {
-            setToBasic();
-        }
-        }
-        function setToBasic() {
-        document.getElementById('tierName').textContent = "Basic";
-        document.getElementById('tierPrice').textContent = "$199";
-        document.querySelector('.sublabel').textContent = "Flat Rate";
-        document.querySelector('.desc').textContent = "Basic tier with flat pricing for small quantities.";
-        }
-
-        // Set slider default to 320GB
-        const defaultGB = 320;
-        const slider = document.getElementById('storageRange');
-        const sliderDefaultValue = logValueToSlider(defaultGB);
-        slider.value = sliderDefaultValue;
-        document.getElementById('storageValue').textContent = defaultGB;
-        updateCard(defaultGB);
-
-        // Update the slider's filled color
-        function updateSliderFill(slider) {
-        const percentage = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-        slider.style.setProperty('--percent', percentage + '%');
-        }
-
-        // Update the fill based on the initial default value
-        updateSliderFill(slider);
-
-        // Event listener for slider input to update the values and fill
-        slider.addEventListener('input', function () {
-        const logValue = sliderToLogValue(this.value);
-        // make rounded value have commas as separator for 1,000
-        
-
-        const roundedValue = Math.round(logValue);
-        
-
-        document.getElementById('storageValue').textContent = roundedValue.toLocaleString();
-        updateCard(roundedValue);
-        updateSliderFill(this); // Update the slider's fill as the value changes
-        });
-
-
-
-     </script>
     <script nonce="a34g29914" src="../js/main.js?v=2"></script>
+    <script nonce="a34g29914">
+          // Select all clickable opener divs inside .faq
+            var q = document.querySelectorAll('.faq div');
+            for (var i = 0; i < q.length; i++) {
+                q[i].onclick = function() {
+                // Toggle the 'open' class on the corresponding <p> element
+                if (this.nextElementSibling.classList.contains('open')) {
+                    this.nextElementSibling.classList.remove('open');
+                    this.style.background = "url('../media/open.svg')";
+                } else {
+                    closeAll();
+                    this.nextElementSibling.classList.add('open');
+                    this.style.background = "url('../media/close-f.svg')";
+                }
+                }
+            }
+            
+            function closeAll() {
+                var q = document.querySelectorAll('.faq div');
+                for (var i = 0; i < q.length; i++) {
+                q[i].nextElementSibling.classList.remove('open');
+                q[i].style.background = "url('../media/open.svg')";
+                }
+            }
+    </script>
   </body>
 </html>
