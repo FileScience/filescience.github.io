@@ -203,6 +203,10 @@
         .nav-container {
             background: #98C5C2;
         }
+        .section.s1 h1, .section.s1 p {
+            max-width: 1100px;
+            margin: 32px auto;
+        }
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -409,37 +413,6 @@
           </div>
         </div>
       </div>
-    <script nonce="a34g29914">
-
-document.addEventListener('DOMContentLoaded', function() {
-  const reviewSlider = document.querySelector('.review-slider');
-  const originals = Array.from(document.querySelectorAll('.review-card'));
-  const total = originals.length;
-  let cloneIndex = 0;
-  let clonedCount = 0;
-  const maxClones = 100;
-
-  // 1) Auto-scroll at 1px per 10ms (fast, smooth)
-  setInterval(() => {
-    reviewSlider.scrollLeft += 1;
-    // no reset needed—new cards keep being appended
-  }, 20);
-
-  // 2) Clone one card per second, in sequence, stop after 100
-  const cloneInterval = setInterval(() => {
-    if (clonedCount >= maxClones) {
-      clearInterval(cloneInterval);
-      return;
-    }
-    const toClone = originals[cloneIndex % total];
-    reviewSlider.appendChild(toClone.cloneNode(true));
-    cloneIndex++;
-    clonedCount++;
-  }, 1000);
-});
-
-
-    </script>
     <div class="section s4">
         <div class="container">
             <div class="row">
