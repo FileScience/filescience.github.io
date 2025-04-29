@@ -93,6 +93,7 @@
 
 
 
+
 .card-pricing {
   padding-top: 32px;
   padding-bottom: 64px;
@@ -119,6 +120,75 @@
 }
 .col-9.included {
 	text-align: center;
+}
+
+        .row.stats {
+          color: white;
+        }
+        .reason .f2 {
+          background: linear-gradient(270deg, #BBBAF6 0%, #655E8E 89.26%);
+          -webkit-background-clip: text; /* For Chrome, Safari, and Opera */
+          -webkit-text-fill-color: transparent; /* For Chrome, Safari, and Opera */
+          background-clip: text;
+          color: transparent;
+          margin-top: 0;
+        }
+        .reason .statsline {
+            background: linear-gradient(270deg, #BBBAF6 0%, #655E8E 89.26%);
+            height: 3px;
+            display: flex;
+            width: 100%;
+        } 
+        .reason .p {
+          margin: 0;
+          min-height: 140px;
+          font-size: 21px;
+          color: #1A1B2E;
+        }
+        .calendly-spinner + iframe {
+            min-height: 900px;
+        }
+        .s1 .row:nth-of-type(1) {
+            margin-bottom: 0;
+        }
+        .reason {
+            max-width: 350px;
+        }
+        .calendly-inline-widget {
+            display: flex;
+            min-height: 900px;
+        }
+        .section.s6 {
+        margin-bottom: 48px;
+        }
+        .btn.book-demo-btn {
+            text-decoration: none;
+            color: #655E8E;
+            position: relative;
+            font-size: 21px;
+        }
+        .btn.book-demo-btn::after {
+            content: ' ';
+            width: 16px;
+            height: 16px;
+            display: flex;
+            background: url('../media/arrow-mini.svg');
+            position: absolute;
+            left: 142px;
+            top: 7px;
+        }
+        .backup-solution-card p.f6 {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        
+.backup-solution-card {
+  display: flex;
+  flex-direction: column;
+}
+.btn.book-demo-btn.f6 {
+  margin-top: auto;
+  justify-content: end;
 }
     </style>
     <!-- Navigation Container -->
@@ -168,7 +238,7 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="f1">See how FileScience protects the data effortlessly </h1>
-                    <p class="p">Book a personalized demo and discover how we safeguard NetDocuments, Microsoft 365, and 50+ SaaS platforms</p>
+                    <p id="booknow" class="p">Book a personalized demo and discover how we safeguard NetDocuments, Microsoft 365, and 50+ SaaS platforms</p>
                 </div>
             </div>
             <div class="row">
@@ -181,46 +251,36 @@
             </div>
         </div>
     </div>
-    <div class="section s3">
+    <div class="section s6">
         <div class="container">
-          <div class="row stats">
-            <div class="col-12">
-              <div class="stats-container">
-                <div class="row">
-                  <div class="col-6 stats-col">
-                    <div class="stat">
-                      <h2 class="f1">95%</h2>
-                      <p class="f4">Minimized Downtime Costs</p>
+            <div class="row">
+                <div class="col-4">
+                    <div class="backup-solution-card">
+                        <h2 class="f4">Microsoft 365</h2>
+                        <p class="f6">Back up not only Outlook, OneDrive, and SharePoint — but also the tools most providers ignore: Microsoft To Do, Stream, Visio, Loop, and PowerBI. </p>
+                        <a href="#booknow" class="btn book-demo-btn f6">Book a demo</a>
                     </div>
-                    <div class="stat">
-                      <h2 class="f1">74%</h2>
-                      <p class="f4">Faster Recovery</p>
-                    </div>
-                    <div class="stat">
-                      <h2 class="f1">40%</h2>
-                      <p class="f4">Lower total cost of ownership (TCO)</p>
-                    </div>
-                  </div>
-                  <div class="col-6 visual-col">
-                    <img src="media/home-2.svg" height="500" width="500" loading="lazy" alt="Statistics">
-                  </div>
                 </div>
-              </div>
+                <div class="col-4">
+                    <div class="backup-solution-card">
+                        <h2 class="f4">NetDocuments</h2>
+                        <p class="f6">We’re the first and only provider offering full backup and recovery for NetDocuments. </p>
+                        <a href="#booknow" class="btn book-demo-btn f6">Book a demo</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="backup-solution-card">
+                        <h2 class="f4">Other SaaS Platforms</h2>
+                        <p class="f6">From Box, Zoom, and Asana to Google Workspace and Salesforce — FileScience gives you centralized protection for your entire SaaS environment.</p>
+                        <a href="#booknow" class="btn book-demo-btn f6">Book a demo</a>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 cta-border">
-              <div class="stats-cta">
-                <a href="/standards/">
-                  <h3 class="f5">Ten reasons to choose Cloud-to-Cloud backup</h3>
-                  <img src="media/vector-right.svg" loading="lazy" width="90" height="45" alt="Arrow">
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
     <style>
         .section.s2 {
-            background: #A490B0;
+            background: #7BADD5;
         }
         .review-section .f2 {
             color: #fff;
@@ -299,6 +359,40 @@
             </div>
         </div>
     </div>
+    <div class="section s3">
+        <div class="container">
+          <div class="row stats">
+            <div class="col-12">
+                <h2 class="f2">We don’t just backup,<br>we deliver results</h2>
+              <div class="stats-container">
+                <div class="row">
+                    <div class="col-4">
+                      <div class="reason">
+                        <p class="f2">95%</p>
+                        <div class="statsline"></div>
+                        <p class="f6" role="heading" aria-level="5">Minimized Downtime Costs</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="reason">
+                        <p class="f2">74%</p>
+                        <div class="statsline"></div>
+                        <p class="f6" role="heading" aria-level="7">Faster Recovery</p>
+                      </div>
+                    </div>
+                    <div class="col-4">
+                      <div class="reason">
+                        <p class="f2">40%</p>
+                        <div class="statsline"></div>
+                        <p class="f6" role="heading" aria-level="9">Lower total cost of ownership</p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     <script nonce="a34g29914">
 
 document.addEventListener('DOMContentLoaded', function() {
