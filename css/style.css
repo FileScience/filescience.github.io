@@ -56,10 +56,12 @@ html, body {
   /* f4 series */
   .f4  { font-size: 36px; line-height: 40px; font-family: 'n', Arial, sans-serif; color:#272727}
   .f4b { font-size: 36px; line-height: 40px; font-family: 'b', Arial, sans-serif; color:#272727}
+  .f4l { font-size: 36px; line-height: 40px; font-family: 'l', Arial, sans-serif; color:#272727}
   
   /* Other Font Classes */
   .f5   { font-size: 30px; line-height: 35px; font-family: 'n', Arial, sans-serif; color:#272727}
   .f5b  { font-size: 30px; line-height: 35px; font-family: 'b', Arial, sans-serif; color:#272727}
+  .f5l  { font-size: 30px; line-height: 35px; font-family: 'l', Arial, sans-serif; color:#272727}
   .f6   { font-size: 20px; line-height: 25px; font-family: 'n', Arial, sans-serif; color:#272727}
   .f6b  { font-size: 20px; line-height: 25px; font-family: 'b', Arial, sans-serif; color:#272727}
   .f6l  { font-size: 20px; line-height: 25px; font-family: 'l', Arial, sans-serif; color:#272727}
@@ -103,8 +105,11 @@ html, body {
     
     .f4  { font-size: 25px; line-height: 28px; }
     .f4b { font-size: 25px; line-height: 28px; }
+    .f4l { font-size: 25px; line-height: 28px; }
     
     .f5   { font-size: 21px; line-height: 25px; }
+    .f5b  { font-size: 21px; line-height: 25px; }
+    .f5l  { font-size: 21px; line-height: 25px; }
     .f6   { font-size: 16px; line-height: 18px; }
     .f6b  { font-size: 16px; line-height: 18px; }
     .f6l  { font-size: 16px; line-height: 18px; }
