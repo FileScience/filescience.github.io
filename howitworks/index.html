@@ -89,14 +89,14 @@
                 }
                 /* Dropdown Content (Hidden by Default) */
                 .dropdown-content {
-                position: absolute;
-                background-color: #f6f6f6;
-                min-width: 230px;
-                border: 1px solid #ddd;
-                z-index: 1;
-                width: 60%;
-                left:20%;
-                font-family: l;
+                    position: absolute;
+                    background-color: #f6f6f6;
+                    min-width: 230px;
+                    border: 1px solid #ddd;
+                    z-index: 1;
+                    width: 100%;
+                    left: 0;
+                    font-family: l;
                 }
                 #DropDown {
                     max-height: 400px;
@@ -126,6 +126,10 @@
 
                 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
                 .showChildren a {display:block;} 
+                
+                .dropdown {
+                    position: relative;
+                }
             
     </style>
     <!-- Navigation Container -->
@@ -173,7 +177,7 @@
     <div class="section s1">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-8">
                     <div class="SearchZone">
                         <h1 class="f2">How do you backup?</h1>
                         <p class="p">Enter app name to know how we backup your data.</p>
@@ -613,6 +617,12 @@
                         </div>
     
                     </div>
+                </div>
+                <div class="col-4">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/kris-filescience/meeting?hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                    <script nonce="a34g29914" type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
                 </div>
             </div>
         </div>
