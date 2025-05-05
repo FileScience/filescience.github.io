@@ -223,6 +223,21 @@
         const form = document.getElementById("maincontact");
         if (!form) return;
       
+        // Helper to display a message below the form
+        function showMessage(text, isError = false) {
+          // Remove any existing message
+          const existing = form.parentNode.querySelector('.form-feedback');
+          if (existing) existing.remove();
+      
+          const msgEl = document.createElement("p");
+          msgEl.classList.add("f3", "form-feedback");
+          if (isError) {
+            msgEl.style.color = "red";
+          }
+          msgEl.textContent = text;
+          form.parentNode.insertBefore(msgEl, form.nextSibling);
+        }
+      
         // Attach a submit event listener
         form.addEventListener("submit", function(e) {
           e.preventDefault(); // Prevent normal form submission
@@ -236,27 +251,30 @@
             body: formData,
             redirect: "manual" // so we can detect and stop a server redirect
           })
-          .then(response => {
-            // If the endpoint attempts a redirect, the status is in the 300 range
+          .then(response => response.text().then(text => {
+            // If backend signals a free-email or invalid email, show error and keep form
+            if (text.trim() === "Please use a work email" || text.trim() === "Invalid email address.") {
+              showMessage(text.trim(), true);
+              return;
+            }
+      
+            // If the endpoint attempts a redirect, log it (but still treat as success)
             if (response.status >= 300 && response.status < 400) {
               console.log("Server attempted a redirect (HTTP " + response.status + ").");
             }
       
-            // Show a thank‑you message below the form
-            const thankYouMsg = document.createElement("p");
-            thankYouMsg.classList.add("f3");
-            thankYouMsg.textContent = "Thanks for your interest in FileScience, we'll get in touch shortly!";
-            form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
-      
-            // Optionally hide or remove the form
+            // On any other successful response, show thank-you and remove form
+            showMessage("Thanks for your interest in FileScience, we'll get in touch shortly!");
             form.remove();
-          })
+          }))
           .catch(err => {
             console.error("Error submitting form:", err);
+            showMessage("An error occurred. Please try again later.", true);
           });
         });
       });
       </script>
+      
       
   </body>
 </html>
