@@ -45,69 +45,97 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     console.log("Form found. Attaching event listener.");
-    
+  
     form.addEventListener("submit", function(e) {
       e.preventDefault();
       console.log("Form submitted.");
-      
-      // Disable all form elements to prevent multiple submissions
+  
+      // Cache elements for later
       var formElements = form.querySelectorAll("input, button, select, textarea");
-      formElements.forEach(function(el) {
-        el.disabled = true;
-      });
-      
-      // Hide the submit button immediately
       var submitButton = form.querySelector("button[type='submit']");
+  
+      // Disable and hide original button + show loading icon
+      formElements.forEach(el => el.disabled = true);
       if (submitButton) {
         submitButton.style.display = "none";
-        // Insert a loading SVG above the submit button location
         var loadingSVG = document.createElement("img");
-        loadingSVG.src = "https://filescience.io/media/loading.svg"; // Adjust the path as needed
+        loadingSVG.src = "https://filescience.io/media/loading.svg";
         loadingSVG.alt = "Loading...";
         loadingSVG.className = "loading-icon";
         submitButton.parentNode.insertBefore(loadingSVG, submitButton);
       }
-      
+  
+      // Grab the email
       var emailInput = form.querySelector("input[name='email']");
       if (!emailInput) {
         console.error("Email input not found.");
-        return;
+        return restoreForm("Unexpected error: email field missing.");
       }
       var email = emailInput.value.trim();
       console.log("Captured email:", email);
-      
+  
+      // Send it off
       var formData = new FormData();
       formData.append("email", email);
-      
+  
       fetch("https://cgnew.wpengine.com/apis/filescience/subscribe/", {
         method: "POST",
         body: formData
       })
-      .then(function(response) {
-        return response.text();
-      })
-      .then(function(responseText) {
+      .then(response => response.text())
+      .then(responseText => {
         console.log("Response received:", responseText);
-        var thankYouMsg = document.createElement("p");
-        thankYouMsg.className = "p thank you";
-        // if the response contains ("invalid"), do not hide the form and show the error message instead
+  
+        // Handle specific error messages
         if (responseText.includes("Invalid")) {
-          thankYouMsg.textContent = "Invalid email address. Please try again.";
-          thankYouMsg.className = "error-message"; // Add a class for styling the error message
-          return;
+          return restoreForm("Invalid email address. Please try again.");
         }
-        thankYouMsg.textContent = responseText; // Expected: "Thank you for your interest in FileScience!"
+        if (responseText.includes("Please use a work email")) {
+          return restoreForm("Please use a work email.");
+        }
+  
+        // Success path
+        var thankYouMsg = document.createElement("p");
+        thankYouMsg.className = "thank-you";
+        thankYouMsg.textContent = responseText; // e.g. "Thank you for your interest in FileScience!"
         form.parentNode.insertBefore(thankYouMsg, form.nextSibling);
-        // Hide the entire form upon successful submission
         form.style.display = "none";
       })
-      .catch(function(error) {
+      .catch(error => {
         console.error("Error during fetch:", error);
+        restoreForm("An error occurred. Please try again later.");
       });
+  
+      // Helper to reset form state and show a single error message
+      function restoreForm(message) {
+        // Remove loading icon
+        var loadingIcon = form.querySelector(".loading-icon");
+        if (loadingIcon) loadingIcon.remove();
+  
+        // Show submit button again
+        if (submitButton) submitButton.style.display = "";
+  
+        // Re-enable all fields
+        formElements.forEach(el => el.disabled = false);
+  
+        // Remove any existing error messages
+        var existingErrors = form.parentNode.querySelectorAll(".error-message");
+        existingErrors.forEach(err => err.remove());
+  
+        // Insert one fresh error message
+        var errorMsg = document.createElement("p");
+        errorMsg.className = "error-message";
+        errorMsg.textContent = message;
+        form.parentNode.insertBefore(errorMsg, form.nextSibling);
+      }
     });
   }
   
+  // Initialize on page load
+  document.addEventListener("DOMContentLoaded", initSubscriptionForm);
+  
+  
   // Start the check
-  initSubscriptionForm();
+  //initSubscriptionForm();
   
   
