@@ -111,6 +111,38 @@
 	min-height: auto;
 }
 }
+
+/* Blog */
+
+
+.blog-main-info {
+  display: flex;
+  align-items: end;
+}
+.blog-main-img {
+	border-radius: 24px;
+}
+.blog-main-btn {
+  padding: 14px;
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.read-time {
+  display: flex;
+  flex-direction: column;
+}
+.read-time p {
+  margin: 0;
+}
+.button-blog-nav.f6l {
+	margin-left: auto;
+}
+.blog-main-text p {
+	margin-bottom: 0;
+}
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -162,17 +194,25 @@
             <div class="row blog-featured">
                 <div class="col-12">
                     <img src="../media/blog-main-placeholder.png" alt="Blog" class="blog-main-img">
-                    <div class="blog-main-text">
-                        <h2 class="f2">Lorem ipsum dolor sit amet consectetur. Condimentum lacus.</h2>
-                        <p class="f6l">Lorem ipsum dolor sit amet consectetur. Nisl vitae suscipit a ac. Egestas est dui lectus enim quisque feugiat facilisis tincidunt. Sed blandit lacus rhoncus mauris lectus nulla est purus. Cursus habitant semper tincidunt massa augue a faucibus mattis. Aliquet in sed et vel lacus eu sodales potenti porttitor. Ornare dignissim eu condimentum ut maecenas in. Arcu integer nulla tortor proin. Nibh quam orci elementum tempus vulputate cras ullamcorper. Ut.</p>
+                    <div class="blog-main-info">
+                      <div class="blog-main-text col-9">
+                          <h2 class="f2">Lorem ipsum dolor sit amet consectetur. Condimentum lacus.</h2>
+                          <p class="f6l">Lorem ipsum dolor sit amet consectetur. Nisl vitae suscipit a ac. Egestas est dui lectus enim quisque feugiat facilisis tincidunt. Sed blandit lacus rhoncus mauris lectus nulla est purus. Cursus habitant semper tincidunt massa augue a faucibus mattis. Aliquet in sed et vel lacus eu sodales potenti porttitor. Ornare dignissim eu condimentum ut maecenas in. Arcu integer nulla tortor proin. Nibh quam orci elementum tempus vulputate cras ullamcorper. Ut.</p>
+                      </div>
+                      <div class="col-1">
+
+                      </div>
+                      <div class="blog-main-btn col-2">
+                          <div class="read-time">
+                              <p class="f6">Case Study</p>
+                              <p class="f6l">5 minutes</p>
+                          </div>
+                          <a href="../blog/Lorem-ipsum-dolor/" class="button-blog-nav f6l">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="37" fill="none"><rect width="35" height="35" x=".5" y="1.4" stroke="#7F7F7F" rx="17.5"/><g clip-path="url(#a)"><g clip-path="url(#b)"><g clip-path="url(#c)"><mask id="d" width="16" height="16" x="10" y="11" maskUnits="userSpaceOnUse" style="mask-type:luminance"><path fill="#fff" d="M25.19 26.09H10.8V11.7h14.39v14.39Z"/></mask><g mask="url(#d)"><path stroke="#7F7F7F" stroke-linecap="round" stroke-linejoin="round" stroke-width=".771" d="M13.2 18.895h9.593m0 0-3.598 3.598m3.598-3.598-3.598-3.598"/></g></g></g></g><defs><clipPath id="a"><path fill="#fff" d="M10.8 11.7h14.39v14.39H10.8z"/></clipPath><clipPath id="b"><path fill="#fff" d="M10.8 11.7h14.39v14.39H10.8z"/></clipPath><clipPath id="c"><path fill="#fff" d="M10.8 11.7h14.39v14.39H10.8z"/></clipPath></defs></svg>
+                          </a>
+                      </div>
                     </div>
-                    <div class="blog-main-btn">
-                        <div class="read-time">
-                            <p class="f6">Case Study</p>
-                            <p class="f6l">5 minutes</p>
-                        </div>
-                        <a href="../blog/Lorem-ipsum-dolor/" class="button-blog-nav f6l"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#a)"><mask id="b" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M15.2 15H.8V.8h14.4v14.4Z" fill="#fff"/></mask><g mask="url(#b)"><path d="M3.2 7.9h9.6m0 0-3.6 3.6m3.6-3.6L9.2 4.3" stroke="#7F7F7F" stroke-width=".8" stroke-linecap="round" stroke-linejoin="round"/></g></g><defs><clipPath id="a"><path fill="#fff" transform="translate(.8 .7)" d="M0 0h14.4v14.4H0z"/></clipPath></defs></svg></a>
-                    </div>
+                    
                 </div>
             </div>
 
