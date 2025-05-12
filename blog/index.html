@@ -143,6 +143,23 @@
 .blog-main-text p {
 	margin-bottom: 0;
 }
+
+@media screen and (max-width: 992px) {
+
+  .blog-main-info {
+  flex-direction: column;
+  align-items: baseline;
+  }
+  .blog-main-info .col-1 {
+    display: none;
+  }
+  .blog-main-text.col-9 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: unset;
+  }
+}
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
