@@ -215,6 +215,153 @@
         </div>
       </div>
     </div>
+    <div class="cookie-banner" style="display:none;">
+      <div style="max-width: 1280px;width: 100%;padding-right: 36px;padding-left: 36px;">
+        <p>
+          We use cookies to improve your experience on our website. By continuing to use the site, you agree to this.
+          You can read detailed information about cookies here.
+        </p>
+        <div class="cookie-buttons">
+          <button class="btn accept">Accept</button>
+          <button class="btn decline">Decline</button>
+        </div>
+      </div>
+    </div>
+<script nonce="a34g29914">
+        document.addEventListener('DOMContentLoaded', function() {
+          
+          // Cookie utility functions with added logging and default path.
+          function setCookie(name, value, days, path = "/") {
+            var expires = "";
+            if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+              expires = "; expires=" + date.toUTCString();
+            }
+            var cookieString = name + "=" + (value || "") + expires + "; path=" + path;
+            document.cookie = cookieString;
+            console.log("Set Cookie:", cookieString);
+          }
+        
+          function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+              var c = ca[i].trim();
+              if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+            }
+            return null;
+          }
+        
+          // Ensure dataLayer exists and define gtag as a wrapper.
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { 
+            window.dataLayer.push(arguments); 
+            console.log("Pushed to dataLayer:", arguments);
+          }
+          
+          // Google Consent Mode v2 default settings.
+          gtag('consent', 'default', {
+            'ad_storage': 'denied',
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'analytics_storage': 'denied'
+          });
+          console.log("Initial dataLayer state:", window.dataLayer);
+        
+          // Check if consent cookie is already set.
+          var consentStatus = getCookie("cookie_consent");
+          if (consentStatus === "accepted") {
+            // If cookie is set, grant consent automatically.
+            
+            gtag("consent", "update", {
+              ad_storage: "granted",
+              ad_user_data: "granted",
+              ad_personalization: "granted",
+              analytics_storage: "granted",
+              security_storage: "granted",
+              functionality_storage: "granted",
+              personalization_storage: "granted"
+            });
+            window.dataLayer = window.dataLayer || [];
+            dataLayer.push({
+              event: "consent_updated_granted"
+            });
+
+            console.log("Consent already granted via cookie.");
+          } else {
+            // Otherwise, show the consent banner after a delay.
+            setTimeout(function() {
+              var banner = document.querySelector(".cookie-banner");
+              if (banner) {
+                banner.style.display = "flex";
+                console.log("Cookie banner displayed.");
+              } else {
+                console.warn("Cookie banner element not found.");
+              }
+            }, 1000);
+          }
+          
+          // Event listener for the "Accept" button.
+          var acceptBtn = document.querySelector(".cookie-banner .accept");
+          if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+              // Update consent using gtag.
+              
+              gtag("consent", "update", {
+                ad_storage: "granted",
+                ad_user_data: "granted",
+                ad_personalization: "granted",
+                analytics_storage: "granted",
+                security_storage: "granted",
+                functionality_storage: "granted",
+                personalization_storage: "granted"
+              });
+              window.dataLayer = window.dataLayer || [];
+              dataLayer.push({
+                event: "consent_updated_granted"
+              });
+              
+              // Set cookie so that the banner is not shown again.
+              setCookie("cookie_consent", "accepted", 365);
+              var banner = document.querySelector(".cookie-banner");
+              if (banner) {
+                banner.style.display = "none";
+                console.log("Cookie banner hidden after acceptance.");
+              }
+            });
+          } else {
+            console.warn("Accept button not found in the cookie banner.");
+          }
+        
+          // Event listener for the "Decline" button.
+          var declineBtn = document.querySelector(".cookie-banner .decline");
+          if (declineBtn) {
+            declineBtn.addEventListener('click', function() {
+              // Update consent using gtag.
+              gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+              });
+              window.dataLayer = window.dataLayer || [];
+              dataLayer.push({
+                event: "consent_updated_canceled"
+              });
+
+              // Do not set a cookie so that the banner can reappear on the next visit.
+              var banner = document.querySelector(".cookie-banner");
+              if (banner) {
+                banner.style.display = "none";
+                console.log("Cookie banner hidden after decline.");
+              }
+            });
+          } else {
+            console.warn("Decline button not found in the cookie banner.");
+          }
+        });
+    </script>
     <!-- Google tag (gtag.js) -->
     <script nonce="a34g29914" async src="https://www.googletagmanager.com/gtag/js?id=G-J2CT8GZLXN"></script>
     <script nonce="a34g29914">
