@@ -473,6 +473,10 @@ footer a {
 }
 
 
+.cookie-banner * {
+	font-family: l;
+}
+
 .no-scroll {
     overflow: hidden;
 }
