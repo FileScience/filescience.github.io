@@ -139,3 +139,42 @@ document.addEventListener('DOMContentLoaded', function() {
   //initSubscriptionForm();
   
   
+  (function() {
+    // Function to parse URL parameters into an object
+    function getAllUrlParams() {
+      const params = {};
+      const queryString = window.location.search.slice(1);
+      const regex = /([^&=]+)=?([^&]*)/g;
+      let match;
+      while ((match = regex.exec(queryString))) {
+        const key = decodeURIComponent(match[1].replace(/\+/g, ' '));
+        const value = decodeURIComponent(match[2].replace(/\+/g, ' '));
+        params[key] = value;
+      }
+      return params;
+    }
+  
+    // Function to create hidden input
+    function createHiddenInput(name, value) {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = `tr_${name}`;
+      input.value = value;
+      return input;
+    }
+  
+    // Capture parameters
+    const params = getAllUrlParams();
+  
+    // Append hidden inputs to all forms
+    document.addEventListener('DOMContentLoaded', () => {
+      const forms = document.querySelectorAll('form');
+      forms.forEach(form => {
+        for (const [key, value] of Object.entries(params)) {
+          const hiddenInput = createHiddenInput(key, value);
+          form.appendChild(hiddenInput);
+        }
+      });
+    });
+  })();
+  
