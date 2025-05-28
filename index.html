@@ -480,9 +480,6 @@
 }
 }
 
-.cookie-banner * {
-	font-family: l;
-}
 
     </style>
     <!-- Navigation Container -->
@@ -963,7 +960,7 @@
             }
             var cookieString = name + "=" + (value || "") + expires + "; path=" + path;
             document.cookie = cookieString;
-            console.log("Set Cookie:", cookieString);
+            //console.log("Set Cookie:", cookieString);
           }
         
           function getCookie(name) {
@@ -980,7 +977,7 @@
           window.dataLayer = window.dataLayer || [];
           function gtag() { 
             window.dataLayer.push(arguments); 
-            console.log("Pushed to dataLayer:", arguments);
+            //console.log("Pushed to dataLayer:", arguments);
           }
           
           // Google Consent Mode v2 default settings.
@@ -990,7 +987,7 @@
             'ad_personalization': 'denied',
             'analytics_storage': 'denied'
           });
-          console.log("Initial dataLayer state:", window.dataLayer);
+          //console.log("Initial dataLayer state:", window.dataLayer);
         
           // Check if consent cookie is already set.
           var consentStatus = getCookie("cookie_consent");
@@ -1011,14 +1008,14 @@
               event: "consent_updated_granted"
             });
 
-            console.log("Consent already granted via cookie.");
+            //console.log("Consent already granted via cookie.");
           } else {
             // Otherwise, show the consent banner after a delay.
             setTimeout(function() {
               var banner = document.querySelector(".cookie-banner");
               if (banner) {
                 banner.style.display = "flex";
-                console.log("Cookie banner displayed.");
+                //console.log("Cookie banner displayed.");
               } else {
                 console.warn("Cookie banner element not found.");
               }
@@ -1050,7 +1047,7 @@
               var banner = document.querySelector(".cookie-banner");
               if (banner) {
                 banner.style.display = "none";
-                console.log("Cookie banner hidden after acceptance.");
+                //console.log("Cookie banner hidden after acceptance.");
               }
             });
           } else {
@@ -1077,7 +1074,7 @@
               var banner = document.querySelector(".cookie-banner");
               if (banner) {
                 banner.style.display = "none";
-                console.log("Cookie banner hidden after decline.");
+                //console.log("Cookie banner hidden after decline.");
               }
             });
           } else {

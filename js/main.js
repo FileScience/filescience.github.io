@@ -40,15 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
   function initSubscriptionForm() {
     var form = document.querySelector(".footer .footer_form");
     if (!form) {
-      console.log("Form not found. Retrying in 1 second...");
+      //console.log("Form not found. Retrying in 1 second...");
       setTimeout(initSubscriptionForm, 1000);
       return;
     }
-    console.log("Form found. Attaching event listener.");
+    //console.log("Form found. Attaching event listener.");
   
     form.addEventListener("submit", function(e) {
       e.preventDefault();
-      console.log("Form submitted.");
+      //console.log("Form submitted.");
   
       // Cache elements for later
       var formElements = form.querySelectorAll("input, button, select, textarea");
@@ -68,11 +68,11 @@ document.addEventListener('DOMContentLoaded', function() {
       // Grab the email
       var emailInput = form.querySelector("input[name='email']");
       if (!emailInput) {
-        console.error("Email input not found.");
+        //console.error("Email input not found.");
         return restoreForm("Unexpected error: email field missing.");
       }
       var email = emailInput.value.trim();
-      console.log("Captured email:", email);
+      //console.log("Captured email:", email);
   
       // Send it off
       var formData = new FormData();
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
       })
       .then(response => response.text())
       .then(responseText => {
-        console.log("Response received:", responseText);
+        //console.log("Response received:", responseText);
   
         // Handle specific error messages
         if (responseText.includes("Invalid")) {
@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
         form.style.display = "none";
       })
       .catch(error => {
-        console.error("Error during fetch:", error);
+        //console.error("Error during fetch:", error);
         restoreForm("An error occurred. Please try again later.");
       });
   
