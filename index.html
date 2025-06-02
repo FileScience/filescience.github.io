@@ -948,6 +948,33 @@
       });
       </script>
       <script nonce="a34g29914">
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById("bookme_form");
+          if (!form) return;
+        
+          const emailInput = form.querySelector("input[name='email']");
+        
+          emailInput.addEventListener("input", function () {
+            // Clear previous error when user starts typing
+            emailInput.setCustomValidity("");
+          });
+        
+          form.addEventListener("submit", function (e) {
+            const email = emailInput.value.trim().toLowerCase();
+            const bannedDomains = ["@gmail", "@yahoo", "@outlook", "@hotmail"];
+        
+            if (bannedDomains.some(domain => email.includes(domain))) {
+              e.preventDefault();
+              emailInput.setCustomValidity("Please use a work email address.");
+              emailInput.reportValidity(); // This shows the validation message
+            } else {
+              emailInput.setCustomValidity(""); // Allow form submission if valid
+            }
+          });
+        });
+        </script>
+        
+      <script nonce="a34g29914">
         document.addEventListener('DOMContentLoaded', function() {
           
           // Cookie utility functions with added logging and default path.
@@ -1081,6 +1108,7 @@
             console.warn("Decline button not found in the cookie banner.");
           }
         });
+        
         </script>
         
       
