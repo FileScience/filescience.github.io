@@ -195,6 +195,28 @@
   }
   
 }
+
+.card-pricing {
+	margin-bottom: 15px;
+	border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.card-pricing.card-pricing-2 a {
+  text-decoration: none;
+}
+.card-pricing.card-pricing-1 {
+  background: #A490B0;
+}
+.card-pricing.card-pricing-3 {
+  background: #EBCA71;
+}
+.card-pricing.card-pricing-2 {
+  background: #98C5C2;
+}
+.card-pricing.card-pricing-4 {
+  background: #A7B88F;
+}
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -242,17 +264,29 @@
     <div class="section s1">
         <div class="container">
             <div class="row">
-                <div class="col-8 col-left">
-                    <h1 class="f1">Flexible pricing<br>for every need</h1>
-                    <p class="p">Enjoy fixed pricing for up to <b><u>500GB.</u></b><br>
-                    <p class="f6l pricing-notes">*Accounts using over 500GB of storage will automatically transition to the dynamic pricing model.<br>
-                        **Certain exceptions to pricing may vary per cloud. Click here to learn more.<br>
-                        ***Multi-year contractual pricing available upon request, contact our team.</p><br>
+                <div class="col-6 col-left">
+                    <h1 class="f1">Adaptable plans<br>that grow with you</h1>
+                    <p class="f6l">We understand every company’s storage needs are unique. That’s why we offer flexible pricing—pay only for the storage you use, and scale seamlessly without extra costs for unused GBs.</p>
                 </div>
-                <div class="col-4 col-right">
-                    <div class="card-pricing">
+                <div class="col-3 col-right">
+                    <div class="card-pricing card-pricing-1">
+                        <p class="f6">Enjoy fixed pricing for up to</p>
+                        <h2 class="f2">500GB</h2>
+                    </div>
+                    <div class="card-pricing card-pricing-2">
+                      <a href="https://filescience.io/demo/" class="">
+                        <img src="../media/arrow-up.svg" height="39" width="39" alt="Arrow Icon" class="arrow-icon">
+                        <h2 class="f2">Talk to our Team</h2>
+                      </a>
+                    </div>
+                </div>
+                <div class="col-3 col-right">
+                    <div class="card-pricing card-pricing-3">
+                        <p class="bold">Complete Backup with Cloud Protection</p>
+                    </div>
+                    <div class="card-pricing card-pricing-4">
                         <p class="f6">Did someone say</p>
-                        <h2 class="f1">Unlimited storage?</h2>
+                        <h2 class="f2">Unlimited storage?</h2>
                     </div>
                 </div>
             </div>
