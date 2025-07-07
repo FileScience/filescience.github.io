@@ -217,6 +217,45 @@
 .card-pricing.card-pricing-4 {
   background: #A7B88F;
 }
+
+.card-pricing.card-pricing-1 h2 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.card-pricing.card-pricing-1 p {
+  margin-top: 150px;
+}
+.card-pricing.card-pricing-1 {
+  padding-bottom: 20px;
+}
+.card-pricing.card-pricing-4 p {
+	margin-top: 52px;
+}
+.card-pricing.card-pricing-4 h2 {
+  margin-top:0;
+}
+.card-pricing.card-pricing-4 h2 {
+  margin-bottom: 0;
+}
+.card-pricing.card-pricing-4 p {
+  margin-top: 92px;
+}
+.expand-container {
+  display: flex;
+  flex-direction: row;
+}
+.expand-container img {
+  width: 40px;
+  margin-right: 20px;
+  justify-content: ;
+  vertical-align: top;
+  display: flex;
+  align-self: baseline;
+}
+.expand-container p {
+  margin-top: 0;
+  padding-right: 48px;
+}
     </style>
     <!-- Navigation Container -->
     <div class="nav-container">
@@ -266,17 +305,22 @@
             <div class="row">
                 <div class="col-6 col-left">
                     <h1 class="f1">Adaptable plans<br>that grow with you</h1>
-                    <p class="f6l">We understand every company’s storage needs are unique. That’s why we offer flexible pricing—pay only for the storage you use, and scale seamlessly without extra costs for unused GBs.</p>
+                    <div class="expand-container">
+                      <img src="../media/expand.svg" alt="Expand Icon" class="expand-icon">
+                      <p class="f6l">We understand every company’s storage needs are unique. That’s why we offer flexible pricing—pay only for the storage you use, and scale seamlessly without extra costs for unused GBs.</p>
+
+                    </div>
+                    
                 </div>
                 <div class="col-3 col-right">
                     <div class="card-pricing card-pricing-1">
-                        <p class="f6">Enjoy fixed pricing for up to</p>
+                        <p class="p">Enjoy fixed pricing for up to</p>
                         <h2 class="f2">500GB</h2>
                     </div>
                     <div class="card-pricing card-pricing-2">
                       <a href="https://filescience.io/demo/" class="">
                         <img src="../media/arrow-up.svg" height="39" width="39" alt="Arrow Icon" class="arrow-icon">
-                        <h2 class="f2">Talk to our Team</h2>
+                        <h2 class="bold">Talk to our Team</h2>
                       </a>
                     </div>
                 </div>
@@ -288,13 +332,6 @@
                         <p class="f6">Did someone say</p>
                         <h2 class="f2">Unlimited storage?</h2>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-9 included">
-                    <h2 class="f2">Included in <u>every plan</u></h2>
-                    <img src="../media/inc-d.svg" class="d" alt="Included in every plan">
-                    <img src="../media/inc-m.svg" class="m" alt="Included in every plan">
                 </div>
             </div>
         </div>
@@ -358,6 +395,31 @@
         .section.s7 .container {
             padding-bottom: 80px;
         }
+
+
+        .table-col {
+          width: 220px;
+          display: flex;
+          flex-direction: column;
+        }
+        .table-col.tc-1 {
+          width: 320px;
+          background: #EBCA71;
+          padding: 34px;
+        }
+        .table-inner {
+          display: flex;
+        }
+        .col-20 {
+          padding: 0;
+        }
+        .table-col h3 {
+          text-align: center;
+        }
+        .table-col.tc-1 h3 {
+          margin-top: 0px;
+          margin-bottom: 56px;
+        }
     </style>
     <div class="section s2">
         <div class="container">
@@ -395,6 +457,50 @@
                                     </a>
                                 </div>
                                 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section s3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 limited-width">
+                    <h2 class="f2">Compare FileScience with Other Backup Solutions</h2>
+                    <p class="p">See how FileScience stands out from Veeam, Commvault, Datto, and CloudAlly in pricing, simplicity, and performance.</p>
+                </div>
+                <div class="col-12 full-compare-table">
+                    <div class="table-inner">
+                        <div class="col-20">
+                            <div class="table-col tc-1">
+                                <h3 class="f5l">FileScience</h3>
+                                <img src="../media/filescience-c1.svg" alt="FileScience Logo" class="compare-logo">
+                            </div>
+                        </div>
+                        <div class="col-20">
+                            <div class="table-col tc-2">
+                                <h3 class="f5l">Veeam</h3>
+                                <img src="../media/veeam-c2.svg" alt="FileScience Logo" class="compare-logo">
+                            </div>
+                        </div>
+                        <div class="col-20">
+                            <div class="table-col tc-3">
+                                <h3 class="f5l">Commvault</h3>
+                                <img src="../media/commvault-c3.svg" alt="FileScience Logo" class="compare-logo">
+                            </div>
+                        </div>
+                        <div class="col-20">
+                            <div class="table-col tc-4">
+                                <h3 class="f5l">Datto</h3>
+                                <img src="../media/datto-c4.svg" alt="FileScience Logo" class="compare-logo">
+                            </div>
+                        </div>
+                        <div class="col-20">
+                            <div class="table-col tc-5">
+                                <h3 class="f5l">CloudAlly</h3>
+                                <img src="../media/cloudally-c5.svg" alt="FileScience Logo" class="compare-logo">
+                            </div>
                         </div>
                     </div>
                 </div>
