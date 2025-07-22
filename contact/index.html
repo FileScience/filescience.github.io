@@ -17,6 +17,7 @@
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
     <meta name="revisit-after" content="21 days">
+    <link rel="preconnect" href="https://cdn.snitcher.com" crossorigin>
     <title>FileScience - Reliable Cloud-to-Cloud Backup and Recovery Service</title>
   </head>
   <body>
@@ -202,40 +203,11 @@
             return null;
           }
         
-          // Ensure dataLayer exists and define gtag as a wrapper.
-          window.dataLayer = window.dataLayer || [];
-          function gtag() { 
-            window.dataLayer.push(arguments); 
-            console.log("Pushed to dataLayer:", arguments);
-          }
-          
-          // Google Consent Mode v2 default settings.
-          gtag('consent', 'default', {
-            'ad_storage': 'denied',
-            'ad_user_data': 'denied',
-            'ad_personalization': 'denied',
-            'analytics_storage': 'denied'
-          });
-          console.log("Initial dataLayer state:", window.dataLayer);
-        
           // Check if consent cookie is already set.
           var consentStatus = getCookie("cookie_consent");
           if (consentStatus === "accepted") {
             // If cookie is set, grant consent automatically.
             
-            gtag("consent", "update", {
-              ad_storage: "granted",
-              ad_user_data: "granted",
-              ad_personalization: "granted",
-              analytics_storage: "granted",
-              security_storage: "granted",
-              functionality_storage: "granted",
-              personalization_storage: "granted"
-            });
-            window.dataLayer = window.dataLayer || [];
-            dataLayer.push({
-              event: "consent_updated_granted"
-            });
 
             console.log("Consent already granted via cookie.");
           } else {
@@ -255,22 +227,7 @@
           var acceptBtn = document.querySelector(".cookie-banner .accept");
           if (acceptBtn) {
             acceptBtn.addEventListener('click', function() {
-              // Update consent using gtag.
-              
-              gtag("consent", "update", {
-                ad_storage: "granted",
-                ad_user_data: "granted",
-                ad_personalization: "granted",
-                analytics_storage: "granted",
-                security_storage: "granted",
-                functionality_storage: "granted",
-                personalization_storage: "granted"
-              });
-              window.dataLayer = window.dataLayer || [];
-              dataLayer.push({
-                event: "consent_updated_granted"
-              });
-              
+
               // Set cookie so that the banner is not shown again.
               setCookie("cookie_consent", "accepted", 365);
               var banner = document.querySelector(".cookie-banner");
@@ -287,18 +244,6 @@
           var declineBtn = document.querySelector(".cookie-banner .decline");
           if (declineBtn) {
             declineBtn.addEventListener('click', function() {
-              // Update consent using gtag.
-              gtag('consent', 'update', {
-                'ad_storage': 'denied',
-                'ad_user_data': 'denied',
-                'ad_personalization': 'denied',
-                'analytics_storage': 'denied'
-              });
-              window.dataLayer = window.dataLayer || [];
-              dataLayer.push({
-                event: "consent_updated_canceled"
-              });
-
               // Do not set a cookie so that the banner can reappear on the next visit.
               var banner = document.querySelector(".cookie-banner");
               if (banner) {
@@ -311,27 +256,6 @@
           }
         });
     </script>
-    <!-- Google tag (gtag.js) -->
-    <script nonce="a34g29914" async src="https://www.googletagmanager.com/gtag/js?id=G-J2CT8GZLXN"></script>
-    <script nonce="a34g29914">
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-J2CT8GZLXN');
-    </script>
-    <!-- Google Tag Manager -->
-    <script nonce="a34g29914">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K2H5L4VF');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K2H5L4VF"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
   <script nonce="a34g29914">!function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Ie Ts Ms Ee Es Rs capture Ge calculateEventProperties Os register register_once register_for_session unregister unregister_for_session js getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Ds Fs createPersonProfile Ls Ps opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Cs debug I As getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);posthog.init('phc_Kl1L17KsovenUJoYsv8sdWEOdUEv2nrQOCun2kOL15T', {api_host: 'https://us.i.posthog.com',defaults: '2025-05-24',person_profiles: 'identified_only', })</script>
     <!-- Footer Section -->
     <div class="section footer">
